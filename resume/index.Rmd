@@ -135,17 +135,9 @@ Grants {data-icon=connectdevelop data-concise=true}
 CV %<>% print_section('grants')
 ```
 
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('education')
-```
-
-
 ::: aside
 
-**SKILLS**
+**SKILLS**-
 
 ```{r skill_bar}
 # print_skill_bars(CV)
@@ -172,6 +164,13 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 ```
 
 :::
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r education}
+CV %<>% print_section('education')
+```
 
 Leadership {data-icon=flag}
 --------------------------------------------------------------------------------
