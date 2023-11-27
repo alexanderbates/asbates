@@ -29,15 +29,15 @@ sup {
 
 * {
   /* Override default right margin for sidebar*/
-  --pagedjs-margin-right: 0.2in;
-  --pagedjs-margin-left: 0.2in;
+  --pagedjs-margin-right: 0.1in;
+  --pagedjs-margin-left: 0.1in;
 }
 
 /* Customize some of the sizing variables */
 :root {
-  --sidebar-width: 10rem; /* Shrink sidebar width  */
+  --sidebar-width: 9rem; /* Shrink sidebar width  */
   --sidebar-background-color: #f7fbff; /* Make sidebar blue */
-  --sidebar-horizontal-padding: 0.01in; /* Reduce sidebar padding */
+  --sidebar-horizontal-padding: 0.1in; /* Reduce sidebar padding */
   --decorator-outer-dim: 10px; /* Make position deliniating circles larger */
   --decorator-border: 2px solid #bdd7e7; /* Make timeline a blue as well*/
 }
@@ -78,9 +78,9 @@ sup {
 
 /* Make sure elements in asside are centered and have a nice small text */
 .aside {
-  width: calc(var(--sidebar-width) + 9px);
+  width: calc(var(--sidebar-width) + 1px);
   line-height: 1.2;
-  font-size: 0.75rem;
+  font-size: 0.70rem;
 }
 
 /* Make little circle outline be a light blue */
@@ -100,7 +100,6 @@ sup {
   position: relative;
   width: 100%;
 }
-
 
 /* When the class no-timeline is added we remove the after psuedo element from the header... */
 

@@ -17,7 +17,7 @@ authorlist <- publications$author
 publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
 publications$author_position <- author_position(authorlist, scholar::get_profile(id)$name)$Position
 publications$author_position[is.na(publications$author_position)] = 6
-publications$impact_factor <- get_impactfactor(publications$journal, max.distance = 0.05)$ImpactFactor
+publications$impact_factor <- scholar::get_impactfactor(publications$journal, max.distance = 0.05)$ImpactFactor
 publications$impact_factor[is.na(publications$impact_factor)] = 0
 publications$author_position[publications$title=='Information flow, cell types and stereotypy in a full olfactory connectome'] = 1
 publications$author = gsub("Bates","**Bates**",publications$author)

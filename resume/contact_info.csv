@@ -1,5 +1,5 @@
 ﻿loc,icon,contact
-email,fa fa-envelope,Alexander_Bates@hms.harvard.edu
+email,fa fa-envelope,[alexander_bates @hms.harvard.edu](alexander_bates@hms.harvard.edu)
 twitter,fa fa-twitter,[as_bates](https://twitter.com/as_bates?lang=en)
 github,fa fa-github,[alexanderbates](github.com/alexanderbates)
 website,fa fa-link,[asbates.com](www.asbates.com)
@@ -7,3 +7,4 @@ linkedin,fa fa-linkedin,[linkedIn](linkedin.com/in/alex-bates-22a265a7/)
 scholar,ai ai-google-scholar,[google scholar](https://scholar.google.com/citations?user=BOVTiXIAAAAJ&hl=en)
 orcid,ai ai-orcid,[0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445)
 researchgate,ai ai-researchgate,[researchgate](https://www.researchgate.net/profile/Alexander-Bates)
+publons,ai ai-publons,[GQQ-6852-2022](https://www.webofscience.com/wos/?mode=Nextgen&path=%2Fwos%2Fauthor%2Frid%2FGQQ-6852-2022&IsProductCode=Yes&Init=Yes&DestApp=UA&Func=Frame&action=transfer&SrcApp=CR&SID=USW2EC0F96iwGNdGl0jPXxtf5Y225)

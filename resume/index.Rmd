@@ -11,6 +11,7 @@ output:
     self_contained: true
 # knit: pagedown::chrome_print      
 ---
+
 ```{r startup, echo = FALSE, message = FALSE, warning = FALSE}
 knitr::opts_chunk$set(
   results='asis',
@@ -29,7 +30,74 @@ library(magrittr) # For the pipe
 library(plotly)
 library(extrafont)
 library(extrafontdb)
+library(rorcid)
+asb.id <- '0000-0002-1195-0445'#orcid_auth()
+id <- "BOVTiXIAAAAJ&hl"
 source("cv_printing_functions.r")
+```
+
+```{r pub_data}
+publications <- scholar::get_publications(id, sortby = "year", pagesize = 100, flush = TRUE)
+publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge",""))
+authorlist <- publications$author
+publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
+publications$position <- author_position(authorlist, scholar::get_profile(id)$name)$Position
+publications$position[is.na(publications$position)] = 6
+publications$IF <- scholar::get_impactfactor(publications$journal, max.distance = 0.05)$ImpactFactor
+publications$IF[is.na(publications$IF)] = 0
+publications$IF <- round(publications$IF)
+publications$author = gsub("AS Bates","**AS Bates**",publications$author)
+publications$title = paste0("<a href='","https://scholar.google.com/scholar?oi=bibs&hl=en&cites=",gsub(",.*","",publications$cid), "'>",publications$title,"</a>")
+
+# Bold for first author
+first.pubids <- c("mVmsd5A6BfQC", "8k81kl-MbHgC", 
+                  "Y0pCki6q_DkC", "eQOLeE2rZwMC", 
+                  "d1gkVwhDpl0C", "hqOjcs7Dif8C",
+                  "_FxGoFyzp5QC")
+first <- publications$pubid%in%first.pubids
+publications$position[first] <- 1
+publications$author[first] <- gsub("AS Bates", "<ins>AS Bates</ins>",publications$author[first])
+publications <- publications[,c("title","author","journal","year","cites", "position","IF")]
+publications <- dplyr::arrange(publications, position, dplyr::desc(year))
+
+# Get DOIs
+
+
+# Separate out reviews
+revs <- c("Systems neuroscience: Auditory processing at synaptic resolution",
+          "Neuronal cell types in the fly: single-cell anatomy meets single-cell genomics")
+revs <- paste0(revs,collapse="|")
+reviews <- subset(publications, grepl(revs,title))
+publications <- subset(publications, ! grepl(revs,title))
+
+# Corrections
+corr <- c("Neurotransmitter Classification from Electron Microscopy Images at Synaptic Sites in Drosophila Melanogaster")
+publications$journal[publications$title%in%corr] <- "*Accepted at Cell*"
+publications$year[publications$title%in%corr] <- "2023"
+
+# Get peer reviews
+prs <- rorcid::orcid_peer_reviews(asb.id)
+plucked_prs <- prs %>%
+  purrr::map_dfr(pluck, "group") %>%
+  janitor::clean_names() %>%
+  dplyr::mutate(last_modified_date_value = anytime::anydate(last_modified_date_value/1000))
+peer_reviews <- data.frame()
+for(i in 1:length(plucked_prs$peer_review_group)){
+  pr.df <- do.call(plyr::rbind.fill,plucked_prs$peer_review_group[[i]]$`peer-review-summary`) %>%
+      janitor::clean_names() %>%
+      as.data.frame()
+  issn <- gsub("issn\\:","",pr.df$review_group_id)
+  details <- rcrossref::cr_journals(issn = issn, works = FALSE)
+  journals <- data.frame(journal = details$data$title)
+  peer_reviews <- plyr::rbind.fill(peer_reviews,journals)
+}
+peer_reviews <- peer_reviews %>%
+  dplyr::group_by(journal) %>%
+  dplyr::mutate(reviews = dplyr::n()) %>%
+  dplyr::ungroup() %>%
+  dplyr::arrange(dplyr::desc(reviews)) %>%
+  dplyr::distinct(journal, reviews)
+#read_csv(file = "peer_reviews.csv", show_col_types = FALSE)
 ```
 
 <!-- inicio academic icons -->
@@ -79,17 +147,20 @@ if(params$pdf_mode){
 }
 ```
 
-Media {#Media}
---------------------------------------------------------------------------------
+<br></br>
+
+**Media**
 
 ```{r contact_info}
 CV$contact_info %>% glue_data("- <i class='{icon}'></i> {contact}")
 ```
+<br></br>
 
-Software {#software}
---------------------------------------------------------------------------------
+<br></br>
 
-<i class="fas fa-toolbox"></i> [natverse](https://natverse.org/) - a toolscape for neuroinformatics, co-author
+**Software**
+
+<i class="fas fa-toolbox"></i> [natverse](https://natverse.org/) - co-author
 
 <i class="fas fa-tools"></i> [neuromorphr](https://natverse.github.io/neuromorphr/) - author
 
@@ -114,7 +185,6 @@ print_text_block(CV, 'intro')
 ```
 
 ```{r profile, fig.align = "center"}
-id <- "BOVTiXIAAAAJ&hl"
 author <- scholar::get_profile(id)
 df <- data.frame(total_cites = author$total_cites, h_index = author$h_index, i10_index = author$i10_index)
 formattable(df, list(total_cites = color_bar("coral", fun = "normalize"), h_index = color_bar("lightgreen", fun = "proportion"), i10_index = color_bar("lightblue", fun = "proportion")))
@@ -127,7 +197,6 @@ Professional Research {data-icon=microscope data-concise=true}
 CV %<>% print_section('research_projects')
 ```
 
-
 Grants {data-icon=connectdevelop data-concise=true}
 --------------------------------------------------------------------------------
 
@@ -137,7 +206,7 @@ CV %<>% print_section('grants')
 
 ::: aside
 
-**SKILLS**-
+**Skills**
 
 ```{r skill_bar}
 # print_skill_bars(CV)
@@ -163,6 +232,36 @@ CV %<>% print_section('grants')
 CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 ```
 
+<br></br>
+
+<br></br>
+
+**Peer Reviews**
+
+```{r peer_reviews}
+# Format reviews table
+formattable(peer_reviews, list(
+  reviews = color_bar("lightgreen", fun = "normalize")
+  ))
+```
+
+<br></br>
+
+<br></br>
+
+**Referees** 
+
+- <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
+
+- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
+
+- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
+
+- <i class="fas fa-user-astronaut"></i> Supervisee: 
+Serene Dhawan, 
+Princeton, PhD student, 
+[serenedhawan @gmail.com](serenedhawan@gmail.com])
+
 :::
 
 Education {data-icon=graduation-cap data-concise=true}
@@ -172,14 +271,21 @@ Education {data-icon=graduation-cap data-concise=true}
 CV %<>% print_section('education')
 ```
 
-Leadership {data-icon=flag}
+Reviews {data-icon=eye}
 --------------------------------------------------------------------------------
 
-```{r leadership}
-CV %<>% print_section('leadership_experience')
+```{r reviews}
+# Format reviews table
+formattable(reviews, list(
+  position = FALSE, # color_bar("lightgreen", fun = "normalize"),
+  cites = color_bar("coral", fun = "normalize"),
+  IF = FALSE, # color_bar("lightblue", fun = "normalize"),
+  number = FALSE,
+  cid = FALSE,
+  pubid = FALSE))
 ```
 
-Publications {data-icon=book}
+Papers {data-icon=book}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -196,22 +302,11 @@ print_text_block(CV, 'publications')
 
 ```{r publications}
 #CV %<>% print_section('publications')
-publications <- scholar::get_publications(id, sortby = "year", pagesize = 100, flush = TRUE)
-publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge",""))
-authorlist <- publications$author
-publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
-publications$position <- author_position(authorlist, scholar::get_profile(id)$name)$Position
-publications$position[is.na(publications$position)] = 6
-publications$IF <- get_impactfactor(publications$journal, max.distance = 0.05)$ImpactFactor
-publications$IF[is.na(publications$IF)] = 0
-publications$author = gsub("Bates","**Bates**",publications$author)
-publications$position[publications$title=='Information flow, cell types and stereotypy in a full olfactory connectome'] = 1
-publications$title = paste0("<a href='","https://scholar.google.com/scholar?oi=bibs&hl=en&cites=",gsub(",.*","",publications$cid), "'>",publications$title,"</a>")
-publications = publications[,c("title","author","journal","year","cites", "position","IF")]
+# Format publication table
 formattable(publications, list(
-  position = color_bar("lightgreen", fun = "normalize"),
+  position = FALSE, # color_bar("lightgreen", fun = "normalize"),
   cites = color_bar("coral", fun = "normalize"),
-  IF = color_bar("lightblue", fun = "normalize"),
+  IF = FALSE, # color_bar("lightblue", fun = "normalize"),
   number = FALSE,
   cid = FALSE,
   pubid = FALSE))
@@ -224,25 +319,18 @@ Selected Talks {data-icon=chalkboard-teacher}
 CV %<>% print_section('meetings')
 ```
 
-::: aside
-
-**REFEREES** 
-
-- <i class="fas fa-robot"></i> `PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk`
-
-- <i class="fas fa-user-secret"></i> `Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, Rachel_Wilson@ hms.harvard.edu`
-
-- <i class="fas fa-user-graduate"></i> `BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk`
-
-- <i class="fas fa-user-astronaut"></i> `Supervisee: Serene Dhawan, The Francis Crick Institute, serenedhawan@gmail.com`
-
-:::
-
 Selected Posters {data-icon=chart-area}
 --------------------------------------------------------------------------------
 
 ```{r posters}
 CV %<>% print_section('posters')
+```
+
+Leadership {data-icon=flag}
+--------------------------------------------------------------------------------
+
+```{r leadership}
+CV %<>% print_section('leadership_experience')
 ```
 
 Other {data-icon=share-alt}

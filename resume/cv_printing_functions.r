@@ -52,7 +52,6 @@ create_CV_object <-  function(data_location,
     cv$contact_info <- readr::read_csv(paste0(data_location, "contact_info.csv"))
   }
 
-
   extract_year <- function(dates){
     date_year <- stringr::str_extract(dates, "(20|19)[0-9]{2}")
     date_year[is.na(date_year)] <- lubridate::year(lubridate::ymd(Sys.Date())) + 10
