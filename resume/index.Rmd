@@ -93,6 +93,12 @@ for(i in 1:length(plucked_prs$peer_review_group)){
   peer_reviews <- plyr::rbind.fill(peer_reviews,journals)
 }
 peer_reviews <- peer_reviews %>%
+  dplyr::mutate(journal=dplyr::case_when(
+    journal=="PLoS Computational Biology" ~ "PLoS Comp. Bio.",
+    journal=="Nature Communications" ~ "Nature Comm.",
+    TRUE ~ journal
+  )
+  ) %>%
   dplyr::group_by(journal) %>%
   dplyr::mutate(reviews = dplyr::n()) %>%
   dplyr::ungroup() %>%
@@ -243,27 +249,8 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 
 ```{r peer_reviews}
 # Format reviews table
-formattable(peer_reviews, list(
-  reviews = color_bar("lightgreen", fun = "normalize")
-  ))
+formattable(peer_reviews)
 ```
-
-<br></br>
-
-<br></br>
-
-**Referees** 
-
-- <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
-
-- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
-
-- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
-
-- <i class="fas fa-user-astronaut"></i> Supervisee: 
-Serene Dhawan, 
-Princeton, PhD student, 
-[serenedhawan @gmail.com](serenedhawan@gmail.com])
 
 :::
 
@@ -308,7 +295,7 @@ print_text_block(CV, 'publications')
 # Format publication table
 formattable(publications[1:15,], list(
   position = FALSE, # color_bar("lightgreen", fun = "normalize"),
-  cites = color_bar("coral", fun = function(x) min(c(x,100))/100),
+  cites = FALSE, #color_bar("coral", fun = function(x) min(c(x,100))/100),
   IF = FALSE, # color_bar("lightblue", fun = "normalize"),
   number = FALSE,
   cid = FALSE,
@@ -327,6 +314,23 @@ formattable(publications[16:nrow(publications),], list(
   cid = FALSE,
   pubid = FALSE))
 ```
+
+::: aside
+
+**Referees** 
+
+- <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
+
+- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
+
+- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
+
+- <i class="fas fa-user-astronaut"></i> Supervisee: 
+Serene Dhawan, 
+Princeton, PhD student, 
+[serenedhawan @gmail.com](serenedhawan@gmail.com])
+
+:::
 
 Selected Talks {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------

@@ -35,7 +35,7 @@ sup {
 
 /* Customize some of the sizing variables */
 :root {
-  --sidebar-width: 9rem; /* Shrink sidebar width  */
+  --sidebar-width: 7rem; /* Shrink sidebar width  */
   --sidebar-background-color: #f7fbff; /* Make sidebar blue */
   --sidebar-horizontal-padding: 0.1in; /* Reduce sidebar padding */
   --decorator-outer-dim: 10px; /* Make position deliniating circles larger */
