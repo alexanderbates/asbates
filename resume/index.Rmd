@@ -305,7 +305,7 @@ print_text_block(CV, 'publications')
 # Format publication table
 formattable(publications, list(
   position = FALSE, # color_bar("lightgreen", fun = "normalize"),
-  cites = color_bar("coral", fun = "normalize"),
+  cites = color_bar("coral", fun = function(x) x/100),
   IF = FALSE, # color_bar("lightblue", fun = "normalize"),
   number = FALSE,
   cid = FALSE,
