@@ -1,66 +1,233 @@
+/*
+ * custom.css - Personalized overrides for the CV template
+ * This file overrides styles from dd_cv.css and adds custom styling
+ */
+
 @import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Montserrat&display=swap');
 
-/* Give headers playfair font */
+/*
+ * Override header fonts from dd_cv.css
+ * Changes h1 from Playfair Display to Lexend Deca
+ * Applied to main header at top of CV
+ */
 h1 {
-font-family: 'Lexend Deca', sans-serif;
-color: #DBCB9F;
+  font-family: 'Lexend Deca', sans-serif;
+  color: #DBCB9F; /* Gold color for main title */
+  font-size: 1.8rem; /* Reduced from default for smaller text */
 }
 
-
+/*
+ * Override sidebar background color from dd_cv.css
+ * Changes sidebar from blue (#f7fbff) to gold (#DBCB9F)
+ */
 :root {
-  --sidebar-background-color: #DBCB9F; /* Make sidebar blue */
+  --sidebar-width: 7rem; /* Reduced from 11rem to make text more flush with sidebar */
+  --sidebar-background-color: #DBCB9F; /* Make sidebar gold */
 }
 
-
-h2{
+/*
+ * Override h2 from dd_cv.css
+ * Changes from Playfair Display to Montserrat
+ * Applied to section headers (PROFESSIONAL EXPERIENCE, EDUCATION, etc.)
+ */
+h2 {
   font-family: 'Montserrat', sans-serif;
- 	font-weight: 400;
-	font-size: 1.1rem;
-	color: #555;
-	text-transform: uppercase;
-	page-break-after: avoid;
+  font-weight: 400;
+  font-size: 0.7rem; /* Further reduced from 1rem for smaller text */
+  color: #555;
+  text-transform: uppercase;
+  page-break-after: avoid; /* Prevents page breaks right after section headers */
+  margin-top: 0.8rem; /* Reduced top margin */
+  margin-bottom: 0.2rem; /* Reduced bottom margin */
 }
 
-
-h3{
-    font-family: 'Montserrat', sans-serif;
-  	font-weight: 500;
-  	color: #B80068;
+/*
+ * Override h3 from dd_cv.css
+ * Changes from Playfair Display to Montserrat
+ * Applied to subsection titles (job titles, degree names, etc.)
+ */
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #88816f; /* Earth tone accent color */
+  font-size: 0.5rem; /* Further reduced for smaller text */
+  margin-top: 0.2rem; /* Minimized top margin */
+  margin-bottom: 0.1rem; /* Minimized bottom margin */
 }
 
-
+/*
+ * Link styling
+ * Applied to all hyperlinks in the document
+ */
 a {
-	color: #800080;
-
+  color: #88816f; /* Purple link color */
 }
 
+/* Hover effect for links */
 a:hover {
-	text-decoration: underline dotted;
-
-
+  text-decoration: underline dotted;
 }
 
+/*
+ * Make sidebar text use available width more efficiently
+ */
+.aside {
+  text-align: left; /* Align text to the left */
+  word-wrap: break-word; /* Allow long words to break */
+  word-break: normal; /* Break words at appropriate points */
+  letter-spacing: -0.02em; /* Further tighten letter spacing for narrower sidebar */
+  font-stretch: condensed; /* Use condensed font for more compact text */
+}
 
+/* Adjust sidebar skill bar spacing */
+.skill-bar {
+  margin-top: 0.03rem !important;
+  margin-bottom: 0.03rem !important;
+  padding: 0.03rem 0.1rem !important;
+  font-size: 0.5rem !important; /* Smaller text for skill bars */
+}
+
+/* Make sidebar lists more compact */
+.aside li {
+  margin-bottom: 0.03rem; /* Further reduce space between list items */
+  margin-top: 0.03rem;
+  line-height: 1.1; /* Tighter line height for list items */
+}
+
+/* Optimize sidebar section spacing */
+.aside section {
+  margin-bottom: 0.4rem; /* Further reduce spacing between sidebar sections */
+  padding-top: 0.1rem;
+  padding-bottom: 0;
+}
+
+/* Make sidebar headings more compact */
+.aside h1, .aside h2, .aside h3 {
+  margin-top: 0.15rem;
+  margin-bottom: 0.05rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1;
+  font-size: 0.7rem; /* Smaller heading size for narrower sidebar */
+  letter-spacing: -0.02em; /* Tighten letter spacing */
+}
+
+/*
+ * Override aside ul padding from dd_cv.css
+ * Minimizes padding to make text flush with sidebar edges
+ * Controls list indentation in the sidebar to maximize text width
+ */
 .aside ul {
-	padding-left: 0.2rem;
+  padding-left: 0.01rem;
+  padding-right: 0.05rem;
+  margin-left: 0;
+  margin-right: 0;
 }
 
+/*
+ * Override decorator color from dd_cv.css
+ * Changes timeline dots from blue (#08306b) to pink (#B80068)
+ * Controls the colored dots in the timeline
+ */
 .decorator::after {
-	background-color: #B80068;
+  background-color: #88816f;
 }
 
-b::title{
-  	color: #B80068;
-	font-weight: 600;
+/*
+ * Title styling for bold text
+ * Used for emphasizing specific text in titles
+ */
+b::title {
+  color: #88816f; /* Pink accent color */
+  font-weight: 600;
 }
 
-
+/*
+ * Title text alignment
+ * Controls alignment of title text blocks
+ */
 p::title {
-
-	text-align: justify;
+  text-align: justify;
 }
 
-
+/*
+ * Page break control
+ * Applied to elements that should force a page break after them
+ * Used in index.Rmd with: <div class="break-after-me"></div>
+ */
 .break-after-me {
   break-after: page;
+}
+
+/* Make main content more compact */
+.main-block {
+  margin-top: 0.2rem; /* Reduced from default */
+  margin-bottom: 0.2rem; /* Reduced from default */
+}
+
+/* Make paragraphs in main content more compact and smaller */
+p {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.5rem !important; /* Force smaller text size for paragraphs */
+}
+
+/* Make details text smaller - this targets the actual content text in timeline entries */
+.details {
+  font-size: 0.5rem !important; /* Force smaller text for all detail elements */
+}
+
+/* Ensure all text in main content area is smaller */
+.main-block {
+  font-size: 0.5rem !important; /* Force smaller text for main content */
+}
+
+/* Make bullet points in main content more compact */
+ul {
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+  padding-left: 1rem; /* Reduced indentation */
+  font-size: 0.5rem !important; /* Force smaller text for lists */
+}
+
+li {
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+  line-height: 1.1; /* Tighter line height for bullets */
+  font-size: 0.5rem !important; /* Force smaller text for list items */
+}
+
+/* Make tables more compact */
+table {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  font-size: 0.75rem !important; /* Increased from 0.5rem but still smaller than main text */
+}
+
+/* Make place entries (institutions, job titles) smaller */
+.place {
+  font-size: 0.5rem !important; /* Force smaller text size */
+}
+
+/* Make timeline more compact */
+.timeline {
+  margin-left: 0.5rem; /* Reduce left margin of timeline */
+}
+
+/* Make entries more compact */
+.blocks {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+/* Reduce space between date entries in timeline */
+.date {
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+  font-size: 0.75rem !important; /* Increased from 0.5rem but still smaller than regular text */
+}
+
+/* Force all text to be smaller regardless of element */
+* {
+  font-size: 0.5rem; /* Base size for all elements unless specifically overridden */
 }

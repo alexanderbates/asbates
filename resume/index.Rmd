@@ -161,6 +161,48 @@ if(params$pdf_mode){
 ```{r contact_info}
 CV$contact_info %>% glue_data("- <i class='{icon}'></i> {contact}")
 ```
+
+<br></br>
+
+<br></br>
+
+**Peer Reviews**
+
+```{r peer_reviews}
+# Format reviews table
+formattable(peer_reviews)
+```
+
+<br></br>
+
+<br></br>
+
+**Skills**
+
+```{r skill_bar}
+# print_skill_bars(CV)
+# p <-ggplot(data=CV$skills, aes(x=skill, y=level)) +
+#   geom_bar(stat="identity", fill="#4D4D4D")+
+#   coord_flip() + 
+#   theme(
+#     axis.title.y = element_blank(),
+#     axis.title.x = element_blank(),
+#     axis.text.y = element_text(size=20, face="bold", colour = "#4D4D4D", family = "sans"),
+#     axis.text.x=element_blank(),
+#     axis.ticks.y=element_blank(),
+#     axis.ticks.x=element_blank(),
+#     panel.background = element_rect(fill = "transparent"), # bg of the panel
+#     plot.background = element_rect(fill = "transparent", color = NA), # bg of the plot
+#     panel.grid.major = element_blank(), # get rid of major grid
+#     panel.grid.minor = element_blank(), # get rid of minor grid
+#     legend.background = element_rect(fill = "transparent"), # get rid of legend bg
+#     legend.box.background = element_rect(fill = "transparent") # get rid of legend panel bg
+#   )
+# ggsave(p, filename = "skills.png",  bg = "transparent", units = "cm", height = 25, width = 15)
+# cat("![skills](skills.png)")
+CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
+```
+
 <br></br>
 
 <br></br>
@@ -215,46 +257,6 @@ Grants {data-icon=connectdevelop data-concise=true}
 CV %<>% print_section('grants')
 ```
 
-::: aside
-
-**Skills**
-
-```{r skill_bar}
-# print_skill_bars(CV)
-# p <-ggplot(data=CV$skills, aes(x=skill, y=level)) +
-#   geom_bar(stat="identity", fill="#4D4D4D")+
-#   coord_flip() + 
-#   theme(
-#     axis.title.y = element_blank(),
-#     axis.title.x = element_blank(),
-#     axis.text.y = element_text(size=20, face="bold", colour = "#4D4D4D", family = "sans"),
-#     axis.text.x=element_blank(),
-#     axis.ticks.y=element_blank(),
-#     axis.ticks.x=element_blank(),
-#     panel.background = element_rect(fill = "transparent"), # bg of the panel
-#     plot.background = element_rect(fill = "transparent", color = NA), # bg of the plot
-#     panel.grid.major = element_blank(), # get rid of major grid
-#     panel.grid.minor = element_blank(), # get rid of minor grid
-#     legend.background = element_rect(fill = "transparent"), # get rid of legend bg
-#     legend.box.background = element_rect(fill = "transparent") # get rid of legend panel bg
-#   )
-# ggsave(p, filename = "skills.png",  bg = "transparent", units = "cm", height = 25, width = 15)
-# cat("![skills](skills.png)")
-CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
-```
-
-<br></br>
-
-<br></br>
-
-**Peer Reviews**
-
-```{r peer_reviews}
-# Format reviews table
-formattable(peer_reviews)
-```
-
-:::
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -276,6 +278,25 @@ formattable(reviews, list(
   cid = FALSE,
   pubid = FALSE))
 ```
+
+::: aside
+
+**Referees** 
+
+- <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
+
+- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
+
+- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
+
+- <i class="fas fa-user-astronaut"></i> Supervisee: 
+Serene Dhawan, 
+Princeton, PhD student, 
+[serenedhawan @gmail.com](serenedhawan@gmail.com])
+
+<br></br>
+
+:::
 
 Papers {data-icon=book}
 --------------------------------------------------------------------------------
@@ -316,23 +337,6 @@ formattable(publications[16:nrow(publications),], list(
   cid = FALSE,
   pubid = FALSE))
 ```
-
-::: aside
-
-**Referees** 
-
-- <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
-
-- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
-
-- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
-
-- <i class="fas fa-user-astronaut"></i> Supervisee: 
-Serene Dhawan, 
-Princeton, PhD student, 
-[serenedhawan @gmail.com](serenedhawan@gmail.com])
-
-:::
 
 Selected Talks {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
