@@ -148,16 +148,6 @@ cat("![logo](asb_logo_round.png)")
 # Add plotly brain??
 ```
 
-```{r pdf_mode}
-# if(params$pdf_mode){
-#    cat("View this resume online with links at asbates.com/CV")
-#  } else {
-#    cat("<i class='fas fa-download'></i> [download this resume](https://github.com/alexanderbates/asbates/raw/main/resume/index.pdf)")
-# }
-```
-
-<br></br>
-
 **Media**
 
 ```{r contact_info}
@@ -361,7 +351,7 @@ Other {data-icon=share-alt}
 CV %<>% print_section('experience')
 ```
 
-Peer Reviews {data-icon=chalkboard-teacher}
+Peer Reviews {data-icon=eye}
 --------------------------------------------------------------------------------
 
 ```{r peer_reviews}

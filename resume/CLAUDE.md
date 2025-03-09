@@ -32,59 +32,60 @@ The CV styling is controlled by two CSS files and their application to the index
 | `.place` | Institution names | Formats workplace and institution entries |
 | `.blocks` | Content grouping | Controls spacing and layout of content blocks |
 
-## Current CV Formatting Issues
+## Current CV Formatting Issues (Updated Analysis)
 
-### Spacing Issues
-1. **Line spacing too tight**
-   - Text lines are excessively compressed (line-height: 0.9)
-   - Bullet points have almost no vertical separation
-   - Content appears cramped, particularly in lists
+### Spacing and Alignment Issues
+1. **Sidebar alignment**
+   - Sidebar content starts too low compared to main content
+   - Excessive vertical padding at the top of the sidebar
+   - Poor alignment with main content headings
 
-2. **Inconsistent section spacing**
-   - Too much vertical space between major sections (PROFESSIONAL RESEARCH, EDUCATION, etc.)
-   - Timeline entries have disproportionate spacing between titles and details
-   - Blocks of related content need more consistent margins
+2. **Line spacing improvements needed**
+   - Current line-height of 1.15 is better but could be optimized further
+   - Bullet points need slightly more vertical separation
+   - Content appears somewhat cramped in detailed lists
 
-3. **Text size imbalances**
-   - Section headers (h2) are oversized compared to content text (0.7rem vs 0.5rem)
-   - Body text size (0.5rem) is too small for comfortable reading
-   - Inconsistent text sizing between different content types
+3. **Section spacing refinement**
+   - Major sections (PROFESSIONAL RESEARCH, EDUCATION) still have slightly too much spacing
+   - Timeline entries need more consistent spacing
+   - Need better vertical rhythm throughout document
 
-### Visual Hierarchy Problems
-1. **Section headers too prominent**
-   - GRANTS, PAPERS, etc. headings are disproportionately large
-   - Creates imbalance between headers and content
-   - Heading font weight makes them dominate the page
+### Text Size Hierarchy
+1. **Title text issues**
+   - Non-main titles are still slightly too large (0.6rem)
+   - Timeline titles (0.52rem) need better visual hierarchy
+   - Need clearer differentiation between section titles and content
 
-2. **Poor content differentiation**
-   - Difficult to distinguish between different types of entries
-   - Subsection titles don't stand out sufficiently from body text
-   - Employment dates and locations blend with other content
+2. **Table text readability**
+   - Publication tables still have compressed text (0.45rem)
+   - Need better balance between space efficiency and readability
+   - Citation metrics need better visual distinction
 
-3. **Timeline visualization issues**
-   - Timeline dots are too small (8px) and get lost in the dense content
-   - Vertical connector line needs better spacing
-   - Date entries have inconsistent alignment
+3. **Timeline visualization**
+   - Timeline dots (8px) blend with content
+   - Need better visual emphasis for timeline connectors
+   - More consistent alignment of date entries needed
 
-### Content Formatting Issues
-1. **Table formatting problems**
-   - Tables in the "PAPERS" section have compressed text with poor readability
-   - Column alignment issues in tables
-   - Citation metrics difficult to read
+### Current Visual Structure Problems
+1. **Content differentiation**
+   - Need better visual cues to distinguish content types
+   - Employment dates and locations need more emphasis
+   - Need clearer hierarchy between different entry types
 
-2. **Text overflow concerns**
-   - Publication titles with awkward line breaks
-   - Author lists truncated inconsistently
-   - Some content runs close to right margin
+2. **Section header balance**
+   - Section headers (0.6rem) still slightly oversized relative to content
+   - Need better vertical spacing before/after headers
+   - Font weight makes headers stand out too much
 
-3. **Uneven page distribution**
-   - Content appears unevenly distributed across pages
-   - Some pages appear more dense than others
+3. **Sidebar formatting**
+   - Skills section text is difficult to read at 0.5rem
+   - Contact information appears compressed
+   - Need better spacing between sidebar sections
 
-## Technical Style Problems
+## Technical Style Problems (Updated)
 
 1. **CSS specificity conflicts**
-   - Excessive use of !important flags (necessary but indicates potential structure issues)
+   - Still using many !important flags (necessary but indicates structure issues)
    - Competing style rules between dd_cv.css and custom.css
    - Targeting of specific elements could be more efficient
 
@@ -96,28 +97,45 @@ The CV styling is controlled by two CSS files and their application to the index
    - Heavy reliance on fixed margins rather than flexible spacing
    - Limited use of container-based spacing
 
-## Recommendations for Current Issues
+## Recent Improvements Made
 
-1. **Fix line spacing**
-   - Increase line-height values from 0.9 to 1.1-1.2 for readability
-   - Restore moderate spacing between bullet points
+1. **Reduced section title sizes**
+   - Reduced h2 size from 0.65rem to 0.6rem
+   - Improved timeline title size from 0.48rem to 0.52rem
+   - Added font-weight:500 to timeline titles for better emphasis
 
-2. **Balance section spacing**
-   - Reduce margins between major sections
-   - Standardize spacing between all related elements
-   - Create consistent vertical rhythm
+2. **Improved table formatting**
+   - Increased main table font size from 0.4rem to 0.45rem
+   - Increased cell padding from 0.02/0.04rem to 0.04/0.06rem
+   - Improved line height from 1.1 to 1.15 for better readability
 
-3. **Improve text size hierarchy**
-   - Reduce section header (h2) size
-   - Slightly increase body text size for readability
-   - Maintain clear size differentiation between heading levels
+3. **Fixed sidebar alignment**
+   - Removed unnecessary breaks in Rmd file
+   - Removed top margin/padding from sidebar elements
+   - Improved first section alignment in sidebar
 
-4. **Enhance visual structure**
-   - Better distinguish section headers from content
-   - Improve timeline visualization with better spacing
-   - Create clearer visual separation between content types
+4. **Added proper eye icon**
+   - Updated Peer Reviews section icon from chalkboard-teacher to eye
+   - Better semantic representation of the content
 
-5. **Optimize table formatting**
-   - Improve readability of publication tables
-   - Standardize column widths and alignment
-   - Enhance citation metric display
+## Remaining Recommendations
+
+1. **Further refine spacing**
+   - Consider increasing line-height to 1.2 for optimal readability
+   - Add slight padding between bullet points
+   - Create more consistent vertical rhythm
+
+2. **Improve visual hierarchy**
+   - Further adjust section header (h2) size or weight
+   - Enhance timeline visualization with better connector styling
+   - Create clearer visual distinction between entry types
+
+3. **Optimize table formatting**
+   - Continue refining publication table readability
+   - Consider adding subtle alternating row styling
+   - Enhance citation metric visual presentation
+
+4. **Sidebar improvements**
+   - Further refine sidebar spacing and alignment
+   - Consider adjusting sidebar width or padding
+   - Improve contrast and readability of sidebar content

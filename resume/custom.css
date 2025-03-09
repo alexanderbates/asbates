@@ -35,11 +35,11 @@ h1 {
 h2, h2:hover, h2:focus, h2:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 0.65rem; /* Reduced section header size */
+  font-size: 0.6rem; /* Reduced section header size */
   color: #555;
   text-transform: uppercase;
   page-break-after: avoid; /* Prevents page breaks right after section headers */
-  margin-top: 0.6rem; /* Further reduced top margin to decrease section spacing */
+  margin-top: 0.55rem; /* Reduced top margin to decrease section spacing */
   margin-bottom: 0.15rem; /* Adjusted bottom margin */
   letter-spacing: 0.02em; /* Slightly increase letter spacing for readability */
 }
@@ -260,23 +260,23 @@ table {
 
 /* Target only main content tables, not sidebar tables */
 .main-block table, .details table {
-  font-size: 0.4rem !important;
+  font-size: 0.45rem !important; /* Slightly increased for better readability */
 }
 
 /* Ensure sidebar tables are not affected */
 .aside table {
-  font-size: 0.55rem !important; /* Keep consistent with other sidebar text */
+  font-size: 0.5rem !important; /* Smaller text consistent with sidebar */
 }
 
 /* Make table cells more compact */
 td, th {
-  padding: 0.02rem 0.04rem !important; /* Minimal padding for table cells */
-  line-height: 1.1 !important; /* Tighter line height for table content */
+  padding: 0.04rem 0.06rem !important; /* Slightly more padding for better readability */
+  line-height: 1.15 !important; /* Slightly increased line height for better readability */
 }
 
 /* Main content table cells only */
 .main-block td, .main-block th, .details td, .details th {
-  font-size: 0.51rem !important; /* Even smaller font for table cells */
+  font-size: 0.47rem !important; /* Slightly smaller than regular text but readable */
 }
 
 /* Links in different contexts */
@@ -339,22 +339,23 @@ h1:hover {
 /* Timeline section headers */
 .timeline h2, .timeline h2:focus, .timeline h2:active,
 .details h2, .details h2:focus, .details h2:active {
-  font-size: 0.65rem !important; /* Consistent with main h2 */
+  font-size: 0.6rem !important; /* Reduced for better proportion */
 }
 
 .timeline h2:hover, .details h2:hover {
-  font-size: 0.65rem !important; /* Consistent with main h2 */
+  font-size: 0.6rem !important; /* Reduced for better proportion */
   color: #ebb7a1 !important; /* New hover color */
 }
 
 /* Timeline entry titles */
 .timeline h3, .timeline h3:focus, .timeline h3:active,
 .details h3, .details h3:focus, .details h3:active {
-  font-size: 0.48rem !important; /* Reduced size for timeline titles */
+  font-size: 0.52rem !important; /* Increased slightly for better readability */
+  font-weight: 500 !important; /* Make timeline titles slightly bolder */
 }
 
 .timeline h3:hover, .details h3:hover {
-  font-size: 0.48rem !important; /* Reduced size for timeline titles */
+  font-size: 0.52rem !important; /* Increased slightly for better readability */
   color: #ebb7a1 !important; /* New hover color */
 }
 
