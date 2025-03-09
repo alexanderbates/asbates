@@ -40,9 +40,11 @@ sup {
 }
 
 * {
-  /* Override default right margin for sidebar*/
-  --pagedjs-margin-right: 0.03in; /* Further reduced from 0.05in for tighter margins */
-  --pagedjs-margin-left: 0.03in; /* Further reduced from 0.05in for tighter margins */
+  /* Reduce page margins */
+  --pagedjs-margin-right: 0.01in; /* Reduced for tighter margins */
+  --pagedjs-margin-left: 0.01in; /* Reduced for tighter margins */
+  --pagedjs-margin-top: 0.1in; /* Reduced top margin */
+  --pagedjs-margin-bottom: 0.1in; /* Reduced bottom margin */
 }
 
 /* Customize some of the sizing variables */

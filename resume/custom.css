@@ -12,7 +12,7 @@
  */
 h1 {
   font-family: 'Lexend Deca', sans-serif;
-  color: #DBCB9F; /* Gold color for main title */
+  color: #e2d5b2; /* Gold color for main title */
   font-size: 1rem; /* Reduced from default for smaller text */
   margin-top: 0; /* Remove top margin to align with top */
   padding-top: 0; /* Remove top padding */
@@ -20,11 +20,11 @@ h1 {
 
 /*
  * Override sidebar background color from dd_cv.css
- * Changes sidebar from blue (#f7fbff) to gold (#DBCB9F)
+ * Changes sidebar from blue (#f7fbff) to gold (#e2d5b2)
  */
 :root {
-  --sidebar-width: 6.5rem; /* Reduced from 11rem to make text more flush with sidebar */
-  --sidebar-background-color: #DBCB9F; /* Make sidebar gold */
+  --sidebar-width: 8rem; /* Reduced from 11rem to make text more flush with sidebar */
+  --sidebar-background-color: #e2d5b2; /* Make sidebar gold */
 }
 
 /*
@@ -35,7 +35,7 @@ h1 {
 h2, h2:hover, h2:focus, h2:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 0.6rem; /* Reduced section header size */
+  font-size: 1.75rem; /* Reduced section header size */
   color: #555;
   text-transform: uppercase;
   page-break-after: avoid; /* Prevents page breaks right after section headers */
@@ -78,14 +78,20 @@ a:hover {
  * Make sidebar text use available width more efficiently
  */
 .aside {
-  text-align: left; /* Align text to the left */
+  text-align: center; /* Center text in sidebar */
   word-wrap: break-word; /* Allow long words to break */
   word-break: normal; /* Break words at appropriate points */
-  letter-spacing: -0.02em; /* Further tighten letter spacing for narrower sidebar */
+  letter-spacing: -0.01em; /* Slightly looser letter spacing for better readability */
   font-stretch: condensed; /* Use condensed font for more compact text */
   font-size: 0.5rem; /* Smaller sidebar text */
   margin-top: 0; /* Remove any default top margin */
   padding-top: 0; /* Remove any default top padding */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  padding-right: 0.25rem;
+  padding-left: 0rem;
+  margin: 0;
 }
 
 /* Adjust sidebar skill bar spacing */
@@ -98,16 +104,37 @@ a:hover {
 
 /* Make sidebar lists more compact */
 .aside li {
-  margin-bottom: 0.03rem; /* Further reduce space between list items */
-  margin-top: 0.03rem;
-  line-height: 1.1; /* Tighter line height for list items */
+  margin-bottom: 0.05rem; /* Slightly increased for better readability */
+  margin-top: 0.05rem; /* Slightly increased for better readability */
+  line-height: 1.15; /* Slightly increased line height for better readability */
+  text-align: left; /* Left-align text in list items for better readability */
+  display: block; /* Ensure proper block display */
+  width: 90%; /* Reduced width for better right margin */
+  margin-left: auto; /* Center alignment */
+  margin-right: auto; /* Center alignment */
+  padding-right: 0.25rem;
+  padding-left: 0rem;
+  margin: 0;
+}
+
+/* Center sidebar image */
+.aside img {
+  display: block; /* Make image a block element */
+  margin: 0 auto; /* Center the image */
+  max-width: 85%; /* Limit width for better proportions */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Optimize sidebar section spacing */
 .aside section {
-  margin-bottom: 0.4rem; /* Further reduce spacing between sidebar sections */
+  margin-bottom: 0.3rem; /* Reduce spacing between sidebar sections */
   padding-top: 0;
   padding-bottom: 0;
+  width: 85%; /* Reduced width for more margin space */
+  margin-left: auto; /* Center the section */
+  margin-right: auto; /* Center the section */
+  text-align: center; /* Center content */
+  padding-right: 0.3rem; /* Add extra padding on the right side */
 }
 
 /* First section in sidebar should align with top */
@@ -116,36 +143,58 @@ a:hover {
   padding-top: 0;
 }
 
+/* Add space below logo */
+.aside p img {
+  margin-bottom: 0.2rem;
+}
+
+/* Style paragraph text in sidebar */
+.aside p {
+  width: 90%; /* Reduced width for better margins */
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0.2rem; /* Extra right padding */
+  text-align: center; /* Center text */
+}
+
 /* Make sidebar headings more compact */
 .aside h1, .aside h2, .aside h3 {
-  margin-top: 0.15rem;
-  margin-bottom: 0.05rem;
+  margin-top: 0.2rem; /* Slightly increased top margin for better spacing */
+  margin-bottom: 0.1rem; /* Increased bottom margin to separate from content */
   padding-top: 0;
   padding-bottom: 0;
-  line-height: 1;
-  font-size: 0.7rem; /* Smaller heading size for narrower sidebar */
-  letter-spacing: -0.02em; /* Tighten letter spacing */
+  line-height: 1.1; /* Slightly increased line height */
+  font-size: 0.6rem; /* Reduced size for better proportion */
+  letter-spacing: 0.01em; /* Slightly increased letter spacing for better readability */
+  font-weight: 500; /* Make headings slightly bolder */
+  border-bottom: 1px solid rgba(136, 129, 111, 0.2); /* Add subtle border for emphasis */
+  display: inline-block; /* Make border only as wide as text */
+  padding-bottom: 0.05rem; /* Add space between text and border */
 }
 
 /*
  * Override aside ul padding from dd_cv.css
- * Minimizes padding to make text flush with sidebar edges
- * Controls list indentation in the sidebar to maximize text width
+ * Adds proper padding for sidebar lists
+ * Controls list indentation in the sidebar
  */
 .aside ul {
-  padding-left: 0.01rem;
-  padding-right: 0.05rem;
-  margin-left: 0;
-  margin-right: 0;
+  padding-left: 0.05rem;
+  padding-right: 0.2rem; /* Increased right padding */
+  margin-left: 0.05rem;
+  margin-right: 0.15rem; /* Increased right margin */
+  width: 90%; /* Reduced width for better spacing */
+  margin-left: auto; /* Center alignment */
+  margin-right: auto; /* Center alignment */
 }
 
 /*
  * Override decorator color from dd_cv.css
- * Changes timeline dots from blue (#08306b) to pink (#B80068)
+ * Changes timeline dots from blue (#08306b) to earth tone (#88816f)
  * Controls the colored dots in the timeline
  */
 .decorator::after {
   background-color: #88816f;
+  /* Keep original sizing to maintain alignment */
 }
 
 /*
@@ -178,13 +227,12 @@ p::title {
 
 /* Make main content more compact while maintaining readability */
 .main-block {
-  margin-top: 0; /* Remove top margin to align with sidebar */
-  margin-bottom: 0.15rem; /* Further reduced spacing between main blocks */
+  margin-bottom: 0.15rem; /* Reduced spacing between main blocks */
 }
 
 /* First main block should align with top */
 .main-block:first-child {
-  margin-top: 0;
+  margin-top: 0 !important; /* Force top margin removal for first block */
   padding-top: 0;
 }
 
@@ -193,7 +241,7 @@ p {
   margin-top: 0.05rem;
   margin-bottom: 0.05rem;
   font-size: 0.52rem !important; /* Slightly increased from 0.5rem for readability */
-  line-height: 1.15 !important; /* Better line height for paragraph text */
+  line-height: 1.2 !important; /* Improved line height for optimal readability */
 }
 
 /* Make details text smaller - this targets the actual content text in timeline entries */
@@ -208,11 +256,11 @@ p {
 
 /* Make timeline details properly spaced */
 .details p {
-  margin-top: 0.02rem !important;
-  margin-bottom: 0.02rem !important;
+  margin-top: 0.03rem !important; /* Increased for better spacing */
+  margin-bottom: 0.03rem !important; /* Increased for better spacing */
   padding-top: 0.01rem !important;
   padding-bottom: 0.01rem !important;
-  line-height: 1.15 !important; /* Increased from 0.9 for better readability */
+  line-height: 1.2 !important; /* Improved for optimal readability */
 }
 
 /* Make bullet points in main content properly spaced */
@@ -234,21 +282,21 @@ ul {
 }
 
 li {
-  margin-top: 0.03rem !important;
-  margin-bottom: 0.03rem !important;
-  line-height: 1.15 !important; /* Increased from 1.0 for better readability */
+  margin-top: 0.05rem !important; /* Increased spacing between list items */
+  margin-bottom: 0.05rem !important; /* Increased spacing between list items */
+  line-height: 1.2 !important; /* Improved line height for optimal readability */
   font-size: 0.52rem !important; /* Slightly increased text size for readability */
-  padding-top: 0.01rem !important;
-  padding-bottom: 0.01rem !important;
+  padding-top: 0.02rem !important; /* Added more padding for better separation */
+  padding-bottom: 0.02rem !important; /* Added more padding for better separation */
 }
 
 /* Target list items specifically in timeline sections */
 .timeline li, .details li {
-  margin-top: 0.02rem !important;
-  margin-bottom: 0.02rem !important;
+  margin-top: 0.04rem !important; /* Increased for better spacing */
+  margin-bottom: 0.04rem !important; /* Increased for better spacing */
   padding-top: 0.01rem !important;
   padding-bottom: 0.01rem !important;
-  line-height: 1.15 !important; /* Increased from 0.9 for better readability */
+  line-height: 1.2 !important; /* Improved for optimal readability */
 }
 
 /* Make tables more compact */
@@ -277,6 +325,21 @@ td, th {
 /* Main content table cells only */
 .main-block td, .main-block th, .details td, .details th {
   font-size: 0.47rem !important; /* Slightly smaller than regular text but readable */
+}
+
+/* Add subtle alternating row styling for tables */
+.main-block tr:nth-child(even), .details tr:nth-child(even) {
+  background-color: rgba(219, 203, 159, 0.05); /* Very subtle gold tint */
+}
+
+/* Add subtle border to tables */
+.main-block table, .details table {
+  border-collapse: collapse;
+}
+
+.main-block th, .details th {
+  border-bottom: 1px solid rgba(136, 129, 111, 0.2); /* Subtle bottom border for headers */
+  font-weight: 500; /* Slightly bolder headers */
 }
 
 /* Links in different contexts */
@@ -324,6 +387,10 @@ a:hover {
 .place {
   font-size: 0.55rem !important; /* Increased for better readability */
   font-weight: 500; /* Make institution names slightly bolder */
+  color: #5a5548; /* Darker color for better emphasis */
+  letter-spacing: 0.01em; /* Slightly increased letter spacing */
+  margin-top: 0.05rem !important; /* Add space above */
+  margin-bottom: 0.05rem !important; /* Add space below */
 }
 
 /* Ensure consistent heading styles across all contexts */
@@ -337,9 +404,9 @@ h1:hover {
 }
 
 /* Timeline section headers */
-.timeline h2, .timeline h2:focus, .timeline h2:active,
+h2, .timeline h2, .timeline h2:focus, .timeline h2:active,
 .details h2, .details h2:focus, .details h2:active {
-  font-size: 0.6rem !important; /* Reduced for better proportion */
+  font-size: 0.8rem !important; /* Reduced for better proportion */
 }
 
 .timeline h2:hover, .details h2:hover {
@@ -363,6 +430,9 @@ h1:hover {
 .timeline {
   margin-left: 0.3rem; /* Reduce left margin of timeline */
 }
+
+/* Timeline connector line */
+/* Removed custom styling that was causing misalignment */
 
 /* Make entries more compact but maintain readability */
 .blocks {
@@ -388,16 +458,66 @@ h3:hover {
   color: #ebb7a1 !important; /* New hover color */
 }
 
-/* Reduce space between date entries in timeline */
+/* Style date entries in timeline for better visibility */
 .date {
-  margin-top: 0.05rem;
-  margin-bottom: 0.05rem;
-  font-size: 0.75rem !important; /* Increased from 0.5rem but still smaller than regular text */
+  margin-top: 0.06rem;
+  margin-bottom: 0.06rem;
+  font-size: 0.5rem !important; /* Reduced size for better proportion */
+  font-weight: 400; /* Slightly bolder for emphasis */
+  color: #5a5548; /* Darker color for better visibility */
+  opacity: 0.95; /* Slightly more opaque */
+  letter-spacing: 0.01em; /* Slightly increased letter spacing */
 }
 
 /* Set a reasonable base size for all elements with proper hierarchy preserved through !important overrides */
 * {
   font-size: 0.55rem; /* Slightly increased from 0.5rem for better readability */
+}
+
+/* General section spacing adjustments for all timeline sections */
+section.main-block {
+  margin-top: 0.3rem !important;
+  margin-bottom: 0.3rem !important;
+}
+
+/* Make all section headers consistently sized */
+section.main-block > h1 {
+  font-size: 0.6rem !important; /* Slightly smaller than default section headers */
+  margin-bottom: 0.1rem !important;
+  letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
+}
+
+/* Make all section headers consistently sized */
+section.main-block > h2 {
+  font-size: 0.6rem !important; /* Slightly smaller than default section headers */
+  margin-bottom: 0.1rem !important;
+  letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
+}
+
+/* Make all section headers consistently sized */
+section.main-block > h3 {
+  font-size: 0.5rem !important; /* Slightly smaller than default section headers */
+  margin-bottom: 0.1rem !important;
+  letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
+}
+
+/* Enhance citation metrics display */
+.formattable_container {
+  margin-top: 0.1rem !important;
+  margin-bottom: 0.2rem !important;
+  padding: 0.05rem !important;
+  border-radius: 3px !important;
+  background-color: rgba(250, 250, 250, 0.5) !important;
+  border: 1px solid rgba(136, 129, 111, 0.1) !important;
+}
+
+.formattable_container table {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.formattable_container td {
+  font-weight: 500 !important;
+  color: #5a5548 !important;
 }
 
 /* Universal hover styling for all interactive elements */
