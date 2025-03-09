@@ -14,6 +14,8 @@ h1 {
   font-family: 'Lexend Deca', sans-serif;
   color: #DBCB9F; /* Gold color for main title */
   font-size: 1rem; /* Reduced from default for smaller text */
+  margin-top: 0; /* Remove top margin to align with top */
+  padding-top: 0; /* Remove top padding */
 }
 
 /*
@@ -82,6 +84,8 @@ a:hover {
   letter-spacing: -0.02em; /* Further tighten letter spacing for narrower sidebar */
   font-stretch: condensed; /* Use condensed font for more compact text */
   font-size: 0.5rem; /* Smaller sidebar text */
+  margin-top: 0; /* Remove any default top margin */
+  padding-top: 0; /* Remove any default top padding */
 }
 
 /* Adjust sidebar skill bar spacing */
@@ -102,8 +106,14 @@ a:hover {
 /* Optimize sidebar section spacing */
 .aside section {
   margin-bottom: 0.4rem; /* Further reduce spacing between sidebar sections */
-  padding-top: 0.1rem;
+  padding-top: 0;
   padding-bottom: 0;
+}
+
+/* First section in sidebar should align with top */
+.aside section:first-child {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Make sidebar headings more compact */
@@ -168,8 +178,14 @@ p::title {
 
 /* Make main content more compact while maintaining readability */
 .main-block {
-  margin-top: 0.15rem; /* Further reduced spacing between main blocks */
+  margin-top: 0; /* Remove top margin to align with sidebar */
   margin-bottom: 0.15rem; /* Further reduced spacing between main blocks */
+}
+
+/* First main block should align with top */
+.main-block:first-child {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Make paragraphs in main content more compact and smaller */

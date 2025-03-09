@@ -262,7 +262,7 @@ Professional Research {data-icon=microscope data-concise=true}
 CV %<>% print_section('research_projects')
 ```
 
-Grants {data-icon=connectdevelop data-concise=true}
+Fellowships {data-icon=connectdevelop data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r grants}
@@ -312,8 +312,7 @@ print_text_block(CV, 'publications')
 # Format publication table
 formattable(publications, list(
   position = FALSE, # color_bar("lightgreen", fun = "normalize"),
-  cites = color_bar("#EBB7a1", fun = "normalize"),
-  #cites = FALSE, #color_bar("coral", fun = function(x) min(c(x,100))/100),
+  cites = color_bar("#EBB7a1", fun = function(x) min(c(x,100))/100),
   IF = FALSE, # color_bar("lightblue", fun = "normalize"),
   number = FALSE,
   cid = FALSE,
