@@ -13,7 +13,7 @@
 h1 {
   font-family: 'Lexend Deca', sans-serif;
   color: #DBCB9F; /* Gold color for main title */
-  font-size: 1.8rem; /* Reduced from default for smaller text */
+  font-size: 1rem; /* Reduced from default for smaller text */
 }
 
 /*
@@ -21,7 +21,7 @@ h1 {
  * Changes sidebar from blue (#f7fbff) to gold (#DBCB9F)
  */
 :root {
-  --sidebar-width: 7rem; /* Reduced from 11rem to make text more flush with sidebar */
+  --sidebar-width: 6.5rem; /* Reduced from 11rem to make text more flush with sidebar */
   --sidebar-background-color: #DBCB9F; /* Make sidebar gold */
 }
 
@@ -30,15 +30,16 @@ h1 {
  * Changes from Playfair Display to Montserrat
  * Applied to section headers (PROFESSIONAL EXPERIENCE, EDUCATION, etc.)
  */
-h2 {
+h2, h2:hover, h2:focus, h2:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 0.7rem; /* Further reduced from 1rem for smaller text */
+  font-size: 0.65rem; /* Reduced section header size */
   color: #555;
   text-transform: uppercase;
   page-break-after: avoid; /* Prevents page breaks right after section headers */
-  margin-top: 0.8rem; /* Reduced top margin */
-  margin-bottom: 0.2rem; /* Reduced bottom margin */
+  margin-top: 0.6rem; /* Further reduced top margin to decrease section spacing */
+  margin-bottom: 0.15rem; /* Adjusted bottom margin */
+  letter-spacing: 0.02em; /* Slightly increase letter spacing for readability */
 }
 
 /*
@@ -46,11 +47,11 @@ h2 {
  * Changes from Playfair Display to Montserrat
  * Applied to subsection titles (job titles, degree names, etc.)
  */
-h3 {
+h3, h3:hover, h3:focus, h3:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #88816f; /* Earth tone accent color */
-  font-size: 0.5rem; /* Further reduced for smaller text */
+  font-size: 0.5rem; /* Adjusted for better proportion with h2 */
   margin-top: 0.2rem; /* Minimized top margin */
   margin-bottom: 0.1rem; /* Minimized bottom margin */
 }
@@ -60,12 +61,15 @@ h3 {
  * Applied to all hyperlinks in the document
  */
 a {
-  color: #88816f; /* Purple link color */
+  color: #88816f; /* Earth tone link color */
+  font-size: inherit !important; /* Ensure links match surrounding text size */
 }
 
 /* Hover effect for links */
 a:hover {
   text-decoration: underline dotted;
+  font-size: inherit !important; /* Ensure hover state matches normal state */
+  color: #EBB7a1 !important; /* New hover color */
 }
 
 /*
@@ -77,13 +81,14 @@ a:hover {
   word-break: normal; /* Break words at appropriate points */
   letter-spacing: -0.02em; /* Further tighten letter spacing for narrower sidebar */
   font-stretch: condensed; /* Use condensed font for more compact text */
+  font-size: 0.5rem; /* Smaller sidebar text */
 }
 
 /* Adjust sidebar skill bar spacing */
 .skill-bar {
   margin-top: 0.03rem !important;
   margin-bottom: 0.03rem !important;
-  padding: 0.03rem 0.1rem !important;
+  padding: 0.01rem 0.01rem !important;
   font-size: 0.5rem !important; /* Smaller text for skill bars */
 }
 
@@ -140,6 +145,7 @@ a:hover {
 b::title {
   color: #88816f; /* Pink accent color */
   font-weight: 600;
+  font-size: 1rem !important;
 }
 
 /*
@@ -148,6 +154,7 @@ b::title {
  */
 p::title {
   text-align: justify;
+  font-size: 1rem !important;
 }
 
 /*
@@ -159,65 +166,209 @@ p::title {
   break-after: page;
 }
 
-/* Make main content more compact */
+/* Make main content more compact while maintaining readability */
 .main-block {
-  margin-top: 0.2rem; /* Reduced from default */
-  margin-bottom: 0.2rem; /* Reduced from default */
+  margin-top: 0.15rem; /* Further reduced spacing between main blocks */
+  margin-bottom: 0.15rem; /* Further reduced spacing between main blocks */
 }
 
 /* Make paragraphs in main content more compact and smaller */
 p {
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
-  font-size: 0.5rem !important; /* Force smaller text size for paragraphs */
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+  font-size: 0.52rem !important; /* Slightly increased from 0.5rem for readability */
+  line-height: 1.15 !important; /* Better line height for paragraph text */
 }
 
 /* Make details text smaller - this targets the actual content text in timeline entries */
 .details {
-  font-size: 0.5rem !important; /* Force smaller text for all detail elements */
+  font-size: 0.52rem !important; /* Slightly increased from 0.5rem for readability */
 }
 
 /* Ensure all text in main content area is smaller */
 .main-block {
-  font-size: 0.5rem !important; /* Force smaller text for main content */
+  font-size: 0.52rem !important; /* Slightly increased from 0.5rem for readability */
 }
 
-/* Make bullet points in main content more compact */
+/* Make timeline details properly spaced */
+.details p {
+  margin-top: 0.02rem !important;
+  margin-bottom: 0.02rem !important;
+  padding-top: 0.01rem !important;
+  padding-bottom: 0.01rem !important;
+  line-height: 1.15 !important; /* Increased from 0.9 for better readability */
+}
+
+/* Make bullet points in main content properly spaced */
 ul {
-  margin-top: 0.05rem;
-  margin-bottom: 0.05rem;
+  margin-top: 0.03rem !important;
+  margin-bottom: 0.03rem !important;
   padding-left: 1rem; /* Reduced indentation */
-  font-size: 0.5rem !important; /* Force smaller text for lists */
+  font-size: 0.52rem !important; /* Slightly increased text size for readability */
+  padding-top: 0.01rem !important;
+  padding-bottom: 0.01rem !important;
+}
+
+/* Target lists specifically in timeline sections for better spacing */
+.timeline ul, .details ul {
+  margin-top: 0.02rem !important;
+  margin-bottom: 0.02rem !important;
+  padding-top: 0.01rem !important;
+  padding-bottom: 0.01rem !important;
 }
 
 li {
-  margin-top: 0.05rem;
-  margin-bottom: 0.05rem;
-  line-height: 1.1; /* Tighter line height for bullets */
-  font-size: 0.5rem !important; /* Force smaller text for list items */
+  margin-top: 0.03rem !important;
+  margin-bottom: 0.03rem !important;
+  line-height: 1.15 !important; /* Increased from 1.0 for better readability */
+  font-size: 0.52rem !important; /* Slightly increased text size for readability */
+  padding-top: 0.01rem !important;
+  padding-bottom: 0.01rem !important;
+}
+
+/* Target list items specifically in timeline sections */
+.timeline li, .details li {
+  margin-top: 0.02rem !important;
+  margin-bottom: 0.02rem !important;
+  padding-top: 0.01rem !important;
+  padding-bottom: 0.01rem !important;
+  line-height: 1.15 !important; /* Increased from 0.9 for better readability */
 }
 
 /* Make tables more compact */
 table {
   margin-top: 0.1rem;
   margin-bottom: 0.1rem;
-  font-size: 0.75rem !important; /* Increased from 0.5rem but still smaller than main text */
+  font-size: 0.3rem !important; /* Reduced from 0.75rem for more compact tables */
 }
 
-/* Make place entries (institutions, job titles) smaller */
+/* Target only main content tables, not sidebar tables */
+.main-block table, .details table {
+  font-size: 0.4rem !important;
+}
+
+/* Ensure sidebar tables are not affected */
+.aside table {
+  font-size: 0.55rem !important; /* Keep consistent with other sidebar text */
+}
+
+/* Make table cells more compact */
+td, th {
+  padding: 0.02rem 0.04rem !important; /* Minimal padding for table cells */
+  line-height: 1.1 !important; /* Tighter line height for table content */
+}
+
+/* Main content table cells only */
+.main-block td, .main-block th, .details td, .details th {
+  font-size: 0.51rem !important; /* Even smaller font for table cells */
+}
+
+/* Links in different contexts */
+.main-block a, .details a, .main-block a:hover, .details a:hover {
+  font-size: 0.51rem !important; /* Match smallest content text size */
+}
+
+.main-block a:hover, .details a:hover {
+  color: #ebb7a1 !important; /* Explicit hover color for main content */
+  text-decoration-color: #ebb7a1 !important; /* Colored underline */
+}
+
+table a, td a, th a, table a:hover, td a:hover, th a:hover {
+  font-size: 0.51rem !important; /* Match table cell size */
+}
+
+table a:hover, td a:hover, th a:hover {
+  color: #ebb7a1 !important; /* Explicit hover color for tables */
+  text-decoration-color: #ebb7a1 !important; /* Colored underline */
+}
+
+.aside a, .aside a:hover {
+  font-size: 0.55rem !important; /* Match sidebar text */
+}
+
+.aside a:hover {
+  color: #ebb7a1 !important; /* Explicit hover color for sidebar */
+  text-decoration-color: #ebb7a1 !important; /* Colored underline */
+}
+
+/* Override for all links to ensure consistency between normal and hover states */
+a, a:visited, a:active, a:focus {
+  font-size: 0.51rem !important; /* Use smallest size consistently */
+  text-decoration-thickness: 0.5px !important; /* Thin underline when hovering */
+}
+
+/* Set hover color for all links */
+a:hover {
+  font-size: 0.51rem !important; /* Use smallest size consistently */
+  text-decoration-thickness: 0.5px !important; /* Thin underline when hovering */
+  color: #ebb7a1 !important; /* New hover color */
+}
+
+/* Make place entries (institutions, job titles) properly sized */
 .place {
-  font-size: 0.5rem !important; /* Force smaller text size */
+  font-size: 0.55rem !important; /* Increased for better readability */
+  font-weight: 500; /* Make institution names slightly bolder */
+}
+
+/* Ensure consistent heading styles across all contexts */
+h1, h1:focus, h1:active {
+  font-size: 1rem !important; /* Consistent h1 size */
+}
+
+h1:hover {
+  font-size: 1rem !important; /* Consistent h1 size */
+  color: #ebb7a1 !important; /* New hover color */
+}
+
+/* Timeline section headers */
+.timeline h2, .timeline h2:focus, .timeline h2:active,
+.details h2, .details h2:focus, .details h2:active {
+  font-size: 0.65rem !important; /* Consistent with main h2 */
+}
+
+.timeline h2:hover, .details h2:hover {
+  font-size: 0.65rem !important; /* Consistent with main h2 */
+  color: #ebb7a1 !important; /* New hover color */
+}
+
+/* Timeline entry titles */
+.timeline h3, .timeline h3:focus, .timeline h3:active,
+.details h3, .details h3:focus, .details h3:active {
+  font-size: 0.48rem !important; /* Reduced size for timeline titles */
+}
+
+.timeline h3:hover, .details h3:hover {
+  font-size: 0.48rem !important; /* Reduced size for timeline titles */
+  color: #ebb7a1 !important; /* New hover color */
 }
 
 /* Make timeline more compact */
 .timeline {
-  margin-left: 0.5rem; /* Reduce left margin of timeline */
+  margin-left: 0.3rem; /* Reduce left margin of timeline */
 }
 
-/* Make entries more compact */
+/* Make entries more compact but maintain readability */
 .blocks {
-  margin-top: 0.1rem;
-  margin-bottom: 0.1rem;
+  margin-top: 0.08rem !important; /* Slightly increased for better spacing */
+  margin-bottom: 0.08rem !important;
+  padding-top: 0.01rem !important;
+  padding-bottom: 0.01rem !important;
+}
+
+/* Properly space timeline entry titles with their content */
+.timeline h3 {
+  margin-bottom: 0.04rem !important; /* Added minimal space */
+  padding-bottom: 0 !important;
+  margin-top: 0.1rem !important; /* Added space above entry titles */
+}
+
+/* Add global hover styles for all heading elements */
+h2:hover {
+  color: #ebb7a1 !important; /* New hover color */
+}
+
+h3:hover {
+  color: #ebb7a1 !important; /* New hover color */
 }
 
 /* Reduce space between date entries in timeline */
@@ -227,7 +378,27 @@ table {
   font-size: 0.75rem !important; /* Increased from 0.5rem but still smaller than regular text */
 }
 
-/* Force all text to be smaller regardless of element */
+/* Set a reasonable base size for all elements with proper hierarchy preserved through !important overrides */
 * {
-  font-size: 0.5rem; /* Base size for all elements unless specifically overridden */
+  font-size: 0.55rem; /* Slightly increased from 0.5rem for better readability */
+}
+
+/* Universal hover styling for all interactive elements */
+*:hover {
+  color: #ebb7a1 !important; /* New hover color with !important to ensure it's applied */
+}
+
+/* Special PDF mode styles for links */
+@media print {
+  a {
+    color: #88816f !important; /* Default link color */
+    text-decoration: none !important;
+  }
+
+  /* Add visible styling for PDF links */
+  a::after {
+    content: " ↗";
+    color: #ebb7a1 !important;
+    font-size: 0.5rem !important;
+  }
 }

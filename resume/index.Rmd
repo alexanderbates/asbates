@@ -47,7 +47,10 @@ publications$IF <- scholar::get_impactfactor(publications$journal, max.distance 
 publications$IF[is.na(publications$IF)] = 0
 publications$IF <- round(publications$IF)
 publications$author = gsub("AS Bates","**AS Bates**",publications$author)
+publications$author = gsub("A Bates","**A Bates**",publications$author)
 publications$title = paste0("<a href='","https://scholar.google.com/scholar?oi=bibs&hl=en&cites=",gsub(",.*","",publications$cid), "'>",publications$title,"</a>")
+publications$journal <- gsub("Conference","Conf.",publications$journal)
+publications$journal <- gsub("Current","Curr.",publications$journal)
 
 # Bold for first author
 first.pubids <- c("mVmsd5A6BfQC", "8k81kl-MbHgC", 
@@ -57,11 +60,9 @@ first.pubids <- c("mVmsd5A6BfQC", "8k81kl-MbHgC",
 first <- publications$pubid%in%first.pubids
 publications$position[first] <- 1
 publications$author[first] <- gsub("AS Bates", "<ins>AS Bates</ins>",publications$author[first])
+publications$author[first] <- gsub("A Bates", "<ins>A Bates</ins>",publications$author[first])
 publications <- publications[,c("title","author","journal","year","cites", "position","IF")]
 publications <- dplyr::arrange(publications, position, dplyr::desc(year))
-
-# Get DOIs
-
 
 # Separate out reviews
 revs <- c("Systems neuroscience: Auditory processing at synaptic resolution",
@@ -69,6 +70,7 @@ revs <- c("Systems neuroscience: Auditory processing at synaptic resolution",
 revs <- paste0(revs,collapse="|")
 reviews <- subset(publications, grepl(revs,title))
 publications <- subset(publications, ! grepl(revs,title))
+rownames(reviews) <- 1:nrow(reviews)
 
 # Corrections
 corr <- c("Neurotransmitter Classification from Electron Microscopy Images at Synaptic Sites in Drosophila Melanogaster")
@@ -147,11 +149,11 @@ cat("![logo](asb_logo_round.png)")
 ```
 
 ```{r pdf_mode}
-if(params$pdf_mode){
-  cat("View this resume online with links at asbates.com/CV")
-} else {
-  cat("<i class='fas fa-download'></i> [download this resume](https://github.com/alexanderbates/asbates/raw/main/resume/index.pdf)")
-}
+# if(params$pdf_mode){
+#    cat("View this resume online with links at asbates.com/CV")
+#  } else {
+#    cat("<i class='fas fa-download'></i> [download this resume](https://github.com/alexanderbates/asbates/raw/main/resume/index.pdf)")
+# }
 ```
 
 <br></br>
@@ -160,17 +162,6 @@ if(params$pdf_mode){
 
 ```{r contact_info}
 CV$contact_info %>% glue_data("- <i class='{icon}'></i> {contact}")
-```
-
-<br></br>
-
-<br></br>
-
-**Peer Reviews**
-
-```{r peer_reviews}
-# Format reviews table
-formattable(peer_reviews)
 ```
 
 <br></br>
@@ -227,6 +218,27 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 
 <i class="fas fa-tools"></i> [bancr](https://github.com/flyconnectome/bancr) - author
 
+<br></br>
+
+<br></br>
+
+**Referees** 
+<br></br>
+<br></br>
+- <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
+<br></br>
+<br></br>
+- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
+<br></br>
+<br></br>
+- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
+<br></br>
+<br></br>
+- <i class="fas fa-user-astronaut"></i> Supervisee: 
+Serene Dhawan, 
+Princeton, PhD student, 
+[serenedhawan @gmail.com](serenedhawan@gmail.com])
+
 Main
 ================================================================================
 
@@ -272,31 +284,13 @@ Reviews {data-icon=eye}
 # Format reviews table
 formattable(reviews, list(
   position = FALSE, # color_bar("lightgreen", fun = "normalize"),
-  cites = color_bar("coral", fun = "normalize"),
+  cites = color_bar("#EBB7a1", fun = "normalize"),
   IF = FALSE, # color_bar("lightblue", fun = "normalize"),
   number = FALSE,
   cid = FALSE,
   pubid = FALSE))
 ```
 
-::: aside
-
-**Referees** 
-
-- <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
-
-- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
-
-- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
-
-- <i class="fas fa-user-astronaut"></i> Supervisee: 
-Serene Dhawan, 
-Princeton, PhD student, 
-[serenedhawan @gmail.com](serenedhawan@gmail.com])
-
-<br></br>
-
-:::
 
 Papers {data-icon=book}
 --------------------------------------------------------------------------------
@@ -316,27 +310,29 @@ print_text_block(CV, 'publications')
 ```{r publications}
 #CV %<>% print_section('publications')
 # Format publication table
-formattable(publications[1:15,], list(
+formattable(publications, list(
   position = FALSE, # color_bar("lightgreen", fun = "normalize"),
-  cites = FALSE, #color_bar("coral", fun = function(x) min(c(x,100))/100),
+  cites = color_bar("#EBB7a1", fun = "normalize"),
+  #cites = FALSE, #color_bar("coral", fun = function(x) min(c(x,100))/100),
   IF = FALSE, # color_bar("lightblue", fun = "normalize"),
   number = FALSE,
   cid = FALSE,
   pubid = FALSE))
 ```
-<br></br>
 
-```{r publications2}
-#CV %<>% print_section('publications')
-# Format publication table
-formattable(publications[16:nrow(publications),], list(
-  position = FALSE, # color_bar("lightgreen", fun = "normalize"),
-  cites = color_bar("coral", fun = function(x) min(c(x,100))/100),
-  IF = FALSE, # color_bar("lightblue", fun = "normalize"),
-  number = FALSE,
-  cid = FALSE,
-  pubid = FALSE))
-```
+<!-- <br></br> -->
+
+<!-- ```{r publications2} -->
+<!-- #CV %<>% print_section('publications') -->
+<!-- # Format publication table -->
+<!-- formattable(publications[16:nrow(publications),], list( -->
+<!--   position = FALSE, # color_bar("lightgreen", fun = "normalize"), -->
+<!--   cites = color_bar("coral", fun = function(x) min(c(x,100))/100), -->
+<!--   IF = FALSE, # color_bar("lightblue", fun = "normalize"), -->
+<!--   number = FALSE, -->
+<!--   cid = FALSE, -->
+<!--   pubid = FALSE)) -->
+<!-- ``` -->
 
 Selected Talks {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
@@ -364,6 +360,14 @@ Other {data-icon=share-alt}
 
 ```{r other}
 CV %<>% print_section('experience')
+```
+
+Peer Reviews {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r peer_reviews}
+# Format reviews table
+formattable(peer_reviews)
 ```
 
 ::: aside

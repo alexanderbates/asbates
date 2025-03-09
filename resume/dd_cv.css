@@ -10,9 +10,14 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  line-height: 1.15; /* Further reduced for even more compact spacing */
+  line-height: 1.2; /* Increased from 1.15 for better readability */
   color: #444;
-  font-size: 0.8rem !important; /* Further reduced and forced with !important */
+  font-size: 0.72rem !important; /* Adjusted for better overall proportion */
+}
+
+/* Force hover color for links in all contexts */
+a:hover, a:hover *, *:hover > a {
+  color: #ebb7a1 !important; /* Ensure hover color is applied with high specificity */
 }
 
 /* Give headers playfair font - OVERRIDDEN in custom.css for h1, h2, h3 */
@@ -59,8 +64,9 @@ sup {
 
 /* Controls spacing for detailed entries in non-concise sections */
 .main-block:not(.concise) .details div {
-  padding-top: 0.001rem; /* Reduced from 0.005rem for tighter spacing */
-  margin-bottom: 0.05rem; /* Added to reduce space between items */
+  padding-top: 0.01rem !important; /* Added minimal padding */
+  margin-bottom: 0.02rem !important; /* Added minimal margin */
+  line-height: 1.15 !important; /* Increased from 0.9 for better readability */
 }
 
 /* Laptop icon isn't centered by default which is lame */
