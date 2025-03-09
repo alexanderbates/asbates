@@ -183,6 +183,8 @@ CV$contact_info %>% glue_data("- <i class='{icon}'></i> {contact}")
 
 <i class="fas fa-tools"></i> [crantr](https://github.com/flyconnectome/crantr) - author
 
+<i class="fas fa-tools"></i> [bancr](https://github.com/flyconnectome/bancr) - author
+
 Main
 ================================================================================
 
