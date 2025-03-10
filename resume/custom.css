@@ -58,13 +58,14 @@ h1 {
 h2, h2:hover, h2:focus, h2:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 1.7rem; /* Reduced section header size */
+  font-size: 0.65rem; /* Standardized size for section headers */
   color: #555;
   text-transform: uppercase;
   page-break-after: avoid; /* Prevents page breaks right after section headers */
   margin-top: 0.55rem; /* Reduced top margin to decrease section spacing */
   margin-bottom: 0.15rem; /* Adjusted bottom margin */
   letter-spacing: 0.02em; /* Slightly increase letter spacing for readability */
+  line-height: 1.1 !important; /* Consistent line height */
 }
 
 /*
@@ -76,9 +77,10 @@ h3, h3:hover, h3:focus, h3:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #88816f; /* Earth tone accent color */
-  font-size: 0.6rem; /* Adjusted for better proportion with h2 */
+  font-size: 0.55rem; /* Reduced for consistency with other elements */
   margin-top: 0.2rem; /* Minimized top margin */
   margin-bottom: 0.1rem; /* Minimized bottom margin */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
 /*
@@ -489,23 +491,25 @@ h1:hover {
 /* Timeline section headers */
 h2, .timeline h2, .timeline h2:focus, .timeline h2:active,
 .details h2, .details h2:focus, .details h2:active {
-  font-size: 0.6rem !important; /* Reduced for better proportion */
+  font-size: 0.65rem !important; /* Consistent size for all h2 elements */
+  line-height: 1.1 !important; /* Consistent line height */
 }
 
 h2:hover, .timeline h2:hover, .details h2:hover {
-  font-size: 0.6rem !important; /* Reduced for better proportion */
+  font-size: 0.65rem !important; /* Consistent size for all h2 elements */
   color: #ebb7a1 !important; /* New hover color */
 }
 
 /* Timeline entry titles */
 h3, .timeline h3, .timeline h3:focus, .timeline h3:active,
 .details h3, .details h3:focus, .details h3:active {
-  font-size: 0.6rem !important; /* Increased slightly for better readability */
+  font-size: 0.55rem !important; /* Reduced for consistency across all h3 elements */
   font-weight: 500 !important; /* Make timeline titles slightly bolder */
+  line-height: 1.1 !important; /* Consistent line height */
 }
 
 h3:hover, .timeline h3:hover, .details h3:hover {
-  font-size: 0.6rem !important; /* Increased slightly for better readability */
+  font-size: 0.55rem !important; /* Reduced for consistency across all h3 elements */
   color: #ebb7a1 !important; /* New hover color */
 }
 
@@ -607,8 +611,16 @@ section.main-block {
  * These rules control the appearance of section headers in the timeline
  * Adjust font-size, margins, and other properties to change the look
  * ===================================================================== */
+
+/* Increase size of section header icons */
+h2::before {
+  font-size: 2rem !important; /* Larger section icons */
+  margin-right: 0.3rem !important; /* Add more space between icon and text */
+  opacity: 0.9 !important; /* Slightly more visible */
+  vertical-align: middle !important; /* Better vertical alignment */
+}
 section.main-block > h1 {
-  font-size: 0.6rem !important; /* Slightly smaller than default section headers */
+  font-size: 1rem !important; /* Consistent with other h1 elements */
   margin-top: 0.04rem !important; /* GREATLY REDUCED: This controls space above each section title */
   margin-bottom: 0.04rem !important; /* GREATLY REDUCED: This controls space below each section title */
   letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
@@ -619,7 +631,7 @@ section.main-block > h1 {
 
 /* Section header styling for h2 elements (primary section headers) */
 section.main-block > h2 {
-  font-size: 0.58rem !important; /* Slightly smaller than default section headers */
+  font-size: 0.65rem !important; /* Consistent with other h2 elements */
   margin-top: 0.03rem !important; /* GREATLY REDUCED: This controls space above each section title */
   margin-bottom: 0.03rem !important; /* GREATLY REDUCED: This controls space below each section title */
   letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
@@ -630,7 +642,7 @@ section.main-block > h2 {
 
 /* Section header styling for h3 elements (subsection titles) */
 section.main-block > h3 {
-  font-size: 0.6rem !important; /* Smaller size for subsection headers */
+  font-size: 0.55rem !important; /* Consistent size for all h3 elements */
   margin-top: 0.04rem !important; /* GREATLY REDUCED: This controls space above each subsection title */
   margin-bottom: 0.04rem !important; /* GREATLY REDUCED: This controls space below each subsection title */
   letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */

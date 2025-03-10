@@ -26,7 +26,7 @@ source("~/projects/hugo/asbates/resume/export_cv.R", echo=TRUE)
    - Left-aligned sidebar content
    - Removed unnecessary line breaks and spacing
    - Fixed email link formatting issues
-   - Standardized sidebar section styling
+   - Standardised sidebar section styling
 
 4. **Visual Enhancement**
    - Better spacing for timeline connectors and dots
@@ -77,7 +77,7 @@ source("~/projects/hugo/asbates/resume/export_cv.R", echo=TRUE)
 ### Content Refinements
 1. **Language Standardization**
    - Choose UK English consistently throughout
-   - Standardize all technical and scientific terminology
+   - Standardise all technical and scientific terminology
    - Correct capitalization of scientific names (e.g., "Drosophila melanogaster")
    - Fix email link formatting throughout
 
@@ -85,12 +85,12 @@ source("~/projects/hugo/asbates/resume/export_cv.R", echo=TRUE)
    - Revise introduction to more formally highlight expertise
    - Remove or relocate date of birth information
    - Use more specific language instead of vague phrases
-   - Standardize use of titles (Dr./Prof.) throughout
+   - Standardise use of titles (Dr./Prof.) throughout
 
 3. **Formatting Consistency**
    - Fix email address markdown format to use proper mailto: links
    - Create consistent icon usage in the referees section
-   - Standardize journal name abbreviations
+   - Standardise journal name abbreviations
    - Implement consistent spacing between similar elements
 
 ### Visual Refinements
@@ -112,7 +112,7 @@ source("~/projects/hugo/asbates/resume/export_cv.R", echo=TRUE)
 ## Implementation Plan
 1. **Content Corrections**
    - Fix email links formatting
-   - Standardize UK English spelling
+   - Standardise UK English spelling
    - Correct scientific terminology
 
 2. **Visual Polish**
