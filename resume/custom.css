@@ -58,7 +58,7 @@ h1 {
 h2, h2:hover, h2:focus, h2:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 1.75rem; /* Reduced section header size */
+  font-size: 1.7rem; /* Reduced section header size */
   color: #555;
   text-transform: uppercase;
   page-break-after: avoid; /* Prevents page breaks right after section headers */
@@ -209,7 +209,7 @@ a:hover {
   padding-top: 0;
   padding-bottom: 0;
   line-height: 1.1; /* Slightly increased line height */
-  font-size: 0.6rem; /* Reduced size for better proportion */
+  font-size: 0.8rem; /* Reduced size for better proportion */
   letter-spacing: 0.01em; /* Slightly increased letter spacing for better readability */
   font-weight: 500; /* Make headings slightly bolder */
   border-bottom: 1px solid rgba(136, 129, 111, 0.2); /* Add subtle border for emphasis */
@@ -307,13 +307,13 @@ p {
   font-size: 0.52rem !important; /* Slightly increased from 0.5rem for readability */
 }
 
-/* Make timeline details properly spaced */
+/* Make timeline details more compact */
 .details p {
-  margin-top: 0.03rem !important; /* Increased for better spacing */
-  margin-bottom: 0.03rem !important; /* Increased for better spacing */
-  padding-top: 0.01rem !important;
-  padding-bottom: 0.01rem !important;
-  line-height: 1.2 !important; /* Improved for optimal readability */
+  margin-top: 0.02rem !important; /* Reduced margin */
+  margin-bottom: 0.02rem !important; /* Reduced margin */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
+  line-height: 1.15 !important; /* Slightly tighter line height */
 }
 
 /* Make bullet points in main content properly spaced */
@@ -349,32 +349,32 @@ li {
  * Adjust these values to change the vertical spacing in the timeline
  * ===================================================================== */
 
-/* Target list items specifically in timeline sections */
+/* Target list items specifically in timeline sections - more compact */
 .timeline li, .details li {
-  margin-top: 0.04rem !important; /* Moderate top margin */
-  margin-bottom: 0.04rem !important; /* Moderate bottom margin */
-  padding-top: 0.01rem !important; /* Minimal padding */
-  padding-bottom: 0.01rem !important; /* Minimal padding */
-  line-height: 1.15 !important; /* Balanced line height for readability */
+  margin-top: 0.02rem !important; /* Reduced top margin */
+  margin-bottom: 0.02rem !important; /* Reduced bottom margin */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
-/* Balanced spacing for timeline section entries */
+/* Tighter spacing for timeline section entries */
 .timeline h3 {
-  margin-top: 0.12rem !important; /* Moderate margin above timeline entries */
-  margin-bottom: 0.08rem !important; /* Moderate margin below timeline entries */
-  padding-top: 0.02rem !important; /* Small padding */
-  padding-bottom: 0.02rem !important; /* Small padding */
-  line-height: 1.15 !important; /* Readable line height */
+  margin-top: 0.08rem !important; /* Reduced margin above timeline entries */
+  margin-bottom: 0.05rem !important; /* Reduced margin below timeline entries */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
 /* Removed duplicate blocks rule - see above */
 
-/* Balanced spacing for timeline blocks */
+/* Tighter spacing for timeline blocks */
 .timeline .blocks {
-  margin-top: 0.05rem !important; /* Small margin above blocks */
-  margin-bottom: 0.08rem !important; /* Moderate margin below blocks */
-  padding-top: 0.02rem !important; /* Small padding above blocks */
-  padding-bottom: 0.02rem !important; /* Small padding below blocks */
+  margin-top: 0.03rem !important; /* Reduced margin above blocks */
+  margin-bottom: 0.04rem !important; /* Reduced margin below blocks */
+  padding-top: 0 !important; /* No padding above blocks */
+  padding-bottom: 0 !important; /* No padding below blocks */
 }
 
 /* =====================================================================
@@ -489,22 +489,22 @@ h1:hover {
 /* Timeline section headers */
 h2, .timeline h2, .timeline h2:focus, .timeline h2:active,
 .details h2, .details h2:focus, .details h2:active {
-  font-size: 0.8rem !important; /* Reduced for better proportion */
+  font-size: 0.6rem !important; /* Reduced for better proportion */
 }
 
-.timeline h2:hover, .details h2:hover {
-  font-size: 0.8rem !important; /* Reduced for better proportion */
+h2:hover, .timeline h2:hover, .details h2:hover {
+  font-size: 0.6rem !important; /* Reduced for better proportion */
   color: #ebb7a1 !important; /* New hover color */
 }
 
 /* Timeline entry titles */
-.timeline h3, .timeline h3:focus, .timeline h3:active,
+h3, .timeline h3, .timeline h3:focus, .timeline h3:active,
 .details h3, .details h3:focus, .details h3:active {
   font-size: 0.6rem !important; /* Increased slightly for better readability */
   font-weight: 500 !important; /* Make timeline titles slightly bolder */
 }
 
-.timeline h3:hover, .details h3:hover {
+h3:hover, .timeline h3:hover, .details h3:hover {
   font-size: 0.6rem !important; /* Increased slightly for better readability */
   color: #ebb7a1 !important; /* New hover color */
 }
@@ -532,16 +532,18 @@ section {
 
 /* Balanced spacing for timeline entries */
 .blocks {
-  margin-top: 0.08rem !important; /* Moderate top margin */
-  margin-bottom: 0.08rem !important; /* Moderate bottom margin */
+  margin-top: 0.04rem !important; /* Moderate top margin */
+  margin-bottom: 0.04rem !important; /* Moderate bottom margin */
   padding-top: 0.04rem !important; /* Small top padding */
   padding-bottom: 0.04rem !important; /* Small bottom padding */
 }
 
-/* Target major section headers */
+/* Target major section headers - much more compact */
 .main-block > h2 {
-  margin-top: 0.08rem !important; /* REDUCED: Minimal space above section headers */
-  margin-bottom: 0.05rem !important; /* REDUCED: Minimal space below section headers */
+  margin-top: 0.03rem !important; /* GREATLY REDUCED: Minimal space above section headers */
+  margin-bottom: 0.03rem !important; /* GREATLY REDUCED: Minimal space below section headers */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
 }
 
 /* Properly space timeline entry titles with their content */
@@ -563,16 +565,16 @@ h3:hover {
 
 /* Style date entries in timeline for better visibility */
 .date {
-  margin-top: 0.06rem !important; /* Moderate top margin */
-  margin-bottom: 0.06rem !important; /* Moderate bottom margin */
-  padding-top: 0.01rem !important; /* Minimal padding */
-  padding-bottom: 0.01rem !important; /* Minimal padding */
-  font-size: 0.5rem !important; /* Reduced size for better proportion */
-  font-weight: 400; /* Slightly bolder for emphasis */
+  margin-top: 0.04rem !important; /* Reduced top margin */
+  margin-bottom: 0.04rem !important; /* Reduced bottom margin */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
+  font-size: 0.35rem !important; /* Smaller size */
+  font-weight: 400; /* Normal weight */
   color: #5a5548; /* Darker color for better visibility */
-  opacity: 0.95; /* Slightly more opaque */
+  opacity: 0.85; /* Slightly less pronounced */
   letter-spacing: 0.01em; /* Slightly increased letter spacing */
-  line-height: 1.15 !important; /* Balanced line height for readability */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
 /* Set a reasonable base size for all elements with proper hierarchy preserved through !important overrides */
@@ -586,8 +588,18 @@ h3:hover {
  * Adjust margin-top and margin-bottom to change spacing between sections
  * ===================================================================== */
 section.main-block {
-  margin-top: 0.05rem !important; /* REDUCED: This controls space above each section */
-  margin-bottom: 0.05rem !important; /* REDUCED: This controls space below each section */
+  margin-top: 0.02rem !important; /* GREATLY REDUCED: This controls space above each section */
+  margin-bottom: 0.02rem !important; /* GREATLY REDUCED: This controls space below each section */
+}
+
+/* Location text in timeline */
+.loc {
+  font-size: 0.35rem !important; /* Smaller location text */
+  color: #5a5548; /* Match date color */
+  opacity: 0.85; /* Less pronounced */
+  margin-top: 0.02rem !important; /* Minimal margin */
+  margin-bottom: 0.02rem !important; /* Minimal margin */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
 /* =====================================================================
@@ -597,25 +609,34 @@ section.main-block {
  * ===================================================================== */
 section.main-block > h1 {
   font-size: 0.6rem !important; /* Slightly smaller than default section headers */
-  margin-top: 0.1rem !important; /* REDUCED: This controls space above each section title */
-  margin-bottom: 0.1rem !important; /* This controls space below each section title */
+  margin-top: 0.04rem !important; /* GREATLY REDUCED: This controls space above each section title */
+  margin-bottom: 0.04rem !important; /* GREATLY REDUCED: This controls space below each section title */
   letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
 /* Section header styling for h2 elements (primary section headers) */
 section.main-block > h2 {
   font-size: 0.58rem !important; /* Slightly smaller than default section headers */
-  margin-top: 0.05rem !important; /* REDUCED: This controls space above each section title */
-  margin-bottom: 0.05rem !important; /* This controls space below each section title */
+  margin-top: 0.03rem !important; /* GREATLY REDUCED: This controls space above each section title */
+  margin-bottom: 0.03rem !important; /* GREATLY REDUCED: This controls space below each section title */
   letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
 /* Section header styling for h3 elements (subsection titles) */
 section.main-block > h3 {
   font-size: 0.6rem !important; /* Smaller size for subsection headers */
-  margin-top: 0.08rem !important; /* REDUCED: This controls space above each subsection title */
-  margin-bottom: 0.08rem !important; /* This controls space below each subsection title */
+  margin-top: 0.04rem !important; /* GREATLY REDUCED: This controls space above each subsection title */
+  margin-bottom: 0.04rem !important; /* GREATLY REDUCED: This controls space below each subsection title */
   letter-spacing: 0.01em !important; /* Slightly tighter letter spacing */
+  padding-top: 0 !important; /* No padding */
+  padding-bottom: 0 !important; /* No padding */
+  line-height: 1.1 !important; /* Tighter line height */
 }
 
 /* Enhance citation metrics display */

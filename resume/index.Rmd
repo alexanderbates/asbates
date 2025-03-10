@@ -269,35 +269,8 @@ Education {data-icon=graduation-cap data-concise=true}
 CV %<>% print_section('education')
 ```
 
-Reviews {data-icon=eye}
+Primary Research {data-icon=book}
 --------------------------------------------------------------------------------
-
-```{r reviews}
-# Format reviews table
-formattable(reviews, list(
-  position = FALSE, # color_bar("lightgreen", fun = "normalize"),
-  cites = color_bar("white", fun = "normalize"),
-  IF = FALSE, # color_bar("lightblue", fun = "normalize"),
-  number = FALSE,
-  cid = FALSE,
-  pubid = FALSE))
-```
-
-
-Papers {data-icon=book}
---------------------------------------------------------------------------------
-
-::: aside
-
-```{r pubs}
-print_text_block(CV, 'publications')
-```
-
-<i class="ai ai-biorxiv"></i> Most of my work has first been published on bioRxiv
-
-<i class="ai ai-open-access"></i> Much of my work comes with open source R code
-
-:::
 
 ```{r publications}
 #CV %<>% print_section('publications')
@@ -311,19 +284,30 @@ formattable(publications, list(
   pubid = FALSE))
 ```
 
-<!-- <br></br> -->
+::: aside
 
-<!-- ```{r publications2} -->
-<!-- #CV %<>% print_section('publications') -->
-<!-- # Format publication table -->
-<!-- formattable(publications[16:nrow(publications),], list( -->
-<!--   position = FALSE, # color_bar("lightgreen", fun = "normalize"), -->
-<!--   cites = color_bar("coral", fun = function(x) min(c(x,100))/100), -->
-<!--   IF = FALSE, # color_bar("lightblue", fun = "normalize"), -->
-<!--   number = FALSE, -->
-<!--   cid = FALSE, -->
-<!--   pubid = FALSE)) -->
-<!-- ``` -->
+**Peer Review**
+
+```{r peer_reviews}
+# Format reviews table
+formattable(peer_reviews)
+```
+
+:::
+
+Reviews {data-icon=eye}
+--------------------------------------------------------------------------------
+
+```{r reviews}
+# Format reviews table
+formattable(reviews, list(
+  position = FALSE, # color_bar("lightgreen", fun = "normalize"),
+  cites = color_bar("white", fun = "normalize"),
+  IF = FALSE, # color_bar("lightblue", fun = "normalize"),
+  number = FALSE,
+  cid = FALSE,
+  pubid = FALSE))
+```
 
 Selected Talks {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
@@ -346,6 +330,18 @@ Leadership {data-icon=flag}
 CV %<>% print_section('leadership_experience')
 ```
 
+::: aside
+
+<i class="ai ai-biorxiv"></i> Most of my work has first been published on bioRxiv
+
+<br></br>
+
+<br></br>
+
+<i class="ai ai-open-access"></i> Much of my work comes with open source R code
+
+:::
+
 Other {data-icon=share-alt}
 --------------------------------------------------------------------------------
 
@@ -353,19 +349,7 @@ Other {data-icon=share-alt}
 CV %<>% print_section('experience')
 ```
 
-Peer Reviews {data-icon=eye}
---------------------------------------------------------------------------------
-
-```{r peer_reviews}
-# Format reviews table
-formattable(peer_reviews)
-```
-
 ::: aside
-
-<i class="ai ai-biorxiv"></i> Most of my work has first been published on bioRxiv
-
-<i class="ai ai-open-access"></i> Much of my work comes with open source R code
 
 Updated on `r format(Sys.Date(), format = "DD-MM-YYYY")` 
 
