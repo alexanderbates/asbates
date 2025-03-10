@@ -106,7 +106,7 @@ a:hover {
  * Make sidebar text use available width more efficiently
  */
 .aside {
-  text-align: center; /* Center text in sidebar */
+  text-align: left; /* Left-align text in sidebar */
   word-wrap: break-word; /* Allow long words to break */
   word-break: normal; /* Break words at appropriate points */
   letter-spacing: -0.01em; /* Slightly looser letter spacing for better readability */
@@ -116,9 +116,9 @@ a:hover {
   padding-top: 0; /* Remove any default top padding */
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  padding-right: 0.3rem;
-  padding-left: 0rem;
+  align-items: flex-start; /* Left-align items horizontally */
+  padding-right: 0rem;
+  padding-left: 0.3rem;
   margin: 0;
 }
 
@@ -135,19 +135,20 @@ a:hover {
   margin-bottom: 0.05rem; /* Slightly increased for better readability */
   margin-top: 0.05rem; /* Slightly increased for better readability */
   line-height: 1.15; /* Slightly increased line height for better readability */
-  text-align: left; /* Left-align text in list items for better readability */
+  text-align: left; /* Left-align text in list items for consistency with other sidebar content */
   display: block; /* Ensure proper block display */
-  width: 95%; /* Wider width to reduce left margin */
+  width: 95%; /* Wider width */
   margin-left: 0; /* Remove left margin completely */
   margin-right: auto; /* Auto right margin */
-  padding-right: 0.3rem; /* Right padding */
-  padding-left: 0rem; /* Minimal left padding */
+  padding-right: 0rem; /* No right padding */
+  padding-left: 0.3rem; /* Left padding */
 }
 
-/* Center sidebar image */
+/* Left-align sidebar image with some centering for aesthetics */
 .aside img {
   display: block; /* Make image a block element */
-  margin: 0 auto; /* Center the image */
+  margin-left: 0.3rem; /* Left margin for spacing */
+  margin-right: auto; /* Push image to the left */
   max-width: 85%; /* Limit width for better proportions */
   height: auto; /* Maintain aspect ratio */
 }
@@ -157,12 +158,12 @@ a:hover {
   margin-bottom: 0.3rem; /* Reduce spacing between sidebar sections */
   padding-top: 0;
   padding-bottom: 0;
-  width: 95%; /* Wider width to reduce left margin */
-  margin-left: 0; /* Remove left margin completely */
+  width: 95%; /* Wider width */
+  margin-left: 0; /* Remove left margin */
   margin-right: auto; /* Auto right margin */
-  text-align: center; /* Center content */
-  padding-right: 0.3rem; /* Add extra padding on the right side */
-  padding-left: 0.05rem; /* Minimal left padding */
+  text-align: left; /* Left-align content */
+  padding-right: 0rem; /* No right padding */
+  padding-left: 0.3rem; /* Left padding */
 }
 
 /* First section in sidebar should align with top */
@@ -176,13 +177,29 @@ a:hover {
   margin-bottom: 0.2rem;
 }
 
+/* Force text alignment for specific sections including Referees */
+.aside strong, .aside b {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 0.1rem;
+  padding-left: 0.3rem;
+  padding-right: 0rem;
+}
+
+/* Ensure all list items in the referees section are properly left-aligned */
+.aside li {
+  text-align: left !important;
+}
+
 /* Style paragraph text in sidebar */
 .aside p {
   width: 90%; /* Reduced width for better margins */
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
-  padding-right: 0.2rem; /* Extra right padding */
-  text-align: center; /* Center text */
+  padding-left: 0.3rem; /* Left padding */
+  padding-right: 0; /* No right padding */
+  text-align: left; /* Left-align text */
 }
 
 /* Make sidebar headings more compact */
@@ -198,6 +215,10 @@ a:hover {
   border-bottom: 1px solid rgba(136, 129, 111, 0.2); /* Add subtle border for emphasis */
   display: inline-block; /* Make border only as wide as text */
   padding-bottom: 0.05rem; /* Add space between text and border */
+  text-align: left; /* Left-align headings */
+  width: 100%; /* Full width to allow proper alignment */
+  padding-left: 0.3rem; /* Left padding */
+  padding-right: 0; /* No right padding */
 }
 
 /*
@@ -206,12 +227,12 @@ a:hover {
  * Controls list indentation in the sidebar
  */
 .aside ul {
-  padding-left: 0.05rem; /* Minimal left padding */
-  padding-right: 0.2rem; /* Increased right padding */
+  padding-left: 0.3rem; /* Left padding */
+  padding-right: 0; /* No right padding */
   margin-left: 0; /* Remove left margin */
-  margin-right: 0.15rem; /* Increased right margin */
-  width: 95%; /* Wider width to reduce left margin */
   margin-right: auto; /* Auto right margin */
+  width: 95%; /* Wider width */
+  text-align: left; /* Ensure lists are left-aligned */
 }
 
 /* =====================================================================

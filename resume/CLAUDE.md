@@ -1,5 +1,12 @@
 # CV Codebase Analysis
 
+## Build Commands
+
+To build the CV (generate HTML and PDF):
+```r
+source("~/projects/hugo/asbates/resume/export_cv.R", echo=TRUE)
+```
+
 ## CSS and RMD Relationship
 
 The CV styling is controlled by two CSS files and their application to the index.Rmd structure:

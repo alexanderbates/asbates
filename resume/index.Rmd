@@ -213,19 +213,21 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 
 <br></br>
 
-**Referees** 
-<br></br>
-<br></br>
+**Referees**
+
 - <i class="fas fa-robot"></i> PhD Supervisor: Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, jefferis@mrc-lmb.cam.ac.uk
+- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
+- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, [m.beato@ucl.ac.uk](m.beato@ucl.ac.uk)
+- <i class="fas fa-user-astronaut"></i> Supervisee: Serene Dhawan, Princeton, PhD student, [serenedhawan@gmail.com](serenedhawan@gmail.com)
+
 <br></br>
+
 <br></br>
-- <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
-<br></br>
-<br></br>
-- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, [m.beato@ucl.ac.uk](m.beato@ucl.ac.uk])
-<br></br>
-<br></br>
-- <i class="fas fa-user-astronaut"></i> Supervisee: Serene Dhawan, Princeton, PhD student, [serenedhawan @gmail.com](serenedhawan@gmail.com])
+
+```{r pubs}
+print_text_block(CV, 'publications')
+```
+
 
 Main
 ================================================================================
@@ -360,6 +362,10 @@ formattable(peer_reviews)
 ```
 
 ::: aside
+
+<i class="ai ai-biorxiv"></i> Most of my work has first been published on bioRxiv
+
+<i class="ai ai-open-access"></i> Much of my work comes with open source R code
 
 Updated on `r format(Sys.Date(), format = "DD-MM-YYYY")` 
 
