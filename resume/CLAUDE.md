@@ -20,6 +20,22 @@ The CV styling is controlled by two CSS files and their application to the index
    - Adds page break controls with .break-after-me class
    - Overrides text sizes and spacing
 
+### On Consolidating CSS Files
+
+**Pros of Combining Files:**
+- Simpler management with only one file to edit
+- Eliminates cascade conflicts between files
+- May improve load time (marginally)
+- Easier to track all styling in one place
+
+**Cons of Combining Files:**
+- Loses separation of template vs. customization
+- Makes template updates harder to implement
+- Increases risk when making changes (affects entire styling)
+- Harder to revert to default styling if needed
+
+**Recommendation:** Keep files separate but add clear section comments to custom.css to indicate which base styles are being overridden. This maintains the separation of concerns while improving maintainability.
+
 ### Key CSS-RMD Relationships
 
 | CSS Class/Element | RMD Application | Visual Effect |

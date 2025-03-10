@@ -222,13 +222,10 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 - <i class="fas fa-user-secret"></i> Current Supervisor: Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@ hms.harvard.edu](Rachel_Wilson@hms.harvard.edu)
 <br></br>
 <br></br>
-- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, m.beato@ucl.ac.uk
+- <i class="fas fa-user-graduate"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, [m.beato@ucl.ac.uk](m.beato@ucl.ac.uk])
 <br></br>
 <br></br>
-- <i class="fas fa-user-astronaut"></i> Supervisee: 
-Serene Dhawan, 
-Princeton, PhD student, 
-[serenedhawan @gmail.com](serenedhawan@gmail.com])
+- <i class="fas fa-user-astronaut"></i> Supervisee: Serene Dhawan, Princeton, PhD student, [serenedhawan @gmail.com](serenedhawan@gmail.com])
 
 Main
 ================================================================================
@@ -243,7 +240,9 @@ print_text_block(CV, 'intro')
 ```{r profile, fig.align = "center"}
 author <- scholar::get_profile(id)
 df <- data.frame(total_cites = author$total_cites, h_index = author$h_index, i10_index = author$i10_index)
-formattable(df, list(total_cites = color_bar("coral", fun = "normalize"), h_index = color_bar("lightgreen", fun = "proportion"), i10_index = color_bar("lightblue", fun = "proportion")))
+df$peer_reviews <-  sum(peer_reviews$reviews)
+colnames(df) <- gsub("_"," ",colnames(df))
+formattable(df, list(`total cites` = color_bar("coral", fun = "normalize"), `h index` = color_bar("lightgreen", fun = "proportion"), `i10 index` = color_bar("lightblue", fun = "proportion"), `peer reviews` = color_bar("darkgrey", fun = "proportion")))
 ```
 
 Professional Research {data-icon=microscope data-concise=true}
@@ -362,7 +361,7 @@ formattable(peer_reviews)
 
 ::: aside
 
-Last updated on `r Sys.Date()`. 
+Updated on `r format(Sys.Date(), format = "DD-MM-YYYY")` 
 
 :::
 
