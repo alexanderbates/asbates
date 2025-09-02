@@ -1,0 +1,409 @@
+---
+title: "CV Builder"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, results = 'asis')
+library(tidyverse)
+library(glue)
+library(scholar)
+library(rorcid)
+library(magrittr)
+
+# Load custom functions
+source("cv_printing_functions.r")
+
+# Scholar and ORCID IDs
+asb.id <- '0000-0002-1195-0445'
+scholar_id <- "BOVTiXIAAAAJ&hl"
+```
+
+```{r load_data, include=FALSE}
+# Load all CSV data
+entries_data <- readr::read_csv("entries.csv", show_col_types = FALSE)
+contact_info <- readr::read_csv("contact_info.csv", show_col_types = FALSE)  
+text_blocks <- readr::read_csv("text_blocks.csv", show_col_types = FALSE)
+language_skills <- readr::read_csv("language_skills.csv", show_col_types = FALSE)
+
+# Create CV object
+CV <- create_CV_object(data_location = "", pdf_mode = FALSE)
+CV$entries_data <- CV$entries_data %>% dplyr::filter(in_resume == TRUE)
+
+# Get publications data
+publications <- scholar::get_publications(scholar_id, sortby = "year", pagesize = 100, flush = TRUE)
+publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge",""))
+
+# Process publications
+authorlist <- publications$author
+publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
+
+# Get author position using the same logic as index.Rmd
+author_name <- scholar::get_profile(scholar_id)$name
+
+# Define author_position function to match index.Rmd logic
+author_position <- function(author_strings, name) {
+  positions <- sapply(author_strings, function(authors) {
+    # Split by commas and clean up names
+    author_list <- strsplit(authors, ",")[[1]]
+    author_list <- trimws(author_list)
+    
+    # Look for AS Bates or A Bates in any form
+    position <- which(grepl("AS Bates|A Bates", author_list, ignore.case = TRUE))[1]
+    if(is.na(position)) position <- 6  # Default to last if not found
+    return(position)
+  })
+  
+  return(data.frame(Position = positions))
+}
+
+publications$position <- author_position(authorlist, author_name)$Position
+publications$position[is.na(publications$position)] <- 6
+
+publications$author = gsub("AS Bates","**AS Bates**",publications$author)
+publications$author = gsub("A Bates","**A Bates**",publications$author)
+
+# Clean journal names
+publications$journal <- gsub("Conference","Conf.",publications$journal)
+publications$journal <- gsub("Current","Curr.",publications$journal)
+publications$journal <- gsub("communications","Comm.",publications$journal)
+publications$journal <- gsub("European","Euro.",publications$journal)
+publications$journal <- gsub("Research","Res.",publications$journal)
+publications$journal <- gsub("elife","eLife",publications$journal)
+publications$journal <- gsub("Journal","J.",publications$journal)
+
+# Mark first author papers
+first.pubids <- c("mVmsd5A6BfQC", "8k81kl-MbHgC", "Y0pCki6q_DkC", "eQOLeE2rZwMC", 
+                  "d1gkVwhDpl0C", "hqOjcs7Dif8C", "_FxGoFyzp5QC")
+
+# Add first author papers by title as well (for cases where pubid might not match)
+first_author_titles <- c("Distributed control circuits across a brain-and-cord connectome")
+first_by_pubid <- publications$pubid %in% first.pubids
+first_by_title <- publications$title %in% first_author_titles
+first <- first_by_pubid | first_by_title
+publications$position[first] <- 1
+
+# Mark joint first author papers by title
+joint_first_titles <- c("Information flow, cell types and stereotypy in a full olfactory connectome",
+                        "Neurotransmitter classification from electron microscopy images at synaptic sites in Drosophila melanogaster")
+joint_first <- publications$title %in% joint_first_titles
+
+# Apply underlining + italics for both first author and joint first author
+all_first <- first | joint_first
+publications$author[all_first] <- gsub("\\*\\*AS Bates\\*\\*", "<ins>***AS Bates***</ins>", publications$author[all_first])
+publications$author[all_first] <- gsub("\\*\\*A Bates\\*\\*", "<ins>***A Bates***</ins>", publications$author[all_first])
+
+# Sort by position first, then by year (descending)
+publications <- dplyr::arrange(publications, position, dplyr::desc(year))
+
+# Separate reviews
+revs <- c("Systems neuroscience: Auditory processing at synaptic resolution",
+          "Neuronal cell types in the fly: single-cell anatomy meets single-cell genomics")
+revs <- paste0(revs, collapse="|")
+reviews <- subset(publications, grepl(revs, title))
+publications <- subset(publications, !grepl(revs, title))
+
+# Get scholar profile for metrics
+author <- scholar::get_profile(scholar_id)
+
+# Get peer reviews from ORCID
+prs <- rorcid::orcid_peer_reviews(asb.id)
+plucked_prs <- prs %>%
+  purrr::map_dfr(purrr::pluck, "group") %>%
+  janitor::clean_names()
+
+peer_reviews <- data.frame()
+for(i in 1:length(plucked_prs$peer_review_group)){
+  pr.df <- do.call(plyr::rbind.fill, plucked_prs$peer_review_group[[i]]$`peer-review-summary`) %>%
+      janitor::clean_names() %>%
+      as.data.frame()
+  issn <- gsub("issn\\:","", pr.df$review_group_id)
+  tryCatch({
+    details <- rcrossref::cr_journals(issn = issn, works = FALSE)
+    journals <- data.frame(journal = details$data$title)
+    peer_reviews <- plyr::rbind.fill(peer_reviews, journals)
+  }, error = function(e) {
+    # Skip if journal lookup fails
+  })
+}
+
+if(nrow(peer_reviews) > 0) {
+  peer_reviews <- peer_reviews %>%
+    dplyr::mutate(journal = dplyr::case_when(
+      journal == "PLoS Computational Biology" ~ "PLoS Comp. Bio.",
+      journal == "Nature Communications" ~ "Nature Comm.",
+      TRUE ~ journal
+    )) %>%
+    dplyr::group_by(journal) %>%
+    dplyr::mutate(reviews = dplyr::n()) %>%
+    dplyr::ungroup() %>%
+    dplyr::arrange(dplyr::desc(reviews)) %>%
+    dplyr::distinct(journal, reviews)
+}
+```
+
+# [Dr. Alexander Shakeel Bates](https://as-bates.netlify.app/portfolio/) ![](asb_logo_round.png){width=80px style="float: right; margin-left: 20px;"}
+
+**Neuroscientist & Computational Biologist**
+
+```{r intro}
+intro_text <- text_blocks %>% filter(loc == "intro") %>% pull(text)
+cat(intro_text)
+```
+
+---
+
+```{r contact_metrics}
+# Separate contact and metrics with proper spacing
+contact_line <- "**Contact:** alexander_bates@hms.harvard.edu | [ORCID: 0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445) | [GitHub: alexanderbates](https://github.com/alexanderbates)"
+metrics_line <- glue("**Metrics:** {author$total_cites} citations | h-index: {author$h_index} | i10-index: {author$i10_index}")
+if(nrow(peer_reviews) > 0) {
+  metrics_line <- glue("{metrics_line} | {sum(peer_reviews$reviews)} peer reviews")
+}
+cat(contact_line)
+cat("\n\n")
+cat(metrics_line)
+```
+
+## Professional Research _________________________________
+
+```{r research}
+research_entries <- CV$entries_data %>% filter(section == "research_projects")
+
+for(i in 1:nrow(research_entries)) {
+  entry <- research_entries[i, ]
+  
+  clean_title <- gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", entry$title)
+  
+  cat(glue("**{clean_title}** • {entry$institution} • {entry$loc} • {entry$timeline}"))
+  cat("\n\n")
+  
+  if(!is.na(entry$description_bullets) && entry$description_bullets != "") {
+    desc_clean <- gsub("^- ", "", entry$description_bullets)
+    desc_clean <- gsub("\n- ", "\n• ", desc_clean)
+    cat(desc_clean)
+    cat("\n\n")
+  }
+}
+```
+
+## Fellowships & Grants ___________________________________
+
+```{r grants}
+grant_entries <- CV$entries_data %>% filter(section == "grants")
+
+for(i in 1:nrow(grant_entries)) {
+  entry <- grant_entries[i, ]
+  
+  # Extract clean title without links  
+  clean_title <- gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", entry$title)
+  
+  cat(glue("**{clean_title}** • {entry$institution} • {entry$loc} • {entry$timeline}"))
+  cat("\n\n")
+  
+  if(!is.na(entry$description_bullets) && entry$description_bullets != "") {
+    desc_clean <- gsub("^- ", "", entry$description_bullets)
+    desc_clean <- gsub("\n- ", "\n• ", desc_clean)
+    cat(desc_clean)
+    cat("\n\n")
+  }
+}
+```
+
+## Education _______________________________________________
+
+```{r education}
+education_entries <- CV$entries_data %>% filter(section == "education")
+
+for(i in 1:nrow(education_entries)) {
+  entry <- education_entries[i, ]
+  
+  # Extract clean title without links
+  clean_title <- gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", entry$title)
+  
+  cat(glue("**{clean_title}** • {entry$institution} • {entry$loc} • {entry$timeline}"))
+  cat("\n\n")
+  
+  if(!is.na(entry$description_bullets) && entry$description_bullets != "") {
+    # Clean up description bullets
+    desc_clean <- gsub("^- ", "", entry$description_bullets)
+    desc_clean <- gsub("\n- ", "\n• ", desc_clean)
+    cat(desc_clean)
+    cat("\n\n")
+  }
+}
+```
+
+
+
+## Presentations __________________________________________
+
+```{r presentations}
+# Combine talks and posters into one compact section
+talk_entries <- CV$entries_data %>% filter(section == "meetings")
+poster_entries <- CV$entries_data %>% filter(section == "posters")
+
+if(nrow(talk_entries) > 0) {
+  cat("**Selected Talks:** ")
+  talk_list <- talk_entries %>%
+    mutate(clean_title = gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", title)) %>%
+    mutate(entry_text = glue("{clean_title} ({timeline})")) %>%
+    pull(entry_text) %>%
+    paste(collapse = " • ")
+  cat(talk_list)
+  cat("\n\n")
+}
+
+if(nrow(poster_entries) > 0) {
+  cat("**Selected Posters:** ")
+  poster_list <- poster_entries %>%
+    mutate(clean_title = gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", title)) %>%
+    mutate(entry_text = glue("{clean_title} ({timeline})")) %>%
+    pull(entry_text) %>%
+    paste(collapse = " • ")
+  cat(poster_list)
+  cat("\n\n")
+}
+```
+
+## Leadership Experience __________________________________
+
+```{r leadership}
+leadership_entries <- CV$entries_data %>% filter(section == "leadership_experience")
+
+# Format like presentations - inline compact format
+if(nrow(leadership_entries) > 0) {
+  leadership_list <- leadership_entries %>%
+    mutate(clean_title = gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", title)) %>%
+    mutate(entry_text = glue("{clean_title} ({timeline})")) %>%
+    pull(entry_text) %>%
+    paste(collapse = " • ")
+  
+  cat(leadership_list)
+  cat("\n\n")
+}
+```
+
+## Other Experience _______________________________________
+
+```{r other_experience}
+other_entries <- CV$entries_data %>% filter(section == "experience")
+
+# Group by type for more efficient presentation
+research_visits <- other_entries %>% filter(grepl("Visiting Scholar|University of Queensland|Amgen", title))
+training_and_programs <- other_entries %>% filter(grepl("Paris Spring|Neuroscience Techniques|iGEM|Summer student|biomolecular", title))
+
+# Research Visits
+if(nrow(research_visits) > 0) {
+  cat("**Research Visits:** ")
+  for(i in 1:nrow(research_visits)) {
+    entry <- research_visits[i, ]
+    clean_title <- gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", entry$title)
+    
+    # Create summary with description
+    desc_summary <- ""
+    if(!is.na(entry$description_bullets) && entry$description_bullets != "") {
+      desc_clean <- gsub("^- ", "", entry$description_bullets)
+      desc_clean <- gsub("\\n- ", ", ", desc_clean)
+      desc_summary <- glue(" | {desc_clean}")
+    }
+    
+    cat(glue("{entry$institution} ({entry$timeline}){desc_summary}"))
+    if(i < nrow(research_visits)) cat(" • ")
+  }
+  cat("\\n")
+}
+```
+
+```{r training}
+# Training & Student Programs (combined)
+if(nrow(training_and_programs) > 0) {
+  cat("\n**Training:** ")
+  for(i in 1:nrow(training_and_programs)) {
+    entry <- training_and_programs[i, ]
+    clean_title <- gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", entry$title)
+    
+    desc_summary <- ""
+    if(!is.na(entry$description_bullets) && entry$description_bullets != "") {
+      desc_clean <- gsub("^- ", "", entry$description_bullets)
+      desc_clean <- gsub("\\n- ", ", ", desc_clean)
+      desc_summary <- glue(" | {desc_clean}")
+    }
+    
+    cat(glue("{clean_title}, {entry$institution} ({entry$timeline}){desc_summary}"))
+    if(i < nrow(training_and_programs)) cat(" • ")
+  }
+  cat("\\n")
+}
+```
+
+```{r skills_software}
+# Combine skills and software into compact format
+skills_data <- language_skills
+skill_list <- skills_data %>% pull(skill) %>% paste(collapse = " • ")
+
+cat("**Technical Skills:** ")
+cat(skill_list)
+cat("\n\n")
+cat("**Selected Open Source Software:** [natverse](https://natverse.org/) • [neuromorphr](https://natverse.github.io/neuromorphr/) • [neuprintr](https://natverse.github.io/neuprintr/) • [bancr](https://github.com/flyconnectome/bancr?tab=readme-ov-file) • [insectbrainr](https://natverse.github.io/insectbrainr/)")
+```
+
+## Selected Publications __________________________________
+
+```{r publications}
+cat("\\scriptsize\n\n")  # LaTeX command for small but readable text
+
+# Ultra-compact publication format - single line per publication
+for(i in 1:min(12, nrow(publications))) {
+  pub <- publications[i, ]
+  clean_title <- gsub("<a href='[^']*'>([^<]*)</a>", "\\1", pub$title)
+  
+  # Truncate long author lists
+  author_short <- pub$author
+  if(nchar(author_short) > 60) {
+    author_short <- paste0(substr(author_short, 1, 57), "...")
+  }
+  
+  citation_text <- if(!is.na(pub$cites) && pub$cites > 0) glue(" ({pub$cites})") else ""
+  
+  cat(glue("**{clean_title}** ({pub$year}). {author_short} *{pub$journal}*{citation_text}"))
+  cat("  \n")
+}
+
+if(nrow(publications) > 12) {
+  cat(glue("*+{nrow(publications) - 12} more on [Scholar](https://scholar.google.com/citations?user=BOVTiXIAAAAJ&hl=en)*"))
+}
+cat("\\n\\n*, italics=first author*\\n\\n")
+
+cat("\\normalsize\n\n")  # Return to normal size
+```
+
+## Review Articles _________________________________________
+
+```{r reviews}
+if(nrow(reviews) > 0) {
+  cat("\\scriptsize\n\n")
+  
+  for(i in 1:nrow(reviews)) {
+    rev <- reviews[i, ]
+    clean_title <- gsub("<a href='[^']*'>([^<]*)</a>", "\\1", rev$title)
+    citation_text <- if(!is.na(rev$cites) && rev$cites > 0) glue(" ({rev$cites})") else ""
+    
+    cat(glue("**{clean_title}** ({rev$year}). {rev$author} *{rev$journal}*{citation_text}"))
+    cat("  \n")
+  }
+  
+  cat("\\normalsize\n\n")
+}
+```
+
+## Referees _______________________________________________
+
+**Postdoc Supervisor:** Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@hms.harvard.edu](mailto:Rachel_Wilson@hms.harvard.edu)  
+**PhD Supervisor:** Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, [jefferis@mrc-lmb.cam.ac.uk](mailto:jefferis@mrc-lmb.cam.ac.uk)  
+**BSc Tutor:** Dr. Marco Beato, UCL Neuroscience, [m.beato@ucl.ac.uk](mailto:m.beato@ucl.ac.uk)  
+**Supervisee:** Serene Dhawan, Princeton PhD student, [serenedhawan@gmail.com](mailto:serenedhawan@gmail.com)
+
+---
+
+*Updated: `r format(Sys.Date(), "%d %B %Y")`*

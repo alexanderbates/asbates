@@ -1,68 +1,135 @@
-﻿title,event,institution,loc,start,end,section,color,fontcolor,description_1,description_2,description_3,description_4,in_resume
-[Sir Henry Wellcome Fellowship](https://wellcome.org/grant-funding/schemes/sir-henry-wellcome-postdoctoral-fellowships),Wellcome Trust,Wellcome Trust & University of Oxford,UK,01/06/2022,01/06/2025,grants,#EE4244,#4D4D4D,"30,000 GBP towards my current research","Collaboration between groups of Rachel Wilson, Wei Lee, Scott Waddell and Shaul Druckmann",Also accepted as Life Science Research Foundation fellow,,TRUE
-[EMBO fellow](https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/),EMBO fellow,European Molecular Biology Organization,Europe,01/04/2021,01/06/2022,grants,#EE4244,#4D4D4D,Also accepted as a International Human Frontier Science Program fellow,,,,TRUE
-[Human Frontiers Fellowship](https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships),HFSP fellow,International Human Frontier Science Program,International,01/05/2021,01/05/2021,grants,#EE4244,#4D4D4D,Did not pursue,,,,FALSE
-[Life Science Research Foundation Fellowship](https://lsrf.org/),LSRF fellow,Life Science Research Foundation,US,01/06/2021,01/06/2021,grants,#EE4244,#4D4D4D,Did not pursue,,,,FALSE
-[Herchel Smith PhD Scholarship](https://www.herchelsmith.cam.ac.uk/phd-studentships/current-phd-students),Herchel Smith Scholarship,Herchel Smith Foundation,"Cambridge, UK",01/08/2015,30/09/2019,grants,#EE4244,#4D4D4D,,,,,TRUE
-[Boehringer Ingelheim PhD Scholarship](https://www.bifonds.de/fellowships-grants/phd-fellowships/who-can-apply-phd.html),Boehringer Ingelheim Scholarship,Boehringer Ingelheim Foundation,European,01/08/2016,01/08/2018,grants,#EE4244,#4D4D4D,,,,,TRUE
-"[Honorary Vice Chancellor's Award](https://www.cambridgetrust.org/scholarships/v-c-awards-and-cambridge-international-scholarships/#:~:text=The%20aim%20of%20the%20Vice,research%20leading%20to%20a%20PhD.)",Honorary Vice Chancellor's Award,University of Cambridge,"Cambridge, UK",01/08/2015,01/08/2015,awards,#1BB6AF,#4D4D4D,,,,,FALSE
-Burnstock Prize,Burnstock Prize,University College London,"London, UK",01/07/2013,01/07/2013,awards,#1BB6AF,#4D4D4D,"Highest grade in Neuroscience BSc course, 1st year",,,,FALSE
-Burnstock Prize,Burnstock Prize,University College London,"London, UK",01/07/2014,01/07/2014,awards,#1BB6AF,#4D4D4D,"Highest grade in Neuroscience BSc course, 2nd year",,,,FALSE
-Burnstock Prize,Burnstock Prize,University College London,"London, UK",01/07/2015,01/07/2015,awards,#1BB6AF,#4D4D4D,"Highest grade in Neuroscience BSc course, 3rd year",,,,FALSE
-Max Perutz Prize,Max Perutz Prize,"MRC LMB, University of Cambridge","Cambridge, UK",01/10/2020,01/10/2020,awards,#1BB6AF,#4D4D4D,[A best thesis at the MRC LMB](https://www2.mrc-lmb.cam.ac.uk/achievements/lmb-student-prize/),,,,FALSE
-BNA Postgraduate Prize,BNA Postgraduate Prize,British Neuroscience Association,UK,01/12/2020,01/12/2020,awards,#1BB6AF,#4D4D4D,[A best neuroscience thesis](https://www.bna.org.uk/members/student-prizes/),,,,FALSE
-Dean's list,Dean's list,University College London,"London, UK",01/07/2013,01/07/2013,awards,#1BB6AF,#4D4D4D,"Dean’s list for the Faculty of Life Sciences, awarded based on undergraduate grades",,,,FALSE
-Dean's list,Dean's list,University College London,"London, UK",01/07/2014,01/07/2014,awards,#1BB6AF,#4D4D4D,"Dean’s list for the Faculty of Life Sciences, awarded based on undergraduate grades",,,,FALSE
-[Rob Clarke Award](https://www.physoc.org/grants-and-prizes/prizes/the-rob-clarke-awards/),Rob Clarke Award,Society of Physiology,"London, UK",01/09/2015,01/09/2015,awards,#1BB6AF,#4D4D4D,,,,,FALSE
-Neuroscience BSc,"Neuroscience BSc, UCL",University College London,"London, UK",01/09/2012,01/07/2015,education,#007BC3,#4D4D4D,1st class degree with honours,Modules taken listed on [linkedIn](https://www.linkedin.com/in/alex-bates-22a265a7/),"**Awards:** [Burnstock Sessional Prize in Neuroscience BSc](https://www.ucl.ac.uk/biosciences/news/2020/jun/professor-geoffrey-burnstock-1929-2020) (ranked first in year) (2012–2013) (2013-2014) (2014-2015), Dean’s list for the Faculty of Life Sciences (2013-2014) (2014-2015), [Rob Clarke Award](https://www.physoc.org/grants-and-prizes/prizes/the-rob-clarke-awards/) from the Society of Physiology",,TRUE
-High School,High School,Woodbridge High School,"London, UK",01/09/2008,01/09/2012,education,#F4E3C7,#4D4D4D,"6 A*s at A-level, comprising: Physics, Chemistry, Mathematics, English Literature, Philosophy and Russian, and in a history related EPQ (level 3) project","13 A*s at GCSE: English Literature, English Language, Mathematics, Statistics, Core Science, Additional Science, History, Philosophy, Geography, French, Italian, Russian and Expressive Arts. [Jack Petchey Achievement Award](https://www.jackpetcheyfoundation.org.uk/opportunities/grant-programmes/achievement-awards/)",,,
-GCSEs,GCSEs,Woodbridge High School,"London, UK",01/09/2008,31/08/2010,education,#F4E3C7,#4D4D4D,"13 A*s: English Literature, English Language, Mathematics, Statistics, Core Science, Additional Science, History, Philosophy, Geography, French, Italian, Russian and Expressive Arts. [Jack Petchey Achievement Award](https://www.jackpetcheyfoundation.org.uk/opportunities/grant-programmes/achievement-awards/)",,,,FALSE
-A levels,A levels,Woodbridge High School,"London, UK",01/09/2010,01/09/2012,education,#EF7C12,#4D4D4D,"6 A*s at A-level, comprising: Physics, Chemistry, Mathematics, English Literature, Philosophy and Russian, and in a history related EPQ (level 3) project",,,,FALSE
-Neuroscience PhD,"Neuroscience PhD, University of Cambridge","[MRC LMB](https://www2.mrc-lmb.cam.ac.uk/), University of Cambridge","Cambridge, UK",01/09/2015,30/09/2020,education,#FC6882,#4D4D4D,PhD student with [Dr. Greg Jefferis](https://en.wikipedia.org/wiki/Gregory_Jefferis) ,"[**Thesis**](https://drive.google.com/file/d/1qiiAcquT948EcSC0SJYW85j8C-amOKkT/view): The lateral horn, a brain region in the fly, primes innate olfactory behaviours by combining patterns of second-order olfactory projection neuron activity. In my work, I developed tools and analyses, and reconstructed neural networks from electron microscopy data, in order to better understand this brain region and how memory systems interact with it","Neuroinformatics, data science, R programming","**Awards:** [Honorary Vice Chancellor’s Award](https://www.cambridgetrust.org/scholarships/v-c-awards-and-cambridge-international-scholarships/#:~:text=The%20aim%20of%20the%20Vice,research%20leading%20to%20a%20PhD.), [MRC LMB Max Perutz Prize 2019](https://www2.mrc-lmb.cam.ac.uk/achievements/lmb-student-prize/), Winner of the [British Neuroscience Association Postgraduate Prize 2020](https://www.bna.org.uk/members/student-prizes/)",TRUE
-Paris Spring School in Neuroscience Techniques,Neuroscience Techniques Training,Paris Descartes University,"Paris, France",13/06/2018,28/06/2018,experience,#D5A848,#4D4D4D,[A course in](https://www.google.com/url?q=https://parisneuro.ovh/&sa=D&source=editors&ust=1626576404921000&usg=AOvVaw3eOj4rTk3Uv6H6IJSM3JZb) Optical Imaging and Electrophysiological Recording in Neuroscience,,,,TRUE
-Visiting Scholar,Janelia Research Campus,Janelia Research Campus,"Ashburn, US",01/02/2019,01/03/2019,experience,#FBBB48,#4D4D4D,"Worked in FlyEM, [Dr. Gerry Rubin’s Group](https://www.hhmi.org/scientists/gerald-m-rubin)",Worked on the hemibrain connectome,,,TRUE
-Visiting Scholar,Janelia Research Campus,Janelia Research Campus,"Ashburn, US",01/02/2016,01/05/2016,experience,#FBBB48,#4D4D4D,Worked with [Dr. Albert Cardona’s Group](https://www.janelia.org/people/albert-cardona),Worked on the L1 larval connectome,,,TRUE
-University of Queensland Winter Scholarship,University of Queensland,University of Queensland,"Brisbane, Australia",06/01/2015,01/08/2015,experience,#FBBB48,#4D4D4D,"Worked on tectal activity in zebrafish larvae, light sheet imaging, [Dr. Ethan Scott’s Group](https://researchers.uq.edu.au/researcher/1835)",,,,TRUE
-[Amgen Scholarship](https://www.google.com/url?q=https://amgenscholars.com/alumn/alex-bates/&sa=D&source=editors&ust=1626581062908000&usg=AOvVaw2a9vv9JV6gpLghqCyVznFE),Amgen Scholarship,"Dept. Zoology, University of Cambridge","Cambridge, UK",06/01/2014,01/08/2014,experience,#FBBB48,#4D4D4D,"Worked on neuronal structural plasticity in *Drosophila melanogaster* larvae, [Dr. Landgraf’s group](https://www.zoo.cam.ac.uk/directory/dr-matthias-landgraf)",,,,TRUE
-[UCL iGEM 2013](http://2013.igem.org/Team:UCL) team member,UCL iGEM,University College London,"London, UK",06/01/2013,01/08/2013,experience,#FBBB48,#4D4D4D,"Team member, cloning, cell culture, project planning",Gold medallist,,,TRUE
-[UCL iGEM 2014](http://2014.igem.org/Team:UCL) Advisor,UCL iGEM Advisor,University College London,"London, UK",06/01/2014,01/08/2014,leadership_experience,#C70E7B,#4D4D4D,"Project planning, oversight, team slection and management",Gold medallist,,,TRUE
-Summer student in the biomolecular modelling laboratory,Cancer Research UK,"Cancer Research UK, London Research Institute","London, UK",06/01/2013,01/08/2013,experience,#FBBB48,#4D4D4D,"Student Placement with [Dr. Tammy Cheng](https://bmm.crick.ac.uk/~cheng03/Biography.html), python programming ",,,,TRUE
-Mentored summer student,Mentoring,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2017,01/07/2017,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
-Mentored summer student,Mentoring,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2018,01/07/2018,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
-Mentored undergraduate student,Mentoring,"Dept. Zoology, University of Cambridge","Cambridge, UK",01/09/2017,01/05/2018,leadership_experience,#C70E7B,#4D4D4D,Student won best thesis in year award and two authorships,,,,TRUE
-CSHL Neuronal Circuits,Cold Spring Harbor,,"Cold Spring Harbor, NY",01/04/2024,01/04/2024,meetings,#D5A848,#4D4D4D,,,,,
-Brains and Roses,Brains and Roses,Schaeffer and Datta group organised,"Montserrat, Catalonia",01/06/2016,01/06/2016,meetings,#D5A848,#4D4D4D,,,,,TRUE
-Boehringer Ingelheim Meeting,BIF meeting,Boehringer Ingelheim Fonds,"Hirschegg, Austria",01/06/2017,01/06/2017,meetings,#D5A848,#4D4D4D,,,,,TRUE
-Boehringer Ingelheim Meeting,BIF meeting,Boehringer Ingelheim Fonds,"Hirschegg, Austria",01/06/2018,01/06/2018,meetings,#D5A848,#4D4D4D,,,,,TRUE
-MPI Connectomics meeting,MPI Connectomics meeting,Max Planck Institute,"Berlin, Germany",01/10/2017,01/10/2017,meetings,#D5A848,#4D4D4D,,,,,TRUE
-ECRO meeting,ECRO meeting,European Chemoreception Research Organization,"Cambridge, UK",11/09/2017,11/09/2017,meetings,#D5A848,#4D4D4D,,,,,TRUE
-ECRO meeting,ECRO meeting,European Chemoreception Research Organization,"Trieste, Italy",11/09/2019,11/09/2019,meetings,#D5A848,#4D4D4D,,,,,TRUE
-Mentorship of two students through the BNA Scholars Programme,The BNA Scholars Programme supports students and early career researchers from underrepresented backgrounds,,"Durham, UK",01/03/2021,present,leadership_experience,#C70E7B,#4D4D4D,,,,,
-President of [BlueSci](www.bluesci.co.uk),President of BlueSci,University College London,"London, UK",01/01/2016,01/10/2019,leadership_experience,#C70E7B,#4D4D4D,"Lead [BlueSci](www.bluesci.co.uk), the University of Cambridge’s science media society, through 15 issues of the [magazine](https://issuu.com/bluesci)",,,,TRUE
-President of the [UCLU Writer's Society](https://studentsunionucl.org/clubs-societies/writers-society?sku=CSC-MEMBERSHIP-2021-NID-82294-FULL),President of the UCLU Writer's Society,University College London,"London, UK",01/10/2014,01/10/2015,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
-"Science Editor, [Pi Magazine](https://uclpimedia.com/)","Science Editor, Pi Magazine",University College London,"London, UK",01/10/2014,01/10/2015,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
-[LMB graduate symposium organiser](https://www3.mrc-lmb.cam.ac.uk/sites/gsasymposium/),Symposium organiser,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2016,01/07/2016,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
-[LMB graduate symposium lead organiser](https://www3.mrc-lmb.cam.ac.uk/sites/gsasymposium/),Symposium organiser,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2017,01/07/2017,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
-Dolan and Belliart-Guérin et al. 2016,Dolan and Belliart-Guérin et al. 2016,"Cambridge, UK","Cambridge, UK",01/01/2018,01/01/2018,publications,#8FDA04,#4D4D4D,Communication from Learned to Innate Olfactory Processing Centers Is Required for Memory Retrieval in Drosophila,,,,FALSE
-Bates et al. 2018,Bates et al. 2018,"Cambridge, UK","Cambridge, UK",01/10/2018,01/10/2018,publications,#EE4244,#4D4D4D,Neuronal Cell Types in the Fly: Single-Cell Anatomy Meets Single-Cell Genomics,,,,FALSE
-Bates and Manton et al. 2020,Bates and Manton et al. 2020,"Cambridge, UK","Cambridge, UK",09/04/2020,09/04/2020,publications,#EE4244,#4D4D4D,"The Natverse, a Versatile Toolbox for Combining and Analysing Neuroanatomical Data",,,,FALSE
-Bates and Schlegel et al. 2020,Bates and Schlegel et al. 2020,"Cambridge, UK","Cambridge, UK",29/06/2020,29/06/2020,publications,#EE4244,#4D4D4D,Complete Connectomic Reconstruction of Olfactory Projection Neurons in the Fly Brain,,,,FALSE
-Huoviala et al. 2018,Huoviala et al. 2018,"Cambridge, UK","Cambridge, UK",11/06/2018,11/06/2018,publications,#8FDA04,#4D4D4D,Neural circuit basis of aversive odour processing in Drosophila from sensory input to descending output,,,,FALSE
-Li et al. 2018,Li et al. 2018,"Cambridge, UK","Cambridge, UK",24/05/2019,24/05/2019,publications,#8FDA04,#4D4D4D,Automated Reconstruction of a Serial-Section EM Drosophila Brain with Flood-Filling Networks and Local Realignment,,,,FALSE
-Frechter et al. 2019,Frechter et al. 2019,"Cambridge, UK","Cambridge, UK",21/05/2019,21/05/2019,publications,#8FDA04,#4D4D4D,Functional and anatomical specificity in a higher olfactory centre,,,,FALSE
-Dolan et al. 2019,Dolan et al. 2019,"Cambridge, UK","Cambridge, UK",21/05/2019,21/05/2019,publications,#8FDA04,#4D4D4D,"Neurogenetic dissection of the Drosophila lateral horn reveals major outputs, diverse behavioural functions, and interactions with the mushroom body",,,,FALSE
-Otto et al. 2020,Otto et al. 2020,"Cambridge, UK","Cambridge, UK",05/06/2020,05/06/2020,publications,#8FDA04,#4D4D4D,Input Connectivity Reveals Additional Heterogeneity of Dopaminergic Reinforcement in Drosophila,,,,FALSE
-Marin et al. 2020,Marin et al. 2020,"Cambridge, UK","Cambridge, UK",01/07/2020,01/07/2020,publications,#8FDA04,#4D4D4D,"Connectomics Analysis Reveals First-, Second-, and Third-Order Thermosensory and Hygrosensory Neurons in the Adult Drosophila Brain",,,,FALSE
-Eckstein et al. 2020,Eckstein et al. 2020,"Cambridge, UK","Cambridge, UK",06/07/2020,06/07/2020,publications,#8FDA04,#4D4D4D,Neurotransmitter Classification from Electron Microscopy Images at Synaptic Sites in Drosophila ,,,,FALSE
-Scheffer et al. 2020,Scheffer et al. 2020,"Cambridge, UK","Cambridge, UK",03/09/2020,03/09/2020,publications,#8FDA04,#4D4D4D,A connectome and analysis of the adult Drosophila central brain,,,,FALSE
-Cachero et al. 2020,Cachero et al. 2020,"Cambridge, UK","Cambridge, UK",02/11/2020,02/11/2020,publications,#8FDA04,#4D4D4D,"BAcTrace, a tool for retrograde tracing of neuronal circuits in Drosophila",,,,FALSE
-Li et al. 2020,Li et al. 2020,"Cambridge, UK","Cambridge, UK",14/12/2020,14/12/2020,publications,#8FDA04,#4D4D4D,The connectome of the adult Drosophila mushroom body provides insights into function,,,,FALSE
-Schlegel and Bates et al. 2021,Schlegel and Bates et al. 2021,"Cambridge, UK","Cambridge, UK",01/06/2021,01/06/2021,publications,#EE4244,#4D4D4D,"Information flow, cell types and stereotypy in a full olfactory connectome ",,,,FALSE
-[Postdoctoral Fellow in Neurobiology](https://brain.harvard.edu/hbi_humans/alexander-bates/),Harvard Medical School,Harvard Medical School,"Boston, US",01/10/2020,present,research_projects,#D72000,#4D4D4D,Member of the laboratory of [Prof. Rachel Wilson](https://neuro.hms.harvard.edu/faculty-staff/rachel-wilson),"Investigating navigational circuitry using calcium imaging, neurophysiology and behavioural studies involving virtual reality with *Drosophila melanogaster*","Co-leading an international collaboration with [Prof. Wei-Chung Allen Lee](https://www.lee.hms.harvard.edu/), [flywire](https://codex.flywire.ai/) and a network of international research groups on the first whole fly central nervous system connectome, open-access",,TRUE
-Visiting Scientist,Drosophila Connectomics Group,"Dept. Zoology, University of Cambridge",remote,01/10/2020,01/03/2024,research_projects,#5CA700,#4D4D4D,Neuroinformatics work with the [Drosophila Connectomics Group](https://www.zoo.cam.ac.uk/research/groups/connectomics),"Developed R tools for neuroanatomy and connectomics, organised international collaborators",,,TRUE
-LMB GSA Symposium,LMB symposium,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2016,01/05/2016,posters,#D5A848,#4D4D4D,,,,,TRUE
-High-resolution circuit reconstruction meeting,Janelia EM,Janelia Research Campus,"Ashburn, US",01/07/2016,01/07/2016,posters,#D5A848,#4D4D4D,,,,,TRUE
-Maggot Meeting,Janelia maggot meeting,Janelia Research Campus,"Ashburn, US",01/09/2016,01/09/2016,posters,#D5A848,#4D4D4D,,,,,TRUE
-UK Neural Computation,Neural Comp,University of Nottingham,"Nottingham, UK",01/09/2019,01/09/2019,posters,#D5A848,#4D4D4D,,,,,TRUE
-Boehringer Ingelheim Fonds communication workshop,BIF communications,Boehringer Ingelheim Foundation,"Mainz, Germany",01/09/2017,01/09/2017,posters,#D5A848,#4D4D4D,,,,,TRUE
+﻿title,event,institution,loc,start,end,section,color,fontcolor,description_1,description_2,description_3,description_4,in_resume
+,,,,,,,,,,,,,
+[Sir Henry Wellcome Fellowship](https://wellcome.org/grant-funding/schemes/sir-henry-wellcome-postdoctoral-fellowships),Wellcome Trust,Wellcome Trust & University of Oxford,UK,01/06/2022,01/02/2026,grants,#EE4244,#4D4D4D,"300,000 GBP towards my current research","Collaboration between groups of Rachel Wilson, Wei Lee, Scott Waddell and Shaul Druckmann",Also accepted as Life Science Research Foundation fellow,,TRUE
+,,,,,,,,,,,,,
+[EMBO fellow](https://www.embo.org/funding/fellowships-grants-and-career-support/postdoctoral-fellowships/),EMBO fellow,European Molecular Biology Organization,Europe,01/04/2021,01/06/2022,grants,#EE4244,#4D4D4D,Also accepted as a International Human Frontier Science Program fellow,,,,TRUE
+,,,,,,,,,,,,,
+[Human Frontiers Fellowship](https://www.hfsp.org/funding/hfsp-funding/postdoctoral-fellowships),HFSP fellow,International Human Frontier Science Program,International,01/05/2021,01/05/2021,grants,#EE4244,#4D4D4D,Did not pursue,,,,FALSE
+,,,,,,,,,,,,,
+[Life Science Research Foundation Fellowship](https://lsrf.org/),LSRF fellow,Life Science Research Foundation,US,01/06/2021,01/06/2021,grants,#EE4244,#4D4D4D,Did not pursue,,,,FALSE
+,,,,,,,,,,,,,
+[Herchel Smith PhD Scholarship](https://www.herchelsmith.cam.ac.uk/phd-studentships/current-phd-students),Herchel Smith Scholarship,Herchel Smith Foundation,"Cambridge, UK",01/08/2015,30/09/2019,grants,#EE4244,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+[Boehringer Ingelheim PhD Scholarship](https://www.bifonds.de/fellowships-grants/phd-fellowships/who-can-apply-phd.html),Boehringer Ingelheim Scholarship,Boehringer Ingelheim Foundation,European,01/08/2016,01/08/2018,grants,#EE4244,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+"[Honorary Vice Chancellor's Award](https://www.cambridgetrust.org/scholarships/v-c-awards-and-cambridge-international-scholarships/#:~:text=The%20aim%20of%20the%20Vice,research%20leading%20to%20a%20PhD.)",Honorary Vice Chancellor's Award,University of Cambridge,"Cambridge, UK",01/08/2015,01/08/2015,awards,#1BB6AF,#4D4D4D,,,,,FALSE
+,,,,,,,,,,,,,
+Burnstock Prize,Burnstock Prize,University College London,"London, UK",01/07/2013,01/07/2013,awards,#1BB6AF,#4D4D4D,"Highest grade in Neuroscience BSc course, 1st year",,,,FALSE
+,,,,,,,,,,,,,
+Burnstock Prize,Burnstock Prize,University College London,"London, UK",01/07/2014,01/07/2014,awards,#1BB6AF,#4D4D4D,"Highest grade in Neuroscience BSc course, 2nd year",,,,FALSE
+,,,,,,,,,,,,,
+Burnstock Prize,Burnstock Prize,University College London,"London, UK",01/07/2015,01/07/2015,awards,#1BB6AF,#4D4D4D,"Highest grade in Neuroscience BSc course, 3rd year",,,,FALSE
+,,,,,,,,,,,,,
+Max Perutz Prize,Max Perutz Prize,"MRC LMB, University of Cambridge","Cambridge, UK",01/10/2020,01/10/2020,awards,#1BB6AF,#4D4D4D,[A best thesis at the MRC LMB](https://www2.mrc-lmb.cam.ac.uk/achievements/lmb-student-prize/),,,,FALSE
+,,,,,,,,,,,,,
+BNA Postgraduate Prize,BNA Postgraduate Prize,British Neuroscience Association,UK,01/12/2020,01/12/2020,awards,#1BB6AF,#4D4D4D,[A best neuroscience thesis](https://www.bna.org.uk/members/student-prizes/),,,,FALSE
+,,,,,,,,,,,,,
+Dean's list,Dean's list,University College London,"London, UK",01/07/2013,01/07/2013,awards,#1BB6AF,#4D4D4D,"Dean’s list for the Faculty of Life Sciences, awarded based on undergraduate grades",,,,FALSE
+,,,,,,,,,,,,,
+Dean's list,Dean's list,University College London,"London, UK",01/07/2014,01/07/2014,awards,#1BB6AF,#4D4D4D,"Dean’s list for the Faculty of Life Sciences, awarded based on undergraduate grades",,,,FALSE
+,,,,,,,,,,,,,
+[Rob Clarke Award](https://www.physoc.org/grants-and-prizes/prizes/the-rob-clarke-awards/),Rob Clarke Award,Society of Physiology,"London, UK",01/09/2015,01/09/2015,awards,#1BB6AF,#4D4D4D,,,,,FALSE
+,,,,,,,,,,,,,
+Neuroscience BSc,"Neuroscience BSc, UCL",University College London,"London, UK",01/09/2012,01/07/2015,education,#007BC3,#4D4D4D,1st class degree with honours,Modules taken listed on [linkedIn](https://www.linkedin.com/in/alex-bates-22a265a7/),"**Awards:** [Burnstock Sessional Prize in Neuroscience BSc](https://www.ucl.ac.uk/biosciences/news/2020/jun/professor-geoffrey-burnstock-1929-2020) (ranked first in year) (2012–2013) (2013-2014) (2014-2015), Dean’s list for the Faculty of Life Sciences (2013-2014) (2014-2015), [Rob Clarke Award](https://www.physoc.org/grants-and-prizes/prizes/the-rob-clarke-awards/) from the Society of Physiology",,TRUE
+,,,,,,,,,,,,,
+High School,High School,Woodbridge High School,"London, UK",01/09/2008,01/09/2012,education,#F4E3C7,#4D4D4D,"6 A*s at A-level, comprising: Physics, Chemistry, Mathematics, English Literature, Philosophy and Russian, and in a history related EPQ (level 3) project","13 A*s at GCSE: English Literature, English Language, Mathematics, Statistics, Core Science, Additional Science, History, Philosophy, Geography, French, Italian, Russian and Expressive Arts. [Jack Petchey Achievement Award](https://www.jackpetcheyfoundation.org.uk/opportunities/grant-programmes/achievement-awards/)",,,
+,,,,,,,,,,,,,
+GCSEs,GCSEs,Woodbridge High School,"London, UK",01/09/2008,31/08/2010,education,#F4E3C7,#4D4D4D,"13 A*s: English Literature, English Language, Mathematics, Statistics, Core Science, Additional Science, History, Philosophy, Geography, French, Italian, Russian and Expressive Arts. [Jack Petchey Achievement Award](https://www.jackpetcheyfoundation.org.uk/opportunities/grant-programmes/achievement-awards/)",,,,FALSE
+,,,,,,,,,,,,,
+A levels,A levels,Woodbridge High School,"London, UK",01/09/2010,01/09/2012,education,#EF7C12,#4D4D4D,"6 A*s at A-level, comprising: Physics, Chemistry, Mathematics, English Literature, Philosophy and Russian, and in a history related EPQ (level 3) project",,,,FALSE
+,,,,,,,,,,,,,
+Neuroscience PhD,"Neuroscience PhD, University of Cambridge","[MRC LMB](https://www2.mrc-lmb.cam.ac.uk/), University of Cambridge","Cambridge, UK",01/09/2015,30/02/2021,education,#FC6882,#4D4D4D,PhD student with [Dr. Greg Jefferis](https://en.wikipedia.org/wiki/Gregory_Jefferis) ,"[**Thesis**](https://drive.google.com/file/d/1qiiAcquT948EcSC0SJYW85j8C-amOKkT/view): The lateral horn, a brain region in the fly, primes innate olfactory behaviours by combining patterns of second-order olfactory projection neuron activity. In my work, I developed tools and analyses, and reconstructed neural networks from electron microscopy data, in order to better understand this brain region and how memory systems interact with it","Neuroinformatics, data science, R programming","**Awards:** [Honorary Vice Chancellor’s Award](https://www.cambridgetrust.org/scholarships/v-c-awards-and-cambridge-international-scholarships/#:~:text=The%20aim%20of%20the%20Vice,research%20leading%20to%20a%20PhD.), [MRC LMB Max Perutz Prize 2019](https://www2.mrc-lmb.cam.ac.uk/achievements/lmb-student-prize/), Winner of the [British Neuroscience Association Postgraduate Prize 2020](https://www.bna.org.uk/members/student-prizes/)",TRUE
+,,,,,,,,,,,,,
+Paris Spring School in Neuroscience Techniques,Neuroscience Techniques Training,Paris Descartes University,"Paris, France",13/06/2018,28/06/2018,experience,#D5A848,#4D4D4D,[A course in](https://www.google.com/url?q=https://parisneuro.ovh/&sa=D&source=editors&ust=1626576404921000&usg=AOvVaw3eOj4rTk3Uv6H6IJSM3JZb) Optical Imaging and Electrophysiological Recording in Neuroscience,,,,TRUE
+,,,,,,,,,,,,,
+Visiting Scholar,Janelia Research Campus,Janelia Research Campus,"Ashburn, US",01/02/2019,01/03/2019,experience,#FBBB48,#4D4D4D,"Worked in FlyEM, [Dr. Gerry Rubin’s Group](https://www.hhmi.org/scientists/gerald-m-rubin)",Worked on the hemibrain connectome,,,TRUE
+,,,,,,,,,,,,,
+Visiting Scholar,Janelia Research Campus,Janelia Research Campus,"Ashburn, US",01/02/2016,01/05/2016,experience,#FBBB48,#4D4D4D,Worked with [Dr. Albert Cardona’s Group](https://www.janelia.org/people/albert-cardona),Worked on the L1 larval connectome,,,TRUE
+,,,,,,,,,,,,,
+University of Queensland Winter Scholarship,University of Queensland,University of Queensland,"Brisbane, Australia",06/01/2015,01/08/2015,experience,#FBBB48,#4D4D4D,"Worked on tectal activity in zebrafish larvae, light sheet imaging, [Dr. Ethan Scott’s Group](https://researchers.uq.edu.au/researcher/1835)",,,,TRUE
+,,,,,,,,,,,,,
+[Amgen Scholarship](https://www.google.com/url?q=https://amgenscholars.com/alumn/alex-bates/&sa=D&source=editors&ust=1626581062908000&usg=AOvVaw2a9vv9JV6gpLghqCyVznFE),Amgen Scholarship,"Dept. Zoology, University of Cambridge","Cambridge, UK",06/01/2014,01/08/2014,experience,#FBBB48,#4D4D4D,"Worked on neuronal structural plasticity in *Drosophila melanogaster* larvae, [Dr. Landgraf’s group](https://www.zoo.cam.ac.uk/directory/dr-matthias-landgraf)",,,,TRUE
+,,,,,,,,,,,,,
+[UCL iGEM 2013](http://2013.igem.org/Team:UCL) team member,UCL iGEM,University College London,"London, UK",06/01/2013,01/08/2013,experience,#FBBB48,#4D4D4D,"Team member, cloning, cell culture, project planning",Gold medallist,,,TRUE
+,,,,,,,,,,,,,
+[UCL iGEM 2014](http://2014.igem.org/Team:UCL) Advisor,UCL iGEM Advisor,University College London,"London, UK",06/01/2014,01/08/2014,leadership_experience,#C70E7B,#4D4D4D,"Project planning, oversight, team slection and management",Gold medallist,,,TRUE
+,,,,,,,,,,,,,
+Summer student in the biomolecular modelling laboratory,Cancer Research UK,"Cancer Research UK, London Research Institute","London, UK",06/01/2013,01/08/2013,experience,#FBBB48,#4D4D4D,"Student Placement with [Dr. Tammy Cheng](https://bmm.crick.ac.uk/~cheng03/Biography.html), python programming ",,,,TRUE
+,,,,,,,,,,,,,
+Mentored summer student,Mentoring,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2017,01/07/2017,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Mentored summer student,Mentoring,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2018,01/07/2018,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Mentored undergraduate student,Mentoring,"Dept. Zoology, University of Cambridge","Cambridge, UK",01/09/2017,01/05/2018,leadership_experience,#C70E7B,#4D4D4D,Student won best thesis in year award and two authorships,,,,TRUE
+,,,,,,,,,,,,,
+CSHL Neuronal Circuits,Cold Spring Harbor,,"Cold Spring Harbor, NY",01/04/2024,01/04/2024,meetings,#D5A848,#4D4D4D,,,,,
+,,,,,,,,,,,,,
+Brains and Roses,Brains and Roses,Schaeffer and Datta group organised,"Montserrat, Catalonia",01/06/2016,01/06/2016,meetings,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Boehringer Ingelheim Meeting,BIF meeting,Boehringer Ingelheim Fonds,"Hirschegg, Austria",01/06/2017,01/06/2017,meetings,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Boehringer Ingelheim Meeting,BIF meeting,Boehringer Ingelheim Fonds,"Hirschegg, Austria",01/06/2018,01/06/2018,meetings,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+MPI Connectomics meeting,MPI Connectomics meeting,Max Planck Institute,"Berlin, Germany",01/10/2017,01/10/2017,meetings,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+ECRO meeting,ECRO meeting,European Chemoreception Research Organization,"Cambridge, UK",11/09/2017,11/09/2017,meetings,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+ECRO meeting,ECRO meeting,European Chemoreception Research Organization,"Trieste, Italy",11/09/2019,11/09/2019,meetings,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Mentorship of two students through the BNA Scholars Programme,The BNA Scholars Programme supports students and early career researchers from underrepresented backgrounds,,"Durham, UK",01/03/2021,present,leadership_experience,#C70E7B,#4D4D4D,,,,,
+,,,,,,,,,,,,,
+President of [BlueSci](www.bluesci.co.uk),President of BlueSci,University College London,"London, UK",01/01/2016,01/10/2019,leadership_experience,#C70E7B,#4D4D4D,"Lead [BlueSci](www.bluesci.co.uk), the University of Cambridge’s science media society, through 15 issues of the [magazine](https://issuu.com/bluesci)",,,,TRUE
+,,,,,,,,,,,,,
+President of the [UCLU Writer's Society](https://studentsunionucl.org/clubs-societies/writers-society?sku=CSC-MEMBERSHIP-2021-NID-82294-FULL),President of the UCLU Writer's Society,University College London,"London, UK",01/10/2014,01/10/2015,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+"Science Editor, [Pi Magazine](https://uclpimedia.com/)","Science Editor, Pi Magazine",University College London,"London, UK",01/10/2014,01/10/2015,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+[LMB graduate symposium organiser](https://www3.mrc-lmb.cam.ac.uk/sites/gsasymposium/),Symposium organiser,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2016,01/07/2016,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+[LMB graduate symposium lead organiser](https://www3.mrc-lmb.cam.ac.uk/sites/gsasymposium/),Symposium organiser,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2017,01/07/2017,leadership_experience,#C70E7B,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Dolan and Belliart-Guérin et al. 2016,Dolan and Belliart-Guérin et al. 2016,"Cambridge, UK","Cambridge, UK",01/01/2018,01/01/2018,publications,#8FDA04,#4D4D4D,Communication from Learned to Innate Olfactory Processing Centers Is Required for Memory Retrieval in Drosophila,,,,FALSE
+,,,,,,,,,,,,,
+Bates et al. 2018,Bates et al. 2018,"Cambridge, UK","Cambridge, UK",01/10/2018,01/10/2018,publications,#EE4244,#4D4D4D,Neuronal Cell Types in the Fly: Single-Cell Anatomy Meets Single-Cell Genomics,,,,FALSE
+,,,,,,,,,,,,,
+Bates and Manton et al. 2020,Bates and Manton et al. 2020,"Cambridge, UK","Cambridge, UK",09/04/2020,09/04/2020,publications,#EE4244,#4D4D4D,"The Natverse, a Versatile Toolbox for Combining and Analysing Neuroanatomical Data",,,,FALSE
+,,,,,,,,,,,,,
+Bates and Schlegel et al. 2020,Bates and Schlegel et al. 2020,"Cambridge, UK","Cambridge, UK",29/06/2020,29/06/2020,publications,#EE4244,#4D4D4D,Complete Connectomic Reconstruction of Olfactory Projection Neurons in the Fly Brain,,,,FALSE
+,,,,,,,,,,,,,
+Huoviala et al. 2018,Huoviala et al. 2018,"Cambridge, UK","Cambridge, UK",11/06/2018,11/06/2018,publications,#8FDA04,#4D4D4D,Neural circuit basis of aversive odour processing in Drosophila from sensory input to descending output,,,,FALSE
+,,,,,,,,,,,,,
+Li et al. 2018,Li et al. 2018,"Cambridge, UK","Cambridge, UK",24/05/2019,24/05/2019,publications,#8FDA04,#4D4D4D,Automated Reconstruction of a Serial-Section EM Drosophila Brain with Flood-Filling Networks and Local Realignment,,,,FALSE
+,,,,,,,,,,,,,
+Frechter et al. 2019,Frechter et al. 2019,"Cambridge, UK","Cambridge, UK",21/05/2019,21/05/2019,publications,#8FDA04,#4D4D4D,Functional and anatomical specificity in a higher olfactory centre,,,,FALSE
+,,,,,,,,,,,,,
+Dolan et al. 2019,Dolan et al. 2019,"Cambridge, UK","Cambridge, UK",21/05/2019,21/05/2019,publications,#8FDA04,#4D4D4D,"Neurogenetic dissection of the Drosophila lateral horn reveals major outputs, diverse behavioural functions, and interactions with the mushroom body",,,,FALSE
+,,,,,,,,,,,,,
+Otto et al. 2020,Otto et al. 2020,"Cambridge, UK","Cambridge, UK",05/06/2020,05/06/2020,publications,#8FDA04,#4D4D4D,Input Connectivity Reveals Additional Heterogeneity of Dopaminergic Reinforcement in Drosophila,,,,FALSE
+,,,,,,,,,,,,,
+Marin et al. 2020,Marin et al. 2020,"Cambridge, UK","Cambridge, UK",01/07/2020,01/07/2020,publications,#8FDA04,#4D4D4D,"Connectomics Analysis Reveals First-, Second-, and Third-Order Thermosensory and Hygrosensory Neurons in the Adult Drosophila Brain",,,,FALSE
+,,,,,,,,,,,,,
+Eckstein et al. 2020,Eckstein et al. 2020,"Cambridge, UK","Cambridge, UK",06/07/2020,06/07/2020,publications,#8FDA04,#4D4D4D,Neurotransmitter Classification from Electron Microscopy Images at Synaptic Sites in Drosophila ,,,,FALSE
+,,,,,,,,,,,,,
+Scheffer et al. 2020,Scheffer et al. 2020,"Cambridge, UK","Cambridge, UK",03/09/2020,03/09/2020,publications,#8FDA04,#4D4D4D,A connectome and analysis of the adult Drosophila central brain,,,,FALSE
+,,,,,,,,,,,,,
+Cachero et al. 2020,Cachero et al. 2020,"Cambridge, UK","Cambridge, UK",02/11/2020,02/11/2020,publications,#8FDA04,#4D4D4D,"BAcTrace, a tool for retrograde tracing of neuronal circuits in Drosophila",,,,FALSE
+,,,,,,,,,,,,,
+Li et al. 2020,Li et al. 2020,"Cambridge, UK","Cambridge, UK",14/12/2020,14/12/2020,publications,#8FDA04,#4D4D4D,The connectome of the adult Drosophila mushroom body provides insights into function,,,,FALSE
+,,,,,,,,,,,,,
+Schlegel and Bates et al. 2021,Schlegel and Bates et al. 2021,"Cambridge, UK","Cambridge, UK",01/06/2021,01/06/2021,publications,#EE4244,#4D4D4D,"Information flow, cell types and stereotypy in a full olfactory connectome ",,,,FALSE
+,,,,,,,,,,,,,
+[Postdoctoral Fellow in Neurobiology](https://brain.harvard.edu/hbi_humans/alexander-bates/),Harvard Medical School,Harvard Medical School,"Boston, US",01/10/2020,present,research_projects,#D72000,#4D4D4D,"Investigating navigational circuitry using calcium imaging, neurophysiology and behavioural studies involving virtual reality with *Drosophila melanogaster*, in the laboratory of [Prof. Rachel Wilson](https://neuro.hms.harvard.edu/faculty-staff/rachel-wilson)","Co-leading an international collaboration with [Prof. Wei-Chung Allen Lee](https://www.lee.hms.harvard.edu/), [flywire](https://codex.flywire.ai/) and a network of international research groups on the first whole fly central nervous system connectome, open-access",,,TRUE
+,,,,,,,,,,,,,
+Visiting Scientist,Drosophila Connectomics Group,"Dept. Zoology, University of Cambridge",remote,01/10/2020,01/03/2024,research_projects,#5CA700,#4D4D4D,Neuroinformatics work with the [Drosophila Connectomics Group](https://www.zoo.cam.ac.uk/research/groups/connectomics),"Developed R tools for neuroanatomy and connectomics, organised international collaborators",,,TRUE
+,,,,,,,,,,,,,
+LMB GSA Symposium,LMB symposium,"MRC LMB, University of Cambridge","Cambridge, UK",01/05/2016,01/05/2016,posters,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+High-resolution circuit reconstruction meeting,Janelia EM,Janelia Research Campus,"Ashburn, US",01/07/2016,01/07/2016,posters,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Maggot Meeting,Janelia maggot meeting,Janelia Research Campus,"Ashburn, US",01/09/2016,01/09/2016,posters,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+UK Neural Computation,Neural Comp,University of Nottingham,"Nottingham, UK",01/09/2019,01/09/2019,posters,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
+Boehringer Ingelheim Fonds communication workshop,BIF communications,Boehringer Ingelheim Foundation,"Mainz, Germany",01/09/2017,01/09/2017,posters,#D5A848,#4D4D4D,,,,,TRUE
+,,,,,,,,,,,,,
 HHMI Investigators' Meeting,HHMI HQ,HHMI HQ,Chevy Chase,12/12/2023,14/12/2023,posters,#D5A848,#4D4D4D,,,,,TRUE
