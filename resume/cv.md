@@ -10,7 +10,7 @@ generate complex behaviours, including olfactory processing and animal
 navigation. I develop open-source tools for neuroanatomical analysis and
 collaborate internationally on connectomics projects. In the wetlab, I
 use virtual reality and calcium imaging experiments to interrogate
-neurobiological circuits in living, behaving flies.
+neurobiological circuits in living, behaving flies. I am a UK citizen.
 
 ------------------------------------------------------------------------
 
@@ -18,7 +18,7 @@ neurobiological circuits in living, behaving flies.
 0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445) | [GitHub:
 alexanderbates](https://github.com/alexanderbates)
 
-**Metrics:** 3910 citations | h-index: 21 | i10-index: 23 | 7 peer
+**Metrics:** 4175 citations | h-index: 21 | i10-index: 23 | 7 peer
 reviews
 
 ## Professional Research \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
@@ -50,7 +50,7 @@ international collaborators
 Oxford • UK • 01/02/2026 - 01/06/2022
 
 300,000 GBP towards my current research • Collaboration between groups
-of Rachel Wilson, Wei Lee, Scott Waddell and Shaul Druckmann • Also
+of Rachel Wilson, Wei Lee, Scott Waddell and Jan Drugowitsch • Also
 accepted as Life Science Research Foundation fellow
 
 **EMBO fellow** • European Molecular Biology Organization • Europe •
@@ -99,8 +99,9 @@ from the Society of Physiology
 
 ## Presentations \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Selected Talks:** ECRO meeting (2019) • Boehringer Ingelheim Meeting
-(2018) • MPI Connectomics meeting (2017) • ECRO meeting (2017) •
+**Selected Talks:** CSHL Neurobiology of Drosophila (2025) • CSHL
+Neuronal Circuits (2024) • ECRO meeting (2019) • Boehringer Ingelheim
+Meeting (2018) • MPI Connectomics meeting (2017) • ECRO meeting (2017) •
 Boehringer Ingelheim Meeting (2017) • Brains and Roses (2016)
 
 **Selected Posters:** HHMI Investigators’ Meeting (2023) • UK Neural
@@ -149,49 +150,32 @@ writing • creative writing • open access
 
 **Selected Open Source Software:** [natverse](https://natverse.org/) •
 [neuromorphr](https://natverse.github.io/neuromorphr/) •
+[nat.ggplot](https://natverse.github.io/nat.ggplot/) •
 [neuprintr](https://natverse.github.io/neuprintr/) •
+[crantr](https://github.com/flyconnectome/crantr) •
 [bancr](https://github.com/flyconnectome/bancr?tab=readme-ov-file) •
 [insectbrainr](https://natverse.github.io/insectbrainr/)
 
 ## Selected Publications \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Distributed control circuits across a brain-and-cord connectome**
-(2025). <ins>***AS Bates***</ins>, JS Phelps, M Kim, HH Yang, A M…
-*bioRxiv*  
+(2025). <ins>***AS Bates***</ins>, JS Phelps, M Kim, HH Yang, A
+Matsliah, Z Ajabi, E Perlman, … *bioRxiv* (6)  
 **Neurotransmitter classification from electron microscopy images at
 synaptic sites in Drosophila melanogaster** (2024). N Eckstein,
-<ins>***AS Bates***</ins>, A Champion, M Du, … *Cell* (181)  
+<ins>***AS Bates***</ins>, A Champion, M Du, Y Yin, P Schlegel, AKY Lu,
+… *Cell* (196)  
 **Information flow, cell types and stereotypy in a full olfactory
 connectome** (2021). P Schlegel, <ins>***AS Bates***</ins>, T Stürner,
-SR Jaga… *Elife* (142)  
+SR Jagannathan, N Drummond, J Hsu, … *Elife* (152)  
 **Complete connectomic reconstruction of olfactory projection neurons in
 the fly brain** (2020). <ins>***AS Bates***</ins>, P Schlegel, RJV
-Roberts, N Dru… *Curr. Biology* (194)  
+Roberts, N Drummond, IFM Tamimi, … *Curr. Biology* (202)  
 **The natverse, a versatile toolbox for combining and analysing
 neuroanatomical data** (2020). <ins>***AS Bates***</ins>, JD Manton, SR
-Jagannathan, M C… *Elife* (194)  
-**Analysis and optimization of equitable US cancer clinical trial center
-access by travel time** (2024). H Lee, **AS Bates**, S Callier, M Chan,
-N Chambwe, A Mars… *JAMA oncology* (12)  
-**Functional and anatomical specificity in a higher olfactory centre**
-(2019). S Frechter, **AS Bates**, S Tootoonian, MJ Dolan, J Manto…
-*eLife* (107)  
-**Neural circuit mechanisms for steering control in walking Drosophila**
-(2025). A Rayshubskiy, SL Holtz, **AS Bates**, QX Vanderbeck, LS …
-*ELife* (96)  
-**Quantitative Attributions with Counterfactuals** (2024). DY Adjavon, N
-Eckstein, **AS Bates**, GSXE Jefferis, J Funke *bioRxiv*  
-**Whole-brain annotation and multi-connectome cell typing of
-Drosophila** (2024). P Schlegel, Y Yin, **AS Bates**, S Dorkenwald, K
-Eichler,… *Nature* (271)  
-**Discriminative attribution from paired images** (2022). N Eckstein, H
-Bukhari, **AS Bates**, GSXE Jefferis, J Funke *Euro. Conf. on Computer
-Vision* (8)  
-**BAcTrace, a tool for retrograde tracing of neuronal circuits in
-Drosophila** (2020). S Cachero, M Gkantia, **AS Bates**, S Frechter, L
-Blackie… *Nature methods* (43)  
-*+13 more on
-[Scholar](https://scholar.google.com/citations?user=BOVTiXIAAAAJ&hl=en)*,
+Jagannathan, M Costa, P Schlegel, T Rohlfing, … *Elife* (203)  
+*+21 more publications available at [NCBI
+Bibliography](https://www.ncbi.nlm.nih.gov/myncbi/1l7VwNZADtbg7x/bibliography/public/)*,
 italics=first author\*
 
 ## Review Articles \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
@@ -200,18 +184,19 @@ italics=first author\*
 (2022). <ins>***AS Bates***</ins>, G Jefferis *Curr. Biology* (1)  
 **Neuronal cell types in the fly: single-cell anatomy meets single-cell
 genomics** (2019). <ins>***AS Bates***</ins>, J Janssens, GS Jefferis, S
-Aerts *Curr. opinion in neurobiology* (70)  
+Aerts *Curr. opinion in neurobiology* (72)  
 
 ## Referees \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 **Postdoc Supervisor:** Prof. Rachel Wilson, Harvard Medical School,
-<Rachel_Wilson@hms.harvard.edu>  
-**PhD Supervisor:** Dr. Gregory Jefferis, MRC Laboratory of Molecular
-Biology, Cambridge, <jefferis@mrc-lmb.cam.ac.uk>  
-**BSc Tutor:** Dr. Marco Beato, UCL Neuroscience, <m.beato@ucl.ac.uk>  
+<Rachel_Wilson@hms.harvard.edu> **PhD Supervisor:** Dr. Gregory
+Jefferis, MRC Laboratory of Molecular Biology, Cambridge,
+<jefferis@mrc-lmb.cam.ac.uk> **Key Collaborator:** Prof. Wei-Chung Allen
+Lee, Harvard Medical School, <Wei-Chung_Lee@hms.harvard.edu> **BSc
+Tutor:** Dr. Marco Beato, UCL Neuroscience, <m.beato@ucl.ac.uk>
 **Supervisee:** Serene Dhawan, Princeton PhD student,
 <serenedhawan@gmail.com>
 
 ------------------------------------------------------------------------
 
-*Updated: 01 September 2025*
+*Updated: 03 November 2025*

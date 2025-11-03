@@ -345,37 +345,28 @@ skill_list <- skills_data %>% pull(skill) %>% paste(collapse = " • ")
 cat("**Technical Skills:** ")
 cat(skill_list)
 cat("\n\n")
-cat("**Selected Open Source Software:** [natverse](https://natverse.org/) • [neuromorphr](https://natverse.github.io/neuromorphr/) • [neuprintr](https://natverse.github.io/neuprintr/) • [bancr](https://github.com/flyconnectome/bancr?tab=readme-ov-file) • [insectbrainr](https://natverse.github.io/insectbrainr/)")
+cat("**Selected Open Source Software:** [natverse](https://natverse.org/) • [neuromorphr](https://natverse.github.io/neuromorphr/) • [nat.ggplot](https://natverse.github.io/nat.ggplot/) • [neuprintr](https://natverse.github.io/neuprintr/) • [crantr](https://github.com/flyconnectome/crantr) • [bancr](https://github.com/flyconnectome/bancr?tab=readme-ov-file) • [insectbrainr](https://natverse.github.io/insectbrainr/)")
 ```
 
 ## Selected Publications __________________________________
 
 ```{r publications}
-cat("\\scriptsize\n\n")  # LaTeX command for small but readable text
+# Show only the best 5 publications
+top_publications <- head(publications, 5)
 
-# Ultra-compact publication format - single line per publication
-for(i in 1:min(12, nrow(publications))) {
-  pub <- publications[i, ]
+for(i in 1:nrow(top_publications)) {
+  pub <- top_publications[i, ]
   clean_title <- gsub("<a href='[^']*'>([^<]*)</a>", "\\1", pub$title)
-  
-  # Truncate long author lists
-  author_short <- pub$author
-  if(nchar(author_short) > 60) {
-    author_short <- paste0(substr(author_short, 1, 57), "...")
-  }
-  
+
   citation_text <- if(!is.na(pub$cites) && pub$cites > 0) glue(" ({pub$cites})") else ""
-  
-  cat(glue("**{clean_title}** ({pub$year}). {author_short} *{pub$journal}*{citation_text}"))
+
+  cat(glue("**{clean_title}** ({pub$year}). {pub$author} *{pub$journal}*{citation_text}"))
   cat("  \n")
 }
 
-if(nrow(publications) > 12) {
-  cat(glue("*+{nrow(publications) - 12} more on [Scholar](https://scholar.google.com/citations?user=BOVTiXIAAAAJ&hl=en)*"))
-}
+# Add link to full bibliography
+cat(glue("*+{nrow(publications) - 5} more publications available at [NCBI Bibliography](https://www.ncbi.nlm.nih.gov/myncbi/1l7VwNZADtbg7x/bibliography/public/)*"))
 cat("\\n\\n*, italics=first author*\\n\\n")
-
-cat("\\normalsize\n\n")  # Return to normal size
 ```
 
 ## Review Articles _________________________________________
@@ -399,9 +390,10 @@ if(nrow(reviews) > 0) {
 
 ## Referees _______________________________________________
 
-**Postdoc Supervisor:** Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@hms.harvard.edu](mailto:Rachel_Wilson@hms.harvard.edu)  
-**PhD Supervisor:** Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, [jefferis@mrc-lmb.cam.ac.uk](mailto:jefferis@mrc-lmb.cam.ac.uk)  
-**BSc Tutor:** Dr. Marco Beato, UCL Neuroscience, [m.beato@ucl.ac.uk](mailto:m.beato@ucl.ac.uk)  
+**Postdoc Supervisor:** Prof. Rachel Wilson, Harvard Medical School, [Rachel_Wilson@hms.harvard.edu](mailto:Rachel_Wilson@hms.harvard.edu)
+**PhD Supervisor:** Dr. Gregory Jefferis, MRC Laboratory of Molecular Biology, Cambridge, [jefferis@mrc-lmb.cam.ac.uk](mailto:jefferis@mrc-lmb.cam.ac.uk)
+**Key Collaborator:** Prof. Wei-Chung Allen Lee, Harvard Medical School, [Wei-Chung_Lee@hms.harvard.edu](mailto:Wei-Chung_Lee@hms.harvard.edu)
+**BSc Tutor:** Dr. Marco Beato, UCL Neuroscience, [m.beato@ucl.ac.uk](mailto:m.beato@ucl.ac.uk)
 **Supervisee:** Serene Dhawan, Princeton PhD student, [serenedhawan@gmail.com](mailto:serenedhawan@gmail.com)
 
 ---
