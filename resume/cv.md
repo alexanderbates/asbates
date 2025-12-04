@@ -148,13 +148,7 @@ programming
 Illustrator • InDesign • communication • text editing • journalistic
 writing • creative writing • open access
 
-**Selected Open Source Software:** [natverse](https://natverse.org/) •
-[neuromorphr](https://natverse.github.io/neuromorphr/) •
-[nat.ggplot](https://natverse.github.io/nat.ggplot/) •
-[neuprintr](https://natverse.github.io/neuprintr/) •
-[crantr](https://github.com/flyconnectome/crantr) •
-[bancr](https://github.com/flyconnectome/bancr?tab=readme-ov-file) •
-[insectbrainr](https://natverse.github.io/insectbrainr/)
+**Data and Code:** Public datasets: [BANC Adult Fly Brain Connectome](https://doi.org/10.7910/DVN/8TFGGB) • Zenodo: [Supplemental Files for Eckstein and Bates et al., Cell (2024)](https://doi.org/10.5281/zenodo.10593546) (954 downloads) • Open source software: 28 GitHub repositories across 4 organizations, including [natverse](https://natverse.org/) (20 repos), [bancr](https://github.com/flyconnectome/bancr), [neuprintr](https://natverse.github.io/neuprintr/), [crantr](https://github.com/flyconnectome/crantr)
 
 ## Selected Publications \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 

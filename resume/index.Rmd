@@ -81,6 +81,11 @@ rownames(reviews) <- 1:nrow(reviews)
 corr <- c("Neurotransmitter Classification from Electron Microscopy Images at Synaptic Sites in Drosophila Melanogaster")
 publications$journal[publications$title%in%corr] <- "*Accepted at Cell*"
 publications$year[publications$title%in%corr] <- "2023"
+
+# Update BANC connectome paper
+banc_corr <- grepl("Distributed control circuits across a brain-and-cord connectome", publications$title, ignore.case = TRUE)
+publications$journal[banc_corr] <- "bioRxiv, *in review at Nature*"
+
 rownames(publications) <- 1:nrow(publications)
 
 # Get peer reviews
@@ -207,8 +212,10 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 - <i class="fas fa-tools"></i> [hemibrainr](https://natverse.github.io/hemibrainr/)
 - <i class="fas fa-tools"></i> [mouselightr](https://natverse.github.io/mouselightr/)
 - <i class="fas fa-tools"></i> [insectbrainr](https://natverse.github.io/insectbrainr/)
-- <i class="fas fa-tools"></i> [crantr](https://github.com/flyconnectome/crantr) 
+- <i class="fas fa-tools"></i> [crantr](https://github.com/flyconnectome/crantr)
 - <i class="fas fa-tools"></i> [bancr](https://github.com/flyconnectome/bancr)
+- <i class="fas fa-tools"></i> [influencer](https://github.com/natverse/influencer/)
+- <i class="fas fa-tools"></i> [ConnectomeInfluenceCalculator](https://zenodo.org/records/17693838)
 
 <br></br>
 
@@ -244,7 +251,7 @@ print_text_block(CV, 'intro')
 ```{r profile, fig.align = "center"}
 author <- scholar::get_profile(id)
 df <- data.frame(total_cites = author$total_cites, h_index = author$h_index, i10_index = author$i10_index)
-df$peer_reviews <-  sum(peer_reviews$reviews)
+df$peer_reviews <-  sum(peer_reviews$reviews) + 9  # Add 9 abstract reviews (e.g., COSYNE 2026)
 colnames(df) <- gsub("_"," ",colnames(df))
 formattable(df, list(`total cites` = color_bar("coral", fun = "normalize"), `h index` = color_bar("lightgreen", fun = "proportion"), `i10 index` = color_bar("lightblue", fun = "proportion"), `peer reviews` = color_bar("darkgrey", fun = "proportion")))
 ```
@@ -351,9 +358,92 @@ Other {data-icon=share-alt}
 CV %<>% print_section('experience')
 ```
 
+Data and Code {data-icon=database}
+--------------------------------------------------------------------------------
+
+```{r data_and_code}
+# Load compiled data and code sources
+tryCatch({
+  data_sources <- read.csv("data_and_code_sources.csv", stringsAsFactors = FALSE)
+
+  # Group by type for organized display
+  dataverse_sources <- data_sources %>% filter(type == "dataverse")
+  github_sources <- data_sources %>% filter(type == "github")
+  zenodo_sources <- data_sources %>% filter(type == "zenodo")
+
+  # Display Harvard Dataverse
+  if (nrow(dataverse_sources) > 0) {
+    for(i in 1:nrow(dataverse_sources)) {
+      ds <- dataverse_sources[i, ]
+
+      cat("### Public Dataset: ", ds$title, "\n\n")
+      cat(ds$organization, "\n\n")
+      cat("N/A", "\n\n")  # For the location field
+      cat("N/A", "\n\n")  # For the timeline field
+
+      cat("- DOI: [", ds$doi, "](https://doi.org/", ds$doi, ")\n", sep = "")
+      if (!is.na(ds$description) && ds$description != "") {
+        cat("- ", ds$description, "\n", sep = "")
+      }
+      cat("\n")
+    }
+  }
+
+  # Display GitHub projects by organization
+  if (nrow(github_sources) > 0) {
+    # Group by organization
+    orgs <- unique(github_sources$organization)
+    for (org in orgs) {
+      org_repos <- github_sources %>% filter(organization == org) %>% arrange(desc(stars))
+
+      cat("### Open Source Contributions: ", org, "\n\n")
+      cat("GitHub Organization\n\n")
+      cat("N/A", "\n\n")
+      cat("N/A", "\n\n")
+
+      cat("- ", nrow(org_repos), " repositories as contributor\n", sep = "")
+
+      # Show all repositories
+      cat("- Projects: ")
+      repo_links <- sapply(1:nrow(org_repos), function(i) {
+        repo <- org_repos[i, ]
+        paste0("[", repo$title, "](", repo$url, ")")
+      })
+      cat(paste(repo_links, collapse = ", "))
+      cat("\n\n")
+    }
+  }
+
+  # Display Zenodo projects
+  if (nrow(zenodo_sources) > 0) {
+    for(i in 1:nrow(zenodo_sources)) {
+      zs <- zenodo_sources[i, ]
+
+      cat("### Zenodo Dataset: ", zs$title, "\n\n")
+      cat("Zenodo\n\n")
+      cat("N/A", "\n\n")
+      cat("N/A", "\n\n")
+
+      cat("- DOI: [", zs$doi, "](https://doi.org/", zs$doi, ")\n", sep = "")
+      if (!is.na(zs$downloads) && zs$downloads > 0) {
+        cat("- Downloads: ", format(zs$downloads, big.mark = ","), "\n", sep = "")
+      }
+      cat("\n")
+    }
+  }
+
+}, error = function(e) {
+  cat("### Data and Code Resources\n\n")
+  cat("GitHub\n\n")
+  cat("N/A\n\n")
+  cat("N/A\n\n")
+  cat("- See [GitHub profile](https://github.com/alexanderbates) for open source contributions\n\n")
+})
+```
+
 ::: aside
 
-Updated on `r format(Sys.Date(), format = "%d/%m/%Y")` 
+Updated on `r format(Sys.Date(), format = "%d/%m/%Y")`
 
 :::
 

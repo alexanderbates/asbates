@@ -103,6 +103,10 @@ revs <- paste0(revs, collapse="|")
 reviews <- subset(publications, grepl(revs, title))
 publications <- subset(publications, !grepl(revs, title))
 
+# Journal corrections
+banc_corr <- grepl("Distributed control circuits across a brain-and-cord connectome", publications$title, ignore.case = TRUE)
+publications$journal[banc_corr] <- "bioRxiv, *in review at Nature*"
+
 # Get scholar profile for metrics
 author <- scholar::get_profile(scholar_id)
 
@@ -158,7 +162,7 @@ cat(intro_text)
 contact_line <- "**Contact:** alexander_bates@hms.harvard.edu | [ORCID: 0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445) | [GitHub: alexanderbates](https://github.com/alexanderbates)"
 metrics_line <- glue("**Metrics:** {author$total_cites} citations | h-index: {author$h_index} | i10-index: {author$i10_index}")
 if(nrow(peer_reviews) > 0) {
-  metrics_line <- glue("{metrics_line} | {sum(peer_reviews$reviews)} peer reviews")
+  metrics_line <- glue("{metrics_line} | {sum(peer_reviews$reviews) + 9} peer reviews")  # Add 9 abstract reviews (e.g., COSYNE 2026)
 }
 cat(contact_line)
 cat("\n\n")
@@ -194,13 +198,11 @@ grant_entries <- CV$entries_data %>% filter(section == "grants")
 
 for(i in 1:nrow(grant_entries)) {
   entry <- grant_entries[i, ]
-  
-  # Extract clean title without links  
-  clean_title <- gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", entry$title)
-  
-  cat(glue("**{clean_title}** • {entry$institution} • {entry$loc} • {entry$timeline}"))
+
+  # Keep hyperlinks in title
+  cat(glue("**{entry$title}** • {entry$institution} • {entry$loc} • {entry$timeline}"))
   cat("\n\n")
-  
+
   if(!is.na(entry$description_bullets) && entry$description_bullets != "") {
     desc_clean <- gsub("^- ", "", entry$description_bullets)
     desc_clean <- gsub("\n- ", "\n• ", desc_clean)
@@ -298,8 +300,7 @@ if(nrow(research_visits) > 0) {
   cat("**Research Visits:** ")
   for(i in 1:nrow(research_visits)) {
     entry <- research_visits[i, ]
-    clean_title <- gsub("\\[([^]]+)\\]\\([^)]+\\)", "\\1", entry$title)
-    
+
     # Create summary with description
     desc_summary <- ""
     if(!is.na(entry$description_bullets) && entry$description_bullets != "") {
@@ -307,8 +308,14 @@ if(nrow(research_visits) > 0) {
       desc_clean <- gsub("\\n- ", ", ", desc_clean)
       desc_summary <- glue(" | {desc_clean}")
     }
-    
-    cat(glue("{entry$institution} ({entry$timeline}){desc_summary}"))
+
+    # Show title for scholarships (keep hyperlinks), otherwise just institution
+    if(grepl("Scholarship", entry$title, ignore.case = TRUE)) {
+      # Keep hyperlinks for scholarships
+      cat(glue("{entry$title}, {entry$institution} ({entry$timeline}){desc_summary}"))
+    } else {
+      cat(glue("{entry$institution} ({entry$timeline}){desc_summary}"))
+    }
     if(i < nrow(research_visits)) cat(" • ")
   }
   cat("\\n")
@@ -345,28 +352,129 @@ skill_list <- skills_data %>% pull(skill) %>% paste(collapse = " • ")
 cat("**Technical Skills:** ")
 cat(skill_list)
 cat("\n\n")
-cat("**Selected Open Source Software:** [natverse](https://natverse.org/) • [neuromorphr](https://natverse.github.io/neuromorphr/) • [nat.ggplot](https://natverse.github.io/nat.ggplot/) • [neuprintr](https://natverse.github.io/neuprintr/) • [crantr](https://github.com/flyconnectome/crantr) • [bancr](https://github.com/flyconnectome/bancr?tab=readme-ov-file) • [insectbrainr](https://natverse.github.io/insectbrainr/)")
 ```
 
-## Selected Publications __________________________________
+## Data and Code ___________________________________________
+
+```{r data_and_code}
+# Load compiled data and code sources
+tryCatch({
+  data_sources <- read.csv("data_and_code_sources.csv", stringsAsFactors = FALSE)
+
+  # Group by type for organized display
+  dataverse_sources <- data_sources %>% filter(type == "dataverse")
+  github_sources <- data_sources %>% filter(type == "github")
+  zenodo_sources <- data_sources %>% filter(type == "zenodo")
+
+  # Display Harvard Dataverse
+  if (nrow(dataverse_sources) > 0) {
+    cat("**Public Datasets:**  \n")
+    for(i in 1:nrow(dataverse_sources)) {
+      ds <- dataverse_sources[i, ]
+      cat(glue("- [{ds$title}]({ds$url}) (DOI: {ds$doi})"))
+      if (!is.na(ds$description) && ds$description != "") {
+        cat(glue(" - {ds$description}"))
+      }
+      cat("  \n")
+    }
+    cat("\n")
+  }
+
+  # Display GitHub projects by organization
+  if (nrow(github_sources) > 0) {
+    cat("**Open Source Software Contributions:**  \n")
+
+    # Group by organization
+    orgs <- unique(github_sources$organization)
+    for (org in orgs) {
+      org_repos <- github_sources %>% filter(organization == org) %>% arrange(desc(stars))
+
+      # Show all repositories for each organization
+      cat(glue("*{org}* ({nrow(org_repos)} repositories): "))
+      repo_links <- sapply(1:nrow(org_repos), function(i) {
+        repo <- org_repos[i, ]
+        glue("[{repo$title}]({repo$url})")
+      })
+      cat(paste(repo_links, collapse = " • "))
+      cat("  \n")
+    }
+    cat("\n")
+  }
+
+  # Display Zenodo projects
+  if (nrow(zenodo_sources) > 0) {
+    cat("**Zenodo Datasets:**  \n")
+    for(i in 1:nrow(zenodo_sources)) {
+      zs <- zenodo_sources[i, ]
+      cat(glue("- [{zs$title}]({zs$url}) (DOI: {zs$doi})"))
+      if (!is.na(zs$description) && zs$description != "") {
+        cat(glue(" - {zs$description}"))
+      }
+      cat("  \n")
+    }
+    cat("\n")
+  }
+
+}, error = function(e) {
+  cat("*Data and code sources: See [GitHub profile](https://github.com/alexanderbates)*\n\n")
+})
+```
+
+## Publications __________________________________
 
 ```{r publications}
-# Show only the best 5 publications
-top_publications <- head(publications, 5)
-
-for(i in 1:nrow(top_publications)) {
-  pub <- top_publications[i, ]
+# Show all publications
+for(i in 1:nrow(publications)) {
+  pub <- publications[i, ]
   clean_title <- gsub("<a href='[^']*'>([^<]*)</a>", "\\1", pub$title)
 
-  citation_text <- if(!is.na(pub$cites) && pub$cites > 0) glue(" ({pub$cites})") else ""
+  # Mark first author with obelus in the author list
+  author_text <- pub$author
 
-  cat(glue("**{clean_title}** ({pub$year}). {pub$author} *{pub$journal}*{citation_text}"))
+  # Special handling for papers with multiple first authors
+  if(grepl("Distributed control circuits across a brain-and-cord connectome", clean_title, ignore.case = TRUE)) {
+    # BANC paper: Add obelus to multiple first authors (AS Bates, JS Phelps, M Kim, HH Yang)
+    # Add double dagger for corresponding authors (AS Bates, JS Phelps)
+    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020\u2021", author_text)
+    author_text <- gsub("JS Phelps", "JS Phelps\u2020\u2021", author_text)
+    author_text <- gsub("M Kim", "M Kim\u2020", author_text)
+    author_text <- gsub("HH Yang", "HH Yang\u2020", author_text)
+  } else if(grepl("Neurotransmitter classification from electron microscopy", clean_title, ignore.case = TRUE)) {
+    # Neurotransmitter paper: N Eckstein†, AS Bates†
+    author_text <- gsub("N Eckstein", "N Eckstein\u2020", author_text)
+    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
+  } else if(grepl("Information flow, cell types and stereotypy", clean_title, ignore.case = TRUE)) {
+    # Olfactory connectome paper: P Schlegel†, AS Bates†
+    author_text <- gsub("P Schlegel", "P Schlegel\u2020", author_text)
+    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
+  } else if(grepl("Complete connectomic reconstruction of olfactory projection neurons", clean_title, ignore.case = TRUE)) {
+    # Olfactory projection neurons paper: AS Bates†, P Schlegel†
+    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
+    author_text <- gsub("P Schlegel", "P Schlegel\u2020", author_text)
+  } else if(grepl("The natverse, a versatile toolbox", clean_title, ignore.case = TRUE)) {
+    # Natverse paper: AS Bates†, JD Manton†
+    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
+    author_text <- gsub("JD Manton", "JD Manton\u2020", author_text)
+  } else {
+    # Standard case: add obelus to first author only
+    first_author_match <- regexpr("^[^,]+", author_text)
+    if(first_author_match[1] > 0) {
+      first_author <- regmatches(author_text, first_author_match)
+      # Add obelus right next to the first author name (before any spaces at the end)
+      first_author_clean <- trimws(first_author)
+      first_author_with_obelus <- paste0(first_author_clean, "\u2020")
+      author_text <- sub(first_author, first_author_with_obelus, author_text, fixed = TRUE)
+    }
+  }
+
+  citation_text <- if(!is.na(pub$cites) && pub$cites > 0) glue(" [citations: {pub$cites}]") else ""
+
+  cat(glue("**{clean_title}** ({pub$year}). {author_text} *{pub$journal}*{citation_text}"))
   cat("  \n")
 }
 
-# Add link to full bibliography
-cat(glue("*+{nrow(publications) - 5} more publications available at [NCBI Bibliography](https://www.ncbi.nlm.nih.gov/myncbi/1l7VwNZADtbg7x/bibliography/public/)*"))
-cat("\\n\\n*, italics=first author*\\n\\n")
+cat("\n\u2020 denotes first author  \n")
+cat("\u2021 denotes corresponding author\n\n")
 ```
 
 ## Review Articles _________________________________________
@@ -374,16 +482,16 @@ cat("\\n\\n*, italics=first author*\\n\\n")
 ```{r reviews}
 if(nrow(reviews) > 0) {
   cat("\\scriptsize\n\n")
-  
+
   for(i in 1:nrow(reviews)) {
     rev <- reviews[i, ]
     clean_title <- gsub("<a href='[^']*'>([^<]*)</a>", "\\1", rev$title)
-    citation_text <- if(!is.na(rev$cites) && rev$cites > 0) glue(" ({rev$cites})") else ""
-    
+    citation_text <- if(!is.na(rev$cites) && rev$cites > 0) glue(" [citations: {rev$cites}]") else ""
+
     cat(glue("**{clean_title}** ({rev$year}). {rev$author} *{rev$journal}*{citation_text}"))
     cat("  \n")
   }
-  
+
   cat("\\normalsize\n\n")
 }
 ```
