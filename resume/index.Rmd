@@ -403,6 +403,21 @@ tryCatch({
 
       cat("- ", nrow(org_repos), " repositories as contributor\n", sep = "")
 
+      # Show download statistics if available
+      repos_with_downloads <- org_repos %>%
+        filter(!is.na(downloads) & downloads > 0) %>%
+        arrange(desc(downloads))
+
+      if (nrow(repos_with_downloads) > 0) {
+        cat("- Top downloads: ")
+        download_info <- sapply(1:nrow(repos_with_downloads), function(i) {
+          repo <- repos_with_downloads[i, ]
+          paste0(repo$title, " (", format(repo$downloads, big.mark = ","), ")")
+        })
+        cat(paste(download_info, collapse = ", "))
+        cat("\n")
+      }
+
       # Show all repositories
       cat("- Projects: ")
       repo_links <- sapply(1:nrow(org_repos), function(i) {

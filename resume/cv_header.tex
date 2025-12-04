@@ -1,11 +1,19 @@
+\usepackage{fontspec}
+\setmainfont{Helvetica}
 \usepackage{xcolor}
+\definecolor{accentcolor}{RGB}{136,129,111}
+\definecolor{linkcolor}{RGB}{170,165,150}
 \usepackage{hyperref}
-\definecolor{accentcolor}{RGB}{201,114,72}
 \hypersetup{
     colorlinks=true,
-    linkcolor=accentcolor,
-    urlcolor=accentcolor,
-    citecolor=accentcolor
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor,
+    filecolor=linkcolor
 }
 \usepackage{geometry}
 \geometry{margin=1in}
+% Section title color
+\usepackage{titlesec}
+\titleformat*{\section}{\Large\bfseries\color{accentcolor}}
+\titleformat*{\subsection}{\large\bfseries\color{accentcolor}}

@@ -233,7 +233,9 @@ get_zenodo_records_by_orcid_authenticated <- function(orcid = "0000-0002-1195-04
     }
 
     # Get DOI
-    doi <- tryCatch(metadata$doi, error = function(e) NA)
+    doi <- tryCatch({
+      record$pids$doi$identifier %||% metadata$doi %||% NA
+    }, error = function(e) NA)
 
     # Get title
     title <- metadata$title %||% NA
