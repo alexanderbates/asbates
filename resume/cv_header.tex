@@ -1,8 +1,10 @@
 \usepackage{fontspec}
-\setmainfont{Helvetica}
+\setmainfont{Helvetica Neue}
+\setsansfont{Helvetica Neue}
 \usepackage{xcolor}
 \definecolor{accentcolor}{RGB}{136,129,111}
 \definecolor{linkcolor}{RGB}{170,165,150}
+\definecolor{highlightcolor}{RGB}{136,129,111}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -12,8 +14,40 @@
     filecolor=linkcolor
 }
 \usepackage{geometry}
-\geometry{margin=1in}
-% Section title color
+\geometry{margin=0.75in, top=0.65in, bottom=0.65in}
 \usepackage{titlesec}
-\titleformat*{\section}{\Large\bfseries\color{accentcolor}}
-\titleformat*{\subsection}{\large\bfseries\color{accentcolor}}
+% Section title styling - elegant with small caps
+\titleformat{\section}
+  {\large\scshape\color{accentcolor}}
+  {}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt plus 2pt minus 2pt}{6pt plus 1pt minus 1pt}
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{accentcolor}}
+  {}{0em}{}
+\titlespacing{\subsection}{0pt}{8pt plus 2pt minus 2pt}{4pt plus 1pt minus 1pt}
+% Line spacing
+\usepackage{setspace}
+\setstretch{1.08}
+% Paragraph spacing
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+% Custom highlight command for author name
+\usepackage{soul}
+\setulcolor{accentcolor}
+\setul{1.2pt}{0.25pt}
+% Make soul work with bold text
+\soulregister\textbf7
+\soulregister\textit7
+% Custom command for highlighted author name with colored underline
+\newcommand{\authorname}[1]{\textbf{\setulcolor{accentcolor}\ul{#1}}}
+% Better list spacing
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=*}
+% Title formatting
+\usepackage{titling}
+\pretitle{\begin{center}\LARGE\bfseries\color{accentcolor}}
+\posttitle{\par\end{center}\vskip 0.3em}
+\preauthor{\begin{center}\large}
+\postauthor{\end{center}}
+\predate{\begin{center}\small}
+\postdate{\end{center}}

@@ -116,6 +116,12 @@ peer_reviews <- peer_reviews %>%
   dplyr::ungroup() %>%
   dplyr::arrange(dplyr::desc(reviews)) %>%
   dplyr::distinct(journal, reviews)
+
+# Add COSYNE abstract reviews
+cosyne_reviews <- data.frame(journal = "COSYNE (abstracts)", reviews = 9)
+peer_reviews <- dplyr::bind_rows(peer_reviews, cosyne_reviews) %>%
+  dplyr::arrange(dplyr::desc(reviews))
+
 #read_csv(file = "peer_reviews.csv", show_col_types = FALSE)
 ```
 

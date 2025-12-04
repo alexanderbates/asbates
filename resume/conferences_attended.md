@@ -6,13 +6,27 @@ This document provides a comprehensive list of all conferences, workshops, and s
 
 ## Conferences and Scientific Meetings
 
+### 2026
+- **4th Asia-Pacific Drosophila Neuroscience Conference (APDNC4)** | APDNC4 | Shenzhen, China | **Invited Speaker Talk**
+  - *Dates: April 20-24, 2026*
+  - *Organization: Asia-Pacific Drosophila Neuroscience Conference*
+
 ### 2025
-- **CSHL Neurobiology of Drosophila** | Cold Spring Harbor Laboratory | Cold Spring Harbor, NY | **Talk** (scheduled)
+- **CSHL Neurobiology of Drosophila** | Cold Spring Harbor Laboratory | Cold Spring Harbor, NY | **Invited Speaker Talk**
   - *Dates: October 7-11, 2025*
   - *Organization: Cold Spring Harbor Laboratory*
 
+- **FlyWire Townhall** | FlyWire Consortium | Princeton, NJ | **Invited Speaker Talk**
+  - *Dates: June 2025*
+  - *Organization: FlyWire Consortium*
+  - *Video of talk:* (https://www.youtube.com/watch?v=-ZOWtTs4Zgc&t=1s)
+
+- **HMS Neurobiology Department Talk** | Harvard Medical School | Boston, MA | **Talk**
+  - *Dates: May 2025*
+  - *Organization: Harvard Medical School Department of Neurobiology*
+
 ### 2024
-- **CSHL Neuronal Circuits** | Cold Spring Harbor Laboratory | Cold Spring Harbor, NY | **Talk**
+- **CSHL Neuronal Circuits** | Cold Spring Harbor Laboratory | Cold Spring Harbor, NY | **Invited Speaker Talk**
   - *Dates: April 2024*
   - *Organization: Cold Spring Harbor Laboratory*
 
@@ -22,7 +36,7 @@ This document provides a comprehensive list of all conferences, workshops, and s
   - *Organization: Howard Hughes Medical Institute*
 
 ### 2019
-- **ECRO Meeting** | European Chemoreception Research Organization | Trieste, Italy | **Talk**
+- **ECRO Meeting** | European Chemoreception Research Organization | Trieste, Italy | **Invited Speaker Talk**
   - *Dates: September 2019*
   - *Organization: European Chemoreception Research Organization*
 
@@ -78,26 +92,30 @@ This document provides a comprehensive list of all conferences, workshops, and s
 
 ## Summary Statistics
 
-- **Total Meetings Attended:** 16
-- **Invited/Selected Talks:** 7 (44%)
-- **Poster Presentations:** 7 (44%)
-- **Training Courses:** 1 (6%)
-- **Specialized Workshops:** 1 (6%)
+- **Total Meetings Attended:** 19
+- **Invited Speaker Talks:** 6 (32%)
+- **Other Talks:** 5 (26%)
+- **Poster Presentations:** 6 (32%)
+- **Training Courses:** 1 (5%)
+- **Specialized Workshops:** 1 (5%)
 
 ### Geographic Distribution
-- **United States:** 6 meetings (38%)
-- **United Kingdom:** 4 meetings (25%)
-- **Germany/Austria:** 4 meetings (25%)
-- **Italy:** 1 meeting (6%)
-- **Spain:** 1 meeting (6%)
+- **United States:** 9 meetings (47%)
+- **United Kingdom:** 4 meetings (21%)
+- **Germany/Austria:** 4 meetings (21%)
+- **China:** 1 meeting (5%)
+- **Italy:** 1 meeting (5%)
 
 ### Organizing Institutions
 - **Cold Spring Harbor Laboratory:** 2 meetings
 - **Boehringer Ingelheim Foundation:** 3 meetings
 - **Janelia Research Campus (HHMI):** 3 meetings
 - **European Chemoreception Research Organization:** 2 meetings
-- **Academic Institutions:** 6 meetings
+- **Harvard Medical School:** 1 meeting
+- **FlyWire Consortium:** 1 meeting
+- **APDNC:** 1 meeting
+- **Other Academic Institutions:** 6 meetings
 
 ---
 
-*Data compiled from CV records and meeting archives. Meeting attendance spans 2016-2025, representing continuous engagement with the international neuroscience community.*
+*Data compiled from CV records and meeting archives. Meeting attendance spans 2016-2026, representing continuous engagement with the international neuroscience community.*

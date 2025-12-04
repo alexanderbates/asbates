@@ -148,39 +148,39 @@ programming
 Illustrator • InDesign • communication • text editing • journalistic
 writing • creative writing • open access
 
-**Data and Code:** Public datasets: [BANC Adult Fly Brain Connectome](https://doi.org/10.7910/DVN/8TFGGB) • Zenodo (4 datasets): [BAcTrace neuronal tracing tool](https://doi.org/10.5281/zenodo.3797211) (1,491 downloads), [Supplemental Files for Eckstein and Bates et al., Cell (2024)](https://doi.org/10.5281/zenodo.10593546) (954 downloads), [Supplementary data for olfactory connectome](https://doi.org/10.5281/zenodo.4383228) (551 downloads), [Connectome Influence Calculator](https://doi.org/10.5281/zenodo.17693838) (16 downloads) • Open source software: 28 GitHub repositories across 4 organizations, including [natverse](https://natverse.org/) (20 R packages; nat: 82,965 downloads, nat.nblast: 39,035 downloads), [bancr](https://github.com/flyconnectome/bancr), [neuprintr](https://natverse.github.io/neuprintr/), [crantr](https://github.com/flyconnectome/crantr)
+**Data and Code:** Public datasets: [BANC Adult Fly Brain Connectome](https://doi.org/10.7910/DVN/8TFGGB) (606 downloads; live access via [BANC Codex](https://codex.flywire.ai/?dataset=banc)) • Zenodo (4 datasets): [BAcTrace neuronal tracing tool](https://doi.org/10.5281/zenodo.3797211) (1,491 downloads), [Supplemental Files for Eckstein and Bates et al., Cell (2024)](https://doi.org/10.5281/zenodo.10593546) (954 downloads), [Supplementary data for olfactory connectome](https://doi.org/10.5281/zenodo.4383228) (551 downloads), [Connectome Influence Calculator](https://doi.org/10.5281/zenodo.17693838) (16 downloads) • Open source software: 28 GitHub repositories across 4 organizations, including [natverse](https://natverse.org/) (20 R packages; nat: 82,965 downloads, nat.nblast: 39,035 downloads), [bancr](https://github.com/flyconnectome/bancr), [neuprintr](https://natverse.github.io/neuprintr/), [crantr](https://github.com/flyconnectome/crantr)
 
-## Selected Publications \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+## Selected Publications
 
 **Distributed control circuits across a brain-and-cord connectome**
-(2025). <ins>***AS Bates***</ins>†‡, JS Phelps†‡, M Kim†, HH Yang†, A
+(2025). \textbf{\ul{AS Bates}}†‡, JS Phelps†‡, M Kim†, HH Yang†, A
 Matsliah, Z Ajabi, E Perlman, … *bioRxiv*, in review at Nature** (10)  
 **Neurotransmitter classification from electron microscopy images at
 synaptic sites in Drosophila melanogaster** (2024). N Eckstein†,
-<ins>***AS Bates***</ins>†, A Champion, M Du, Y Yin, P Schlegel, AKY Lu,
+\textbf{\ul{AS Bates}}†, A Champion, M Du, Y Yin, P Schlegel, AKY Lu,
 … *Cell* (202)  
 **Information flow, cell types and stereotypy in a full olfactory
-connectome** (2021). P Schlegel†, <ins>***AS Bates***</ins>†, T Stürner,
+connectome** (2021). P Schlegel†, \textbf{\ul{AS Bates}}†, T Stürner,
 SR Jagannathan, N Drummond, J Hsu, … *Elife* (156)
 **Complete connectomic reconstruction of olfactory projection neurons in
-the fly brain** (2020). <ins>***AS Bates***</ins>†, P Schlegel†,
+the fly brain** (2020). \textbf{\ul{AS Bates}}†, P Schlegel†,
 RJV Roberts, N Drummond, IFM Tamimi, … *Curr. Biology* (205)
 **The natverse, a versatile toolbox for combining and analysing
-neuroanatomical data** (2020). <ins>***AS Bates***</ins>†, JD Manton†,
+neuroanatomical data** (2020). \textbf{\ul{AS Bates}}†, JD Manton†,
 SR Jagannathan, M Costa, P Schlegel, T Rohlfing, … *Elife* (204)
 *+21 more publications available at [NCBI
 Bibliography](https://www.ncbi.nlm.nih.gov/myncbi/1l7VwNZADtbg7x/bibliography/public/)* † denotes first author
 ‡ denotes corresponding author
 
-## Review Articles \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+## Review Articles
 
 **Systems neuroscience: Auditory processing at synaptic resolution**
-(2022). <ins>***AS Bates***</ins>, G Jefferis *Curr. Biology* (1)
+(2022). \textbf{\ul{AS Bates}}, G Jefferis *Curr. Biology* (1)
 **Neuronal cell types in the fly: single-cell anatomy meets single-cell
-genomics** (2019). <ins>***AS Bates***</ins>, J Janssens, GS Jefferis,
+genomics** (2019). \textbf{\ul{AS Bates}}, J Janssens, GS Jefferis,
 S Aerts *Curr. opinion in neurobiology* (72)  
 
-## Referees \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+## Referees
 
 **Postdoc Supervisor:** Prof. Rachel Wilson, Harvard Medical School,
 <Rachel_Wilson@hms.harvard.edu> **PhD Supervisor:** Dr. Gregory
