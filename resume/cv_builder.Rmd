@@ -407,8 +407,8 @@ tryCatch({
     for(i in 1:nrow(zenodo_sources)) {
       zs <- zenodo_sources[i, ]
       cat(glue("- [{zs$title}]({zs$url}) (DOI: {zs$doi})"))
-      if (!is.na(zs$description) && zs$description != "") {
-        cat(glue(" - {zs$description}"))
+      if (!is.na(zs$downloads) && zs$downloads != "") {
+        cat(glue(" - Downloads: {format(as.numeric(zs$downloads), big.mark = ',')}"))
       }
       cat("  \n")
     }

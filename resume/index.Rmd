@@ -58,14 +58,55 @@ publications$journal <- gsub("elife","eLife",publications$journal)
 publications$journal <- gsub("Journal","J.",publications$journal)
 
 # Bold for first author
-first.pubids <- c("mVmsd5A6BfQC", "8k81kl-MbHgC", 
-                  "Y0pCki6q_DkC", "eQOLeE2rZwMC", 
+first.pubids <- c("mVmsd5A6BfQC", "8k81kl-MbHgC",
+                  "Y0pCki6q_DkC", "eQOLeE2rZwMC",
                   "d1gkVwhDpl0C", "hqOjcs7Dif8C",
                   "_FxGoFyzp5QC")
-first <- publications$pubid%in%first.pubids
+
+# Add first author papers by title (for cases where pubid might not match)
+first_author_titles <- c("Distributed control circuits across a brain-and-cord connectome")
+first_by_pubid <- publications$pubid %in% first.pubids
+first_by_title <- grepl(paste(first_author_titles, collapse="|"), publications$title, ignore.case = TRUE)
+first <- first_by_pubid | first_by_title
+
 publications$position[first] <- 1
-publications$author[first] <- gsub("AS Bates", "<ins>AS Bates</ins>",publications$author[first])
-publications$author[first] <- gsub("A Bates", "<ins>A Bates</ins>",publications$author[first])
+publications$author[first] <- gsub("\\*\\*AS Bates\\*\\*", "<ins>**AS Bates**</ins>",publications$author[first])
+publications$author[first] <- gsub("\\*\\*A Bates\\*\\*", "<ins>**A Bates**</ins>",publications$author[first])
+
+# Add obelus (†) for first authorship and double obelus (‡) for corresponding authorship
+for(i in 1:nrow(publications)) {
+  # Get clean title for matching
+  clean_title <- gsub("<.*?>", "", publications$title[i])
+
+  if(grepl("Distributed control circuits across a brain-and-cord connectome", clean_title, ignore.case = TRUE)) {
+    # BANC paper: Multiple first authors (AS Bates†‡, JS Phelps†‡, M Kim†, HH Yang†)
+    publications$author[i] <- gsub("(<ins>\\*\\*AS Bates\\*\\*</ins>)", "\\1†‡", publications$author[i])
+    publications$author[i] <- gsub("JS Phelps", "JS Phelps†‡", publications$author[i])
+    publications$author[i] <- gsub("M Kim", "M Kim†", publications$author[i])
+    publications$author[i] <- gsub("HH Yang", "HH Yang†", publications$author[i])
+  } else if(grepl("Neurotransmitter classification from electron microscopy", clean_title, ignore.case = TRUE)) {
+    # Neurotransmitter paper: N Eckstein†, AS Bates†
+    publications$author[i] <- gsub("N Eckstein", "N Eckstein†", publications$author[i])
+    publications$author[i] <- gsub("(<ins>\\*\\*AS Bates\\*\\*</ins>)", "\\1†", publications$author[i])
+  } else if(grepl("Information flow, cell types and stereotypy", clean_title, ignore.case = TRUE)) {
+    # Schlegel and Bates co-first
+    publications$author[i] <- gsub("P Schlegel", "P Schlegel†", publications$author[i])
+    publications$author[i] <- gsub("(<ins>\\*\\*AS Bates\\*\\*</ins>)", "\\1†", publications$author[i])
+  } else if(grepl("Complete connectomic reconstruction of olfactory projection neurons", clean_title, ignore.case = TRUE)) {
+    # Bates and Schlegel co-first
+    publications$author[i] <- gsub("(<ins>\\*\\*AS Bates\\*\\*</ins>)", "\\1†", publications$author[i])
+    publications$author[i] <- gsub("P Schlegel", "P Schlegel†", publications$author[i])
+  } else if(grepl("The natverse, a versatile toolbox", clean_title, ignore.case = TRUE)) {
+    # Bates and Manton co-first
+    publications$author[i] <- gsub("(<ins>\\*\\*AS Bates\\*\\*</ins>)", "\\1†", publications$author[i])
+    publications$author[i] <- gsub("JD Manton", "JD Manton†", publications$author[i])
+  } else if(first[i]) {
+    # Standard first author paper - add † after the underlined name
+    publications$author[i] <- gsub("(<ins>\\*\\*AS Bates\\*\\*</ins>)", "\\1†", publications$author[i])
+    publications$author[i] <- gsub("(<ins>\\*\\*A Bates\\*\\*</ins>)", "\\1†", publications$author[i])
+  }
+}
+
 publications <- publications[,c("title","author","journal","year","cites", "position","IF")]
 publications <- dplyr::arrange(publications, position, dplyr::desc(year))
 
@@ -221,7 +262,6 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 - <i class="fas fa-tools"></i> [crantr](https://github.com/flyconnectome/crantr)
 - <i class="fas fa-tools"></i> [bancr](https://github.com/flyconnectome/bancr)
 - <i class="fas fa-tools"></i> [influencer](https://github.com/natverse/influencer/)
-- <i class="fas fa-tools"></i> [ConnectomeInfluenceCalculator](https://zenodo.org/records/17693838)
 
 <br></br>
 
@@ -235,13 +275,6 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 - <i class="fas fa-university"></i> BSc Tutor at UCL: Dr. Marco Beato, UCL Neuroscience, Physiology and Pharmacology, [m.beato@ucl.ac.uk](mailto:m.beato@ucl.ac.uk)
 - <i class="fas fa-user-graduate"></i> Supervisee: Serene Dhawan, Princeton, PhD student, [serenedhawan@gmail.com](mailto:serenedhawan@gmail.com)
 
-<br></br>
-
-<br></br>
-
-```{r pubs}
-print_text_block(CV, 'publications')
-```
 
 
 Main
@@ -257,7 +290,7 @@ print_text_block(CV, 'intro')
 ```{r profile, fig.align = "center"}
 author <- scholar::get_profile(id)
 df <- data.frame(total_cites = author$total_cites, h_index = author$h_index, i10_index = author$i10_index)
-df$peer_reviews <-  sum(peer_reviews$reviews) + 9  # Add 9 abstract reviews (e.g., COSYNE 2026)
+df$peer_reviews <-  sum(peer_reviews$reviews)  # Total includes COSYNE abstract reviews
 colnames(df) <- gsub("_"," ",colnames(df))
 formattable(df, list(`total cites` = color_bar("coral", fun = "normalize"), `h index` = color_bar("lightgreen", fun = "proportion"), `i10 index` = color_bar("lightblue", fun = "proportion"), `peer reviews` = color_bar("darkgrey", fun = "proportion")))
 ```
@@ -284,8 +317,14 @@ Education {data-icon=graduation-cap data-concise=true}
 CV %<>% print_section('education')
 ```
 
+<div class="page-break-after"></div>
+
 Primary Research {data-icon=book}
 --------------------------------------------------------------------------------
+
+```{r pubs}
+print_text_block(CV, 'publications')
+```
 
 ```{r publications}
 #CV %<>% print_section('publications')
@@ -298,6 +337,8 @@ formattable(publications, list(
   cid = FALSE,
   pubid = FALSE))
 ```
+
+**Key:** † = first author, ‡ = corresponding author
 
 ::: aside
 
