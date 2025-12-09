@@ -7,91 +7,91 @@ pub_data <- read.csv("publications_full_citations.csv", stringsAsFactors = FALSE
 # Full author lists for key papers (manually curated from actual papers)
 full_authors <- list(
   "Distributed control circuits across a brain-and-cord connectome" =
-    "Alexander Shakeel Bates, Jasper S Phelps, Minsu Kim, Hannah Haberkern, Chris J Hirokawa, Brandon Nguyen, Jonathan Blyth, Billy J Morris, Lindsay J Sizemore, Aja Murray, Sanna Koskela, Zikun Poon, Azadeh Yazdan-Shahmorad, Katharina Eichler, Anne Drubay, Jenna Brown, Gustavo L Ferreira, Alexis Santana-Cruz, Rachel I Wilson, Wei-Chung Allen Lee, Jasper T Maniates-Selvin, Tomke Stürner, James W Truman, Philip Schlegel, FlyWire Consortium, Marta Zlatic, Gregory SXE Jefferis",
+    "A. S. Bates, J. S. Phelps, M. Kim, H. H. Yang, A. Matsliah, Z. Ajabi, E. Perlman, J. Blyth, B. J. Morris, L. J. Sizemore, A. Murray, S. Koskela, Z. Poon, A. Yazdan-Shahmorad, K. Eichler, A. Drubay, J. Brown, G. L. Ferreira, A. Santana-Cruz, R. I. Wilson, W.-C. A. Lee, J. T. Maniates-Selvin, T. Stürner, J. W. Truman, P. Schlegel, FlyWire Consortium, M. Zlatic, G. S. X. E. Jefferis",
 
   "Neural circuit mechanisms for steering control in walking Drosophila" =
-    "Aleksandr Rayshubskiy, Stephen L Holtz, Alexander Shakeel Bates, Quinn X Vanderbeck, Laia Serratosa Capdevila, Rachel I Wilson",
+    "A. Rayshubskiy, S. L. Holtz, A. S. Bates, Q. X. Vanderbeck, L. S. Capdevila, R. I. Wilson",
 
   "Comparative connectomics of Drosophila descending and ascending neurons" =
-    "Tomke Stürner, Phoebe Brooks, Laia Serratosa Capdevila, Billy J Morris, Aaron Javier, Shigehiro Namiki, Igor Siwanowicz, Chris J Dallmann, FlyWire Consortium, Alexander Shakeel Bates, Gregory SXE Jefferis",
+    "T. Stürner, P. Brooks, L. S. Capdevila, B. J. Morris, A. Javier, S. Namiki, I. Siwanowicz, C. J. Dallmann, FlyWire Consortium, A. S. Bates, G. S. X. E. Jefferis",
 
   "Sexual dimorphism in the complete connectome of the Drosophila male central nervous system" =
-    "Sean Berg, Iris R Beckett, Marta Costa, Philip Schlegel, Marisa Januszewski, Emily C Marin, Alexander Shakeel Bates, Arie Matsliah, Sven Dorkenwald, Kenneth J Hayworth, Shan Xu, Harald Hess, Stephen M Plaza, Gregory SXE Jefferis, FlyWire Consortium",
+    "S. Berg, I. R. Beckett, M. Costa, P. Schlegel, M. Januszewski, E. C. Marin, A. S. Bates, A. Matsliah, S. Dorkenwald, K. J. Hayworth, S. Xu, H. Hess, S. M. Plaza, G. S. X. E. Jefferis, FlyWire Consortium",
 
   "Quantitative Attributions with Counterfactuals" =
-    "David Yaw Adjavon, Nikolas Eckstein, Alexander Shakeel Bates, Gregory SXE Jefferis, Jan Funke",
+    "D. Y. Adjavon, N. Eckstein, A. S. Bates, G. S. X. E. Jefferis, J. Funke",
 
   "A Drosophila computational brain model reveals sensorimotor processing" =
-    "Philip K Shiu, Griffin R Sterne, Nada Spiller, Romain Franconville, Andrea Sandoval, Joie Zhou, Neha Simha, Chan Hyuk Kang, Seung Wook Oh, Alexander Shakeel Bates, Sven Dorkenwald, Arie Matsliah, Amy R Sterling, Szi-chieh Yu, Claire E McKellar, Marta Costa, Katharina Eichler, Gregory SXE Jefferis, Gwyneth M Card, David Sussillo, FlyWire Consortium, Vivek Jayaraman",
+    "P. K. Shiu, G. R. Sterne, N. Spiller, R. Franconville, A. Sandoval, J. Zhou, N. Simha, C. H. Kang, S. W. Oh, A. S. Bates, S. Dorkenwald, A. Matsliah, A. R. Sterling, S. Yu, C. E. McKellar, M. Costa, K. Eichler, G. S. X. E. Jefferis, G. M. Card, D. Sussillo, FlyWire Consortium, V. Jayaraman",
 
   "Network statistics of the whole-brain connectome of Drosophila" =
-    "Angstman Lin, Rick Yang, Sven Dorkenwald, Arie Matsliah, Amy R Sterling, Philip Schlegel, Szi-chieh Yu, Claire E McKellar, Katharina Eichler, Tanya Wolff, Daniel Deutsch, Salma Farias, Marta Costa, Alexander Shakeel Bates, Nikolas Eckstein, Jan Funke, Gregory SXE Jefferis, FlyWire Consortium",
+    "A. Lin, R. Yang, S. Dorkenwald, A. Matsliah, A. R. Sterling, P. Schlegel, S. Yu, C. E. McKellar, K. Eichler, T. Wolff, D. Deutsch, S. Farias, M. Costa, A. S. Bates, N. Eckstein, J. Funke, G. S. X. E. Jefferis, FlyWire Consortium",
 
   "Whole-brain annotation and multi-connectome cell typing of Drosophila" =
-    "Philip Schlegel, Yijie Yin, Alexander Shakeel Bates, Sven Dorkenwald, Katharina Eichler, Paul Brooks, Daniel S Han, Marina Gkantia, Marcia dos Santos, Eva J Munnelly, Griffin Sterne, Zequan Wang, Noëlle Doyle, Eric Perlman, Sebastian Molina-Obando, FlyWire Consortium, Arie Matsliah, Szi-chieh Yu, Claire E McKellar, Amy R Sterling, Marta Costa, Nils Eckstein, Jan Funke, Gregory SXE Jefferis",
+    "P. Schlegel, Y. Yin, A. S. Bates, S. Dorkenwald, K. Eichler, P. Brooks, D. S. Han, M. Gkantia, M. dos Santos, E. J. Munnelly, G. Sterne, Z. Wang, N. Doyle, E. Perlman, S. Molina-Obando, FlyWire Consortium, A. Matsliah, S. Yu, C. E. McKellar, A. R. Sterling, M. Costa, N. Eckstein, J. Funke, G. S. X. E. Jefferis",
 
   "Neuronal wiring diagram of an adult brain" =
-    "Sven Dorkenwald, Arie Matsliah, Amy R Sterling, Philip Schlegel, Szi-chieh Yu, Claire E McKellar, Albert Lin, Marta Costa, Katharina Eichler, Yijie Yin, Will Silversmith, Casey Schneider-Mizell, Chris S Jordan, Derrick Brittain, Akhilesh Halageri, Kai Kuehner, Oluwaseun Ogedengbe, Ryan Morey, Jay Gager, Krzysztof Kruk, Eric Perlman, Runzhe Yang, David Deutsch, Doug Bland, Marissa Sorek, Ran Lu, Thomas Macrina, Kisuk Lee, J. Alexander Bae, Shang Mu, Barak Nehoran, Eric Mitchell, Sergiy Popovych, Jingpeng Wu, Zhen Jia, Jasper Phelps, Christa Baker, Minsu Kim, Nico Kemnitz, Matthew Mahalingam, Garrett Eberle, Erin Nobles, Viren Jain, Michał Januszewski, Alexander Shakeel Bates, Nils Eckstein, Jan Funke, Forrest Collman, Davi D Bock, Gregory SXE Jefferis, H. Sebastian Seung, Mala Murthy, FlyWire Consortium",
+    "S. Dorkenwald, A. Matsliah, A. R. Sterling, P. Schlegel, S. Yu, C. E. McKellar, A. Lin, M. Costa, K. Eichler, Y. Yin, W. Silversmith, C. Schneider-Mizell, C. S. Jordan, D. Brittain, A. Halageri, K. Kuehner, O. Ogedengbe, R. Morey, J. Gager, K. Kruk, E. Perlman, R. Yang, D. Deutsch, D. Bland, M. Sorek, R. Lu, T. Macrina, K. Lee, J. A. Bae, S. Mu, B. Nehoran, E. Mitchell, S. Popovych, J. Wu, Z. Jia, J. Phelps, C. Baker, M. Kim, N. Kemnitz, M. Mahalingam, G. Eberle, E. Nobles, V. Jain, M. Januszewski, A. S. Bates, N. Eckstein, J. Funke, F. Collman, D. D. Bock, G. S. X. E. Jefferis, H. S. Seung, M. Murthy, FlyWire Consortium",
 
   "Neurotransmitter classification from electron microscopy images at synaptic sites in Drosophila melanogaster" =
-    "Nils Eckstein, Alexander Shakeel Bates, Andrew Champion, Michelle Du, Yijie Yin, Philip Schlegel, Alicia K Y Lee, Lia J Pinto-Duartez, Bjarke J Pedersen, Sebastian Valdes-Aleman, Amira Dokaji, Griffin Sterne, Katharina Eichler, Thomas Schlegel, Michael-John Dolan, Tali Grynhaus, Daniel Ramirez, David C Turner, Anna Li, Salma Farias, Ian A Meinertzhagen, Sandra C Turaga, Ralf Dahmen, Tanya Wolff, Krzysztof Kruk, Alexander S Bates, Gregory SXE Jefferis, Davi D Bock, FlyWire Consortium",
+    "N. Eckstein, A. S. Bates, A. Champion, M. Du, Y. Yin, P. Schlegel, A. K. Y. Lee, L. J. Pinto-Duartez, B. J. Pedersen, S. Valdes-Aleman, A. Dokaji, G. Sterne, K. Eichler, T. Schlegel, M.-J. Dolan, T. Grynhaus, D. Ramirez, D. C. Turner, A. Li, S. Farias, I. A. Meinertzhagen, S. C. Turaga, R. Dahmen, T. Wolff, K. Kruk, A. S. Bates, G. S. X. E. Jefferis, D. D. Bock, FlyWire Consortium",
 
   "Analysis and optimization of equitable US cancer clinical trial center access by travel time" =
-    "Hannah Lee, Alexander Shakeel Bates, Sarah Callier, Maggie Chan, Nicole Chambwe, Anne Marshall, Mary Beth Terry, Jodi Sauder, Wendy K Chung",
+    "H. Lee, A. S. Bates, S. Callier, M. Chan, N. Chambwe, A. Marshall, M. B. Terry, J. Sauder, W. K. Chung",
 
   "Combinatorial encoding of odors in the mosquito antennal lobe" =
-    "Pranjul Singh, Shubham Goyal, Samrat Gupta, Shivangi Garg, Anjali Tiwari, Varad Rajput, Alexander Shakeel Bates, Christopher J Potter, Nitin Gupta",
+    "P. Singh, S. Goyal, S. Gupta, S. Garg, A. Tiwari, V. Rajput, A. S. Bates, C. J. Potter, N. Gupta",
 
   "Discriminative attribution from paired images" =
-    "Nils Eckstein, Haidar Bukhari, Alexander Shakeel Bates, Gregory SXE Jefferis, Jan Funke",
+    "N. Eckstein, H. Bukhari, A. S. Bates, G. S. X. E. Jefferis, J. Funke",
 
   "Systems neuroscience: Auditory processing at synaptic resolution" =
-    "Alexander Shakeel Bates, Gregory SXE Jefferis",
+    "A. S. Bates, G. S. X. E. Jefferis",
 
   "Information flow, cell types and stereotypy in a full olfactory connectome" =
-    "Philip Schlegel, Alexander Shakeel Bates, Tomke Stürner, Sridhar R Jagannathan, Nikolas Drummond, Joseph Hsu, Lionel A Capogrosso, Ruairi JV Roberts, Marta Zimmer, Imaan FM Tamimi, Shin-ya Takemura, Stuart Berg, Marta Costa, Gregory SXE Jefferis",
+    "P. Schlegel, A. S. Bates, T. Stürner, S. R. Jagannathan, N. Drummond, J. Hsu, L. A. Capogrosso, R. J. V. Roberts, M. Zimmer, I. F. M. Tamimi, S. Takemura, S. Berg, M. Costa, G. S. X. E. Jefferis",
 
   "The connectome of the adult Drosophila mushroom body provides insights into function" =
-    "Feng Li, Jack W Lindsey, Emily C Marin, Nils Otto, Marisa Dreher, Georgia Dempsey, Ildiko Stark, Alexander Shakeel Bates, Markus Pleijzier, Philipp Schlegel, Aljoscha Nern, Shin-ya Takemura, Nils Eckstein, Tanya Wolff, Ruairi JV Roberts, Gerald M Rubin, Stuart Berg, Davi D Bock, Ashok Litwin-Kumar, Mala Murthy, Gregory SXE Jefferis",
+    "F. Li, J. W. Lindsey, E. C. Marin, N. Otto, M. Dreher, G. Dempsey, I. Stark, A. S. Bates, M. Pleijzier, P. Schlegel, A. Nern, S. Takemura, N. Eckstein, T. Wolff, R. J. V. Roberts, G. M. Rubin, S. Berg, D. D. Bock, A. Litwin-Kumar, M. Murthy, G. S. X. E. Jefferis",
 
   "BAcTrace, a tool for retrograde tracing of neuronal circuits in Drosophila" =
-    "Sebastian Cachero, Marina Gkantia, Alexander Shakeel Bates, Shahar Frechter, Leonidas Blackie, Aoife McCarthy, Paola Sten-Domrose, Gregory SXE Jefferis",
+    "S. Cachero, M. Gkantia, A. S. Bates, S. Frechter, L. Blackie, A. McCarthy, P. Sten-Domrose, G. S. X. E. Jefferis",
 
   "A connectome and analysis of the adult Drosophila central brain" =
-    "Louis K Scheffer, C Shan Xu, Michał Januszewski, Zhiyuan Lu, Shin-ya Takemura, Kenneth J Hayworth, Gary B Huang, Kazunori Shinomiya, Jeremy Maitlin-Shepard, Stuart Berg, Jody Clements, Philip M Hubbard, William T Katz, Lowell Umayam, Ting Zhao, David Ackerman, Tim Blakely, John Bogovic, Tom Dolafi, Dagmar Kainmueller, Takashi Kawase, Khaled A Khairy, Laramie Leavitt, Peter H Li, Larry Lindsey, Nicole Neubarth, Donald J Olbris, Hideo Otsuna, Eric T Trautman, Masayoshi Ito, Alexander Shakeel Bates, Jens Goldammer, Tanya Wolff, Robert Svirskas, Philipp Schlegel, Erika Neace, Christopher J Knecht, Chelsea X Alvarado, Dennis A Bailey, Samantha Ballinger, Jolanta A Borycz, Brandon S Canino, Natasha Cheatham, Michael Cook, Marisa Dreher, Octave Duclos, Bryon Eubanks, Kelli Fairbanks, Samantha Finley, Nora Forknall, Audrey Francis, Gary Patrick Hopkins, Emily M Joyce, SungJin Kim, Nicole A Kirk, Julie Kovalyak, Shirley A Lauchie, Alanna Lohff, Charli Maldonado, Emily A Manley, Sari McLin, Caroline Mooney, Miatta Ndama, Omotara Ogundeyi, Nneoma Okeoma, Christopher Ordish, Nicholas Padilla, Christopher M Patrick, Tyler Paterson, Elliott E Phillips, Emily M Phillips, Neha Rampally, Caitlin Ribeiro, Madelaine K Robertson, Jon Thomson Rymer, Sean M Ryan, Megan Sammons, Anne K Scott, Ashley L Scott, Aya Shinomiya, Claire Smith, Kelsey Smith, Natalie L Smith, Margaret A Sobeski, Alia Suleiman, Jackie Swift, Satoko Takemura, Iris Talebi, Dorota Tarnogorska, Emily Tenshaw, Temour Tokhi, John J Walsh, Tansy Yang, Jane Anne Horne, Feng Li, Ruchi Parekh, Patricia K Rivlin, Vivek Jayaraman, Marta Costa, Gregory SXE Jefferis, Kei Ito, Stephan Saalfeld, Reed George, Ian Meinertzhagen, Gerald M Rubin, Harald F Hess, Viren Jain, Stephen M Plaza",
+    "L. K. Scheffer, C. S. Xu, M. Januszewski, Z. Lu, S. Takemura, K. J. Hayworth, G. B. Huang, K. Shinomiya, J. Maitlin-Shepard, S. Berg, J. Clements, P. M. Hubbard, W. T. Katz, L. Umayam, T. Zhao, D. Ackerman, T. Blakely, J. Bogovic, T. Dolafi, D. Kainmueller, T. Kawase, K. A. Khairy, L. Leavitt, P. H. Li, L. Lindsey, N. Neubarth, D. J. Olbris, H. Otsuna, E. T. Trautman, M. Ito, A. S. Bates, J. Goldammer, T. Wolff, R. Svirskas, P. Schlegel, E. Neace, C. J. Knecht, C. X. Alvarado, D. A. Bailey, S. Ballinger, J. A. Borycz, B. S. Canino, N. Cheatham, M. Cook, M. Dreher, O. Duclos, B. Eubanks, K. Fairbanks, S. Finley, N. Forknall, A. Francis, G. P. Hopkins, E. M. Joyce, S. Kim, N. A. Kirk, J. Kovalyak, S. A. Lauchie, A. Lohff, C. Maldonado, E. A. Manley, S. McLin, C. Mooney, M. Ndama, O. Ogundeyi, N. Okeoma, C. Ordish, N. Padilla, C. M. Patrick, T. Paterson, E. E. Phillips, E. M. Phillips, N. Rampally, C. Ribeiro, M. K. Robertson, J. T. Rymer, S. M. Ryan, M. Sammons, A. K. Scott, A. L. Scott, A. Shinomiya, C. Smith, K. Smith, N. L. Smith, M. A. Sobeski, A. Suleiman, J. Swift, S. Takemura, I. Talebi, D. Tarnogorska, E. Tenshaw, T. Tokhi, J. J. Walsh, T. Yang, J. A. Horne, F. Li, R. Parekh, P. K. Rivlin, V. Jayaraman, M. Costa, G. S. X. E. Jefferis, K. Ito, S. Saalfeld, R. George, I. Meinertzhagen, G. M. Rubin, H. F. Hess, V. Jain, S. M. Plaza",
 
   "Connectomics analysis reveals first-, second-, and third-order thermosensory and hygrosensory neurons in the adult Drosophila brain" =
-    "Emily C Marin, Laurin Büld, Maria Theiss, Tatevik Sarkissian, Ruairi JV Roberts, Robert Turnbull, Imaan FM Tamimi, Markus William Pleijzier, Willem J Laursen, Nils Drummond, Philip Schlegel, Alexander Shakeel Bates, Feng Li, Matthias Landgraf, Marta Costa, Davi D Bock, Paul A Garrity, Gregory SXE Jefferis",
+    "E. C. Marin, L. Büld, M. Theiss, T. Sarkissian, R. J. V. Roberts, R. Turnbull, I. F. M. Tamimi, M. W. Pleijzier, W. J. Laursen, N. Drummond, P. Schlegel, A. S. Bates, F. Li, M. Landgraf, M. Costa, D. D. Bock, P. A. Garrity, G. S. X. E. Jefferis",
 
   "Input connectivity reveals additional heterogeneity of dopaminergic reinforcement in Drosophila" =
-    "Nils Otto, Markus William Pleijzier, Isabel C Morgan, Aryanna J Edmondson-Stait, Konrad J Heinz, Ildiko Stark, Greta Dempsey, Masayoshi Ito, Ishaan Kapoor, Joseph Hsu, Philipp M Schlegel, Alexander Shakeel Bates, Li Feng, Marta Costa, Kei Ito, Davi D Bock, Gerald M Rubin, Ashok Litwin-Kumar, Scott Waddell",
+    "N. Otto, M. W. Pleijzier, I. C. Morgan, A. J. Edmondson-Stait, K. J. Heinz, I. Stark, G. Dempsey, M. Ito, I. Kapoor, J. Hsu, P. M. Schlegel, A. S. Bates, L. Feng, M. Costa, K. Ito, D. D. Bock, G. M. Rubin, A. Litwin-Kumar, S. Waddell",
 
   "Complete connectomic reconstruction of olfactory projection neurons in the fly brain" =
-    "Alexander Shakeel Bates, Philipp Schlegel, Ruairi JV Roberts, Nikolas Drummond, Imaan FM Tamimi, Robert Turnbull, Xincheng Zhao, Elizabeth C Marin, Patricia D Popovici, Serene Dhawan, Adriana Jamasb, Alexandre Javier, Feng Li, Gerald M Rubin, Scott Waddell, Davi D Bock, Marta Costa, Gregory SXE Jefferis",
+    "A. S. Bates, P. Schlegel, R. J. V. Roberts, N. Drummond, I. F. M. Tamimi, R. Turnbull, X. Zhao, E. C. Marin, P. D. Popovici, S. Dhawan, A. Jamasb, A. Javier, F. Li, G. M. Rubin, S. Waddell, D. D. Bock, M. Costa, G. S. X. E. Jefferis",
 
   "The natverse, a versatile toolbox for combining and analysing neuroanatomical data" =
-    "Alexander Shakeel Bates, James D Manton, Sridhar R Jagannathan, Marta Costa, Philipp Schlegel, Torsten Rohlfing, Gregory SXE Jefferis",
+    "A. S. Bates, J. D. Manton, S. R. Jagannathan, M. Costa, P. Schlegel, T. Rohlfing, G. S. X. E. Jefferis",
 
   "Neuronal cell types in the fly: single-cell anatomy meets single-cell genomics" =
-    "Alexander Shakeel Bates, Jelle Janssens, Gregory SXE Jefferis, Stein Aerts",
+    "A. S. Bates, J. Janssens, G. S. X. E. Jefferis, S. Aerts",
 
   "Functional and anatomical specificity in a higher olfactory centre" =
-    "Shahar Frechter, Alexander Shakeel Bates, Sina Tootoonian, Michael-John Dolan, James Manton, Arian Rokkum Jamasb, Johannes Kohl, Davi D Bock, Gregory SXE Jefferis",
+    "S. Frechter, A. S. Bates, S. Tootoonian, M.-J. Dolan, J. Manton, A. R. Jamasb, J. Kohl, D. D. Bock, G. S. X. E. Jefferis",
 
   "Neurogenetic dissection of the Drosophila lateral horn reveals major outputs, diverse behavioural functions, and interactions with the mushroom body" =
-    "Michael-John Dolan, Shahar Frechter, Alexander Shakeel Bates, Chuntao Dan, Paavo Huoviala, Ruairi J Roberts, Philipp Schlegel, Serene Dhawan, Reiko Tabano, Hiromu Tanimoto, Yoshinori Aso, Gregory SXE Jefferis",
+    "M.-J. Dolan, S. Frechter, A. S. Bates, C. Dan, P. Huoviala, R. J. Roberts, P. Schlegel, S. Dhawan, R. Tabano, H. Dionne, C. Christoforou, K. Close, B. Sutcliffe, B. Giuliani, F. Li, M. Costa, G. Ihrke, G. W. Meissner, D. D. Bock, Y. Aso, G. M. Rubin, G. S. Jefferis",
 
   "Automated reconstruction of a serial-section EM Drosophila brain with flood-filling networks and local realignment" =
-    "Peter H Li, Larry F Lindsey, Michał Januszewski, Zhiyuan Zheng, Alexander Shakeel Bates, István Taisz, Mike Tyka, Michał Nichols, Feng Li, Eric Perlman, Joan Ros, Carles Bosch, Marion Fetter, David D Bock, Davi D Bock, Gregory SXE Jefferis, Viren Jain",
+    "P. H. Li, L. F. Lindsey, M. Januszewski, Z. Zheng, A. S. Bates, I. Taisz, M. Tyka, M. Nichols, F. Li, E. Perlman, J. Ros, C. Bosch, M. Fetter, D. D. Bock, D. D. Bock, G. S. X. E. Jefferis, V. Jain",
 
   "Communication from learned to innate olfactory processing centers is required for memory retrieval in Drosophila" =
-    "Michael-John Dolan, Ghislain Belliart-Guérin, Alexander Shakeel Bates, Shahar Frechter, Aurélie Lampin-Saint-Amaux, Yoshinori Aso, Ruairi J Roberts, Philipp Schlegel, Allan Wong, Anna Hammad, Davi D Bock, Gerald M Rubin, Thomas Preat, Pierre-Yves Plaçais, Gregory SXE Jefferis",
+    "M.-J. Dolan, G. Belliart-Guérin, A. S. Bates, S. Frechter, A. Lampin-Saint-Amaux, Y. Aso, R. J. Roberts, P. Schlegel, A. Wong, A. Hammad, D. D. Bock, G. M. Rubin, T. Preat, P.-Y. Plaçais, G. S. X. E. Jefferis",
 
   "Neural circuit basis of aversive odour processing in Drosophila from sensory input to descending output" =
-    "Paavo Huoviala, Michael-John Dolan, Fiona M Love, Peter Myers, Shahar Frechter, Satoshi Namiki, Alexander Shakeel Bates, Ruairi J Roberts, Emilia H Crosetti, Philipp Schlegel, Feng Li, Gerald M Rubin, Davi D Bock, Hiromu Tanimoto, Gregory SXE Jefferis",
+    "P. Huoviala, M.-J. Dolan, F. M. Love, P. Myers, S. Frechter, S. Namiki, A. S. Bates, R. J. Roberts, E. H. Crosetti, P. Schlegel, F. Li, G. M. Rubin, D. D. Bock, H. Tanimoto, G. S. X. E. Jefferis",
 
   "Connectome Influence Calculator" =
-    "Zaki Ajabi, Alexander Shakeel Bates, Jan Drugowitsch"
+    "Z. Ajabi, A. S. Bates, J. Drugowitsch"
 )
 
 # Update author lists

@@ -273,12 +273,12 @@ Link: [https://www.sciencenews.org/article/fruit-fly-brain-connections-traced](h
 - Published November 7, 2024
 Link: [https://www.brainfacts.org/neuroscience-in-society/supporting-research/2024/researchers-create-first-adult-fruit-fly-brain-connectome-110724](https://www.brainfacts.org/neuroscience-in-society/supporting-research/2024/researchers-create-first-adult-fruit-fly-brain-connectome-110724)
 
-**MSN Health** - "First map of adult insect's brain offers clues on neurological diseases"
+**Financial Times** - "First map of adult insect's brain offers clues on neurological diseases"
 - Focus on clinical implications for human neurological diseases
 - Discussion of shared genes between fruit flies and humans (75% of disease-related genes)
 - Potential applications for autism spectrum disorders and schizophrenia research
 - Published October 2024
-Link: [https://www.msn.com/en-gb/health/other/first-map-of-adult-insect-s-brain-offers-clues-on-neurological-diseases/ar-AA1rARNB](https://www.msn.com/en-gb/health/other/first-map-of-adult-insect-s-brain-offers-clues-on-neurological-diseases/ar-AA1rARNB)
+Link: [https://www.ft.com/barrier/corporate/92c11933-59c7-4003-b971-410ba339defe](https://www.ft.com/barrier/corporate/92c11933-59c7-4003-b971-410ba339defe)
 
 #### Federal Research Agency Coverage
 

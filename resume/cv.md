@@ -18,7 +18,7 @@ neurobiological circuits in living, behaving flies. I am a UK citizen.
 0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445) | [GitHub:
 alexanderbates](https://github.com/alexanderbates)
 
-**Metrics:** 4312 citations | h-index: 21 | i10-index: 24 | 16 peer
+**Metrics:** 4325 citations | h-index: 21 | i10-index: 24 | 16 peer
 reviews
 
 ## Professional Research \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
@@ -73,7 +73,7 @@ University of Cambridge • Cambridge, UK • 30/02/2021 - 01/09/2015
 
 PhD student with [Dr. Greg
 Jefferis](https://en.wikipedia.org/wiki/Gregory_Jefferis) •
-[**Thesis**](https://drive.google.com/file/d/1qiiAcquT948EcSC0SJYW85j8C-amOKkT/view):
+[**Thesis**](https://www.repository.cam.ac.uk/items/67fecbc9-4b86-477f-bf59-37fbaf8544fb):
 The lateral horn, a brain region in the fly, primes innate olfactory
 behaviours by combining patterns of second-order olfactory projection
 neuron activity. In my work, I developed tools and analyses, and
@@ -227,103 +227,206 @@ circuits](https://zenodo.org/records/3797211) (DOI:
 
 ## Publications \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Distributed control circuits across a brain-and-cord connectome**
-(2025). <ins>***AS Bates***</ins>†‡, JS Phelps†‡, M Kim†, HH Yang†, A
-Matsliah, Z Ajabi, E Perlman, … *bioRxiv,* in review at Nature\*\*
-\[citations: 11\]  
-**Neurotransmitter classification from electron microscopy images at
-synaptic sites in Drosophila melanogaster** (2024). N Eckstein†,
-<ins>***AS Bates***</ins>†, A Champion, M Du, Y Yin, P Schlegel, AKY Lu,
-… *Cell* \[citations: 205\]  
+**A. S. Bates**†‡, J. S. Phelps†‡, M. Kim†, H. H. Yang†, A. Matsliah, Z.
+Ajabi, E. Perlman, J. Blyth, B. J. Morris, L. J. Sizemore, A. Murray, S.
+Koskela, Z. Poon, A. Yazdan-Shahmorad, K. Eichler, A. Drubay, J. Brown,
+G. L. Ferreira, A. Santana-Cruz, R. I. Wilson, W.-C. A. Lee, J. T.
+Maniates-Selvin, T. Stürner, J. W. Truman, P. Schlegel, FlyWire
+Consortium, M. Zlatic, G. S. X. E. Jefferis, **Distributed control
+circuits across a brain-and-cord connectome.** *bioRxiv,* in review at
+Nature\*\* (2025) \[citations: 11\]
+
+N. Eckstein†, **A. S. Bates**†, A. Champion, M. Du, Y. Yin, P. Schlegel,
+A. K. Y. Lee, L. J. Pinto-Duartez, B. J. Pedersen, S. Valdes-Aleman, A.
+Dokaji, G. Sterne, K. Eichler, T. Schlegel, M.-J. Dolan, T. Grynhaus, D.
+Ramirez, D. C. Turner, A. Li, S. Farias, I. A. Meinertzhagen, S. C.
+Turaga, R. Dahmen, T. Wolff, K. Kruk, **A. S. Bates**†, G. S. X. E.
+Jefferis, D. D. Bock, FlyWire Consortium, **Neurotransmitter
+classification from electron microscopy images at synaptic sites in
+Drosophila melanogaster.** *Cell* 187 (10), 2574-2594. e23 (2024)
+\[citations: 205\]
+
+P. Schlegel†, **A. S. Bates**†, T. Stürner, S. R. Jagannathan, N.
+Drummond, J. Hsu, L. A. Capogrosso, R. J. V. Roberts, M. Zimmer, I. F.
+M. Tamimi, S. Takemura, S. Berg, M. Costa, G. S. X. E. Jefferis,
 **Information flow, cell types and stereotypy in a full olfactory
-connectome** (2021). P Schlegel†, <ins>***AS Bates***</ins>†, T Stürner,
-SR Jagannathan, N Drummond, J Hsu, … *Elife* \[citations: 157\]  
-**Complete connectomic reconstruction of olfactory projection neurons in
-the fly brain** (2020). <ins>***AS Bates***</ins>†, P Schlegel†, RJV
-Roberts, N Drummond, IFM Tamimi, … *Curr. Biology* \[citations: 207\]  
-**The natverse, a versatile toolbox for combining and analysing
-neuroanatomical data** (2020). <ins>***AS Bates***</ins>†, JD Manton†,
-SR Jagannathan, M Costa, P Schlegel, T Rohlfing, … *Elife* \[citations:
-206\]  
-**Analysis and optimization of equitable US cancer clinical trial center
-access by travel time** (2024). H Lee†, **AS Bates**, S Callier, M Chan,
-N Chambwe, A Marshall, MB Terry, … *JAMA oncology* \[citations: 14\]  
-**Functional and anatomical specificity in a higher olfactory centre**
-(2019). S Frechter†, **AS Bates**, S Tootoonian, MJ Dolan, J Manton, AR
-Jamasb, … *eLife* \[citations: 115\]  
-**Neural circuit mechanisms for steering control in walking Drosophila**
-(2025). A Rayshubskiy†, SL Holtz, **AS Bates**, QX Vanderbeck, LS
-Capdevila, … *ELife* \[citations: 101\]  
-**Quantitative Attributions with Counterfactuals** (2024). DY Adjavon†,
-N Eckstein, **AS Bates**, GSXE Jefferis, J Funke *bioRxiv*  
-**Whole-brain annotation and multi-connectome cell typing of
-Drosophila** (2024). P Schlegel†, Y Yin, **AS Bates**, S Dorkenwald, K
-Eichler, P Brooks, DS Han, … *Nature* \[citations: 333\]  
-**Discriminative attribution from paired images** (2022). N Eckstein†, H
-Bukhari, **AS Bates**, GSXE Jefferis, J Funke *Euro. Conf. on Computer
-Vision* \[citations: 8\]  
-**BAcTrace, a tool for retrograde tracing of neuronal circuits in
-Drosophila** (2020). S Cachero†, M Gkantia, **AS Bates**, S Frechter, L
-Blackie, A McCarthy, … *Nature methods* \[citations: 45\]  
+connectome.** *Elife* 10, e66018 (2021) \[citations: 158\]
+
+**A. S. Bates**†, P. Schlegel†, R. J. V. Roberts, N. Drummond, I. F. M.
+Tamimi, R. Turnbull, X. Zhao, E. C. Marin, P. D. Popovici, S. Dhawan, A.
+Jamasb, A. Javier, F. Li, G. M. Rubin, S. Waddell, D. D. Bock, M. Costa,
+G. S. X. E. Jefferis, **Complete connectomic reconstruction of olfactory
+projection neurons in the fly brain.** *Curr. Biology* 30 (16),
+3183-3199. e6 (2020) \[citations: 207\]
+
+**A. S. Bates**†, J. D. Manton†, S. R. Jagannathan, M. Costa, P.
+Schlegel, T. Rohlfing, G. S. X. E. Jefferis, **The natverse, a versatile
+toolbox for combining and analysing neuroanatomical data.** *Elife* 9,
+e53350 (2020) \[citations: 206\]
+
+S. Berg†, I. R. Beckett, M. Costa, P. Schlegel, M. Januszewski, E. C.
+Marin, **A. S. Bates**, A. Matsliah, S. Dorkenwald, K. J. Hayworth, S.
+Xu, H. Hess, S. M. Plaza, G. S. X. E. Jefferis, FlyWire Consortium,
+**Sexual dimorphism in the complete connectome of the Drosophila male
+central nervous system.** *bioRxiv* 2025.10. 09.680999 (2025)
+\[citations: 4\]
+
+A. Rayshubskiy†, S. L. Holtz, **A. S. Bates**, Q. X. Vanderbeck, L. S.
+Capdevila, R. I. Wilson, **Neural circuit mechanisms for steering
+control in walking Drosophila.** *ELife* 13, RP102230 (2025)
+\[citations: 101\]
+
+T. Stürner†, P. Brooks, L. S. Capdevila, B. J. Morris, A. Javier, S.
+Namiki, I. Siwanowicz, C. J. Dallmann, FlyWire Consortium, **A. S.
+Bates**, G. S. X. E. Jefferis, **Comparative connectomics of Drosophila
+descending and ascending neurons.** *Nature* 1-15 (2025) \[citations:
+35\]
+
+D. Y. Adjavon†, N. Eckstein, **A. S. Bates**, G. S. X. E. Jefferis, J.
+Funke, **Quantitative Attributions with Counterfactuals.** *bioRxiv*
+2024.11. 26.625505 (2024)
+
+P. K. Shiu†, G. R. Sterne, N. Spiller, R. Franconville, A. Sandoval, J.
+Zhou, N. Simha, C. H. Kang, S. W. Oh, **A. S. Bates**, S. Dorkenwald, A.
+Matsliah, A. R. Sterling, S. Yu, C. E. McKellar, M. Costa, K. Eichler,
+G. S. X. E. Jefferis, G. M. Card, D. Sussillo, FlyWire Consortium, V.
+Jayaraman, **A Drosophila computational brain model reveals sensorimotor
+processing.** *Nature* 634 (8032), 210-219 (2024) \[citations: 76\]
+
+A. Lin†, R. Yang, S. Dorkenwald, A. Matsliah, A. R. Sterling, P.
+Schlegel, S. Yu, C. E. McKellar, K. Eichler, T. Wolff, D. Deutsch, S.
+Farias, M. Costa, **A. S. Bates**, N. Eckstein, J. Funke, G. S. X. E.
+Jefferis, FlyWire Consortium, **Network statistics of the whole-brain
+connectome of Drosophila.** *Nature* 634 (8032), 153-165 (2024)
+\[citations: 111\]
+
+P. Schlegel†, Y. Yin, **A. S. Bates**, S. Dorkenwald, K. Eichler, P.
+Brooks, D. S. Han, M. Gkantia, M. dos Santos, E. J. Munnelly, G. Sterne,
+Z. Wang, N. Doyle, E. Perlman, S. Molina-Obando, FlyWire Consortium, A.
+Matsliah, S. Yu, C. E. McKellar, A. R. Sterling, M. Costa, N. Eckstein,
+J. Funke, G. S. X. E. Jefferis, **Whole-brain annotation and
+multi-connectome cell typing of Drosophila.** *Nature* 634 (8032),
+139-152 (2024) \[citations: 337\]
+
+S. Dorkenwald†, A. Matsliah, A. R. Sterling, P. Schlegel, S. Yu, C. E.
+McKellar, A. Lin, M. Costa, K. Eichler, Y. Yin, W. Silversmith, C.
+Schneider-Mizell, C. S. Jordan, D. Brittain, A. Halageri, K. Kuehner, O.
+Ogedengbe, R. Morey, J. Gager, K. Kruk, E. Perlman, R. Yang, D. Deutsch,
+D. Bland, M. Sorek, R. Lu, T. Macrina, K. Lee, J. A. Bae, S. Mu, B.
+Nehoran, E. Mitchell, S. Popovych, J. Wu, Z. Jia, J. Phelps, C. Baker,
+M. Kim, N. Kemnitz, M. Mahalingam, G. Eberle, E. Nobles, V. Jain, M.
+Januszewski, **A. S. Bates**, N. Eckstein, J. Funke, F. Collman, D. D.
+Bock, G. S. X. E. Jefferis, H. S. Seung, M. Murthy, FlyWire Consortium,
+**Neuronal wiring diagram of an adult brain.** *Nature* 634 (8032),
+124-138 (2024) \[citations: 483\]
+
+H. Lee†, **A. S. Bates**, S. Callier, M. Chan, N. Chambwe, A. Marshall,
+M. B. Terry, J. Sauder, W. K. Chung, **Analysis and optimization of
+equitable US cancer clinical trial center access by travel time.** *JAMA
+oncology* 10 (5), 652-657 (2024) \[citations: 14\]
+
+P. Singh†, S. Goyal, S. Gupta, S. Garg, A. Tiwari, V. Rajput, **A. S.
+Bates**, C. J. Potter, N. Gupta, **Combinatorial encoding of odors in
+the mosquito antennal lobe.** *Nature Comm.* 14 (1), 3539 (2023)
+\[citations: 17\]
+
+N. Eckstein†, H. Bukhari, **A. S. Bates**, G. S. X. E. Jefferis, J.
+Funke, **Discriminative attribution from paired images.** *Euro. Conf.
+on Computer Vision* 406-422 (2022) \[citations: 8\]
+
+F. Li†, J. W. Lindsey, E. C. Marin, N. Otto, M. Dreher, G. Dempsey, I.
+Stark, **A. S. Bates**, M. Pleijzier, P. Schlegel, A. Nern, S. Takemura,
+N. Eckstein, T. Wolff, R. J. V. Roberts, G. M. Rubin, S. Berg, D. D.
+Bock, A. Litwin-Kumar, M. Murthy, G. S. X. E. Jefferis, **The connectome
+of the adult Drosophila mushroom body provides insights into function.**
+*Elife* 9, e62576 (2020) \[citations: 381\]
+
+S. Cachero†, M. Gkantia, **A. S. Bates**, S. Frechter, L. Blackie, A.
+McCarthy, P. Sten-Domrose, G. S. X. E. Jefferis, **BAcTrace, a tool for
+retrograde tracing of neuronal circuits in Drosophila.** *Nature
+methods* 17 (12), 1254-1261 (2020) \[citations: 45\]
+
+L. K. Scheffer†, C. S. Xu, M. Januszewski, Z. Lu, S. Takemura, K. J.
+Hayworth, G. B. Huang, K. Shinomiya, J. Maitlin-Shepard, S. Berg, J.
+Clements, P. M. Hubbard, W. T. Katz, L. Umayam, T. Zhao, D. Ackerman, T.
+Blakely, J. Bogovic, T. Dolafi, D. Kainmueller, T. Kawase, K. A. Khairy,
+L. Leavitt, P. H. Li, L. Lindsey, N. Neubarth, D. J. Olbris, H. Otsuna,
+E. T. Trautman, M. Ito, **A. S. Bates**, J. Goldammer, T. Wolff, R.
+Svirskas, P. Schlegel, E. Neace, C. J. Knecht, C. X. Alvarado, D. A.
+Bailey, S. Ballinger, J. A. Borycz, B. S. Canino, N. Cheatham, M. Cook,
+M. Dreher, O. Duclos, B. Eubanks, K. Fairbanks, S. Finley, N. Forknall,
+A. Francis, G. P. Hopkins, E. M. Joyce, S. Kim, N. A. Kirk, J. Kovalyak,
+S. A. Lauchie, A. Lohff, C. Maldonado, E. A. Manley, S. McLin, C.
+Mooney, M. Ndama, O. Ogundeyi, N. Okeoma, C. Ordish, N. Padilla, C. M.
+Patrick, T. Paterson, E. E. Phillips, E. M. Phillips, N. Rampally, C.
+Ribeiro, M. K. Robertson, J. T. Rymer, S. M. Ryan, M. Sammons, A. K.
+Scott, A. L. Scott, A. Shinomiya, C. Smith, K. Smith, N. L. Smith, M. A.
+Sobeski, A. Suleiman, J. Swift, S. Takemura, I. Talebi, D. Tarnogorska,
+E. Tenshaw, T. Tokhi, J. J. Walsh, T. Yang, J. A. Horne, F. Li, R.
+Parekh, P. K. Rivlin, V. Jayaraman, M. Costa, G. S. X. E. Jefferis, K.
+Ito, S. Saalfeld, R. George, I. Meinertzhagen, G. M. Rubin, H. F. Hess,
+V. Jain, S. M. Plaza, **A connectome and analysis of the adult
+Drosophila central brain.** *eLife* 9, e57443 (2020) \[citations: 1114\]
+
+E. C. Marin†, L. Büld, M. Theiss, T. Sarkissian, R. J. V. Roberts, R.
+Turnbull, I. F. M. Tamimi, M. W. Pleijzier, W. J. Laursen, N. Drummond,
+P. Schlegel, **A. S. Bates**, F. Li, M. Landgraf, M. Costa, D. D. Bock,
+P. A. Garrity, G. S. X. E. Jefferis, **Connectomics analysis reveals
+first-, second-, and third-order thermosensory and hygrosensory neurons
+in the adult Drosophila brain.** *Curr. Biology* 30 (16), 3167-3182. e4
+(2020) \[citations: 106\]
+
+N. Otto†, M. W. Pleijzier, I. C. Morgan, A. J. Edmondson-Stait, K. J.
+Heinz, I. Stark, G. Dempsey, M. Ito, I. Kapoor, J. Hsu, P. M. Schlegel,
+**A. S. Bates**, L. Feng, M. Costa, K. Ito, D. D. Bock, G. M. Rubin, A.
+Litwin-Kumar, S. Waddell, **Input connectivity reveals additional
+heterogeneity of dopaminergic reinforcement in Drosophila.** *Curr.
+Biology* 30 (16), 3200-3211. e8 (2020) \[citations: 80\]
+
+S. Frechter†, **A. S. Bates**, S. Tootoonian, M.-J. Dolan, J. Manton, A.
+R. Jamasb, J. Kohl, D. D. Bock, G. S. X. E. Jefferis, **Functional and
+anatomical specificity in a higher olfactory centre.** *eLife* 8, e44590
+(2019) \[citations: 115\]
+
+M.-J. Dolan†, S. Frechter, **A. S. Bates**, C. Dan, P. Huoviala, R. J.
+Roberts, P. Schlegel, S. Dhawan, R. Tabano, H. Dionne, C. Christoforou,
+K. Close, B. Sutcliffe, B. Giuliani, F. Li, M. Costa, G. Ihrke, G. W.
+Meissner, D. D. Bock, Y. Aso, G. M. Rubin, G. S. Jefferis,
 **Neurogenetic dissection of the Drosophila lateral horn reveals major
 outputs, diverse behavioural functions, and interactions with the
-mushroom body** (2019). MJ Dolan†, S Frechter, **AS Bates**, C Dan, P
-Huoviala, RJ Roberts, … *Elife* \[citations: 167\]  
-**Communication from learned to innate olfactory processing centers is
-required for memory retrieval in Drosophila** (2018). MJ Dolan†, G
-Belliart-Guérin, **AS Bates**, S Frechter, A Lampin-Saint-Amaux, …
-*Neuron* \[citations: 117\]  
+mushroom body.** *Elife* 8, e43079 (2019) \[citations: 167\]
+
+P. H. Li†, L. F. Lindsey, M. Januszewski, Z. Zheng, **A. S. Bates**, I.
+Taisz, M. Tyka, M. Nichols, F. Li, E. Perlman, J. Ros, C. Bosch, M.
+Fetter, D. D. Bock, D. D. Bock, G. S. X. E. Jefferis, V. Jain,
 **Automated reconstruction of a serial-section EM Drosophila brain with
-flood-filling networks and local realignment** (2019). PH Li†, LF
-Lindsey, M Januszewski, Z Zheng, **AS Bates**, I Taisz, M Tyka, …
-*bioRxiv* \[citations: 105\]  
-**Sexual dimorphism in the complete connectome of the Drosophila male
-central nervous system** (2025). S Berg†, IR Beckett, M Costa, P
-Schlegel, M Januszewski, EC Marin, … *bioRxiv* \[citations: 4\]  
-**Comparative connectomics of Drosophila descending and ascending
-neurons** (2025). T Stürner†, P Brooks, L Serratosa Capdevila, BJ
-Morris, A Javier, S Fang, … *Nature* \[citations: 35\]  
-**A Drosophila computational brain model reveals sensorimotor
-processing** (2024). PK Shiu†, GR Sterne, N Spiller, R Franconville, A
-Sandoval, J Zhou, … *Nature* \[citations: 76\]  
-**Network statistics of the whole-brain connectome of Drosophila**
-(2024). A Lin†, R Yang, S Dorkenwald, A Matsliah, AR Sterling, P
-Schlegel, S Yu, … *Nature* \[citations: 110\]  
-**Neuronal wiring diagram of an adult brain** (2024). S Dorkenwald†, A
-Matsliah, AR Sterling, P Schlegel, SC Yu, CE McKellar, … *Nature*
-\[citations: 479\]  
-**The connectome of the adult Drosophila mushroom body provides insights
-into function** (2020). F Li†, JW Lindsey, EC Marin, N Otto, M Dreher, G
-Dempsey, I Stark, … *Elife* \[citations: 381\]  
-**A connectome and analysis of the adult Drosophila central brain**
-(2020). LK Scheffer†, CS Xu, M Januszewski, Z Lu, S Takemura, KJ
-Hayworth, … *eLife* \[citations: 1113\]  
-**Connectomics analysis reveals first-, second-, and third-order
-thermosensory and hygrosensory neurons in the adult Drosophila brain**
-(2020). EC Marin†, L Büld, M Theiss, T Sarkissian, RJV Roberts, R
-Turnbull, … *Curr. Biology* \[citations: 105\]  
-**Input connectivity reveals additional heterogeneity of dopaminergic
-reinforcement in Drosophila** (2020). N Otto†, MW Pleijzier, IC Morgan,
-AJ Edmondson-Stait, KJ Heinz, I Stark, … *Curr. Biology* \[citations:
-80\]  
-**Neural circuit basis of aversive odour processing in Drosophila from
-sensory input to descending output** (2018). P Huoviala†, MJ Dolan, FM
-Love, P Myers, S Frechter, S Namiki, … *bioRxiv* \[citations: 48\]  
-**Combinatorial encoding of odors in the mosquito antennal lobe**
-(2023). P Singh†, S Goyal, S Gupta, S Garg, A Tiwari, V Rajput, **AS
-Bates**, … *Nature Comm.* \[citations: 17\]
+flood-filling networks and local realignment.** *bioRxiv* 605634 (2019)
+\[citations: 105\]
+
+M.-J. Dolan†, G. Belliart-Guérin, **A. S. Bates**, S. Frechter, A.
+Lampin-Saint-Amaux, Y. Aso, R. J. Roberts, P. Schlegel, A. Wong, A.
+Hammad, D. D. Bock, G. M. Rubin, T. Preat, P.-Y. Plaçais, G. S. X. E.
+Jefferis, **Communication from learned to innate olfactory processing
+centers is required for memory retrieval in Drosophila.** *Neuron* 100
+(3), 651-668. e8 (2018) \[citations: 117\]
+
+P. Huoviala†, M.-J. Dolan, F. M. Love, P. Myers, S. Frechter, S. Namiki,
+**A. S. Bates**, R. J. Roberts, E. H. Crosetti, P. Schlegel, F. Li, G.
+M. Rubin, D. D. Bock, H. Tanimoto, G. S. X. E. Jefferis, **Neural
+circuit basis of aversive odour processing in Drosophila from sensory
+input to descending output.** *bioRxiv* 394403 (2018) \[citations: 49\]
 
 † denotes first author  
 ‡ denotes corresponding author
 
 ## Review Articles \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**Systems neuroscience: Auditory processing at synaptic resolution**
-(2022). <ins>***AS Bates***</ins>, G Jefferis *Curr. Biology*
-\[citations: 1\]  
-**Neuronal cell types in the fly: single-cell anatomy meets single-cell
-genomics** (2019). <ins>***AS Bates***</ins>, J Janssens, GS Jefferis, S
-Aerts *Curr. opinion in neurobiology* \[citations: 72\]  
+**A. S. Bates**, G. S. X. E. Jefferis, **Systems neuroscience: Auditory
+processing at synaptic resolution.** *Curr. Biology* 32 (15), R830-R833
+(2022) \[citations: 1\]  
+**A. S. Bates**, J. Janssens, G. S. X. E. Jefferis, S. Aerts, **Neuronal
+cell types in the fly: single-cell anatomy meets single-cell genomics.**
+*Curr. opinion in neurobiology* 56, 125-134 (2019) \[citations: 72\]  
 
 ## Referees \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -338,4 +441,4 @@ Tutor:** Dr. Marco Beato, UCL Neuroscience, <m.beato@ucl.ac.uk>
 
 ------------------------------------------------------------------------
 
-*Updated: 04 December 2025*
+*Updated: 08 December 2025*

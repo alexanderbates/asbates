@@ -34,6 +34,18 @@ CV$entries_data <- CV$entries_data %>% dplyr::filter(in_resume == TRUE)
 publications <- scholar::get_publications(scholar_id, sortby = "year", pagesize = 100, flush = TRUE)
 publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge",""))
 
+# Load full author lists from manually curated file
+if(file.exists("publications_full_citations.csv")) {
+  full_pubs <- read.csv("publications_full_citations.csv", stringsAsFactors = FALSE)
+  # Merge full author lists based on title match
+  for(i in 1:nrow(publications)) {
+    title_match <- which(full_pubs$title == publications$title[i])
+    if(length(title_match) > 0) {
+      publications$author[i] <- full_pubs$author[title_match[1]]
+    }
+  }
+}
+
 # Process publications
 authorlist <- publications$author
 publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
@@ -431,30 +443,36 @@ for(i in 1:nrow(publications)) {
   # Mark first author with obelus in the author list
   author_text <- pub$author
 
+  citation_text <- if(!is.na(pub$cites) && pub$cites > 0) glue(" [citations: {pub$cites}]") else ""
+
+  # Bold "A. S. Bates" in author list FIRST
+  author_text <- gsub("A\\. S\\. Bates", "**A. S. Bates**", author_text)
+  author_text <- gsub("Alexander Shakeel Bates", "**Alexander Shakeel Bates**", author_text)
+
   # Special handling for papers with multiple first authors
+  # Apply symbols AFTER bolding, matching abbreviated format with periods and spaces
   if(grepl("Distributed control circuits across a brain-and-cord connectome", clean_title, ignore.case = TRUE)) {
-    # BANC paper: Add obelus to multiple first authors (AS Bates, JS Phelps, M Kim, HH Yang)
-    # Add double dagger for corresponding authors (AS Bates, JS Phelps)
-    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020\u2021", author_text)
-    author_text <- gsub("JS Phelps", "JS Phelps\u2020\u2021", author_text)
-    author_text <- gsub("M Kim", "M Kim\u2020", author_text)
-    author_text <- gsub("HH Yang", "HH Yang\u2020", author_text)
+    # BANC paper: A. S. Bates†‡, J. S. Phelps†‡, M. Kim†, H. H. Yang†
+    author_text <- gsub("\\*\\*A\\. S\\. Bates\\*\\*", "**A. S. Bates**\u2020\u2021", author_text)
+    author_text <- gsub("J\\. S\\. Phelps", "J. S. Phelps\u2020\u2021", author_text)
+    author_text <- gsub("M\\. Kim", "M. Kim\u2020", author_text)
+    author_text <- gsub("H\\. H\\. Yang", "H. H. Yang\u2020", author_text)
   } else if(grepl("Neurotransmitter classification from electron microscopy", clean_title, ignore.case = TRUE)) {
-    # Neurotransmitter paper: N Eckstein†, AS Bates†
-    author_text <- gsub("N Eckstein", "N Eckstein\u2020", author_text)
-    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
+    # Neurotransmitter paper: N. Eckstein†, A. S. Bates†
+    author_text <- gsub("N\\. Eckstein", "N. Eckstein\u2020", author_text)
+    author_text <- gsub("\\*\\*A\\. S\\. Bates\\*\\*", "**A. S. Bates**\u2020", author_text)
   } else if(grepl("Information flow, cell types and stereotypy", clean_title, ignore.case = TRUE)) {
-    # Olfactory connectome paper: P Schlegel†, AS Bates†
-    author_text <- gsub("P Schlegel", "P Schlegel\u2020", author_text)
-    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
+    # Olfactory connectome paper: P. Schlegel†, A. S. Bates†
+    author_text <- gsub("P\\. Schlegel", "P. Schlegel\u2020", author_text)
+    author_text <- gsub("\\*\\*A\\. S\\. Bates\\*\\*", "**A. S. Bates**\u2020", author_text)
   } else if(grepl("Complete connectomic reconstruction of olfactory projection neurons", clean_title, ignore.case = TRUE)) {
-    # Olfactory projection neurons paper: AS Bates†, P Schlegel†
-    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
-    author_text <- gsub("P Schlegel", "P Schlegel\u2020", author_text)
+    # Olfactory projection neurons paper: A. S. Bates†, P. Schlegel†
+    author_text <- gsub("\\*\\*A\\. S\\. Bates\\*\\*", "**A. S. Bates**\u2020", author_text)
+    author_text <- gsub("P\\. Schlegel", "P. Schlegel\u2020", author_text)
   } else if(grepl("The natverse, a versatile toolbox", clean_title, ignore.case = TRUE)) {
-    # Natverse paper: AS Bates†, JD Manton†
-    author_text <- gsub("(<ins>\\*\\*\\*AS Bates\\*\\*\\*</ins>)", "\\1\u2020", author_text)
-    author_text <- gsub("JD Manton", "JD Manton\u2020", author_text)
+    # Natverse paper: A. S. Bates†, J. D. Manton†
+    author_text <- gsub("\\*\\*A\\. S\\. Bates\\*\\*", "**A. S. Bates**\u2020", author_text)
+    author_text <- gsub("J\\. D\\. Manton", "J. D. Manton\u2020", author_text)
   } else {
     # Standard case: add obelus to first author only
     first_author_match <- regexpr("^[^,]+", author_text)
@@ -467,10 +485,12 @@ for(i in 1:nrow(publications)) {
     }
   }
 
-  citation_text <- if(!is.na(pub$cites) && pub$cites > 0) glue(" [citations: {pub$cites}]") else ""
+  # Get volume number if available (using number field from Google Scholar)
+  volume_text <- if(!is.na(pub$number) && pub$number != "") glue(" {pub$number}") else ""
 
-  cat(glue("**{clean_title}** ({pub$year}). {author_text} *{pub$journal}*{citation_text}"))
-  cat("  \n")
+  # Science bibliography style: Authors, Title. Journal Volume (Year).
+  cat(glue("{author_text}, **{clean_title}.** *{pub$journal}*{volume_text} ({pub$year}){citation_text}"))
+  cat("  \n\n")
 }
 
 cat("\n\u2020 denotes first author  \n")
@@ -488,7 +508,15 @@ if(nrow(reviews) > 0) {
     clean_title <- gsub("<a href='[^']*'>([^<]*)</a>", "\\1", rev$title)
     citation_text <- if(!is.na(rev$cites) && rev$cites > 0) glue(" [citations: {rev$cites}]") else ""
 
-    cat(glue("**{clean_title}** ({rev$year}). {rev$author} *{rev$journal}*{citation_text}"))
+    # Bold "A. S. Bates" in author list
+    author_text <- gsub("A\\. S\\. Bates", "**A. S. Bates**", rev$author)
+    author_text <- gsub("Alexander Shakeel Bates", "**Alexander Shakeel Bates**", author_text)
+
+    # Get volume number if available
+    volume_text <- if(!is.na(rev$number) && rev$number != "") glue(" {rev$number}") else ""
+
+    # Science bibliography style: Authors, Title. Journal Volume (Year).
+    cat(glue("{author_text}, **{clean_title}.** *{rev$journal}*{volume_text} ({rev$year}){citation_text}"))
     cat("  \n")
   }
 
