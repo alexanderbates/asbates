@@ -449,8 +449,9 @@ for(i in 1:nrow(publications)) {
   author_text <- gsub("A\\. S\\. Bates", "**A. S. Bates**", author_text)
   author_text <- gsub("Alexander Shakeel Bates", "**Alexander Shakeel Bates**", author_text)
 
-  # Special handling for papers with multiple first authors
+  # Special handling for papers where A. S. Bates is one of the first authors
   # Apply symbols AFTER bolding, matching abbreviated format with periods and spaces
+  # ONLY add obelus to papers where A. S. Bates is actually a first author
   if(grepl("Distributed control circuits across a brain-and-cord connectome", clean_title, ignore.case = TRUE)) {
     # BANC paper: A. S. Bates†‡, J. S. Phelps†‡, M. Kim†, H. H. Yang†
     author_text <- gsub("\\*\\*A\\. S\\. Bates\\*\\*", "**A. S. Bates**\u2020\u2021", author_text)
@@ -473,17 +474,8 @@ for(i in 1:nrow(publications)) {
     # Natverse paper: A. S. Bates†, J. D. Manton†
     author_text <- gsub("\\*\\*A\\. S\\. Bates\\*\\*", "**A. S. Bates**\u2020", author_text)
     author_text <- gsub("J\\. D\\. Manton", "J. D. Manton\u2020", author_text)
-  } else {
-    # Standard case: add obelus to first author only
-    first_author_match <- regexpr("^[^,]+", author_text)
-    if(first_author_match[1] > 0) {
-      first_author <- regmatches(author_text, first_author_match)
-      # Add obelus right next to the first author name (before any spaces at the end)
-      first_author_clean <- trimws(first_author)
-      first_author_with_obelus <- paste0(first_author_clean, "\u2020")
-      author_text <- sub(first_author, first_author_with_obelus, author_text, fixed = TRUE)
-    }
   }
+  # NOTE: No "else" clause - for papers where A. S. Bates is NOT a first author, don't add any obelus
 
   # Get volume number if available (using number field from Google Scholar)
   volume_text <- if(!is.na(pub$number) && pub$number != "") glue(" {pub$number}") else ""
