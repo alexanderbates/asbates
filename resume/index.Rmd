@@ -1,6 +1,6 @@
 ---
-title: "Alexander Bates' CV"
-author: Alexander Bates
+title: "Alexander Shakeel Bates, PhD, FRES - CV"
+author: Alexander Shakeel Bates, PhD, FRES
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
@@ -38,7 +38,7 @@ source("cv_printing_functions.r")
 
 ```{r pub_data}
 publications <- scholar::get_publications(id, sortby = "year", pagesize = 100, flush = TRUE)
-publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge",""))
+publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge","Journal of Clinical Oncology",""))
 authorlist <- publications$author
 publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
 publications$position <- author_position(authorlist, scholar::get_profile(id)$name)$Position
@@ -157,6 +157,10 @@ peer_reviews <- peer_reviews %>%
   dplyr::ungroup() %>%
   dplyr::arrange(dplyr::desc(reviews)) %>%
   dplyr::distinct(journal, reviews)
+
+# Add 1 Nature Comm. review not yet on ORCID
+peer_reviews <- peer_reviews %>%
+  dplyr::mutate(reviews = ifelse(journal == "Nature Comm.", reviews + 1, reviews))
 
 # Add COSYNE abstract reviews
 cosyne_reviews <- data.frame(journal = "COSYNE (abstracts)", reviews = 9)
@@ -280,7 +284,7 @@ CV$skills %>% glue_data("- <i class='{icon}'></i> {skill}")
 Main
 ================================================================================
 
-Dr. Alexander Shakeel Bates {#title}
+Alexander Shakeel Bates, PhD, FRES {#title}
 --------------------------------------------------------------------------------
 
 ```{r intro}

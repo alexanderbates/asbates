@@ -158,7 +158,7 @@ if(nrow(peer_reviews) > 0) {
 }
 ```
 
-# [Dr. Alexander Shakeel Bates](https://as-bates.netlify.app/portfolio/) ![](asb_logo_round.png){width=80px style="float: right; margin-left: 20px;"}
+# [Alexander Shakeel Bates, PhD, FRES](https://as-bates.netlify.app/portfolio/) ![](asb_logo_round.png){width=80px style="float: right; margin-left: 20px;"}
 
 **Neuroscientist & Computational Biologist**
 
