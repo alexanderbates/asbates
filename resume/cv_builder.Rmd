@@ -117,7 +117,7 @@ publications <- subset(publications, !grepl(revs, title))
 
 # Journal corrections
 banc_corr <- grepl("Distributed control circuits across a brain-and-cord connectome", publications$title, ignore.case = TRUE)
-publications$journal[banc_corr] <- "bioRxiv, *in review at Nature*"
+publications$journal[banc_corr] <- "bioRxiv, *accepted at Nature*"
 
 # Get scholar profile for metrics
 author <- scholar::get_profile(scholar_id)

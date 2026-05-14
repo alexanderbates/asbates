@@ -18,7 +18,7 @@ neurobiological circuits in living, behaving flies. I am a UK citizen.
 0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445) | [GitHub:
 alexanderbates](https://github.com/alexanderbates)
 
-**Metrics:** 4867 citations | h-index: 23 | i10-index: 25 | 18 peer
+**Metrics:** 5075 citations | h-index: 23 | i10-index: 26 | 17 peer
 reviews
 
 ## Professional Research \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
@@ -38,10 +38,14 @@ connectome, open-access
 
 ## Fellowships & Grants \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-**[Warren Alpert Foundation Distinguished Scholars Award](https://www.warrenalpertfoundation.org)**
-• Warren Alpert Foundation • US • 01/08/2028 - 01/08/2026
+**[Warren Alpert Foundation Distinguished Scholars
+Award](https://www.warrenalpertfoundation.org)** • Warren Alpert
+Foundation • US • 01/08/2028 - 01/08/2026
 
-$400,000 USD ($200,000/year for 2 years) for research on neural circuits linking metabolic state with navigation • One of seven Distinguished Scholars selected in 2026 after rigorous review by independent medical professionals
+$400,000 USD ($200,000/year for 2 years) for research on neural circuits
+linking metabolic state with navigation • One of seven Distinguished
+Scholars selected in 2026 after rigorous review by independent medical
+professionals
 
 **[Sir Henry Wellcome
 Fellowship](https://wellcome.org/grant-funding/schemes/sir-henry-wellcome-postdoctoral-fellowships)**
@@ -197,8 +201,8 @@ Koskela, Z. Poon, A. Yazdan-Shahmorad, K. Eichler, A. Drubay, J. Brown,
 G. L. Ferreira, A. Santana-Cruz, R. I. Wilson, W.-C. A. Lee, J. T.
 Maniates-Selvin, T. Stürner, J. W. Truman, P. Schlegel, FlyWire
 Consortium, M. Zlatic, G. S. X. E. Jefferis, **Distributed control
-circuits across a brain-and-cord connectome.** *bioRxiv,* in review at
-Nature\*\* (2025) \[citations: 24\]
+circuits across a brain-and-cord connectome.** *bioRxiv,* accepted at
+Nature\*\* (2025) \[citations: 32\]
 
 N. Eckstein†, **A. S. Bates**†, A. Champion, M. Du, Y. Yin, P. Schlegel,
 A. K. Y. Lee, L. J. Pinto-Duartez, B. J. Pedersen, S. Valdes-Aleman, A.
@@ -208,25 +212,36 @@ Turaga, R. Dahmen, T. Wolff, K. Kruk, **A. S. Bates**†, G. S. X. E.
 Jefferis, D. D. Bock, FlyWire Consortium, **Neurotransmitter
 classification from electron microscopy images at synaptic sites in
 Drosophila melanogaster.** *Cell* 187 (10), 2574-2594. e23 (2024)
-\[citations: 237\]
+\[citations: 246\]
+
+**A Bates**, A Marshall, S Callier, N Chambwe, T Janowitz, **Analysis
+and optimization of equitable US cancer clinical trial center access by
+travel time..** *J. of Clinical Oncology* 41 (16), 6524-6524 (2023)
 
 P. Schlegel†, **A. S. Bates**†, T. Stürner, S. R. Jagannathan, N.
 Drummond, J. Hsu, L. A. Capogrosso, R. J. V. Roberts, M. Zimmer, I. F.
 M. Tamimi, S. Takemura, S. Berg, M. Costa, G. S. X. E. Jefferis,
 **Information flow, cell types and stereotypy in a full olfactory
-connectome.** *Elife* 10, e66018 (2021) \[citations: 168\]
+connectome.** *Elife* 10, e66018 (2021) \[citations: 170\]
+
+<ins>
+***AS Bates***
+</ins>
+
+, **The organisation of a third-order olfactory brain region in the
+vinegar fly.** *Genomics* 56, 125-34 (2021)
 
 **A. S. Bates**†, P. Schlegel†, R. J. V. Roberts, N. Drummond, I. F. M.
 Tamimi, R. Turnbull, X. Zhao, E. C. Marin, P. D. Popovici, S. Dhawan, A.
 Jamasb, A. Javier, F. Li, G. M. Rubin, S. Waddell, D. D. Bock, M. Costa,
 G. S. X. E. Jefferis, **Complete connectomic reconstruction of olfactory
 projection neurons in the fly brain.** *Curr. Biology* 30 (16),
-3183-3199. e6 (2020) \[citations: 212\]
+3183-3199. e6 (2020) \[citations: 215\]
 
 **A. S. Bates**†, J. D. Manton†, S. R. Jagannathan, M. Costa, P.
 Schlegel, T. Rohlfing, G. S. X. E. Jefferis, **The natverse, a versatile
 toolbox for combining and analysing neuroanatomical data.** *Elife* 9,
-e53350 (2020) \[citations: 212\]
+e53350 (2020) \[citations: 217\]
 
 S. Berg, I. R. Beckett, M. Costa, P. Schlegel, M. Januszewski, E. C.
 Marin, A. Nern, S. Preibisch, W. Qiu, S. Y. Takemura, A. M. C.
@@ -250,36 +265,36 @@ Meissner, S. Romani, J. Funke, C. Knecht, S. Saalfeld, L. K. Scheffer,
 S. Waddell, G. M. Card, C. Ribeiro, M. B. Reiser, H. F. Hess, G. M.
 Rubin, G. S. X. E. Jefferis, **Sexual dimorphism in the complete
 connectome of the Drosophila male central nervous system.** *bioRxiv*
-2025.10. 09.680999 (2025) \[citations: 23\]
+2025.10. 09.680999 (2025) \[citations: 37\]
 
 A. Rayshubskiy, S. L. Holtz, **A. S. Bates**, Q. X. Vanderbeck, L. S.
 Capdevila, R. I. Wilson, **Neural circuit mechanisms for steering
 control in walking Drosophila.** *ELife* 13, RP102230 (2025)
-\[citations: 111\]
+\[citations: 113\]
 
 T. Stürner, P. Brooks, L. S. Capdevila, B. J. Morris, A. Javier, S.
 Namiki, I. Siwanowicz, C. J. Dallmann, FlyWire Consortium, **A. S.
 Bates**, G. S. X. E. Jefferis, **Comparative connectomics of Drosophila
 descending and ascending neurons.** *Nature* 643 (8070), 158-172 (2025)
-\[citations: 50\]
+\[citations: 54\]
 
 D. Y. Adjavon, N. Eckstein, **A. S. Bates**, G. S. X. E. Jefferis, J.
 Funke, **Quantitative Attributions with Counterfactuals.** *bioRxiv*
-2024.11. 26.625505 (2024)
+2024.11. 26.625505 (2024) \[citations: 1\]
 
 P. K. Shiu, G. R. Sterne, N. Spiller, R. Franconville, A. Sandoval, J.
 Zhou, N. Simha, C. H. Kang, S. W. Oh, **A. S. Bates**, S. Dorkenwald, A.
 Matsliah, A. R. Sterling, S. Yu, C. E. McKellar, M. Costa, K. Eichler,
 G. S. X. E. Jefferis, G. M. Card, D. Sussillo, FlyWire Consortium, V.
 Jayaraman, **A Drosophila computational brain model reveals sensorimotor
-processing.** *Nature* 634 (8032), 210-219 (2024) \[citations: 103\]
+processing.** *Nature* 634 (8032), 210-219 (2024) \[citations: 117\]
 
 A. Lin, R. Yang, S. Dorkenwald, A. Matsliah, A. R. Sterling, P.
 Schlegel, S. Yu, C. E. McKellar, K. Eichler, T. Wolff, D. Deutsch, S.
 Farias, M. Costa, **A. S. Bates**, N. Eckstein, J. Funke, G. S. X. E.
 Jefferis, FlyWire Consortium, **Network statistics of the whole-brain
 connectome of Drosophila.** *Nature* 634 (8032), 153-165 (2024)
-\[citations: 141\]
+\[citations: 160\]
 
 P. Schlegel, Y. Yin, **A. S. Bates**, S. Dorkenwald, K. Eichler, P.
 Brooks, D. S. Han, M. Gkantia, M. dos Santos, E. J. Munnelly, G. Sterne,
@@ -287,7 +302,7 @@ Z. Wang, N. Doyle, E. Perlman, S. Molina-Obando, FlyWire Consortium, A.
 Matsliah, S. Yu, C. E. McKellar, A. R. Sterling, M. Costa, N. Eckstein,
 J. Funke, G. S. X. E. Jefferis, **Whole-brain annotation and
 multi-connectome cell typing of Drosophila.** *Nature* 634 (8032),
-139-152 (2024) \[citations: 418\]
+139-152 (2024) \[citations: 462\]
 
 S. Dorkenwald, A. Matsliah, A. R. Sterling, P. Schlegel, S. Yu, C. E.
 McKellar, A. Lin, M. Costa, K. Eichler, Y. Yin, W. Silversmith, C.
@@ -299,33 +314,33 @@ M. Kim, N. Kemnitz, M. Mahalingam, G. Eberle, E. Nobles, V. Jain, M.
 Januszewski, **A. S. Bates**, N. Eckstein, J. Funke, F. Collman, D. D.
 Bock, G. S. X. E. Jefferis, H. S. Seung, M. Murthy, FlyWire Consortium,
 **Neuronal wiring diagram of an adult brain.** *Nature* 634 (8032),
-124-138 (2024) \[citations: 587\]
+124-138 (2024) \[citations: 663\]
 
 H. Lee, **A. S. Bates**, S. Callier, M. Chan, N. Chambwe, A. Marshall,
 M. B. Terry, J. Sauder, W. K. Chung, **Analysis and optimization of
 equitable US cancer clinical trial center access by travel time.** *JAMA
-oncology* 10 (5), 652-657 (2024) \[citations: 16\]
+oncology* 10 (5), 652-657 (2024) \[citations: 20\]
 
 P. Singh, S. Goyal, S. Gupta, S. Garg, A. Tiwari, V. Rajput, **A. S.
 Bates**, C. J. Potter, N. Gupta, **Combinatorial encoding of odors in
 the mosquito antennal lobe.** *Nature Comm.* 14 (1), 3539 (2023)
-\[citations: 19\]
+\[citations: 21\]
 
 N. Eckstein, H. Bukhari, **A. S. Bates**, G. S. X. E. Jefferis, J.
 Funke, **Discriminative attribution from paired images.** *Euro. Conf.
-on Computer Vision* 406-422 (2022) \[citations: 9\]
+on Computer Vision* 406-422 (2022) \[citations: 10\]
 
 F. Li, J. W. Lindsey, E. C. Marin, N. Otto, M. Dreher, G. Dempsey, I.
 Stark, **A. S. Bates**, M. Pleijzier, P. Schlegel, A. Nern, S. Takemura,
 N. Eckstein, T. Wolff, R. J. V. Roberts, G. M. Rubin, S. Berg, D. D.
 Bock, A. Litwin-Kumar, M. Murthy, G. S. X. E. Jefferis, **The connectome
 of the adult Drosophila mushroom body provides insights into function.**
-*Elife* 9, e62576 (2020) \[citations: 395\]
+*Elife* 9, e62576 (2020) \[citations: 410\]
 
 S. Cachero, M. Gkantia, **A. S. Bates**, S. Frechter, L. Blackie, A.
 McCarthy, P. Sten-Domrose, G. S. X. E. Jefferis, **BAcTrace, a tool for
 retrograde tracing of neuronal circuits in Drosophila.** *Nature
-methods* 17 (12), 1254-1261 (2020) \[citations: 50\]
+methods* 17 (12), 1254-1261 (2020) \[citations: 51\]
 
 L. K. Scheffer, C. S. Xu, M. Januszewski, Z. Lu, S. Takemura, K. J.
 Hayworth, G. B. Huang, K. Shinomiya, J. Maitlin-Shepard, S. Berg, J.
@@ -347,7 +362,7 @@ E. Tenshaw, T. Tokhi, J. J. Walsh, T. Yang, J. A. Horne, F. Li, R.
 Parekh, P. K. Rivlin, V. Jayaraman, M. Costa, G. S. X. E. Jefferis, K.
 Ito, S. Saalfeld, R. George, I. Meinertzhagen, G. M. Rubin, H. F. Hess,
 V. Jain, S. M. Plaza, **A connectome and analysis of the adult
-Drosophila central brain.** *eLife* 9, e57443 (2020) \[citations: 1172\]
+Drosophila central brain.** *eLife* 9, e57443 (2020) \[citations: 1219\]
 
 E. C. Marin, L. Büld, M. Theiss, T. Sarkissian, R. J. V. Roberts, R.
 Turnbull, I. F. M. Tamimi, M. W. Pleijzier, W. J. Laursen, N. Drummond,
@@ -355,19 +370,19 @@ P. Schlegel, **A. S. Bates**, F. Li, M. Landgraf, M. Costa, D. D. Bock,
 P. A. Garrity, G. S. X. E. Jefferis, **Connectomics analysis reveals
 first-, second-, and third-order thermosensory and hygrosensory neurons
 in the adult Drosophila brain.** *Curr. Biology* 30 (16), 3167-3182. e4
-(2020) \[citations: 112\]
+(2020) \[citations: 113\]
 
 N. Otto, M. W. Pleijzier, I. C. Morgan, A. J. Edmondson-Stait, K. J.
 Heinz, I. Stark, G. Dempsey, M. Ito, I. Kapoor, J. Hsu, P. M. Schlegel,
 **A. S. Bates**, L. Feng, M. Costa, K. Ito, D. D. Bock, G. M. Rubin, A.
 Litwin-Kumar, S. Waddell, **Input connectivity reveals additional
 heterogeneity of dopaminergic reinforcement in Drosophila.** *Curr.
-biology* 30 (16), 3200-3211. e8 (2020) \[citations: 80\]
+biology* 30 (16), 3200-3211. e8 (2020) \[citations: 83\]
 
 S. Frechter, **A. S. Bates**, S. Tootoonian, M.-J. Dolan, J. Manton, A.
 R. Jamasb, J. Kohl, D. D. Bock, G. S. X. E. Jefferis, **Functional and
 anatomical specificity in a higher olfactory centre.** *eLife* 8, e44590
-(2019) \[citations: 118\]
+(2019) \[citations: 119\]
 
 M.-J. Dolan, S. Frechter, **A. S. Bates**, C. Dan, P. Huoviala, R. J.
 Roberts, P. Schlegel, S. Dhawan, R. Tabano, H. Dionne, C. Christoforou,
@@ -375,21 +390,21 @@ K. Close, B. Sutcliffe, B. Giuliani, F. Li, M. Costa, G. Ihrke, G. W.
 Meissner, D. D. Bock, Y. Aso, G. M. Rubin, G. S. Jefferis,
 **Neurogenetic dissection of the Drosophila lateral horn reveals major
 outputs, diverse behavioural functions, and interactions with the
-mushroom body.** *Elife* 8, e43079 (2019) \[citations: 174\]
+mushroom body.** *Elife* 8, e43079 (2019) \[citations: 176\]
 
 P. H. Li, L. F. Lindsey, M. Januszewski, Z. Zheng, **A. S. Bates**, I.
 Taisz, M. Tyka, M. Nichols, F. Li, E. Perlman, J. Ros, C. Bosch, M.
 Fetter, D. D. Bock, D. D. Bock, G. S. X. E. Jefferis, V. Jain,
 **Automated reconstruction of a serial-section EM Drosophila brain with
 flood-filling networks and local realignment.** *bioRxiv* 605634 (2019)
-\[citations: 109\]
+\[citations: 110\]
 
 M.-J. Dolan, G. Belliart-Guérin, **A. S. Bates**, S. Frechter, A.
 Lampin-Saint-Amaux, Y. Aso, R. J. Roberts, P. Schlegel, A. Wong, A.
 Hammad, D. D. Bock, G. M. Rubin, T. Preat, P.-Y. Plaçais, G. S. X. E.
 Jefferis, **Communication from learned to innate olfactory processing
 centers is required for memory retrieval in Drosophila.** *Neuron* 100
-(3), 651-668. e8 (2018) \[citations: 124\]
+(3), 651-668. e8 (2018) \[citations: 125\]
 
 P. Huoviala, M.-J. Dolan, F. M. Love, P. Myers, S. Frechter, S. Namiki,
 **A. S. Bates**, R. J. Roberts, E. H. Crosetti, P. Schlegel, F. Li, G.
@@ -422,4 +437,4 @@ Tutor:** Dr. Marco Beato, UCL Neuroscience, <m.beato@ucl.ac.uk>
 
 ------------------------------------------------------------------------
 
-*Updated: 19 March 2026*
+*Updated: 13 May 2026*
