@@ -10,3 +10,18 @@ resume/index_Page_4.png
 resume/index_Page_5.png
 resume/index_Page_6.png
 resume/index_Page_7.png
+
+# macOS
+.DS_Store
+
+# Claude Code (local working files)
+/CLAUDE.md
+/upgrade.md
+.claude/
+
+# Sensitive working docs — keep out of this public repo
+resume/CLAUDE_VISA_DOCS.md
+
+# Prize CV (tied to a private essay/prize submission) — keep local
+resume/cv_prize.md
+resume/cv_prize.pdf

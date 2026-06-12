@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>{{ partial "head.html" . }}
+<style>
+/* Subtle, slow crossfading background slideshow (renders by Tyler Sloan).
+   Sits behind all content with a heavy white scrim so it reads as a faint
+   texture, never dominating. Honours prefers-reduced-motion. */
+.site-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#0c0c10;}
+.site-bg__layer{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity;animation:siteBgFade 75s linear infinite;}
+.site-bg__layer:nth-child(1){background-image:url('{{ "img/backgrounds/banc/banc_bg_1.jpg" | absURL }}');animation-delay:0s;}
+.site-bg__layer:nth-child(2){background-image:url('{{ "img/backgrounds/banc/banc_bg_2.jpg" | absURL }}');animation-delay:15s;}
+.site-bg__layer:nth-child(3){background-image:url('{{ "img/backgrounds/banc/banc_bg_3.jpg" | absURL }}');animation-delay:30s;}
+.site-bg__layer:nth-child(4){background-image:url('{{ "img/backgrounds/banc/banc_bg_4.jpg" | absURL }}');animation-delay:45s;}
+.site-bg__layer:nth-child(5){background-image:url('{{ "img/backgrounds/banc/banc_bg_5.jpg" | absURL }}');animation-delay:60s;}
+.site-bg__scrim{position:absolute;inset:0;background:rgba(255,255,255,0.85);}
+@keyframes siteBgFade{0%{opacity:0}2%{opacity:.55}18%{opacity:.55}22%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){
+  .site-bg__layer{animation:none}
+  .site-bg__layer:nth-child(1){opacity:.4}
+}
+@media (max-width: 767px){ .site-bg__scrim{background:rgba(255,255,255,0.9)} }
+/* Article body: dark-grey main text; any image captions small and light. */
+.content-column-content,.content-column-content p,.content-column-content li,.content-column-content p.lead{color:#333;}
+.content-column-content figcaption,.content-column-content .figure .caption,.content-column-content .caption{font-size:.85em;color:#888;text-align:center;margin-top:.4em;}
+</style>
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true">
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__scrim"></div>
+  </div>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              {{ partial "sidebar.html" . }}
+              {{ block "main" . }}
+              {{ end }}
+          </div>
+      </div>
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

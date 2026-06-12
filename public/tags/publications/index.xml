@@ -8,15 +8,6 @@
     <language>en-uk</language>
     <lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://as-bates.netlify.app/tags/publications/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>publications</title>
-      <link>https://as-bates.netlify.app/publications/</link>
-      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://as-bates.netlify.app/publications/</guid>
-      <description>title  author  journal  cites  year  author_position  impact_factor      1  Information flow, cell types and stereotypy in a full olfactory connectome  P Schlegel, AS Bates, T Stürner, SR Jagannathan, N Drummond, J Hsu, …  Elife  2  2021  1  7.616    3  The connectome of the adult Drosophila mushroom body provides insights into function  F Li, JW Lindsey, EC Marin, N Otto, M Dreher, G Dempsey, I Stark, …  Elife  36  2020  6  7.</description>
-    </item>
-    
-    <item>
       <title>timeline</title>
       <link>https://as-bates.netlify.app/timeline/</link>
       <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>

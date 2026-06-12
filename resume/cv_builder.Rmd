@@ -32,16 +32,21 @@ CV$entries_data <- CV$entries_data %>% dplyr::filter(in_resume == TRUE)
 
 # Get publications data
 publications <- scholar::get_publications(scholar_id, sortby = "year", pagesize = 100, flush = TRUE)
-publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge",""))
+publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge","Journal of Clinical Oncology",""))
+# Google Scholar mislabels the PhD thesis as a "Genomics" paper; it is the thesis
+# (covered under Education), so exclude it from the publication list.
+publications <- subset(publications, !grepl("organisation of a third-order olfactory brain region", title, ignore.case = TRUE))
 
 # Load full author lists from manually curated file
+publications$doi <- NA_character_
 if(file.exists("publications_full_citations.csv")) {
   full_pubs <- read.csv("publications_full_citations.csv", stringsAsFactors = FALSE)
-  # Merge full author lists based on title match
+  # Merge full author lists (and DOIs) based on title match
   for(i in 1:nrow(publications)) {
     title_match <- which(full_pubs$title == publications$title[i])
     if(length(title_match) > 0) {
       publications$author[i] <- full_pubs$author[title_match[1]]
+      if("doi" %in% names(full_pubs)) publications$doi[i] <- full_pubs$doi[title_match[1]]
     }
   }
 }
@@ -115,9 +120,12 @@ revs <- paste0(revs, collapse="|")
 reviews <- subset(publications, grepl(revs, title))
 publications <- subset(publications, !grepl(revs, title))
 
-# Journal corrections
+# Journal corrections (BANC now published in Nature; DOI is added from the
+# curated citations file via doi_text, so keep journal/year clean here)
 banc_corr <- grepl("Distributed control circuits across a brain-and-cord connectome", publications$title, ignore.case = TRUE)
-publications$journal[banc_corr] <- "bioRxiv, *accepted at Nature*"
+publications$journal[banc_corr] <- "Nature"
+publications$year[banc_corr] <- 2026
+publications$number[banc_corr] <- ""
 
 # Get scholar profile for metrics
 author <- scholar::get_profile(scholar_id)
@@ -171,7 +179,7 @@ cat(intro_text)
 
 ```{r contact_metrics}
 # Separate contact and metrics with proper spacing
-contact_line <- "**Contact:** alexander_bates@hms.harvard.edu | [ORCID: 0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445) | [GitHub: alexanderbates](https://github.com/alexanderbates)"
+contact_line <- "**Contact:** alexander_bates@hms.harvard.edu | [ORCID: 0000-0002-1195-0445](https://orcid.org/0000-0002-1195-0445) | [GitHub: alexanderbates](https://github.com/alexanderbates) | [as-bates.netlify.app](https://as-bates.netlify.app/portfolio/)"
 metrics_line <- glue("**Metrics:** {author$total_cites} citations | h-index: {author$h_index} | i10-index: {author$i10_index}")
 if(nrow(peer_reviews) > 0) {
   metrics_line <- glue("{metrics_line} | {sum(peer_reviews$reviews) + 9} peer reviews")  # Add 9 abstract reviews (e.g., COSYNE 2026)
@@ -383,10 +391,7 @@ tryCatch({
     cat("**Public Datasets:**  \n")
     for(i in 1:nrow(dataverse_sources)) {
       ds <- dataverse_sources[i, ]
-      cat(glue("- [{ds$title}]({ds$url}) (DOI: {ds$doi})"))
-      if (!is.na(ds$description) && ds$description != "") {
-        cat(glue(" - {ds$description}"))
-      }
+      cat(glue("- [{ds$citation}]({ds$url}) (DOI: {ds$doi})"))
       cat("  \n")
     }
     cat("\n")
@@ -418,7 +423,7 @@ tryCatch({
     cat("**Zenodo Datasets:**  \n")
     for(i in 1:nrow(zenodo_sources)) {
       zs <- zenodo_sources[i, ]
-      cat(glue("- [{zs$title}]({zs$url}) (DOI: {zs$doi})"))
+      cat(glue("- [{zs$citation}]({zs$url}) (DOI: {zs$doi})"))
       if (!is.na(zs$downloads) && zs$downloads != "") {
         cat(glue(" - Downloads: {format(as.numeric(zs$downloads), big.mark = ',')}"))
       }
@@ -458,6 +463,23 @@ for(i in 1:nrow(publications)) {
     author_text <- gsub("J\\. S\\. Phelps", "J. S. Phelps\u2020\u2021", author_text)
     author_text <- gsub("M\\. Kim", "M. Kim\u2020", author_text)
     author_text <- gsub("H\\. H\\. Yang", "H. H. Yang\u2020", author_text)
+    author_text <- gsub("M\\. Murthy", "M. Murthy‡", author_text)
+    author_text <- gsub("J\\. Drugowitsch", "J. Drugowitsch‡", author_text)
+    author_text <- gsub("R\\. I\\. Wilson", "R. I. Wilson‡", author_text)
+    author_text <- gsub("W\\.-C\\. A\\. Lee", "W.-C. A. Lee‡", author_text)
+  } else if(grepl("Sexual dimorphism in the complete connectome", clean_title, ignore.case = TRUE)) {
+    # maleCNS (Berg et al.): nine co-first authors; corresponding Berg, Rubin, Jefferis
+    author_text <- gsub("S\\. Berg", "S. Berg†‡", author_text)
+    author_text <- gsub("I\\. R\\. Beckett", "I. R. Beckett†", author_text)
+    author_text <- gsub("M\\. Costa", "M. Costa†", author_text)
+    author_text <- gsub("P\\. Schlegel", "P. Schlegel†", author_text)
+    author_text <- gsub("M\\. Januszewski", "M. Januszewski†", author_text)
+    author_text <- gsub("E\\. C\\. Marin", "E. C. Marin†", author_text)
+    author_text <- gsub("A\\. Nern", "A. Nern†", author_text)
+    author_text <- gsub("S\\. Preibisch", "S. Preibisch†", author_text)
+    author_text <- gsub("W\\. Qiu", "W. Qiu†", author_text)
+    author_text <- gsub("G\\. M\\. Rubin", "G. M. Rubin‡", author_text)
+    author_text <- gsub("G\\. S\\. X\\. E\\. Jefferis", "G. S. X. E. Jefferis‡", author_text)
   } else if(grepl("Neurotransmitter classification from electron microscopy", clean_title, ignore.case = TRUE)) {
     # Neurotransmitter paper: N. Eckstein†, A. S. Bates†
     author_text <- gsub("N\\. Eckstein", "N. Eckstein\u2020", author_text)
@@ -480,8 +502,11 @@ for(i in 1:nrow(publications)) {
   # Get volume number if available (using number field from Google Scholar)
   volume_text <- if(!is.na(pub$number) && pub$number != "") glue(" {pub$number}") else ""
 
-  # Science bibliography style: Authors, Title. Journal Volume (Year).
-  cat(glue("{author_text}, **{clean_title}.** *{pub$journal}*{volume_text} ({pub$year}){citation_text}"))
+  # Hyperlinked DOI, from the curated citations file
+  doi_text <- if(!is.null(pub$doi) && !is.na(pub$doi) && pub$doi != "") glue(" doi: [{pub$doi}](https://doi.org/{pub$doi})") else ""
+
+  # Science bibliography style: Authors, Title. Journal Volume (Year). doi.
+  cat(glue("{author_text}, **{clean_title}.** *{pub$journal}*{volume_text} ({pub$year}){doi_text}{citation_text}"))
   cat("  \n\n")
 }
 
@@ -515,6 +540,10 @@ if(nrow(reviews) > 0) {
   cat("\\normalsize\n\n")
 }
 ```
+
+## PhD Thesis \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**A. S. Bates**, **The lateral horn, a brain region in the fly, primes innate olfactory behaviours by combining patterns of second-order olfactory projection neuron activity.** PhD thesis, University of Cambridge (2021). [Cambridge repository](https://www.repository.cam.ac.uk/items/67fecbc9-4b86-477f-bf59-37fbaf8544fb)
 
 ## Referees _______________________________________________
 

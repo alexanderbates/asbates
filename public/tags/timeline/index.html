@@ -41,8 +41,37 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+
+<style>
+ 
+.site-bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:#0c0c10;}
+.site-bg__layer{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity;animation:siteBgFade 75s linear infinite;}
+.site-bg__layer:nth-child(1){background-image:url('https://as-bates.netlify.app/img/backgrounds/banc/banc_bg_1.jpg');animation-delay:0s;}
+.site-bg__layer:nth-child(2){background-image:url('https://as-bates.netlify.app/img/backgrounds/banc/banc_bg_2.jpg');animation-delay:15s;}
+.site-bg__layer:nth-child(3){background-image:url('https://as-bates.netlify.app/img/backgrounds/banc/banc_bg_3.jpg');animation-delay:30s;}
+.site-bg__layer:nth-child(4){background-image:url('https://as-bates.netlify.app/img/backgrounds/banc/banc_bg_4.jpg');animation-delay:45s;}
+.site-bg__layer:nth-child(5){background-image:url('https://as-bates.netlify.app/img/backgrounds/banc/banc_bg_5.jpg');animation-delay:60s;}
+.site-bg__scrim{position:absolute;inset:0;background:rgba(255,255,255,0.85);}
+@keyframes siteBgFade{0%{opacity:0}2%{opacity:.55}18%{opacity:.55}22%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion: reduce){
+  .site-bg__layer{animation:none}
+  .site-bg__layer:nth-child(1){opacity:.4}
+}
+@media (max-width: 767px){ .site-bg__scrim{background:rgba(255,255,255,0.9)} }
+ 
+.content-column-content,.content-column-content p,.content-column-content li,.content-column-content p.lead{color:#333;}
+.content-column-content figcaption,.content-column-content .figure .caption,.content-column-content .caption{font-size:.85em;color:#888;text-align:center;margin-top:.4em;}
+</style>
 </head>
 <body>
+  <div class="site-bg" aria-hidden="true">
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__layer"></div>
+    <div class="site-bg__scrim"></div>
+  </div>
   <div id="all">
       <div class="container-fluid">
           <div class="row row-offcanvas row-offcanvas-left">
@@ -74,9 +103,13 @@ if (!doNotTrack) {
     <p class="social">
   
   
-  
   <a href="https://twitter.com/as_bates" data-animate-hover="pulse" class="external twitter">
     <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  <a href="https://bsky.app/profile/asbates.bsky.social" data-animate-hover="pulse" class="external bluesky" title="Bluesky" aria-label="Bluesky">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530" width="1em" height="1em" fill="currentColor" style="vertical-align:-0.125em"><path d="M135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.449-163.25-81.433-5.956-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/></svg>
   </a>
   
   
@@ -91,12 +124,9 @@ if (!doNotTrack) {
   </a>
   
   
-  
   <a href="https://github.com/alexanderbates" data-animate-hover="pulse" class="external">
     <i class="fa fa-github"></i>
   </a>
-  
-  
   
   
 </p>
@@ -123,6 +153,7 @@ if (!doNotTrack) {
   <h1 class="small-navbar-heading"><a href="https://as-bates.netlify.app/">Dr. Alexander S. Bates</a></h1>
 </div>
 
+    
     <div class="grid">
         <div class="row">
           

@@ -39,6 +39,8 @@ source("cv_printing_functions.r")
 ```{r pub_data}
 publications <- scholar::get_publications(id, sortby = "year", pagesize = 100, flush = TRUE)
 publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge","Journal of Clinical Oncology",""))
+# Google Scholar mislabels the PhD thesis as a "Genomics" paper; exclude it (it is the thesis, listed under Education).
+publications <- subset(publications, !grepl("organisation of a third-order olfactory brain region", title, ignore.case = TRUE))
 authorlist <- publications$author
 publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
 publications$position <- author_position(authorlist, scholar::get_profile(id)$name)$Position
@@ -123,9 +125,10 @@ corr <- c("Neurotransmitter Classification from Electron Microscopy Images at Sy
 publications$journal[publications$title%in%corr] <- "*Accepted at Cell*"
 publications$year[publications$title%in%corr] <- "2023"
 
-# Update BANC connectome paper
+# Update BANC connectome paper (now published in Nature)
 banc_corr <- grepl("Distributed control circuits across a brain-and-cord connectome", publications$title, ignore.case = TRUE)
-publications$journal[banc_corr] <- "bioRxiv, *accepted at Nature*"
+publications$journal[banc_corr] <- "Nature"
+publications$year[banc_corr] <- "2026"
 
 rownames(publications) <- 1:nrow(publications)
 

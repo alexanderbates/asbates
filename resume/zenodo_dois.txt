@@ -1,3 +1,9 @@
 # List your Zenodo DOIs here (one per line)
 # The script will fetch metadata for each DOI
 10.5281/zenodo.17693838
+10.5281/zenodo.20350647
+10.5281/zenodo.20350563
+10.5281/zenodo.20350565
+10.5281/zenodo.20350571
+10.5281/zenodo.20350641
+10.5281/zenodo.15999930

@@ -76,7 +76,7 @@ h2, h2:hover, h2:focus, h2:active {
 h3, h3:hover, h3:focus, h3:active {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  color: #88816f; /* Earth tone accent color */
+  color: #6E5F48; /* Earth tone accent color */
   font-size: 0.55rem; /* Reduced for consistency with other elements */
   margin-top: 0.2rem; /* Minimized top margin */
   margin-bottom: 0.1rem; /* Minimized bottom margin */
@@ -88,7 +88,7 @@ h3, h3:hover, h3:focus, h3:active {
  * Applied to all hyperlinks in the document
  */
 a {
-  color: #88816f; /* Earth tone link color */
+  color: #6E5F48; /* Earth tone link color */
   font-size: inherit !important; /* Ensure links match surrounding text size */
 }
 
@@ -244,11 +244,11 @@ a:hover {
 
 /*
  * Override decorator color from dd_cv.css
- * Changes timeline dots from blue (#08306b) to earth tone (#88816f)
+ * Changes timeline dots from blue (#08306b) to earth tone (#6E5F48)
  * Controls the colored dots in the timeline
  */
 .decorator::after {
-  background-color: #88816f;
+  background-color: #6E5F48;
   /* Keep original sizing to maintain alignment */
 }
 
@@ -257,7 +257,7 @@ a:hover {
  * Used for emphasizing specific text in titles
  */
 b::title {
-  color: #88816f; /* Pink accent color */
+  color: #6E5F48; /* Pink accent color */
   font-weight: 600;
   font-size: 1rem !important;
 }
@@ -678,7 +678,7 @@ section.main-block > h3 {
 /* Special PDF mode styles for links */
 @media print {
   a {
-    color: #88816f !important; /* Default link color */
+    color: #6E5F48 !important; /* Default link color */
     text-decoration: none !important;
   }
 

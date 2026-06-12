@@ -1,0 +1,109 @@
+---
+date: "2026-06-08T16:00:00+01:00"
+draft: false
+image: img/portfolio/banc/05_embodied.png
+showonlyimage: false
+title: A walkthrough of the brain and nerve cord connectome
+weight: 1
+bibliography: asb.bib
+---
+
+A guided tour of the BANC, the first full central nervous system connectome of a limbed animal, at single-synapse resolution.
+
+<!--more-->
+
+This is a blogpost version of my BlueSky thread, and I will link out to collaborators on BlueSky to help you find them!
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin-bottom:1.5em;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/XTWQX6vprxc" title="The brain and nerve cord (BANC) connectome" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+### A full CNS connectome
+
+The BANC is a full central nervous system (CNS) connectome of a limbed animal at single-synapse resolution, letting us follow sensory-motor arcs and understand how the CNS controls the body. Read it in *Nature*: [rdcu.be/fncjS](https://rdcu.be/fncjS). Animation by [Tyler Sloan](https://bsky.app/profile/quorumetrix.bsky.social).
+
+### A short history of connectomes
+
+![](/img/portfolio/banc/02_timeline.png)
+
+Connectomes are accelerating, from the ~300 neurons of *C. elegans* forty years ago to the fly brain ([FAFB](https://www.bbc.com/news/articles/c0lw0nxw71po)). The BANC is the next big step: a full CNS, brain and nerve cord together, a powerful hypothesis-generation engine.
+
+### How it was built, and proofread
+
+![](/img/portfolio/banc/03_pipeline.png)
+
+One adult female fly: dissected, cut into 7,010 slices, EM-imaged, aligned to 3D ([Minsu Kim](https://bsky.app/profile/mindyisminsu.bsky.social), [Jasper Phelps](https://bsky.app/profile/jasper-tms.bsky.social)). Neural nets (Zetta AI) segmented cells, synapses and transmitters; the SixEleven and Aelysia teams proofread over about 3.5 years (animation by [Sven Dorkenwald](https://bsky.app/profile/sdorkenw.bsky.social)).
+
+### Cell typing and classification
+
+![](/img/portfolio/banc/04_bridging_dna02.png)
+
+We linked the BANC to other connectomes mainly by morphology: the steering neuron DNa02 matches closely between FAFB and the BANC (tools developed with [Greg Jefferis](https://bsky.app/profile/jefferis.bsky.social)). With [Helen Yang](https://bsky.app/profile/helenhyang.bsky.social) we refined classification into literature-consistent groupings, with detailed metadata.
+
+### An embodied connectome
+
+![](/img/portfolio/banc/05_embodied.png)
+
+We saw a chance to build an "embodied" connectome, one that links sensors and effectors across the body to the CNS. These peripheral labels are among the most interpretable we have.
+
+### Reading 160,000 neurons with influence
+
+![](/img/portfolio/banc/06_influence_combined.gif)
+
+How do you read 160,000 neurons when most connections are indirect? Linear dynamics. Influence (with [Zaki Ajabi](https://bsky.app/profile/zakiajabi.bsky.social)) estimates how strongly one neuron affects another across the entire network: a scalable measure of network distance. Code: [zenodo.org/records/15999930](https://zenodo.org/records/15999930).
+
+### Control built from local loops
+
+![](/img/portfolio/banc/07_heatmap_flip.gif)
+
+Following influence from sensors to effectors, body part by body part, reveals control built from local sensorimotor loops. Effectors are influenced most by their own body part's sensors (the diagonal); weaker off-diagonal links join body parts, key for complex behaviour.
+
+### The neck
+
+![](/img/portfolio/banc/08_neck_flip.gif)
+
+Where are the long-range links that join these local modules? Easiest to find at the neck, because these are definitionally long-ranged and cross module. About 3,600 ascending and descending neurons cross it, wiring the brain to the nerve cord, and one body part to another.
+
+### A map of the long-range neurons
+
+![](/img/portfolio/banc/09_umap_influence.gif)
+
+We embedded the neck neurons by connectivity, then lit the map up by influence from each sensor and to each effector. They resolve into clusters that, we infer, group controllers by behaviour: walking, flight, grooming, feeding, reproduction, threat and more.
+
+### A vignette: flight power
+
+![](/img/portfolio/banc/10_vignette_flightpower.png)
+
+Let's look at a specific example. DNg27 drives flight power and, at the same time, recruits the endocrine cells that release the energy flight demands. One cell, matching a behaviour to the body state that supports it.
+
+### A heterarchy, not a hierarchy
+
+![](/img/portfolio/banc/11_heterarchy.png)
+
+The modules influence one another, forming a heterarchy rather than a strict hierarchy, where they recruit or suppress each other. Together it resembles Rodney Brooks' subsumption architecture from robotics, where complex behaviour comes from layered, semi-autonomous modules with no central controller.
+
+### A deep, open resource
+
+![](/img/portfolio/banc/12_data_and_code.png)
+
+And very importantly, the BANC is a deep, open resource. Browse via [FlyWire Codex](https://codex.flywire.ai/banc) and [Neuroglancer](https://ng.banc.community/view); download everything from the [Harvard Dataverse](https://doi.org/10.7910/DVN/7WTH1N). For the full list of data and code locations, see [Accessing the BANC data](/portfolio/banc-data/).
+
+### A contemporaneous male CNS
+
+![](/img/portfolio/banc/13_malecns.png)
+
+There is also a very high-quality, contemporaneous male CNS connectome, preprinted with data available at [male-cns.janelia.org](https://male-cns.janelia.org) (Berg et al.). They compare the nervous systems of the sexes neuron by neuron.
+
+### Why it matters
+
+![](/img/portfolio/banc/14_closer.png)
+
+I think all this is a big deal. The fly connectomes give the field a strong organizational framework. I think they are making us an "organized system of tunnels", and really advance the fly as the premier system for mechanistic, cognitive neuroscience.
+
+### Acknowledgements
+
+![](/img/portfolio/banc/15_acks_slideshow.gif)
+
+![](/img/portfolio/banc/16_preprint.png)
+
+This was a big effort, led by Harvard Medical School with FlyWire based at Princeton. The BANC is the work of over 100 authors, the BANC-FlyWire Consortium of proofreaders and citizen scientists, and the SixEleven and Aelysia teams. Built especially with [Minsu Kim](https://bsky.app/profile/mindyisminsu.bsky.social), [Jasper Phelps](https://bsky.app/profile/jasper-tms.bsky.social) and [Helen Yang](https://bsky.app/profile/helenhyang.bsky.social), plus the groups of Mala Murthy, [Jan Drugowitsch](https://bsky.app/profile/jdrugowitsch.bsky.social), [Rachel Wilson](https://bsky.app/profile/rachelirenewilson.bsky.social) and [Wei-Chung Allen Lee](https://bsky.app/profile/darbly.bsky.social). Funded by the NIH BRAIN Initiative, HHMI and Wellcome. Published with *Nature*.

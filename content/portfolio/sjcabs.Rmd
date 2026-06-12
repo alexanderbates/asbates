@@ -1,0 +1,21 @@
+---
+date: "2025-12-15T10:00:00-04:00"
+draft: false
+image: img/portfolio/fly_nervous_system.jpg
+showonlyimage: false
+title: Teaching connectome analysis in San Juan
+weight: 7
+bibliography: asb.bib
+---
+
+I had a wonderful time as a teaching assistant at the [San Juan Connectomics and Behaviour Summer School (SJCABS)](https://sjcabs.com/) in Puerto Rico.
+
+<!--more-->
+
+Teaching is one of my favourite parts of this field, and SJCABS is a brilliant place to do it: a group of motivated students, real connectome data, and the goal of getting everyone from "what is a connectome?" to running their own circuit analyses by the end of the week.
+
+For the school I wrote a hands-on **Python + R tutorial for connectome analysis**, walking through how to query, manipulate and visualise fly connectome data and how to ask circuit-level questions of it. The materials are open on GitHub:
+
+[**sjcabs/fly_connectome_data_tutorial**](https://github.com/sjcabs/fly_connectome_data_tutorial)
+
+It pairs the R [natverse](https://natverse.org) ecosystem with Python tooling so students can work in whichever language they prefer, and use both together where that is most natural. If you want to get started with connectome data yourself, it is a good place to begin.

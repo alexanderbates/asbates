@@ -1,0 +1,183 @@
+---
+date: "2026-06-09T10:00:00+01:00"
+draft: false
+image: img/portfolio/banc/12_data_and_code.png
+showonlyimage: false
+title: Accessing the BANC data
+weight: 2
+bibliography: asb.bib
+---
+
+<p>Where to browse, download and analyse the brain and nerve cord (BANC) connectome: every data location and code repository in one place.</p>
+<!--more-->
+<p>The BANC is a deep, open resource. Below are the places to read the paper, explore the connectome online, download the data, and find the analysis code. The Harvard Dataverse holds a stable, DOI-citable snapshot (materialization <strong>v888</strong>) that reproduces the paper; <a href="https://codex.flywire.ai/banc">FlyWire Codex</a> serves the live, continually corrected version.</p>
+<p>A note on snapshots: the published paper uses the <strong>v2</strong> synapse tables (size threshold ≥ 5) throughout. The newer <strong>v3</strong> tables (≥ 10, ~18% more synapses) are the recommended default for new analyses.</p>
+<h3 id="the-paper">The paper</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+<th>Link / DOI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BANC paper</td>
+<td>Bates, Phelps, Kim, Yang et al., <em>Nature</em> (2026), open access</td>
+<td><a href="https://www.nature.com/articles/s41586-026-10735-w">10.1038/s41586-026-10735-w</a> · <a href="https://rdcu.be/fncjS">rdcu.be/fncjS</a></td>
+</tr>
+<tr>
+<td>Preprint</td>
+<td>bioRxiv v3</td>
+<td><a href="https://www.biorxiv.org/content/10.1101/2025.07.31.667571v3">10.1101/2025.07.31.667571</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="browse-and-explore-online">Browse and explore online</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FlyWire Codex</td>
+<td>Browse the live, evolving BANC connectome, cell by cell</td>
+<td><a href="https://codex.flywire.ai/banc">codex.flywire.ai/banc</a></td>
+</tr>
+<tr>
+<td>BANC viewer (Neuroglancer)</td>
+<td>EM image data and v888 meshes, shown alongside registered neurons from FAFB, FANC, HemiBrain, maleCNS and MANC for direct cross-dataset comparison</td>
+<td><a href="https://ng.banc.community/view">ng.banc.community/view</a></td>
+</tr>
+<tr>
+<td>BANC portal</td>
+<td>Community hub for annotation, exploration and documentation</td>
+<td><a href="https://banc.community">banc.community</a></td>
+</tr>
+<tr>
+<td>CAVE (programmatic)</td>
+<td>Connectome Annotation Versioning Engine, the public BANC datastack for programmatic access</td>
+<td><a href="https://global.daf-apis.com/info/datastack/brain_and_nerve_cord_public">public datastack</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="download-the-data">Download the data</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Description</th>
+<th>Link / location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Harvard Dataverse (v888)</td>
+<td>DOI-citable static snapshot (~391 GB): analysis-ready per-neuron and per-synapse tables, edgelists, neurotransmitter predictions, NBLAST cross-dataset matches, influence scores, L2 skeletons, colorMIPs, meshes, registrations and the code ZIPs. Reproduces the paper.</td>
+<td><a href="https://doi.org/10.7910/DVN/7WTH1N">doi:10.7910/DVN/7WTH1N</a></td>
+</tr>
+<tr>
+<td>BossDB</td>
+<td>Aligned EM image data, the flat v888 segmentation, the nuclei and mitochondria segmentation layers, and a long-term archive of the neuron meshes</td>
+<td><a href="https://bossdb.org/project/bates_phelps_kim_yang2025">bossdb.org/…bates_phelps_kim_yang2025</a> · DOI 10.60533/boss-2025-941r</td>
+</tr>
+<tr>
+<td>GCS source bucket</td>
+<td>The live bulk-data source bucket behind the connectome</td>
+<td><code>gs://lee-lab_brain-and-nerve-cord-fly-connectome/</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="code">Code</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Repository</th>
+<th>Description</th>
+<th>Link / DOI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>bancr</strong> (R)</td>
+<td>Primary user-facing R client: metadata, connectivity, influence, NBLAST matches, meshes and template-space transforms</td>
+<td><a href="https://github.com/natverse/bancr">natverse/bancr</a> · <a href="https://doi.org/10.5281/zenodo.20350647">Zenodo</a></td>
+</tr>
+<tr>
+<td><strong>the-BANC-fly-connectome</strong> (Python)</td>
+<td>Jasper Phelps’s Python client: CAVE access, mesh download, transforms, colorMIPs and the canonical Neuroglancer states</td>
+<td><a href="https://github.com/jasper-tms/the-BANC-fly-connectome">jasper-tms/the-BANC-fly-connectome</a></td>
+</tr>
+<tr>
+<td><strong>influencer</strong> (R)</td>
+<td>R port/wrapper of the linear-dynamics influence model used in the paper</td>
+<td><a href="https://github.com/natverse/influencer">natverse/influencer</a> · <a href="https://doi.org/10.5281/zenodo.20350563">Zenodo</a></td>
+</tr>
+<tr>
+<td><strong>ConnectomeInfluenceCalculator</strong> (Python)</td>
+<td>Drugowitsch lab’s influence engine (PETSc/SLEPc); computes every adjusted-influence number</td>
+<td><a href="https://github.com/DrugowitschLab/ConnectomeInfluenceCalculator">DrugowitschLab/ConnectomeInfluenceCalculator</a> · <a href="https://doi.org/10.5281/zenodo.15999929">Zenodo</a></td>
+</tr>
+<tr>
+<td><strong>bancpipeline</strong> (R + SLURM)</td>
+<td>Reproducibility pipeline that builds every compiled-data product from the raw CAVE tables</td>
+<td><a href="https://github.com/htem/bancpipeline">htem/bancpipeline</a> · <a href="https://doi.org/10.5281/zenodo.20350571">Zenodo</a></td>
+</tr>
+<tr>
+<td><strong>BANC-project</strong> (R)</td>
+<td>Analysis code and figure files behind every figure in the paper</td>
+<td><a href="https://github.com/htem/BANC-project">htem/BANC-project</a> · <a href="https://doi.org/10.5281/zenodo.20350641">Zenodo</a></td>
+</tr>
+<tr>
+<td><strong>nat.ggplot</strong> (R)</td>
+<td>Publication-quality 2D ggplot2 rendering of neurons and brain meshes</td>
+<td><a href="https://github.com/natverse/nat.ggplot">natverse/nat.ggplot</a> · <a href="https://doi.org/10.5281/zenodo.20350565">Zenodo</a></td>
+</tr>
+<tr>
+<td><strong>synister_banc</strong></td>
+<td>BANC neurotransmitter-prediction code, ground truth and prediction pointers</td>
+<td><a href="https://github.com/htem/synister_banc">htem/synister_banc</a> · <a href="https://doi.org/10.5281/zenodo.20350569">Zenodo</a></td>
+</tr>
+<tr>
+<td><strong>drosophila_neurotransmitters</strong></td>
+<td>Curated literature database of transmitter usage by cell type (source of <code>neurotransmitter_verified</code>)</td>
+<td><a href="https://github.com/funkelab/drosophila_neurotransmitters">funkelab/drosophila_neurotransmitters</a></td>
+</tr>
+<tr>
+<td><strong>drosophila_neuropeptides</strong></td>
+<td>Curated literature database of neuropeptide usage by cell type (source of <code>neuropeptide_verified</code>)</td>
+<td><a href="https://github.com/funkelab/drosophila_neuropeptides">funkelab/drosophila_neuropeptides</a></td>
+</tr>
+<tr>
+<td><strong>fly_connectome_data_tutorial</strong> (R + Python)</td>
+<td>SJCABS tutorial covering BANC, FAFB-FlyWire, MANC, HemiBrain and maleCNS at a uniform level</td>
+<td><a href="https://github.com/sjcabs/fly_connectome_data_tutorial">sjcabs/fly_connectome_data_tutorial</a></td>
+</tr>
+</tbody>
+</table>
+<p>When citing a specific software component, please cite its own Zenodo DOI (or GitHub repository where no DOI is yet minted) rather than the Dataverse copy.</p>
