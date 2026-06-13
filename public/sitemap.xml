@@ -80,18 +80,6 @@
     <loc>https://as-bates.netlify.app/portfolio/</loc>
     <lastmod>2026-06-09T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://as-bates.netlify.app/tags/about/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://as-bates.netlify.app/about/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://as-bates.netlify.app/tags/alex-bates/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://as-bates.netlify.app/tags/</loc>
-    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://as-bates.netlify.app/contact/</loc>
     <lastmod>2016-11-06T13:00:25+05:30</lastmod>
   </url><url>
@@ -100,6 +88,8 @@
     <loc>https://as-bates.netlify.app/code/</loc>
   </url><url>
     <loc>https://as-bates.netlify.app/data/</loc>
+  </url><url>
+    <loc>https://as-bates.netlify.app/tags/</loc>
   </url><url>
     <loc>https://as-bates.netlify.app/timeline/</loc>
   </url>
