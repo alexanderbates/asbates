@@ -7,6 +7,15 @@ categories: []
 tags: ["publications", "authorship"]
 ---
 
+<style>
+body table{width:100%;border-collapse:collapse;font-size:.85rem;margin-top:1em;}
+table th{padding:6px 14px;border-bottom:2px solid #d8cfc0;color:#6e5f48;font-weight:600;text-align:left !important;}
+table td{padding:6px 14px;vertical-align:middle;border-bottom:1px solid #efe9df;}
+table td:nth-child(n+4),table th:nth-child(n+4){text-align:right !important;white-space:nowrap;}
+table tr:hover td{background:#faf7f2;}
+table td span{box-sizing:border-box;}
+</style>
+
 ```{r scholar, echo = FALSE, warning=FALSE}
 library(scholar)
 library(formattable)

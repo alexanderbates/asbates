@@ -48,7 +48,7 @@ for (i in seq_len(nrow(ent))) {
   show_desc <- r$section %in% c("research_projects", "education", "grants") && !is.na(r$description_1) && nchar(r$description_1) > 0
   card <- sprintf('<div class="vtl-card"><span class="vtl-date">%s &middot; %s</span><h4>%s</h4>%s%s</div>',
                   disp(r$sd, r$ed), he(lab), mdl(title),
-                  if (nchar(meta) > 0) sprintf('<p class="vtl-meta">%s</p>', he(meta)) else "",
+                  if (nchar(meta) > 0) sprintf('<p class="vtl-meta">%s</p>', mdl(meta)) else "",
                   if (show_desc) sprintf('<p class="vtl-desc">%s</p>', mdl(r$description_1)) else "")
   items <- c(items, sprintf('<div class="vtl-item vtl-%s"><span class="vtl-dot" style="background:%s"></span>%s</div>', side, col, card))
   side <- if (side == "left") "right" else "left"
