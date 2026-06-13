@@ -12,8 +12,10 @@ bibliography: asb.bib
 
 <!--more-->
 
-The **R** analysis code and figure files that produced each figure in the BANC paper, on top of bancr and influencer.
+**BANC-project** holds the R analysis code and figure files that produced every figure in the BANC paper, with one directory per figure and shared infrastructure under `R/startup/`.
 
-**Source:** [htem/BANC-project](https://github.com/htem/BANC-project).  **Archive:** Zenodo, [10.5281/zenodo.20350641](https://doi.org/10.5281/zenodo.20350641).
+**What you can use it for.** Use it to reproduce or adapt the paper's figures and the paper-cited numbers; it builds on bancr and influencer for data access and analysis.
+
+**Source:** [htem/BANC-project](https://github.com/htem/BANC-project). **Archive:** Zenodo, [10.5281/zenodo.20350641](https://doi.org/10.5281/zenodo.20350641).
 
 **Cite as:** Bates et al., 2026: BANC-project (DOI: 10.5281/zenodo.20350641).

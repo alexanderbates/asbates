@@ -12,8 +12,10 @@ bibliography: asb.bib
 
 <!--more-->
 
-An **R** implementation of the linear-dynamics *influence* model used throughout the BANC paper, wrapping the Drugowitsch lab's ConnectomeInfluenceCalculator for fast per-seed influence on large connectomes.
+**influencer** is an R implementation of the linear-dynamical-systems *influence* model used throughout the BANC paper, wrapping the Drugowitsch lab's ConnectomeInfluenceCalculator with native R and Python backends.
 
-**Source:** [natverse/influencer](https://github.com/natverse/influencer).  **Archive:** Zenodo, [10.5281/zenodo.20350563](https://doi.org/10.5281/zenodo.20350563).
+**What you can use it for.** Use it to estimate how strongly one neuron (or group of neurons) influences another across an entire connectome, a scalable measure of network distance. It caches the eigen-decomposition between seeds, so repeated queries against the same connectome are fast.
+
+**Source:** [natverse/influencer](https://github.com/natverse/influencer). **Archive:** Zenodo, [10.5281/zenodo.20350563](https://doi.org/10.5281/zenodo.20350563).
 
 **Cite as:** Bates et al., 2026: influencer (DOI: 10.5281/zenodo.20350563).

@@ -12,8 +12,10 @@ bibliography: asb.bib
 
 <!--more-->
 
-The **R + SLURM** pipeline that builds every compiled-data product behind the BANC paper from the raw CAVE annotation tables, synapse detections and neurotransmitter predictions.
+**bancpipeline** is the R + SLURM pipeline that produces every compiled-data product behind the BANC paper, running on Harvard Medical School's O2 cluster from the raw CAVE tables, synapse detections and neurotransmitter predictions.
 
-**Source:** [htem/bancpipeline](https://github.com/htem/bancpipeline).  **Archive:** Zenodo, [10.5281/zenodo.20350571](https://doi.org/10.5281/zenodo.20350571).
+**What you can use it for.** Use it as the reproducibility resource for the BANC: it assembles the per-neuron metadata and metrics, the enriched synapse tables, the edgelists, the NBLAST cross-dataset matches, the neurotransmitter predictions, and the influence shards.
+
+**Source:** [htem/bancpipeline](https://github.com/htem/bancpipeline). **Archive:** Zenodo, [10.5281/zenodo.20350571](https://doi.org/10.5281/zenodo.20350571).
 
 **Cite as:** Bates et al., 2026: bancpipeline (DOI: 10.5281/zenodo.20350571).

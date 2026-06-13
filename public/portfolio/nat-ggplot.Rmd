@@ -12,8 +12,10 @@ bibliography: asb.bib
 
 <!--more-->
 
-A [natverse](https://natverse.org) **R** package for publication-quality 2D ggplot2 renderings of neurons and brain meshes; the rendering backend behind most 2D neuron panels in the BANC figures.
+**nat.ggplot** is a [natverse](https://natverse.org) package for publication-quality 2D renderings of neurons and brain meshes with ggplot2, projecting skeletons, meshes and synapses into 2D as ggplot layers.
 
-**Source:** [natverse/nat.ggplot](https://github.com/natverse/nat.ggplot).  **Archive:** Zenodo, [10.5281/zenodo.20350565](https://doi.org/10.5281/zenodo.20350565).
+**What you can use it for.** Use it to make figure-ready neuron panels: `ggneuron()` for a complete scene with sensible defaults, or `geom_neuron()` as a layer for custom panels. It is the rendering backend behind most 2D neuron figures in the BANC paper, and works with any neuron, mesh or organism.
+
+**Source:** [natverse/nat.ggplot](https://github.com/natverse/nat.ggplot). **Archive:** Zenodo, [10.5281/zenodo.20350565](https://doi.org/10.5281/zenodo.20350565).
 
 **Cite as:** Bates et al., 2026: nat.ggplot (DOI: 10.5281/zenodo.20350565).

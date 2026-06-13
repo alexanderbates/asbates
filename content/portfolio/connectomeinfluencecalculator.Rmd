@@ -12,8 +12,10 @@ bibliography: asb.bib
 
 <!--more-->
 
-The Drugowitsch lab's **Python** engine (PETSc/SLEPc) that computes the linear-dynamics influence scores behind every adjusted-influence number in the BANC paper.
+**ConnectomeInfluenceCalculator** is the Drugowitsch lab's Python engine behind every adjusted-influence number in the BANC paper. Given a connectome as a SQLite file it builds a sparse rescaled connectivity matrix and solves the steady-state response with PETSc and SLEPc.
 
-**Source:** [DrugowitschLab/ConnectomeInfluenceCalculator](https://github.com/DrugowitschLab/ConnectomeInfluenceCalculator).  **Archive:** Zenodo, [10.5281/zenodo.15999929](https://doi.org/10.5281/zenodo.15999929).
+**What you can use it for.** Use it to compute influence on very large connectomes (hundreds of thousands of neurons, millions of edges), with options for signed connectivity, per-call silencing of neurons, and a tunable post-synaptic count threshold.
+
+**Source:** [DrugowitschLab/ConnectomeInfluenceCalculator](https://github.com/DrugowitschLab/ConnectomeInfluenceCalculator). **Archive:** Zenodo, [10.5281/zenodo.15999929](https://doi.org/10.5281/zenodo.15999929).
 
 **Cite as:** Bates et al., 2026: ConnectomeInfluenceCalculator (DOI: 10.5281/zenodo.15999929).
