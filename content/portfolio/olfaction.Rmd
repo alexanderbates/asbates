@@ -15,18 +15,26 @@ A tunnel into the brain.
 
 <!--more-->
 
-![](https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/flybrain_olfactory_path.png)
-This page is a work in progress...
+The fly's sense of smell is a compact, well-mapped circuit, which makes it a good place to ask how a wiring diagram gives rise to behaviour. Much of my own work has focused on the lateral horn, a brain region thought to drive innate responses to odour.
 
-### The drosophila olfactory system
+![](https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/flybrain_olfactory_path.png)
+
+### The *Drosophila* olfactory system
+
+Odours are detected by olfactory receptor neurons on the antennae and maxillary palps. Each receptor type converges on its own glomerulus in the antennal lobe, where projection neurons collect the signal and carry it to two higher centres: the mushroom body, which supports learned associations, and the lateral horn, thought to drive innate responses.
 
 ![](https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/olfactory_system.png)
+
 ![](https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/mb_learning.png)
 
 ### Odour encoding and decoding
 
+An odour is represented by the combination of glomeruli it activates, a combinatorial code that projection neurons transform before it reaches the higher centres. Reading that transformation is one way to connect circuit structure to what the fly smells.
+
 ![](https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/odour_coding.png)
 
 ### Odour scenes
+
+In the wild, odours arrive as turbulent, intermittent plumes and mixtures rather than clean single stimuli. Making sense of these natural odour scenes is a central challenge for the system.
 
 ![](https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/odour_scenes.png)
