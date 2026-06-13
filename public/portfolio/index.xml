@@ -81,27 +81,46 @@
     </item>
     
     <item>
+      <title>Colouring in the connectome with neurotransmitters</title>
+      <link>https://as-bates.netlify.app/portfolio/neurotransmitters/</link>
+      <pubDate>Thu, 09 May 2024 10:00:00 -0400</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/neurotransmitters/</guid>
+      <description>
+&lt;p&gt;The fly now has a full connectome, a directed and weighted graph of its neurons. But what are its connection signs, excitatory or inhibitory? Our work in &lt;a href=&#34;https://doi.org/10.1016/j.cell.2024.03.016&#34;&gt;&lt;em&gt;Cell&lt;/em&gt;&lt;/a&gt; moves towards that answer by predicting neurotransmitters directly from electron microscopy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Why map insect brains</title>
+      <link>https://as-bates.netlify.app/portfolio/interesting/</link>
+      <pubDate>Sat, 05 Nov 2016 19:53:42 +0530</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/interesting/</guid>
+      <description>
+&lt;blockquote&gt;
+&lt;p&gt;“Most benevolent lecturer,
+whose topic is Insect Hearing:
+your effort’s truly fantastic
+but I’d much rather be dreaming”
+~ 9 AM lecture, Laia Serratosa&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Neuronal cell types</title>
       <link>https://as-bates.netlify.app/portfolio/cell_types/</link>
       <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
       
       <guid>https://as-bates.netlify.app/portfolio/cell_types/</guid>
       <description>
-&lt;script src=&#34;https://as-bates.netlify.app/www.asbates.comrmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#a-definition&#34;&gt;A definition&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;“Would it be too ambitious to expect that, at least in relation
 to certain sensory centers or particular mechanisms of
 neuronal reaction, invertebrates, especially insects, offer
 some interpretative criteria for the nervous systems of
-‘superior’ vertebrates?”&#34;
+‘superior’ vertebrates?””
 (&lt;a href=&#34;https://www.britannica.com/biography/Santiago-Ramon-y-Cajal&#34;&gt;SR y Cajal&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 </description>
@@ -114,16 +133,6 @@ some interpretative criteria for the nervous systems of
       
       <guid>https://as-bates.netlify.app/portfolio/understanding/</guid>
       <description>
-&lt;script src=&#34;https://as-bates.netlify.app/asbates.comrmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#start-simple&#34;&gt;Start simple&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#how-we-can-go-about-it&#34;&gt;How we can go about it&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;“When the systems approach can be connected to the mechanisms approach
 so that its feedback loop and automata becomes clothed in flesh and blood,
@@ -165,19 +174,6 @@ we shall see real and exciting progress in understanding behaviour.”
       
       <guid>https://as-bates.netlify.app/portfolio/connectomics/</guid>
       <description>
-&lt;script src=&#34;https://as-bates.netlify.app/www.asbates.comrmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#state-of-play&#34;&gt;State of play&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#electron-microscopy-can-reveal-all-connections&#34;&gt;Electron microscopy can reveal all connections&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#what-did-the-c.-elegans-connectome-do-for-its-neuroscience&#34;&gt;What did the &lt;em&gt;C. elegans&lt;/em&gt; connectome do for its neuroscience&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#why-flies-are-now-the-frontier&#34;&gt;Why flies are now the frontier&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#concluding-thoughts&#34;&gt;Concluding thoughts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
 &lt;blockquote&gt;
 &lt;p&gt;“THE most obvious differences between different animals are differences
 of size, but for some reason the zoologists have paid singularly little
@@ -190,6 +186,72 @@ type of animal there is a most convenient size, and a large change in size
 inevitably carries with it a change of form.”
 (&lt;a href=&#34;https://archive.org/stream/OnBeingTheRightSize-J.B.S.Haldane/rightsize_djvu.txt&#34;&gt;J.B.S. Haldane&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>code - BANC-project</title>
+      <link>https://as-bates.netlify.app/portfolio/banc-project/</link>
+      <pubDate>Mon, 08 Jun 2026 12:00:00 +0000</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/banc-project/</guid>
+      <description>
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.20350641&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350641-1f4d2b&#34; alt=&#34;Zenodo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>code - bancpipeline</title>
+      <link>https://as-bates.netlify.app/portfolio/bancpipeline/</link>
+      <pubDate>Mon, 08 Jun 2026 12:00:00 +0000</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/bancpipeline/</guid>
+      <description>
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.20350571&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350571-1f4d2b&#34; alt=&#34;Zenodo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>code - bancr</title>
+      <link>https://as-bates.netlify.app/portfolio/bancr/</link>
+      <pubDate>Mon, 08 Jun 2026 12:00:00 +0000</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/bancr/</guid>
+      <description>
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.20350647&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350647-1f4d2b&#34; alt=&#34;Zenodo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>code - ConnectomeInfluenceCalculator</title>
+      <link>https://as-bates.netlify.app/portfolio/connectomeinfluencecalculator/</link>
+      <pubDate>Mon, 08 Jun 2026 12:00:00 +0000</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/connectomeinfluencecalculator/</guid>
+      <description>
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.15999929&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.15999929-1f4d2b&#34; alt=&#34;Zenodo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>code - influencer</title>
+      <link>https://as-bates.netlify.app/portfolio/influencer/</link>
+      <pubDate>Mon, 08 Jun 2026 12:00:00 +0000</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/influencer/</guid>
+      <description>
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.20350563&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350563-1f4d2b&#34; alt=&#34;Zenodo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>code - nat.ggplot</title>
+      <link>https://as-bates.netlify.app/portfolio/nat-ggplot/</link>
+      <pubDate>Mon, 08 Jun 2026 12:00:00 +0000</pubDate>
+      
+      <guid>https://as-bates.netlify.app/portfolio/nat-ggplot/</guid>
+      <description>
+&lt;p&gt;&lt;a href=&#34;https://doi.org/10.5281/zenodo.20350565&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350565-1f4d2b&#34; alt=&#34;Zenodo&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

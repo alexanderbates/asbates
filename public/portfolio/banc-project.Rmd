@@ -1,0 +1,19 @@
+---
+date: "2026-06-08T12:00:00+00:00"
+draft: false
+image: img/portfolio/banc/12_data_and_code.png
+showonlyimage: false
+title: code - BANC-project
+weight: 6
+bibliography: asb.bib
+---
+
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350641-1f4d2b)](https://doi.org/10.5281/zenodo.20350641)
+
+<!--more-->
+
+The **R** analysis code and figure files that produced each figure in the BANC paper, on top of bancr and influencer.
+
+**Source:** [htem/BANC-project](https://github.com/htem/BANC-project).  **Archive:** Zenodo, [10.5281/zenodo.20350641](https://doi.org/10.5281/zenodo.20350641).
+
+**Cite as:** Bates et al., 2026: BANC-project (DOI: 10.5281/zenodo.20350641).

@@ -60,6 +60,14 @@ if (!doNotTrack) {
 @media (max-width: 767px){ .site-bg__scrim{background:rgba(255,255,255,0.9)} }
  
 .content-column-content,.content-column-content p,.content-column-content li,.content-column-content p.lead{color:#333;}
+ 
+.content-column-content p > img,
+.content-column-content > img,
+.content-column-content figure img{display:block;max-width:min(100%,680px);height:auto;margin:1.5em auto;border-radius:5px;box-shadow:0 1px 7px rgba(0,0,0,.12);}
+ 
+.content-column-content #refs,.content-column-content .references{font-size:.92em;color:#555;}
+.content-column-content .csl-entry{margin:0 0 .5em 0;}
+.content-column-content .citation a{text-decoration:none;}
 .content-column-content figcaption,.content-column-content .figure .caption,.content-column-content .caption{font-size:.85em;color:#888;text-align:center;margin-top:.4em;}
 </style>
 </head>
@@ -96,6 +104,10 @@ if (!doNotTrack) {
         <li><a href="https://as-bates.netlify.app/CV/">CV</a></li>
       
         <li><a href="https://as-bates.netlify.app/publications/">publications</a></li>
+      
+        <li><a href="https://as-bates.netlify.app/code/">code</a></li>
+      
+        <li><a href="https://as-bates.netlify.app/data/">data</a></li>
       
         <li><a href="https://as-bates.netlify.app/contact/">get in touch</a></li>
       
@@ -156,60 +168,6 @@ if (!doNotTrack) {
     
     <div class="grid">
         <div class="row">
-          
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-                  <div class="box-masonry">
-                      
-                      
-                      <div class="box-masonry-text">
-                      
-                          <h4><a href="https://as-bates.netlify.app/tags/awards/">awards</a></h4>
-                          <div class="box-masonry-description">
-                            <p>
-                                
-                                  
-                                
-                            </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-                  <div class="box-masonry">
-                      
-                      
-                      <div class="box-masonry-text">
-                      
-                          <h4><a href="https://as-bates.netlify.app/tags/publications/">publications</a></h4>
-                          <div class="box-masonry-description">
-                            <p>
-                                
-                                  
-                                
-                            </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          
-              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
-                  <div class="box-masonry">
-                      
-                      
-                      <div class="box-masonry-text">
-                      
-                          <h4><a href="https://as-bates.netlify.app/tags/timeline/">timeline</a></h4>
-                          <div class="box-masonry-description">
-                            <p>
-                                
-                                  
-                                
-                            </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
           
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
                   <div class="box-masonry">

@@ -100,6 +100,14 @@ There is also a very high-quality, contemporaneous male CNS connectome, preprint
 
 I think all this is a big deal. The fly connectomes give the field a strong organizational framework. I think they are making us an "organized system of tunnels", and really advance the fly as the premier system for mechanistic, cognitive neuroscience.
 
+### A talk on the BANC
+
+If you would like a deeper walkthrough, here is a talk I gave on the preprint version of the BANC.
+
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin-bottom:1.5em;">
+<iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/-ZOWtTs4Zgc" title="A talk on the BANC (preprint version)" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 ### Acknowledgements
 
 ![](/img/portfolio/banc/15_acks_slideshow.gif)

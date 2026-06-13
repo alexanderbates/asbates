@@ -1,0 +1,19 @@
+---
+date: "2026-06-08T12:00:00+00:00"
+draft: false
+image: img/portfolio/banc/12_data_and_code.png
+showonlyimage: false
+title: code - bancpipeline
+weight: 6
+bibliography: asb.bib
+---
+
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350571-1f4d2b)](https://doi.org/10.5281/zenodo.20350571)
+
+<!--more-->
+
+The **R + SLURM** pipeline that builds every compiled-data product behind the BANC paper from the raw CAVE annotation tables, synapse detections and neurotransmitter predictions.
+
+**Source:** [htem/bancpipeline](https://github.com/htem/bancpipeline).  **Archive:** Zenodo, [10.5281/zenodo.20350571](https://doi.org/10.5281/zenodo.20350571).
+
+**Cite as:** Bates et al., 2026: bancpipeline (DOI: 10.5281/zenodo.20350571).

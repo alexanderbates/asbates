@@ -46,10 +46,6 @@ coauthor_network <- get_coauthors('BOVTiXIAAAAJ&hl', n_coauthors = 7)
 plot_coauthors(coauthor_network, size_labels = 4)
 ```
 
-```{r brain, eval = FALSE}
-plot3d(FAFB14, plotengine = "plotly")
-```
-
 Right now, I am just getting started. The first tasks is to set-up virtual reality environments, get the flies behaving properly and start manipulating some neurons I think are involved in prescribing how they navigate.
 
 ```{r echo=FALSE}

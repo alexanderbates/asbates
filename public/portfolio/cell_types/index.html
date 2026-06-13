@@ -58,6 +58,14 @@ if (!doNotTrack) {
 @media (max-width: 767px){ .site-bg__scrim{background:rgba(255,255,255,0.9)} }
  
 .content-column-content,.content-column-content p,.content-column-content li,.content-column-content p.lead{color:#333;}
+ 
+.content-column-content p > img,
+.content-column-content > img,
+.content-column-content figure img{display:block;max-width:min(100%,680px);height:auto;margin:1.5em auto;border-radius:5px;box-shadow:0 1px 7px rgba(0,0,0,.12);}
+ 
+.content-column-content #refs,.content-column-content .references{font-size:.92em;color:#555;}
+.content-column-content .csl-entry{margin:0 0 .5em 0;}
+.content-column-content .citation a{text-decoration:none;}
 .content-column-content figcaption,.content-column-content .figure .caption,.content-column-content .caption{font-size:.85em;color:#888;text-align:center;margin-top:.4em;}
 </style>
 </head>
@@ -94,6 +102,10 @@ if (!doNotTrack) {
         <li><a href="https://as-bates.netlify.app/CV/">CV</a></li>
       
         <li><a href="https://as-bates.netlify.app/publications/">publications</a></li>
+      
+        <li><a href="https://as-bates.netlify.app/code/">code</a></li>
+      
+        <li><a href="https://as-bates.netlify.app/data/">data</a></li>
       
         <li><a href="https://as-bates.netlify.app/contact/">get in touch</a></li>
       
@@ -156,14 +168,13 @@ if (!doNotTrack) {
       <div class="content-column-content">
          <h1>Neuronal cell types</h1>
          <p>Below I’ll give a bit of an over view and then delve into a definition for cell types for insects that I think would be useful.
-I have also given this view as part of a review, in slightly different words <span class="citation">(<a href="#ref-Bates2019-hn" role="doc-biblioref">Alexander Shakeel Bates et al. 2019</a>)</span>.</p>
+I have also given this view as part of a review, in slightly different words <span class="citation" data-cites="Bates2019-hn">(<a href="#ref-Bates2019-hn" role="doc-biblioref">Bates et al., 2019</a>)</span>.</p>
 <p><img src="https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/neuron_linked.png" /></p>
-<div id="a-definition" class="section level3">
-<h3>A definition</h3>
-<p>Broadly, there are those that approach cell types as zoologists <span class="citation">(<a href="#ref-Bota2007-py" role="doc-biblioref">Bota and Swanson 2007</a>; <a href="#ref-Zeng2017-vl" role="doc-biblioref">Zeng and Sanes 2017</a>)</span> and those that approach them as demographers, that is to say that some want to compress neurons’ dynamism into rigid hierarchies that yield a stable nomenclature, and those that want to engage in a statistical study of shifting and re-definable populations.</p>
+<h3 id="a-definition">A definition</h3>
+<p>Broadly, there are those that approach cell types as zoologists <span class="citation" data-cites="Bota2007-py Zeng2017-vl">(<a href="#ref-Bota2007-py" role="doc-biblioref">Bota &amp; Swanson, 2007</a>; <a href="#ref-Zeng2017-vl" role="doc-biblioref">Zeng &amp; Sanes, 2017</a>)</span> and those that approach them as demographers, that is to say that some want to compress neurons’ dynamism into rigid hierarchies that yield a stable nomenclature, and those that want to engage in a statistical study of shifting and re-definable populations.</p>
 <p>Arguably, zoology befits the <em>D. melanogaster</em> nervous system because we are approaching a data quorum in morphology and molecular genetics for the stable distinction of neuronal cell types using quantitative methodologies though not quite yet in physiology. Personally, I see the threshold ‘for zoology’ as a morphological handle on enough neurons, that new morphologies rarely offer a complete surprise - one has already seen something like it before. For the fly brain, I guess that this means ~30% coverage, which is approximately what the <a href="http://www.flycircuit.tw/">FlyCircuit</a> data set supplies.</p>
 <p><img src="https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/typing_scheme.png" /></p>
-<p>In species taxonomy, central principles for classification include reproductive isolation, phylogeny and phenotypic similarity. As with species, neuronal types are ultimately the reproducible product of definable genomic regulatory programs active during development, perhaps including synaptic plasticity. One could approximate this developmental ‘aim’ as the average of the cell phenotypes that it produces – its developmental Platonic form. Each real neuron would be generated from this ideal by a somewhat noisy but statistically characterisable process. Analogous to the valleys in Waddington’s epigenetic landscape, stable cell states have a certain width that represents the allowed variance of a cell state while retaining its unique identity. Neurons of a different type may vary significantly in some features but still be related by others. It is helpful to capture this in a hierarchical scheme that posits relationships between types. These ideas might drive us to consider classes of generative models that would capture the statistical regularities of neuronal types <span class="citation">(<a href="#ref-Farhoodi2018-fk" role="doc-biblioref">Farhoodi and Kording 2018</a>)</span>.</p>
+<p>In species taxonomy, central principles for classification include reproductive isolation, phylogeny and phenotypic similarity. As with species, neuronal types are ultimately the reproducible product of definable genomic regulatory programs active during development, perhaps including synaptic plasticity. One could approximate this developmental ‘aim’ as the average of the cell phenotypes that it produces – its developmental Platonic form. Each real neuron would be generated from this ideal by a somewhat noisy but statistically characterisable process. Analogous to the valleys in Waddington’s epigenetic landscape, stable cell states have a certain width that represents the allowed variance of a cell state while retaining its unique identity. Neurons of a different type may vary significantly in some features but still be related by others. It is helpful to capture this in a hierarchical scheme that posits relationships between types. These ideas might drive us to consider classes of generative models that would capture the statistical regularities of neuronal types <span class="citation" data-cites="Farhoodi2018-fk">(<a href="#ref-Farhoodi2018-fk" role="doc-biblioref">Farhoodi &amp; Kording, 2018</a>)</span>.</p>
 <p>Although in phylogeny, reproductive isolation is a hypothesis that can sometimes be tested, it is generally a thought experiment that calibrates definitions based on other measures e.g. genomic sequence similarity. A similar hypothesis for neuroscience might be that:</p>
 <blockquote>
 <p>Neurons of a type can be consistently identified across individuals but not consistently subdivided within individuals.</p>
@@ -181,116 +192,113 @@ I have also given this view as part of a review, in slightly different words <sp
 <p><strong>Cluster:</strong> <em>neuronal types of a shared developmental lineage, most usably, of the same cell body fibre.</em></p>
 </blockquote>
 <blockquote>
-<p><strong>Type:</strong> <em>neurons of a type have a ‘shared morphology’ and ‘physiologically relevant gene expression,’ and therefore a presumed or proven functional equivalency.</em></p>
+<p><strong>Type:</strong> <em>neurons of a type have a ‘shared morphology’ and ‘physiologically relevant gene expression’, and therefore a presumed or proven functional equivalency.</em></p>
 </blockquote>
 <blockquote>
 <p><strong>Subtype:</strong> <em>minor divisions of unknown or lesser operational importance within a neuronal type based on consistent differential expression of key genes, connectivity or electrophysiology. To be avoided where possible.</em></p>
 </blockquote>
 <p><img src="https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/brain_wide_typing.png" /></p>
-<p>One might immediately note that these classes depend on defining ‘meaningful’ sub-volumes from which a neuron might ‘output’ or to which it might be ‘local.’ Significantly, adult <em>D. melanogaster</em> possesses an expert-consensus neuropil itemisation for its brain <span class="citation">(<a href="#ref-Otsuna2006-hn" role="doc-biblioref">Otsuna and Ito 2006</a>)</span> and VNS <span class="citation">(<a href="#ref-Court2017-dh" role="doc-biblioref">Court et al. 2017</a>)</span>, and attempts have been made for the larva <span class="citation">(<a href="#ref-Younossi-Hartenstein2003-aa" role="doc-biblioref">Younossi-Hartenstein, Salvaterra, and Hartenstein 2003</a>)</span>, though these divisions could be improved upon <span class="citation">(<a href="#ref-Robie2017-bg" role="doc-biblioref">Robie et al. 2017</a>)</span>.</p>
+<p>One might immediately note that these classes depend on defining ‘meaningful’ sub-volumes from which a neuron might ‘output’ or to which it might be ‘local’. Significantly, adult <em>D. melanogaster</em> possesses an expert-consensus neuropil itemisation for its brain <span class="citation" data-cites="Otsuna2006-hn">(<a href="#ref-Otsuna2006-hn" role="doc-biblioref">Otsuna &amp; Ito, 2006</a>)</span> and VNS <span class="citation" data-cites="Court2017-dh">(<a href="#ref-Court2017-dh" role="doc-biblioref">Court et al., 2017</a>)</span>, and attempts have been made for the larva <span class="citation" data-cites="Younossi-Hartenstein2003-aa">(<a href="#ref-Younossi-Hartenstein2003-aa" role="doc-biblioref">Younossi-Hartenstein et al., 2003</a>)</span>, though these divisions could be improved upon <span class="citation" data-cites="Robie2017-bg">(<a href="#ref-Robie2017-bg" role="doc-biblioref">Robie et al., 2017</a>)</span>.</p>
 <p>As mentioned above a central principle for species classification is the notion of reproductive isolation. A crucial, equivalent testable hypothesis then for the arthropod neuroscience field is whether neurons that cluster together morphologically exhibit low variation in their physiology, synaptic connectivity and gene expression within an animal, between animals, and between closely related species; this certainly seems to be the case.</p>
 <p>Ergo, a first rule for insect neuronal cell typing:</p>
 <blockquote>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>Neurons of a shared morphology are to be considered the same functional unit until proven otherwise</li>
 </ol>
 </blockquote>
-<p>A second important principle in species taxonomy is that of phylogeny, which might be substituted for by ontogeny in the case of cell types <span class="citation">(<a href="#ref-Zeng2017-vl" role="doc-biblioref">Zeng and Sanes 2017</a>)</span>. <em>D. melanogaster’s</em> ~200 central brain <span class="citation">(<a href="#ref-Ito1992-tx" role="doc-biblioref">Ito and Hotta 1992</a>)</span>, ~1000 optic lobe <span class="citation">(<a href="#ref-Hofbauer1990-ib" role="doc-biblioref">Hofbauer and Campos-Ortega 1990</a>)</span>, ~800 VNS neuromere <span class="citation">(<a href="#ref-Birkholz2013-fa" role="doc-biblioref">Birkholz et al. 2013</a>)</span> neuroblasts consistently create the same neuronal structures and the same, diverse types <span class="citation">(<a href="#ref-Yu2013-fx" role="doc-biblioref">Yu et al. 2013</a>)</span>, with some lineages identifiable across taxa <span class="citation">(<a href="#ref-Boyan2017-rk" role="doc-biblioref">Boyan et al. 2017</a>)</span>. Each insect neuron can be linked to lineage by morphology. The insect neuron is unipolar, its single cell body fibre is sent into the neuropil, fasciculating with other neurons of similar developmental origin before bifurcation, in a stereotyped manner <span class="citation">(<a href="#ref-Cardona2010-eb" role="doc-biblioref">Cardona et al. 2010</a>)</span>. (In vertebrate brains, stereotyped fibre pathways may provide similarly useful features <span class="citation">(<a href="#ref-Hildebrand2017-qh" role="doc-biblioref">Hildebrand et al. 2017</a>)</span>.) It has been suggested that cell body fascicles form a natural grouping system amenable to exhaustive identification by quantitative methods <span class="citation">(<a href="#ref-Cardona2010-eb" role="doc-biblioref">Cardona et al. 2010</a>)</span>, not least because as a lineage-proxy they may indicate common gene expression <span class="citation">(<a href="#ref-Yang2016-un" role="doc-biblioref">Yang et al. 2016</a>)</span>. There are likely a limited number of these tracts subject to a small variance. The ‘hemilineages’ they represent are the building blocks of insect brains [Truman2004-io].</p>
+<p>A second important principle in species taxonomy is that of phylogeny, which might be substituted for by ontogeny in the case of cell types <span class="citation" data-cites="Zeng2017-vl">(<a href="#ref-Zeng2017-vl" role="doc-biblioref">Zeng &amp; Sanes, 2017</a>)</span>. <em>D. melanogaster’s</em> ~200 central brain <span class="citation" data-cites="Ito1992-tx">(<a href="#ref-Ito1992-tx" role="doc-biblioref">Ito &amp; Hotta, 1992</a>)</span>, ~1000 optic lobe <span class="citation" data-cites="Hofbauer1990-ib">(<a href="#ref-Hofbauer1990-ib" role="doc-biblioref">Hofbauer &amp; Campos-Ortega, 1990</a>)</span>, ~800 VNS neuromere <span class="citation" data-cites="Birkholz2013-fa">(<a href="#ref-Birkholz2013-fa" role="doc-biblioref">Birkholz et al., 2013</a>)</span> neuroblasts consistently create the same neuronal structures and the same, diverse types <span class="citation" data-cites="Yu2013-fx">(<a href="#ref-Yu2013-fx" role="doc-biblioref">Yu et al., 2013</a>)</span>, with some lineages identifiable across taxa <span class="citation" data-cites="Boyan2017-rk">(<a href="#ref-Boyan2017-rk" role="doc-biblioref">Boyan et al., 2017</a>)</span>. Each insect neuron can be linked to lineage by morphology. The insect neuron is unipolar, its single cell body fibre is sent into the neuropil, fasciculating with other neurons of similar developmental origin before bifurcation, in a stereotyped manner <span class="citation" data-cites="Cardona2010-eb">(<a href="#ref-Cardona2010-eb" role="doc-biblioref">Cardona et al., 2010</a>)</span>. (In vertebrate brains, stereotyped fibre pathways may provide similarly useful features <span class="citation" data-cites="Hildebrand2017-qh">(<a href="#ref-Hildebrand2017-qh" role="doc-biblioref">Hildebrand et al., 2017</a>)</span>.) It has been suggested that cell body fascicles form a natural grouping system amenable to exhaustive identification by quantitative methods <span class="citation" data-cites="Cardona2010-eb">(<a href="#ref-Cardona2010-eb" role="doc-biblioref">Cardona et al., 2010</a>)</span>, not least because as a lineage-proxy they may indicate common gene expression <span class="citation" data-cites="Yang2016-un">(<a href="#ref-Yang2016-un" role="doc-biblioref">Yang et al., 2016</a>)</span>. There are likely a limited number of these tracts subject to a small variance. The ‘hemilineages’ they represent are the building blocks of insect brains [Truman2004-io].</p>
 <p>So a second rule:</p>
 <blockquote>
-<ol start="2" style="list-style-type: decimal">
+<ol start="2" type="1">
 <li>Neurons that are considered to have a shared morphology must have the same cell body fibre tract</li>
 </ol>
 </blockquote>
 <p>We must now face an issue of electronics; the neuronal cell types of the nervous system comprise a huge circuit. Components in an electrical system can be considered the same but might be present in different motifs of that circuit, such that their circuit roles differ; is a 10 Amp branded transistor in sub-circuit A and sub-circuit B, the same? Neurobiologically, this might be equivalent to asking whether we should consider neurons with the same gene expression profile across the brain, or globular local neurons in different neuropils, as a single cell type. What matters is not that the transistor is a 10 Amp Toshiba, but what it does for our radio signal.</p>
-<p>The brains of larger animals comprise assemblies of neurons in columns and layers and such, whereas for the most part, studied arthropod brains are more economical and tend not to repeat modules across physical space in the brain. There are some notable exceptions. For example, each of D. melanogaster’s ~800 ommatidia, with its 8 photoreceptors, subserves a unique region of the visual field and wires with a ‘visual column’ through the lamina, medulla and lobula that comprises an estimated ~60 neuronal cell types. But researchers in the field equate circuit-similar neurons across columns because doing so highlights the general, repeated motifs of the system and aids comprehension <span class="citation">(<a href="#ref-Zhao2014-zk" role="doc-biblioref">Zhao and Plaza 2014</a>)</span>.</p>
-<p>The overlap of both axons and dendrites in 3D space is a starting point for defining a neuronal type since neurite apposition is suggestive of synaptic connectivity [Rees2017-tb], which in turn is indicative of circuit role. Therefore, the overlap of both axon and dendrite in 3D space is often used for cell typing, as arbours are typically stereotyped within 2-3 µm (imago brain ~4x106 µm3) <span class="citation">(<a href="#ref-Schlegel2017-ig" role="doc-biblioref">Schlegel, Costa, and Jefferis 2017</a>)</span>. With EM reconstructions from the same single brain, investigators have found mid-to-high axon-dendrite overlap highly predictive of connectivity in the fly, even if they do not always correlate (different rules may apply for dendro-dendritic and axo-axonic connections <span class="citation">(<a href="#ref-Bates2020-ww" role="doc-biblioref">Alexander S. Bates et al. 2020</a>)</span>). Clustering neurons by connectivity and morphology can produce similar results <span class="citation">(<a href="#ref-Costa2016-nq" role="doc-biblioref">Costa et al. 2016</a>)</span>, but morphology may be a more consistent indicator of neuronal type. Weak connections can account for a large fraction of a connectome and can be manifold and variable between identified neurons across hemispheres <span class="citation">(<a href="#ref-Ohyama2015-rq" role="doc-biblioref">Ohyama et al. 2015</a>)</span>, repeated structures <span class="citation">(<a href="#ref-Takemura2015-au" role="doc-biblioref">Takemura et al. 2015</a>)</span> or animals <span class="citation">(<a href="#ref-Couton2015-ql" role="doc-biblioref">Couton et al. 2015</a>)</span>, perhaps as a product of small-scale activity-dependent structural changes or intrinsic developmental variability. Neuronal activity does affect structural plasticity in the central brain if limited in the adult , but these changes are not dramatic enough to threaten our understanding of type by morphology.</p>
-<p>In terms of response properties, it might be unsurprising that isomorphic neurons close to the sensory periphery respond similarly to stimuli, especially when their dendrites are clearly compartmentalised, for example into glomerul. But crucially, it seems that even in integrative insect neuropils, neurons of high morphological similarity have stereotyped or otherwise predictable responses to stimuli and consistent basic electrical properties <span class="citation">(<a href="#ref-Frechter2019-yt" role="doc-biblioref">Frechter et al. 2019</a>)</span>.</p>
+<p>The brains of larger animals comprise assemblies of neurons in columns and layers and such, whereas for the most part, studied arthropod brains are more economical and tend not to repeat modules across physical space in the brain. There are some notable exceptions. For example, each of D. melanogaster’s ~800 ommatidia, with its 8 photoreceptors, subserves a unique region of the visual field and wires with a ‘visual column’ through the lamina, medulla and lobula that comprises an estimated ~60 neuronal cell types. But researchers in the field equate circuit-similar neurons across columns because doing so highlights the general, repeated motifs of the system and aids comprehension <span class="citation" data-cites="Zhao2014-zk">(<a href="#ref-Zhao2014-zk" role="doc-biblioref">Zhao &amp; Plaza, 2014</a>)</span>.</p>
+<p>The overlap of both axons and dendrites in 3D space is a starting point for defining a neuronal type since neurite apposition is suggestive of synaptic connectivity [Rees2017-tb], which in turn is indicative of circuit role. Therefore, the overlap of both axon and dendrite in 3D space is often used for cell typing, as arbours are typically stereotyped within 2-3 µm (imago brain ~4x106 µm3) <span class="citation" data-cites="Schlegel2017-ig">(<a href="#ref-Schlegel2017-ig" role="doc-biblioref">Schlegel et al., 2017</a>)</span>. With EM reconstructions from the same single brain, investigators have found mid-to-high axon-dendrite overlap highly predictive of connectivity in the fly, even if they do not always correlate (different rules may apply for dendro-dendritic and axo-axonic connections <span class="citation" data-cites="Bates2020-ww">(<a href="#ref-Bates2020-ww" role="doc-biblioref">Bates et al., 2020</a>)</span>). Clustering neurons by connectivity and morphology can produce similar results <span class="citation" data-cites="Costa2016-nq">(<a href="#ref-Costa2016-nq" role="doc-biblioref">Costa et al., 2016</a>)</span>, but morphology may be a more consistent indicator of neuronal type. Weak connections can account for a large fraction of a connectome and can be manifold and variable between identified neurons across hemispheres <span class="citation" data-cites="Ohyama2015-rq">(<a href="#ref-Ohyama2015-rq" role="doc-biblioref">Ohyama et al., 2015</a>)</span>, repeated structures <span class="citation" data-cites="Takemura2015-au">(<a href="#ref-Takemura2015-au" role="doc-biblioref">Takemura et al., 2015</a>)</span> or animals <span class="citation" data-cites="Couton2015-ql">(<a href="#ref-Couton2015-ql" role="doc-biblioref">Couton et al., 2015</a>)</span>, perhaps as a product of small-scale activity-dependent structural changes or intrinsic developmental variability. Neuronal activity does affect structural plasticity in the central brain if limited in the adult , but these changes are not dramatic enough to threaten our understanding of type by morphology.</p>
+<p>In terms of response properties, it might be unsurprising that isomorphic neurons close to the sensory periphery respond similarly to stimuli, especially when their dendrites are clearly compartmentalised, for example into glomerul. But crucially, it seems that even in integrative insect neuropils, neurons of high morphological similarity have stereotyped or otherwise predictable responses to stimuli and consistent basic electrical properties <span class="citation" data-cites="Frechter2019-yt">(<a href="#ref-Frechter2019-yt" role="doc-biblioref">Frechter et al., 2019</a>)</span>.</p>
 <p>So now a third rule:</p>
 <blockquote>
-<ol start="3" style="list-style-type: decimal">
+<ol start="3" type="1">
 <li>Neurons of a shared morphology must co-localise in a standard reference space, either an averaged whole nervous system space or an averaged, repeated neural structure</li>
 </ol>
 </blockquote>
-<p>Neuronal types might also be algorithmically, semi-automatically assigned and named at scale by their lineage association, neuropil innervation patterns and/or fine neuroanatomy using these three rules, e.g. <span class="citation">(<a href="#ref-Frechter2019-yt" role="doc-biblioref">Frechter et al. 2019</a>)</span>.</p>
+<p>Neuronal types might also be algorithmically, semi-automatically assigned and named at scale by their lineage association, neuropil innervation patterns and/or fine neuroanatomy using these three rules, e.g. <span class="citation" data-cites="Frechter2019-yt">(<a href="#ref-Frechter2019-yt" role="doc-biblioref">Frechter et al., 2019</a>)</span>.</p>
 <p>A data acquisition and cell typing pipeline might look like:</p>
 <p><img src="https://raw.githubusercontent.com/alexanderbates/asbates/main/static/img/portfolio/typing_pipeline.png" /></p>
+<h3 id="references">References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Bates2019-hn" class="csl-entry" role="listitem">
+Bates, A. S., Janssens, J., Jefferis, G. S., &amp; Aerts, S. (2019). Neuronal cell types in the fly: Single-cell anatomy meets single-cell genomics. <em>Curr. Opin. Neurobiol.</em>, <em>56</em>, 125–134. <a href="https://doi.org/10.1016/j.conb.2018.12.012">https://doi.org/10.1016/j.conb.2018.12.012</a>
 </div>
-<div id="references" class="section level3 unnumbered">
-<h3>References</h3>
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-Bates2019-hn" class="csl-entry">
-Bates, Alexander Shakeel, Jasper Janssens, Gregory Sxe Jefferis, and Stein Aerts. 2019. <span>“Neuronal Cell Types in the Fly: Single-Cell Anatomy Meets Single-Cell Genomics.”</span> <em>Curr. Opin. Neurobiol.</em> 56 (June): 125–34.
+<div id="ref-Bates2020-ww" class="csl-entry" role="listitem">
+Bates, A. S., Schlegel, P., Roberts, R. J. V., Drummond, N., Tamimi, I. F. M., Turnbull, R., Zhao, X., Marin, E. C., Popovici, P. D., Dhawan, S., Jamasb, A., Javier, A., Serratosa Capdevila, L., Li, F., Rubin, G. M., Waddell, S., Bock, D. D., Costa, M., &amp; Jefferis, G. S. X. E. (2020). Complete connectomic reconstruction of olfactory projection neurons in the fly brain. <em>Curr. Biol.</em> <a href="https://doi.org/10.1016/j.cub.2020.06.042">https://doi.org/10.1016/j.cub.2020.06.042</a>
 </div>
-<div id="ref-Bates2020-ww" class="csl-entry">
-Bates, Alexander S, Philipp Schlegel, Ruairi J V Roberts, Nikolas Drummond, Imaan F M Tamimi, Robert Turnbull, Xincheng Zhao, et al. 2020. <span>“Complete Connectomic Reconstruction of Olfactory Projection Neurons in the Fly Brain.”</span> <em>Curr. Biol.</em>, June.
+<div id="ref-Birkholz2013-fa" class="csl-entry" role="listitem">
+Birkholz, O., Rickert, C., Berger, C., Urbach, R., &amp; Technau, G. M. (2013). Neuroblast pattern and identity in the drosophila tail region and role of doublesex in the survival of sex-specific precursors. <em>Development</em>, <em>140</em>(8), 1830–1842. <a href="https://doi.org/10.1242/dev.090043">https://doi.org/10.1242/dev.090043</a>
 </div>
-<div id="ref-Birkholz2013-fa" class="csl-entry">
-Birkholz, Oliver, Christof Rickert, Christian Berger, Rolf Urbach, and Gerhard M Technau. 2013. <span>“Neuroblast Pattern and Identity in the Drosophila Tail Region and Role of Doublesex in the Survival of Sex-Specific Precursors.”</span> <em>Development</em> 140 (8): 1830–42.
+<div id="ref-Bota2007-py" class="csl-entry" role="listitem">
+Bota, M., &amp; Swanson, L. W. (2007). The neuron classification problem. <em>Brain Res. Rev.</em>, <em>56</em>(1), 79–88. <a href="https://doi.org/10.1016/j.brainresrev.2007.05.005">https://doi.org/10.1016/j.brainresrev.2007.05.005</a>
 </div>
-<div id="ref-Bota2007-py" class="csl-entry">
-Bota, Mihail, and Larry W Swanson. 2007. <span>“The Neuron Classification Problem.”</span> <em>Brain Res. Rev.</em> 56 (1): 79–88.
+<div id="ref-Boyan2017-rk" class="csl-entry" role="listitem">
+Boyan, G., Liu, Y., Khalsa, S. K., &amp; Hartenstein, V. (2017). A conserved plan for wiring up the fan-shaped body in the grasshopper and drosophila. <em>Dev. Genes Evol.</em>, <em>227</em>(4), 253–269. <a href="https://doi.org/10.1007/s00427-017-0587-2">https://doi.org/10.1007/s00427-017-0587-2</a>
 </div>
-<div id="ref-Boyan2017-rk" class="csl-entry">
-Boyan, George, Yu Liu, Sat Kartar Khalsa, and Volker Hartenstein. 2017. <span>“A Conserved Plan for Wiring up the Fan-Shaped Body in the Grasshopper and Drosophila.”</span> <em>Dev. Genes Evol.</em> 227 (4): 253–69.
+<div id="ref-Cardona2010-eb" class="csl-entry" role="listitem">
+Cardona, A., Saalfeld, S., Arganda, I., Pereanu, W., Schindelin, J., &amp; Hartenstein, V. (2010). Identifying neuronal lineages of drosophila by sequence analysis of axon tracts. <em>J. Neurosci.</em>, <em>30</em>(22), 7538–7553. <a href="https://doi.org/10.1523/jneurosci.0186-10.2010">https://doi.org/10.1523/jneurosci.0186-10.2010</a>
 </div>
-<div id="ref-Cardona2010-eb" class="csl-entry">
-Cardona, Albert, Stephan Saalfeld, Ignacio Arganda, Wayne Pereanu, Johannes Schindelin, and Volker Hartenstein. 2010. <span>“Identifying Neuronal Lineages of Drosophila by Sequence Analysis of Axon Tracts.”</span> <em>J. Neurosci.</em> 30 (22): 7538–53.
+<div id="ref-Costa2016-nq" class="csl-entry" role="listitem">
+Costa, M., Manton, J. D., Ostrovsky, A. D., Prohaska, S., &amp; Jefferis, G. S. X. E. (2016). <span>NBLAST</span>: Rapid, sensitive comparison of neuronal structure and construction of neuron family databases. <em>Neuron</em>, <em>91</em>(2), 293–311. <a href="https://doi.org/10.1016/j.neuron.2016.06.012">https://doi.org/10.1016/j.neuron.2016.06.012</a>
 </div>
-<div id="ref-Costa2016-nq" class="csl-entry">
-Costa, Marta, James D Manton, Aaron D Ostrovsky, Steffen Prohaska, and Gregory S X E Jefferis. 2016. <span>“<span>NBLAST</span>: Rapid, Sensitive Comparison of Neuronal Structure and Construction of Neuron Family Databases.”</span> <em>Neuron</em> 91 (2): 293–311.
+<div id="ref-Court2017-dh" class="csl-entry" role="listitem">
+Court, R. C., Armstrong, J. D., Borner, J., Card, G., Costa, M., Dickinson, M., Duch, C., Korff, W., Mann, R., Merritt, D., Murphey, R., Namiki, S., Seeds, A., Shepherd, D., Shirangi, T., Simpson, J., Truman, J., Tuthill, J., &amp; Williams, D. (2017). A systematic nomenclature for the drosophila ventral nervous system. In <em>bioRxiv</em> (p. 122952).
 </div>
-<div id="ref-Court2017-dh" class="csl-entry">
-Court, Robert Christopher, James Douglas Armstrong, Jana Borner, Gwyneth Card, Marta Costa, Michael Dickinson, Carsten Duch, et al. 2017. <span>“A Systematic Nomenclature for the Drosophila Ventral Nervous System.”</span> <em>bioRxiv</em>.
+<div id="ref-Couton2015-ql" class="csl-entry" role="listitem">
+Couton, L., Mauss, A. S., Yunusov, T., Diegelmann, S., Evers, J. F., &amp; Landgraf, M. (2015). Development of connectivity in a motoneuronal network in drosophila larvae. <em>Curr. Biol.</em>, <em>25</em>(5), 568–576. <a href="https://doi.org/10.1016/j.cub.2014.12.056">https://doi.org/10.1016/j.cub.2014.12.056</a>
 </div>
-<div id="ref-Couton2015-ql" class="csl-entry">
-Couton, Louise, Alex S Mauss, Temur Yunusov, Soeren Diegelmann, Jan Felix Evers, and Matthias Landgraf. 2015. <span>“Development of Connectivity in a Motoneuronal Network in Drosophila Larvae.”</span> <em>Curr. Biol.</em> 25 (5): 568–76.
+<div id="ref-Farhoodi2018-fk" class="csl-entry" role="listitem">
+Farhoodi, R., &amp; Kording, K. P. (2018). Sampling neuron morphologies. In <em>bioRxiv</em> (p. 248385). <a href="https://doi.org/10.1101/248385">https://doi.org/10.1101/248385</a>
 </div>
-<div id="ref-Farhoodi2018-fk" class="csl-entry">
-Farhoodi, Roozbeh, and Konrad Paul Kording. 2018. <span>“Sampling Neuron Morphologies.”</span> <em>bioRxiv</em>.
+<div id="ref-Frechter2019-yt" class="csl-entry" role="listitem">
+Frechter, S., Bates, A. S., Tootoonian, S., Dolan, M.-J., Manton, J. D., Jamasb, A. R., Kohl, J., Bock, D., &amp; Jefferis, G. S. (2019). Functional and anatomical specificity in a higher olfactory centre. <em>Elife</em>, <em>8</em>. <a href="https://doi.org/10.7554/elife.44590.025">https://doi.org/10.7554/elife.44590.025</a>
 </div>
-<div id="ref-Frechter2019-yt" class="csl-entry">
-Frechter, Shahar, Alexander Shakeel Bates, Sina Tootoonian, Michael-John Dolan, James D Manton, Arian Rokkum Jamasb, Johannes Kohl, Davi Bock, and Gregory Sxe Jefferis. 2019. <span>“Functional and Anatomical Specificity in a Higher Olfactory Centre.”</span> <em>Elife</em> 8 (May).
+<div id="ref-Hildebrand2017-qh" class="csl-entry" role="listitem">
+Hildebrand, D. G. C., Cicconet, M., Torres, R. M., Choi, W., Quan, T. M., Moon, J., Wetzel, A. W., Scott Champion, A., Graham, B. J., Randlett, O., Plummer, G. S., Portugues, R., Bianco, I. H., Saalfeld, S., Baden, A. D., Lillaney, K., Burns, R., Vogelstein, J. T., Schier, A. F., … Engert, F. (2017). Whole-brain serial-section electron microscopy in larval zebrafish. <em>Nature</em>, <em>545</em>(7654), 345–349. <a href="https://doi.org/10.3410/f.727594946.793535189">https://doi.org/10.3410/f.727594946.793535189</a>
 </div>
-<div id="ref-Hildebrand2017-qh" class="csl-entry">
-Hildebrand, David Grant Colburn, Marcelo Cicconet, Russel Miguel Torres, Woohyuk Choi, Tran Minh Quan, Jungmin Moon, Arthur Willis Wetzel, et al. 2017. <span>“Whole-Brain Serial-Section Electron Microscopy in Larval Zebrafish.”</span> <em>Nature</em> 545 (7654): 345–49.
+<div id="ref-Hofbauer1990-ib" class="csl-entry" role="listitem">
+Hofbauer, A., &amp; Campos-Ortega, J. A. (1990). Proliferation pattern and early differentiation of the optic lobes in drosophila melanogaster. <em>Rouxs. Arch. Dev. Biol.</em>, <em>198</em>(5), 264–274. <a href="https://doi.org/10.1007/bf00377393">https://doi.org/10.1007/bf00377393</a>
 </div>
-<div id="ref-Hofbauer1990-ib" class="csl-entry">
-Hofbauer, Alois, and José A Campos-Ortega. 1990. <span>“Proliferation Pattern and Early Differentiation of the Optic Lobes in Drosophila Melanogaster.”</span> <em>Rouxs. Arch. Dev. Biol.</em> 198 (5): 264–74.
+<div id="ref-Ito1992-tx" class="csl-entry" role="listitem">
+Ito, K., &amp; Hotta, Y. (1992). Proliferation pattern of postembryonic neuroblasts in the brain of drosophila melanogaster. <em>Dev. Biol.</em>, <em>149</em>(1), 134–148. <a href="https://doi.org/10.1016/0012-1606(92)90270-q">https://doi.org/10.1016/0012-1606(92)90270-q</a>
 </div>
-<div id="ref-Ito1992-tx" class="csl-entry">
-Ito, K, and Y Hotta. 1992. <span>“Proliferation Pattern of Postembryonic Neuroblasts in the Brain of Drosophila Melanogaster.”</span> <em>Dev. Biol.</em> 149 (1): 134–48.
+<div id="ref-Ohyama2015-rq" class="csl-entry" role="listitem">
+Ohyama, T., Schneider-Mizell, C. M., Fetter, R. D., Aleman, J. V., Franconville, R., Rivera-Alba, M., Mensh, B. D., Branson, K. M., Simpson, J. H., Truman, J. W., Cardona, A., &amp; Zlatic, M. (2015). A multilevel multimodal circuit enhances action selection in drosophila. <em>Nature</em>, <em>520</em>(7549), 633–639. <a href="https://doi.org/10.1038/nature14297">https://doi.org/10.1038/nature14297</a>
 </div>
-<div id="ref-Ohyama2015-rq" class="csl-entry">
-Ohyama, Tomoko, Casey M Schneider-Mizell, Richard D Fetter, Javier Valdes Aleman, Romain Franconville, Marta Rivera-Alba, Brett D Mensh, et al. 2015. <span>“A Multilevel Multimodal Circuit Enhances Action Selection in Drosophila.”</span> <em>Nature</em> 520 (7549): 633–39.
+<div id="ref-Otsuna2006-hn" class="csl-entry" role="listitem">
+Otsuna, H., &amp; Ito, K. (2006). Systematic analysis of the visual projection neurons of drosophila melanogaster. I. Lobula-specific pathways. <em>J. Comp. Neurol.</em>, <em>497</em>(6), 928–958. <a href="https://doi.org/10.1002/cne.20759">https://doi.org/10.1002/cne.20759</a>
 </div>
-<div id="ref-Otsuna2006-hn" class="csl-entry">
-Otsuna, Hideo, and Kei Ito. 2006. <span>“Systematic Analysis of the Visual Projection Neurons of Drosophila Melanogaster. I. Lobula-Specific Pathways.”</span> <em>J. Comp. Neurol.</em> 497 (6): 928–58.
+<div id="ref-Robie2017-bg" class="csl-entry" role="listitem">
+Robie, A. A., Hirokawa, J., Edwards, A. W., Umayam, L. A., Lee, A., Phillips, M. L., Card, G. M., Korff, W., Rubin, G. M., Simpson, J. H., Reiser, M. B., &amp; Branson, K. (2017). Mapping the neural substrates of behavior. <em>Cell</em>, <em>170</em>(2), 393–406.e28. <a href="https://doi.org/10.21248/gups.88029">https://doi.org/10.21248/gups.88029</a>
 </div>
-<div id="ref-Robie2017-bg" class="csl-entry">
-Robie, Alice A, Jonathan Hirokawa, Austin W Edwards, Lowell A Umayam, Allen Lee, Mary L Phillips, Gwyneth M Card, et al. 2017. <span>“Mapping the Neural Substrates of Behavior.”</span> <em>Cell</em> 170 (2): 393–406.e28.
+<div id="ref-Schlegel2017-ig" class="csl-entry" role="listitem">
+Schlegel, P., Costa, M., &amp; Jefferis, G. S. (2017). Learning from connectomics on the fly. <em>Curr Opin Insect Sci</em>, <em>24</em>, 96–105. <a href="https://doi.org/10.1016/j.cois.2017.09.011">https://doi.org/10.1016/j.cois.2017.09.011</a>
 </div>
-<div id="ref-Schlegel2017-ig" class="csl-entry">
-Schlegel, Philipp, Marta Costa, and Gregory Sxe Jefferis. 2017. <span>“Learning from Connectomics on the Fly.”</span> <em>Curr Opin Insect Sci</em> 24 (December): 96–105.
+<div id="ref-Takemura2015-au" class="csl-entry" role="listitem">
+Takemura, S.-Y., Xu, C. S., Lu, Z., Rivlin, P. K., Parag, T., Olbris, D. J., Plaza, S., Zhao, T., Katz, W. T., Umayam, L., Weaver, C., Hess, H. F., Horne, J. A., Nunez-Iglesias, J., Aniceto, R., Chang, L.-A., Lauchie, S., Nasca, A., Ogundeyi, O., … Scheffer, L. K. (2015). Synaptic circuits and their variations within different columns in the visual system of drosophila. <em>Proc. Natl. Acad. Sci. U. S. A.</em>, <em>112</em>(44), 13711–13716. <a href="https://doi.org/10.1073/pnas.1509820112">https://doi.org/10.1073/pnas.1509820112</a>
 </div>
-<div id="ref-Takemura2015-au" class="csl-entry">
-Takemura, Shin-Ya, C Shan Xu, Zhiyuan Lu, Patricia K Rivlin, Toufiq Parag, Donald J Olbris, Stephen Plaza, et al. 2015. <span>“Synaptic Circuits and Their Variations Within Different Columns in the Visual System of Drosophila.”</span> <em>Proc. Natl. Acad. Sci. U. S. A.</em> 112 (44): 13711–16.
+<div id="ref-Yang2016-un" class="csl-entry" role="listitem">
+Yang, C.-P., Fu, C.-C., Sugino, K., Liu, Z., Ren, Q., Liu, L.-Y., Yao, X., Lee, L. P., &amp; Lee, T. (2016). Transcriptomes of lineage-specific drosophila neuroblasts profiled by genetic targeting and robotic sorting. <em>Development</em>, <em>143</em>(3), 411–421. <a href="https://doi.org/10.1242/dev.129163">https://doi.org/10.1242/dev.129163</a>
 </div>
-<div id="ref-Yang2016-un" class="csl-entry">
-Yang, Ching-Po, Chi-Cheng Fu, Ken Sugino, Zhiyong Liu, Qingzhong Ren, Ling-Yu Liu, Xiaohao Yao, Luke P Lee, and Tzumin Lee. 2016. <span>“Transcriptomes of Lineage-Specific Drosophila Neuroblasts Profiled by Genetic Targeting and Robotic Sorting.”</span> <em>Development</em> 143 (3): 411–21.
+<div id="ref-Younossi-Hartenstein2003-aa" class="csl-entry" role="listitem">
+Younossi-Hartenstein, A., Salvaterra, P. M., &amp; Hartenstein, V. (2003). Early development of the drosophila brain: <span>IV</span>. Larval neuropile compartments defined by glial septa. <em>J. Comp. Neurol.</em>, <em>455</em>(4), 435–450.
 </div>
-<div id="ref-Younossi-Hartenstein2003-aa" class="csl-entry">
-Younossi-Hartenstein, Amelia, Paul M Salvaterra, and Volker Hartenstein. 2003. <span>“Early Development of the Drosophila Brain: <span>IV</span>. Larval Neuropile Compartments Defined by Glial Septa.”</span> <em>J. Comp. Neurol.</em> 455 (4): 435–50.
+<div id="ref-Yu2013-fx" class="csl-entry" role="listitem">
+Yu, H.-H., Awasaki, T., Schroeder, M. D., Long, F., Yang, J. S., He, Y., Ding, P., Kao, J.-C., Wu, G. Y.-Y., Peng, H., Myers, G., &amp; Lee, T. (2013). Clonal development and organization of the adult drosophila central brain. <em>Curr. Biol.</em>, <em>23</em>. <a href="https://doi.org/10.1016/j.cub.2013.02.057">https://doi.org/10.1016/j.cub.2013.02.057</a>
 </div>
-<div id="ref-Yu2013-fx" class="csl-entry">
-Yu, Hung-Hsiang, Takeshi Awasaki, Mark David Schroeder, Fuhui Long, Jacob S Yang, Yisheng He, Peng Ding, et al. 2013. <span>“Clonal Development and Organization of the Adult Drosophila Central Brain.”</span> <em>Curr. Biol.</em> 23 (March).
+<div id="ref-Zeng2017-vl" class="csl-entry" role="listitem">
+Zeng, H., &amp; Sanes, J. R. (2017). Neuronal cell-type classification: Challenges, opportunities and the path forward. <em>Nat. Rev. Neurosci.</em>, <em>18</em>(9), 530–546. <a href="https://doi.org/10.1038/nrn.2017.85">https://doi.org/10.1038/nrn.2017.85</a>
 </div>
-<div id="ref-Zeng2017-vl" class="csl-entry">
-Zeng, Hongkui, and Joshua R Sanes. 2017. <span>“Neuronal Cell-Type Classification: Challenges, Opportunities and the Path Forward.”</span> <em>Nat. Rev. Neurosci.</em> 18 (9): 530–46.
-</div>
-<div id="ref-Zhao2014-zk" class="csl-entry">
-Zhao, Ting, and Stephen M Plaza. 2014. <span>“Automatic Neuron Type Identification by Neurite Localization in the Drosophila Medulla,”</span> September. <a href="http://arxiv.org/abs/1409.1892">http://arxiv.org/abs/1409.1892</a>.
-</div>
+<div id="ref-Zhao2014-zk" class="csl-entry" role="listitem">
+Zhao, T., &amp; Plaza, S. M. (2014). <em>Automatic neuron type identification by neurite localization in the drosophila medulla</em>. <a href="https://arxiv.org/abs/1409.1892">https://arxiv.org/abs/1409.1892</a>
 </div>
 </div>
 

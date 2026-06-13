@@ -1,0 +1,19 @@
+---
+date: "2026-06-08T12:00:00+00:00"
+draft: false
+image: img/portfolio/banc/12_data_and_code.png
+showonlyimage: false
+title: code - nat.ggplot
+weight: 6
+bibliography: asb.bib
+---
+
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350565-1f4d2b)](https://doi.org/10.5281/zenodo.20350565)
+
+<!--more-->
+
+A [natverse](https://natverse.org) **R** package for publication-quality 2D ggplot2 renderings of neurons and brain meshes; the rendering backend behind most 2D neuron panels in the BANC figures.
+
+**Source:** [natverse/nat.ggplot](https://github.com/natverse/nat.ggplot).  **Archive:** Zenodo, [10.5281/zenodo.20350565](https://doi.org/10.5281/zenodo.20350565).
+
+**Cite as:** Bates et al., 2026: nat.ggplot (DOI: 10.5281/zenodo.20350565).

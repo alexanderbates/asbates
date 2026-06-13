@@ -1,0 +1,50 @@
+---
+date: "2024-05-09T10:00:00-04:00"
+draft: false
+image: img/portfolio/neurotransmitters/nt_cells.png
+showonlyimage: false
+title: Colouring in the connectome with neurotransmitters
+weight: 2
+bibliography: asb.bib
+---
+
+<p>The fly now has a full connectome, a directed and weighted graph of its neurons. But what are its connection signs, excitatory or inhibitory? Our work in <a href="https://doi.org/10.1016/j.cell.2024.03.016"><em>Cell</em></a> moves towards that answer by predicting neurotransmitters directly from electron microscopy.</p>
+<!--more-->
+<p>This is a blogpost version of my thread on the paper, with links out to the people and resources behind it.</p>
+<figure>
+<img src="/img/portfolio/neurotransmitters/nt_cells.png" alt="Neurons of the fly brain coloured by predicted neurotransmitter." />
+<figcaption aria-hidden="true">Neurons of the fly brain coloured by predicted neurotransmitter.</figcaption>
+</figure>
+<h3 id="the-question">The question</h3>
+<p>A connectome gives us the wiring, but not the signs on the wires. Recent work mapped the whole fly brain and ventral nerve cord (the invertebrate analogue of the spinal cord), but to read those circuits we want to know which connections excite and which inhibit. That comes down to the neurotransmitter each neuron uses.</p>
+<h3 id="the-idea">The idea</h3>
+<p>After the 2019 Connectomics Meeting, Jan Funke, Philipp Schlegel and I wondered whether we could predict neurotransmitter use across the roughly 50 million synapses and 130,000 neurons of the brain by assembling ground truth for less than 1% of it. A <a href="https://www.janelia.org/news/high-school-student-helps-transform-crazy-idea-into-innovative-research-tool">Janelia high-school student helped turn that idea into a tool</a>.</p>
+<h3 id="building-ground-truth">Building ground truth</h3>
+<p>Stereotyped, often unique neuron morphologies are the bridge that links the EM connectome to a century of light-microscopy work that identified transmitters with molecular biology. In 2019 we had about 300 identified cell types, roughly 3,000 neurons, traced from the Full Adult Fly Brain (FAFB) dataset in CATMAID, giving about 300,000 synapses for training and testing. We assumed Dale’s law: that all synapses from one neuron share a transmitter.</p>
+<h3 id="could-it-even-work">Could it even work?</h3>
+<p>We did not know in advance whether supervised learning could succeed here, because in electron micrographs of small invertebrates a human cannot see the difference between the main excitatory transmitter (acetylcholine) and the main inhibitory one (GABA).</p>
+<h3 id="synister">Synister</h3>
+<p>Nils Eckstein and Jan Funke were game. They built <a href="https://github.com/funkelab/synister"><strong>Synister</strong></a>, a deep convolutional network that predicts from 640 nm cubes centred on presynaptic T-bars, using synapses that had been manually annotated or automatically detected.</p>
+<p>It worked remarkably well. Aggregating per-synapse results by neuron, prediction was correct at over 80% for each transmitter class, and over 90% overall. Neurons matched across datasets received the same predictions, which suggests the model tracks real biology rather than dataset quirks.</p>
+<h3 id="why-does-it-work">Why does it work?</h3>
+<p>How can a single synapse reveal its transmitter? Nils and Jan developed an <a href="https://openreview.net/forum?id=Cn-n2is3Aff">explainable-AI method</a> that turns real synapse images into counterfactuals that fool Synister. Adding dark, vesicle-like features, for instance, flips a prediction. Alicia Kun-Yang Lu, Thomson Rhymer, Samantha Finley-May and Tyler Paterson could then read off which features distinguish one transmitter from another.</p>
+<h3 id="a-higher-level-principle">A higher-level principle</h3>
+<p>Lacin et al. (2019) had shown that neurons born together, in a hemilineage of roughly 100 to 200 cells, share a fast-acting transmitter in the ventral nerve cord. We found the same held across the roughly 183 brain hemilineages. For example, the tangential cells of the fan-shaped body come out uniformly glutamatergic.</p>
+<p>Where predictions are inconsistent they often look like genuine errors, perhaps under 10% of neurons. The clearest case is the Kenyon cells, predicted dopaminergic rather than cholinergic; serotonin predictions are our least reliable.</p>
+<h3 id="caveats">Caveats</h3>
+<p>Transmitter labels are a proxy for synaptic sign, under real assumptions: no co-transmission, and glutamate acting as inhibitory. Both have limits. Around 80% of brain neurons may express both excitatory and inhibitory glutamate receptors, and co-transmission, especially in monoaminergic neurons, is fairly common. The next step is more annotation, such as receptor localisation, to move signs onto individual connections.</p>
+<figure>
+<img src="/img/portfolio/neurotransmitters/nt_colorset.png" alt="The eight fast-acting transmitter classes Synister predicts." />
+<figcaption aria-hidden="true">The eight fast-acting transmitter classes Synister predicts.</figcaption>
+</figure>
+<h3 id="data-code-and-browsing">Data, code and browsing</h3>
+<ul>
+<li>Paper: <a href="https://doi.org/10.1016/j.cell.2024.03.016">Eckstein &amp; Bates et al., <em>Cell</em> (2024)</a></li>
+<li>Data: <a href="https://doi.org/10.5281/zenodo.10593546">Zenodo, 10.5281/zenodo.10593546</a></li>
+<li>Code: <a href="https://github.com/funkelab/synister">funkelab/synister</a></li>
+<li>Browse the predictions in <a href="https://codex.flywire.ai/">FlyWire Codex</a></li>
+</ul>
+<p>Our predictions have been used in more than a dozen studies since we first posted them to bioRxiv in 2020.</p>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Machine learning with Nils Eckstein, Andrew Champion, Michelle Du and Jan Funke; biology with Yijie Yin, Philipp Schlegel, Kathi Eichler, Marta Costa, <a href="https://bsky.app/profile/jefferis.bsky.social">Greg Jefferis</a> and Volker Hartenstein; data with Sven Dorkenwald, Arie Matsliah, Claire McKellar, Amy Sterling, Mala Murthy, Sebastian Seung and the Janelia annotation team. Ground truth was built on FAFB (<a href="https://bsky.app/profile/dddavi.bsky.social">Davi Bock</a>, Zhihao Zheng) and manual synapse tracing by 27 labs, supported by Tom Kazimiers and <a href="https://bsky.app/profile/perlman.bsky.social">Eric Perlman</a>, accessible at <a href="https://virtualflybrain.org">VirtualFlyBrain.org</a>. Thanks to Lou Scheffer, Clare Pilgrim, <a href="https://bsky.app/profile/vincentcroset.bsky.social">Vincent Croset</a> and our reviewers, and to our funders: the NIH BRAIN Initiative, Wellcome Trust, EMBO, MRC LMB and HHMI Janelia.</p>
+<p>If our predictions fail for cases you know, or you have unpublished data linking transmitters, neuropeptides, gap junctions, receptors or co-transmission to EM, please get in touch (alexander_bates [at] hms.harvard.edu).</p>

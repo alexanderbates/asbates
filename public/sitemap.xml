@@ -14,6 +14,12 @@
     <loc>https://as-bates.netlify.app/portfolio/banc-data/</loc>
     <lastmod>2026-06-09T10:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/neurotransmitters/</loc>
+    <lastmod>2024-05-09T10:00:00-04:00</lastmod>
+  </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/interesting/</loc>
+    <lastmod>2016-11-05T19:53:42+05:30</lastmod>
+  </url><url>
     <loc>https://as-bates.netlify.app/portfolio/cell_types/</loc>
     <lastmod>2016-11-05T19:44:32+05:30</lastmod>
   </url><url>
@@ -25,6 +31,24 @@
   </url><url>
     <loc>https://as-bates.netlify.app/portfolio/connectomics/</loc>
     <lastmod>2016-11-05T19:50:47+05:30</lastmod>
+  </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/banc-project/</loc>
+    <lastmod>2026-06-08T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/bancpipeline/</loc>
+    <lastmod>2026-06-08T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/bancr/</loc>
+    <lastmod>2026-06-08T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/connectomeinfluencecalculator/</loc>
+    <lastmod>2026-06-08T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/influencer/</loc>
+    <lastmod>2026-06-08T12:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://as-bates.netlify.app/portfolio/nat-ggplot/</loc>
+    <lastmod>2026-06-08T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://as-bates.netlify.app/portfolio/insecbrainr/</loc>
     <lastmod>2016-11-05T19:56:17+05:30</lastmod>
@@ -56,21 +80,6 @@
     <loc>https://as-bates.netlify.app/portfolio/</loc>
     <lastmod>2026-06-09T10:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://as-bates.netlify.app/tags/awards/</loc>
-    <lastmod>2021-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://as-bates.netlify.app/tags/publications/</loc>
-    <lastmod>2021-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://as-bates.netlify.app/tags/</loc>
-    <lastmod>2021-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://as-bates.netlify.app/tags/timeline/</loc>
-    <lastmod>2021-07-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://as-bates.netlify.app/timeline/</loc>
-    <lastmod>2021-07-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://as-bates.netlify.app/tags/about/</loc>
     <lastmod>2021-07-03T00:00:00+00:00</lastmod>
   </url><url>
@@ -80,9 +89,18 @@
     <loc>https://as-bates.netlify.app/tags/alex-bates/</loc>
     <lastmod>2021-07-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://as-bates.netlify.app/tags/</loc>
+    <lastmod>2021-07-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://as-bates.netlify.app/contact/</loc>
     <lastmod>2016-11-06T13:00:25+05:30</lastmod>
   </url><url>
     <loc>https://as-bates.netlify.app/categories/</loc>
+  </url><url>
+    <loc>https://as-bates.netlify.app/code/</loc>
+  </url><url>
+    <loc>https://as-bates.netlify.app/data/</loc>
+  </url><url>
+    <loc>https://as-bates.netlify.app/timeline/</loc>
   </url>
 </urlset>

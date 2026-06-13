@@ -1,0 +1,19 @@
+---
+date: "2026-06-08T12:00:00+00:00"
+draft: false
+image: img/portfolio/banc/12_data_and_code.png
+showonlyimage: false
+title: code - ConnectomeInfluenceCalculator
+weight: 6
+bibliography: asb.bib
+---
+
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.15999929-1f4d2b)](https://doi.org/10.5281/zenodo.15999929)
+
+<!--more-->
+
+The Drugowitsch lab's **Python** engine (PETSc/SLEPc) that computes the linear-dynamics influence scores behind every adjusted-influence number in the BANC paper.
+
+**Source:** [DrugowitschLab/ConnectomeInfluenceCalculator](https://github.com/DrugowitschLab/ConnectomeInfluenceCalculator).  **Archive:** Zenodo, [10.5281/zenodo.15999929](https://doi.org/10.5281/zenodo.15999929).
+
+**Cite as:** Bates et al., 2026: ConnectomeInfluenceCalculator (DOI: 10.5281/zenodo.15999929).

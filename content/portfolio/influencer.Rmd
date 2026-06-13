@@ -1,0 +1,19 @@
+---
+date: "2026-06-08T12:00:00+00:00"
+draft: false
+image: img/portfolio/banc/12_data_and_code.png
+showonlyimage: false
+title: code - influencer
+weight: 6
+bibliography: asb.bib
+---
+
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350563-1f4d2b)](https://doi.org/10.5281/zenodo.20350563)
+
+<!--more-->
+
+An **R** implementation of the linear-dynamics *influence* model used throughout the BANC paper, wrapping the Drugowitsch lab's ConnectomeInfluenceCalculator for fast per-seed influence on large connectomes.
+
+**Source:** [natverse/influencer](https://github.com/natverse/influencer).  **Archive:** Zenodo, [10.5281/zenodo.20350563](https://doi.org/10.5281/zenodo.20350563).
+
+**Cite as:** Bates et al., 2026: influencer (DOI: 10.5281/zenodo.20350563).

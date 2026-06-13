@@ -60,6 +60,14 @@ if (!doNotTrack) {
 @media (max-width: 767px){ .site-bg__scrim{background:rgba(255,255,255,0.9)} }
  
 .content-column-content,.content-column-content p,.content-column-content li,.content-column-content p.lead{color:#333;}
+ 
+.content-column-content p > img,
+.content-column-content > img,
+.content-column-content figure img{display:block;max-width:min(100%,680px);height:auto;margin:1.5em auto;border-radius:5px;box-shadow:0 1px 7px rgba(0,0,0,.12);}
+ 
+.content-column-content #refs,.content-column-content .references{font-size:.92em;color:#555;}
+.content-column-content .csl-entry{margin:0 0 .5em 0;}
+.content-column-content .citation a{text-decoration:none;}
 .content-column-content figcaption,.content-column-content .figure .caption,.content-column-content .caption{font-size:.85em;color:#888;text-align:center;margin-top:.4em;}
 </style>
 </head>
@@ -96,6 +104,10 @@ if (!doNotTrack) {
         <li><a href="https://as-bates.netlify.app/CV/">CV</a></li>
       
         <li><a href="https://as-bates.netlify.app/publications/">publications</a></li>
+      
+        <li><a href="https://as-bates.netlify.app/code/">code</a></li>
+      
+        <li><a href="https://as-bates.netlify.app/data/">data</a></li>
       
         <li><a href="https://as-bates.netlify.app/contact/">get in touch</a></li>
       
@@ -309,6 +321,64 @@ if (!doNotTrack) {
                   <div class="box-masonry">
                       
                         
+                        <a href="https://as-bates.netlify.app/portfolio/neurotransmitters/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/neurotransmitters/nt_cells.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/neurotransmitters/">Colouring in the connectome with neurotransmitters</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<p>The fly now has a full connectome, a directed and weighted graph of its neurons. But what are its connection signs, excitatory or inhibitory? Our work in <a href="https://doi.org/10.1016/j.cell.2024.03.016"><em>Cell</em></a> moves towards that answer by predicting neurotransmitters directly from electron microscopy.</p>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="https://as-bates.netlify.app/portfolio/interesting/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/network_red.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/interesting/">Why map insect brains</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<blockquote>
+<p>“Most benevolent lecturer,
+whose topic is Insect Hearing:
+your effort’s truly fantastic
+but I’d much rather be dreaming”
+~ 9 AM lecture, Laia Serratosa</p>
+</blockquote>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
                         <a href="https://as-bates.netlify.app/portfolio/cell_types/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
                         
                             <img src="https://as-bates.netlify.app/img/portfolio/asb_drosophila_neuron_3.png" alt="" class="img-responsive">
@@ -322,21 +392,12 @@ if (!doNotTrack) {
                             <p>
                                 
                                   
-<script src="/www.asbates.comrmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-<div id="TOC">
-<ul>
-<li><a href="#a-definition">A definition</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-</div>
-
 <blockquote>
 <p>“Would it be too ambitious to expect that, at least in relation
 to certain sensory centers or particular mechanisms of
 neuronal reaction, invertebrates, especially insects, offer
 some interpretative criteria for the nervous systems of
-‘superior’ vertebrates?”"
+‘superior’ vertebrates?””
 (<a href="https://www.britannica.com/biography/Santiago-Ramon-y-Cajal">SR y Cajal</a>)</p>
 </blockquote>
 
@@ -364,16 +425,6 @@ some interpretative criteria for the nervous systems of
                             <p>
                                 
                                   
-<script src="/asbates.comrmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-<div id="TOC">
-<ul>
-<li><a href="#start-simple">Start simple</a></li>
-<li><a href="#how-we-can-go-about-it">How we can go about it</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-</div>
-
 <blockquote>
 <p>“When the systems approach can be connected to the mechanisms approach
 so that its feedback loop and automata becomes clothed in flesh and blood,
@@ -445,19 +496,6 @@ we shall see real and exciting progress in understanding behaviour.”
                             <p>
                                 
                                   
-<script src="/www.asbates.comrmarkdown-libs/header-attrs/header-attrs.js"></script>
-
-<div id="TOC">
-<ul>
-<li><a href="#state-of-play">State of play</a></li>
-<li><a href="#electron-microscopy-can-reveal-all-connections">Electron microscopy can reveal all connections</a></li>
-<li><a href="#what-did-the-c.-elegans-connectome-do-for-its-neuroscience">What did the <em>C. elegans</em> connectome do for its neuroscience</a></li>
-<li><a href="#why-flies-are-now-the-frontier">Why flies are now the frontier</a></li>
-<li><a href="#concluding-thoughts">Concluding thoughts</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-</div>
-
 <blockquote>
 <p>“THE most obvious differences between different animals are differences
 of size, but for some reason the zoologists have paid singularly little
@@ -470,6 +508,162 @@ type of animal there is a most convenient size, and a large change in size
 inevitably carries with it a change of form.”
 (<a href="https://archive.org/stream/OnBeingTheRightSize-J.B.S.Haldane/rightsize_djvu.txt">J.B.S. Haldane</a>)</p>
 </blockquote>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="https://as-bates.netlify.app/portfolio/banc-project/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/banc/12_data_and_code.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/banc-project/">code - BANC-project</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<p><a href="https://doi.org/10.5281/zenodo.20350641"><img src="https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350641-1f4d2b" alt="Zenodo" /></a></p>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="https://as-bates.netlify.app/portfolio/bancpipeline/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/banc/12_data_and_code.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/bancpipeline/">code - bancpipeline</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<p><a href="https://doi.org/10.5281/zenodo.20350571"><img src="https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350571-1f4d2b" alt="Zenodo" /></a></p>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="https://as-bates.netlify.app/portfolio/bancr/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/banc/12_data_and_code.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/bancr/">code - bancr</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<p><a href="https://doi.org/10.5281/zenodo.20350647"><img src="https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350647-1f4d2b" alt="Zenodo" /></a></p>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="https://as-bates.netlify.app/portfolio/connectomeinfluencecalculator/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/banc/12_data_and_code.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/connectomeinfluencecalculator/">code - ConnectomeInfluenceCalculator</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<p><a href="https://doi.org/10.5281/zenodo.15999929"><img src="https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.15999929-1f4d2b" alt="Zenodo" /></a></p>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="https://as-bates.netlify.app/portfolio/influencer/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/banc/12_data_and_code.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/influencer/">code - influencer</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<p><a href="https://doi.org/10.5281/zenodo.20350563"><img src="https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350563-1f4d2b" alt="Zenodo" /></a></p>
+
+                                
+                            </p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 masonry-item">
+                  <div class="box-masonry">
+                      
+                        
+                        <a href="https://as-bates.netlify.app/portfolio/nat-ggplot/" title="" class="box-masonry-image with-hover-overlay with-hover-icon">
+                        
+                            <img src="https://as-bates.netlify.app/img/portfolio/banc/12_data_and_code.png" alt="" class="img-responsive">
+                        </a>
+                      
+                      
+                      <div class="box-masonry-text">
+                      
+                          <h4><a href="https://as-bates.netlify.app/portfolio/nat-ggplot/">code - nat.ggplot</a></h4>
+                          <div class="box-masonry-description">
+                            <p>
+                                
+                                  
+<p><a href="https://doi.org/10.5281/zenodo.20350565"><img src="https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.20350565-1f4d2b" alt="Zenodo" /></a></p>
 
                                 
                             </p>

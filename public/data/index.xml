@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Dr. Alexander S. Bates</title>
+    <link>https://as-bates.netlify.app/data/</link>
+    <description>Recent content in Data on Dr. Alexander S. Bates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language><atom:link href="https://as-bates.netlify.app/data/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

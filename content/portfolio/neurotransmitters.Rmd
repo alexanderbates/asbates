@@ -1,0 +1,70 @@
+---
+date: "2024-05-09T10:00:00-04:00"
+draft: false
+image: img/portfolio/neurotransmitters/nt_cells.png
+showonlyimage: false
+title: Colouring in the connectome with neurotransmitters
+weight: 2
+bibliography: asb.bib
+---
+
+The fly now has a full connectome, a directed and weighted graph of its neurons. But what are its connection signs, excitatory or inhibitory? Our work in [*Cell*](https://doi.org/10.1016/j.cell.2024.03.016) moves towards that answer by predicting neurotransmitters directly from electron microscopy.
+
+<!--more-->
+
+This is a blogpost version of my thread on the paper, with links out to the people and resources behind it.
+
+![Neurons of the fly brain coloured by predicted neurotransmitter.](/img/portfolio/neurotransmitters/nt_cells.png)
+
+### The question
+
+A connectome gives us the wiring, but not the signs on the wires. Recent work mapped the whole fly brain and ventral nerve cord (the invertebrate analogue of the spinal cord), but to read those circuits we want to know which connections excite and which inhibit. That comes down to the neurotransmitter each neuron uses.
+
+### The idea
+
+After the 2019 Connectomics Meeting, Jan Funke, Philipp Schlegel and I wondered whether we could predict neurotransmitter use across the roughly 50 million synapses and 130,000 neurons of the brain by assembling ground truth for less than 1% of it. A [Janelia high-school student helped turn that idea into a tool](https://www.janelia.org/news/high-school-student-helps-transform-crazy-idea-into-innovative-research-tool).
+
+### Building ground truth
+
+Stereotyped, often unique neuron morphologies are the bridge that links the EM connectome to a century of light-microscopy work that identified transmitters with molecular biology. In 2019 we had about 300 identified cell types, roughly 3,000 neurons, traced from the Full Adult Fly Brain (FAFB) dataset in CATMAID, giving about 300,000 synapses for training and testing. We assumed Dale's law: that all synapses from one neuron share a transmitter.
+
+### Could it even work?
+
+We did not know in advance whether supervised learning could succeed here, because in electron micrographs of small invertebrates a human cannot see the difference between the main excitatory transmitter (acetylcholine) and the main inhibitory one (GABA).
+
+### Synister
+
+Nils Eckstein and Jan Funke were game. They built [**Synister**](https://github.com/funkelab/synister), a deep convolutional network that predicts from 640 nm cubes centred on presynaptic T-bars, using synapses that had been manually annotated or automatically detected.
+
+It worked remarkably well. Aggregating per-synapse results by neuron, prediction was correct at over 80% for each transmitter class, and over 90% overall. Neurons matched across datasets received the same predictions, which suggests the model tracks real biology rather than dataset quirks.
+
+### Why does it work?
+
+How can a single synapse reveal its transmitter? Nils and Jan developed an [explainable-AI method](https://openreview.net/forum?id=Cn-n2is3Aff) that turns real synapse images into counterfactuals that fool Synister. Adding dark, vesicle-like features, for instance, flips a prediction. Alicia Kun-Yang Lu, Thomson Rhymer, Samantha Finley-May and Tyler Paterson could then read off which features distinguish one transmitter from another.
+
+### A higher-level principle
+
+Lacin et al. (2019) had shown that neurons born together, in a hemilineage of roughly 100 to 200 cells, share a fast-acting transmitter in the ventral nerve cord. We found the same held across the roughly 183 brain hemilineages. For example, the tangential cells of the fan-shaped body come out uniformly glutamatergic.
+
+Where predictions are inconsistent they often look like genuine errors, perhaps under 10% of neurons. The clearest case is the Kenyon cells, predicted dopaminergic rather than cholinergic; serotonin predictions are our least reliable.
+
+### Caveats
+
+Transmitter labels are a proxy for synaptic sign, under real assumptions: no co-transmission, and glutamate acting as inhibitory. Both have limits. Around 80% of brain neurons may express both excitatory and inhibitory glutamate receptors, and co-transmission, especially in monoaminergic neurons, is fairly common. The next step is more annotation, such as receptor localisation, to move signs onto individual connections.
+
+![The eight fast-acting transmitter classes Synister predicts.](/img/portfolio/neurotransmitters/nt_colorset.png)
+
+### Data, code and browsing
+
+- Paper: [Eckstein & Bates et al., *Cell* (2024)](https://doi.org/10.1016/j.cell.2024.03.016)
+- Data: [Zenodo, 10.5281/zenodo.10593546](https://doi.org/10.5281/zenodo.10593546)
+- Code: [funkelab/synister](https://github.com/funkelab/synister)
+- Browse the predictions in [FlyWire Codex](https://codex.flywire.ai/)
+
+Our predictions have been used in more than a dozen studies since we first posted them to bioRxiv in 2020.
+
+### Acknowledgements
+
+Machine learning with Nils Eckstein, Andrew Champion, Michelle Du and Jan Funke; biology with Yijie Yin, Philipp Schlegel, Kathi Eichler, Marta Costa, [Greg Jefferis](https://bsky.app/profile/jefferis.bsky.social) and Volker Hartenstein; data with Sven Dorkenwald, Arie Matsliah, Claire McKellar, Amy Sterling, Mala Murthy, Sebastian Seung and the Janelia annotation team. Ground truth was built on FAFB ([Davi Bock](https://bsky.app/profile/dddavi.bsky.social), Zhihao Zheng) and manual synapse tracing by 27 labs, supported by Tom Kazimiers and [Eric Perlman](https://bsky.app/profile/perlman.bsky.social), accessible at [VirtualFlyBrain.org](https://virtualflybrain.org). Thanks to Lou Scheffer, Clare Pilgrim, [Vincent Croset](https://bsky.app/profile/vincentcroset.bsky.social) and our reviewers, and to our funders: the NIH BRAIN Initiative, Wellcome Trust, EMBO, MRC LMB and HHMI Janelia.
+
+If our predictions fail for cases you know, or you have unpublished data linking transmitters, neuropeptides, gap junctions, receptors or co-transmission to EM, please get in touch (alexander_bates [at] hms.harvard.edu).
