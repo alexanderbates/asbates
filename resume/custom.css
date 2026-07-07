@@ -96,7 +96,7 @@ a {
 a:hover {
   text-decoration: underline dotted;
   font-size: inherit !important; /* Ensure hover state matches normal state */
-  color: #EBB7a1 !important; /* New hover color */
+  color: #6e5f48 !important; /* New hover color */
 }
 
 /* =====================================================================
@@ -433,8 +433,8 @@ td, th {
 }
 
 .main-block a:hover, .details a:hover {
-  color: #ebb7a1 !important; /* Explicit hover color for main content */
-  text-decoration-color: #ebb7a1 !important; /* Colored underline */
+  color: #6e5f48 !important; /* Explicit hover color for main content */
+  text-decoration-color: #6e5f48 !important; /* Colored underline */
 }
 
 table a, td a, th a, table a:hover, td a:hover, th a:hover {
@@ -442,8 +442,8 @@ table a, td a, th a, table a:hover, td a:hover, th a:hover {
 }
 
 table a:hover, td a:hover, th a:hover {
-  color: #ebb7a1 !important; /* Explicit hover color for tables */
-  text-decoration-color: #ebb7a1 !important; /* Colored underline */
+  color: #6e5f48 !important; /* Explicit hover color for tables */
+  text-decoration-color: #6e5f48 !important; /* Colored underline */
 }
 
 .aside a, .aside a:hover {
@@ -451,8 +451,8 @@ table a:hover, td a:hover, th a:hover {
 }
 
 .aside a:hover {
-  color: #ebb7a1 !important; /* Explicit hover color for sidebar */
-  text-decoration-color: #ebb7a1 !important; /* Colored underline */
+  color: #6e5f48 !important; /* Explicit hover color for sidebar */
+  text-decoration-color: #6e5f48 !important; /* Colored underline */
 }
 
 /* Override for all links to ensure consistency between normal and hover states */
@@ -465,7 +465,7 @@ a, a:visited, a:active, a:focus {
 a:hover {
   font-size: 0.51rem !important; /* Use smallest size consistently */
   text-decoration-thickness: 0.5px !important; /* Thin underline when hovering */
-  color: #ebb7a1 !important; /* New hover color */
+  color: #6e5f48 !important; /* New hover color */
 }
 
 /* Make place entries (institutions, job titles) properly sized */
@@ -485,7 +485,7 @@ h1, h1:focus, h1:active {
 
 h1:hover {
   font-size: 1rem !important; /* Consistent h1 size */
-  color: #ebb7a1 !important; /* New hover color */
+  color: #6e5f48 !important; /* New hover color */
 }
 
 /* Timeline section headers */
@@ -497,7 +497,7 @@ h2, .timeline h2, .timeline h2:focus, .timeline h2:active,
 
 h2:hover, .timeline h2:hover, .details h2:hover {
   font-size: 0.65rem !important; /* Consistent size for all h2 elements */
-  color: #ebb7a1 !important; /* New hover color */
+  color: #6e5f48 !important; /* New hover color */
 }
 
 /* Timeline entry titles */
@@ -510,7 +510,7 @@ h3, .timeline h3, .timeline h3:focus, .timeline h3:active,
 
 h3:hover, .timeline h3:hover, .details h3:hover {
   font-size: 0.55rem !important; /* Reduced for consistency across all h3 elements */
-  color: #ebb7a1 !important; /* New hover color */
+  color: #6e5f48 !important; /* New hover color */
 }
 
 /* Make timeline more compact */
@@ -560,11 +560,11 @@ section {
 
 /* Add global hover styles for all heading elements */
 h2:hover {
-  color: #ebb7a1 !important; /* New hover color */
+  color: #6e5f48 !important; /* New hover color */
 }
 
 h3:hover {
-  color: #ebb7a1 !important; /* New hover color */
+  color: #6e5f48 !important; /* New hover color */
 }
 
 /* Style date entries in timeline for better visibility */
@@ -672,7 +672,7 @@ section.main-block > h3 {
 
 /* Universal hover styling for all interactive elements */
 *:hover {
-  color: #ebb7a1 !important; /* New hover color with !important to ensure it's applied */
+  color: #6e5f48 !important; /* New hover color with !important to ensure it's applied */
 }
 
 /* Special PDF mode styles for links */
@@ -685,7 +685,7 @@ section.main-block > h3 {
   /* Add visible styling for PDF links */
   a::after {
     content: " ↗";
-    color: #ebb7a1 !important;
+    color: #6e5f48 !important;
     font-size: 0.5rem !important;
   }
 }

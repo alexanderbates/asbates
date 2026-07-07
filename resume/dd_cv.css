@@ -17,7 +17,7 @@ body {
 
 /* Force hover color for links in all contexts */
 a:hover, a:hover *, *:hover > a {
-  color: #ebb7a1 !important; /* Ensure hover color is applied with high specificity */
+  color: #6e5f48 !important; /* Ensure hover color is applied with high specificity */
 }
 
 /* Give headers playfair font - OVERRIDDEN in custom.css for h1, h2, h3 */
