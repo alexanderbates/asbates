@@ -1,5 +1,5 @@
 # Script to get download statistics from Harvard Dataverse for BANC dataset
-# URL: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8TFGGB
+# URL: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/7WTH1N
 
 library(rvest)
 library(httr)
@@ -9,7 +9,7 @@ library(stringr)
 # Function to get BANC dataset download count from Harvard Dataverse
 get_banc_downloads <- function() {
 
-  url <- "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8TFGGB"
+  url <- "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/7WTH1N"
 
   message("Fetching BANC dataset page from Harvard Dataverse...")
 
@@ -88,7 +88,7 @@ get_banc_downloads <- function() {
   # Strategy 3: Use Dataverse API if available
   if (is.na(downloads)) {
     message("Trying Dataverse API...")
-    api_url <- "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/8TFGGB"
+    api_url <- "https://dataverse.harvard.edu/api/datasets/:persistentId/?persistentId=doi:10.7910/DVN/7WTH1N"
 
     downloads <- tryCatch({
       response <- GET(api_url)
@@ -133,8 +133,8 @@ get_dataverse_stats <- function() {
   tibble(
     dataset = "BANC Adult Fly Brain Connectome",
     repository = "Harvard Dataverse",
-    doi = "10.7910/DVN/8TFGGB",
-    url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8TFGGB",
+    doi = "10.7910/DVN/7WTH1N",
+    url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/7WTH1N",
     codex_url = "https://codex.flywire.ai/?dataset=banc",
     downloads = banc_downloads,
     last_checked = Sys.Date()

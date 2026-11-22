@@ -51,13 +51,19 @@ tryCatch({
 
 # 3. Add Harvard Dataverse and other manually curated data sources
 message("Step 3: Adding manually curated data sources...")
+# 10.7910/DVN/7WTH1N is the publication-version deposit (the one to cite);
+# 10.7910/DVN/8TFGGB is the earlier preprint-version deposit.
 manual_sources <- tibble(
-  type = c("dataverse"),
-  title = c("BANC Adult Fly Brain Connectome"),
-  description = c("Complete synaptic-resolution connectome of an adult female Drosophila melanogaster brain and ventral nerve cord"),
-  url = c("https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/8TFGGB"),
-  doi = c("10.7910/DVN/8TFGGB"),
-  organization = c("Harvard Dataverse")
+  type = c("dataverse", "dataverse"),
+  title = c("BANC Adult Fly Brain Connectome",
+            "BANC EM image data and segmentation (BossDB)"),
+  description = c("Complete synaptic-resolution connectome of an adult female Drosophila melanogaster brain and ventral nerve cord",
+                  "Electron microscopy image data and segmentation for the BANC connectome"),
+  url = c("https://doi.org/10.7910/DVN/7WTH1N",
+          "https://bossdb.org/project/bates_phelps_kim_yang2025"),
+  doi = c("10.7910/DVN/7WTH1N",
+          "10.60533/boss-2025-941r"),
+  organization = c("Harvard Dataverse", "BossDB")
 )
 message("✓ Added ", nrow(manual_sources), " manual sources\n")
 

@@ -36,6 +36,9 @@ publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","Univers
 # Google Scholar mislabels the PhD thesis as a "Genomics" paper; it is the thesis
 # (covered under Education), so exclude it from the publication list.
 publications <- subset(publications, !grepl("organisation of a third-order olfactory brain region", title, ignore.case = TRUE))
+# The maleCNS preprint (Berg et al., bioRxiv 2025) is superseded by the published
+# Cell 2026 version, which Scholar lists as a separate record; keep only the published one.
+publications <- subset(publications, !grepl("Sexual dimorphism in the complete connectome of the Drosophila male central nervous system", title, ignore.case = TRUE))
 
 # Load full author lists from manually curated file
 publications$doi <- NA_character_
@@ -467,7 +470,7 @@ for(i in 1:nrow(publications)) {
     author_text <- gsub("J\\. Drugowitsch", "J. Drugowitsch‡", author_text)
     author_text <- gsub("R\\. I\\. Wilson", "R. I. Wilson‡", author_text)
     author_text <- gsub("W\\.-C\\. A\\. Lee", "W.-C. A. Lee‡", author_text)
-  } else if(grepl("Sexual dimorphism in the complete connectome", clean_title, ignore.case = TRUE)) {
+  } else if(grepl("Sexual dimorphism in the complete", clean_title, ignore.case = TRUE)) {
     # maleCNS (Berg et al.): nine co-first authors; corresponding Berg, Rubin, Jefferis
     author_text <- gsub("S\\. Berg", "S. Berg†‡", author_text)
     author_text <- gsub("I\\. R\\. Beckett", "I. R. Beckett†", author_text)

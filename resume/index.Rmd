@@ -41,6 +41,9 @@ publications <- scholar::get_publications(id, sortby = "year", pagesize = 100, f
 publications <- subset(publications, ! journal %in% c("CHEMICAL SENSES","University of Cambridge","Journal of Clinical Oncology",""))
 # Google Scholar mislabels the PhD thesis as a "Genomics" paper; exclude it (it is the thesis, listed under Education).
 publications <- subset(publications, !grepl("organisation of a third-order olfactory brain region", title, ignore.case = TRUE))
+# The maleCNS preprint (Berg et al., bioRxiv 2025) is superseded by the published
+# Cell 2026 version, which Scholar lists as a separate record; keep only the published one.
+publications <- subset(publications, !grepl("Sexual dimorphism in the complete connectome of the Drosophila male central nervous system", title, ignore.case = TRUE))
 authorlist <- publications$author
 publications$journal[publications$journal %in% c("BioRxiv","Biorxiv","biorxiv")] <- "bioRxiv"
 publications$position <- author_position(authorlist, scholar::get_profile(id)$name)$Position

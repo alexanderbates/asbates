@@ -1,0 +1,18 @@
+---
+date: "2026-10-29T09:00:00-04:00"
+draft: false
+image: img/portfolio/brain_sizes.png
+showonlyimage: false
+title: "Darwin's atom split"
+weight: 1
+---
+
+My Eppendorf & *Science* Prize for Neurobiology essay, published in *Science*.
+
+<!--more-->
+
+My essay ["Darwin's atom split"](https://www.science.org/eprint/2NTCF5V4AETHRJWY4V5P/full?activationRedirect=/doi/full/10.1126/science.ael6230) is out in *Science* as a finalist for the 2026 [Eppendorf & *Science* Prize for Neurobiology](https://www.eppendorf.com/prize) ([finalist profile](https://www.eppendorf.com/ae-fr/company-careers/scientific-awards/eppendorf-science-prize-for-neurobiology/all-prize-winners-finalists/2026-finalist-alexander-bates-ph-d/)). The essay link gives free access to the full text.
+
+*Science* also interviewed me for its [Protostar](https://www.science.org/content/article/scienceadviser-how-some-remote-areas-have-high-levels-nitrogen-pollution#protostar) feature in ScienceAdviser.
+
+Bates, A. S. (2026). Darwin's atom split. *Science*, *394*(6823), 500. <https://doi.org/10.1126/science.ael6230> (PMID: [42956147](https://pubmed.ncbi.nlm.nih.gov/42956147/))
