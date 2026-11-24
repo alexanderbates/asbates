@@ -19,7 +19,7 @@ neurobiological circuits in living, behaving flies. I am a UK citizen.
 alexanderbates](https://github.com/alexanderbates) |
 [as-bates.netlify.app](https://as-bates.netlify.app/portfolio/)
 
-**Metrics:** 6303 citations | h-index: 25 | i10-index: 26 | 17 peer
+**Metrics:** 6326 citations | h-index: 25 | i10-index: 26 | 17 peer
 reviews
 
 ## Professional Research \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
@@ -164,11 +164,24 @@ COSYNE 2026 abstract reviewer (2026) • Teaching at the San Juan Winter
 School for Connectomics (2025) • Attended HFP Leadership and Management
 Skills Course for Postdocs (2023) • President of BlueSci (01/10/2019 -
 01/01/2016) • Officially mentored summer student (2018) • Officially
-mentored undergraduate student (01/05/2018 - 01/09/2017) • Officially
 mentored summer student (2017) • LMB graduate symposium lead organiser
 (2017) • LMB graduate symposium organiser (2016) • President of the UCLU
 Writer’s Society (01/10/2015 - 01/10/2014) • Science Editor, Pi Magazine
 (01/10/2015 - 01/10/2014) • UCL iGEM 2014 Advisor (2014)
+
+## Mentorship \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
+**Kevin Delgado**, Research assistant, Harvard Medical School (current)
+• **Janki Patel**, PhD student, Harvard Medical School (current) •
+**Yervand Azatian**, Research assistant, Harvard Medical School (during
+my postdoc). Now a PhD student at Princeton University • **Minsu Kim**,
+Research assistant, Harvard Medical School (during my postdoc). Now a
+PhD student at Harvard University • **Yijie Yin**, Research assistant,
+MRC LMB, University of Cambridge (during my PhD). Now a PhD student at
+the MRC LMB • **Serene Dhawan**, Undergraduate thesis student, Dept.
+Zoology, University of Cambridge (during my PhD). Thesis won the best BA
+thesis award in Natural Sciences; two authorships. Went on to a PhD at
+Princeton University and a postdoc at MIT
 
 ## Other Experience \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
@@ -279,7 +292,7 @@ Azevedo, H. S. Seung, M. Murthy‡, J. Drugowitsch‡, R. I. Wilson‡, W.-C.
 A. Lee‡, **Distributed control circuits across a brain-and-cord
 connectome.** *Nature* (2026) doi:
 [10.1038/s41586-026-10735-w](https://doi.org/10.1038/s41586-026-10735-w)
-\[citations: 91\]
+\[citations: 93\]
 
 N. Eckstein†, **A. S. Bates**†, A. Champion, M. Du, Y. Yin, P. Schlegel,
 A. K.-Y. Lu, T. Rymer, S. Finley-May, T. Paterson, R. Parekh, S.
@@ -297,7 +310,7 @@ M. Tamimi, S. Takemura, S. Berg, M. Costa, G. S. X. E. Jefferis,
 **Information flow, cell types and stereotypy in a full olfactory
 connectome.** *Elife* 10, e66018 (2021) doi:
 [10.7554/eLife.66018](https://doi.org/10.7554/eLife.66018) \[citations:
-196\]
+197\]
 
 **A. S. Bates**†, P. Schlegel†, R. J. V. Roberts, N. Drummond, I. F. M.
 Tamimi, R. Turnbull, X. Zhao, E. C. Marin, P. D. Popovici, S. Dhawan, A.
@@ -339,7 +352,7 @@ C. Ribeiro, M. B. Reiser, H. F. Hess, G. M. Rubin‡, G. S. X. E.
 Jefferis‡, **Sexual dimorphism in the complete Drosophila male central
 nervous system connectome.** *Cell* 189 (18), 5504-5526. e15 (2026) doi:
 [10.1016/j.cell.2026.08.015](https://doi.org/10.1016/j.cell.2026.08.015)
-\[citations: 126\]
+\[citations: 129\]
 
 A. Matsliah, C. K. Salmon, **A. S. Bates**, H. H. Yang, D. D. Lee, L. K.
 Saul, B. Silverman, J. Gager, S.-C. Yu, K. P. Willie, A. T. Burke, R.
@@ -380,7 +393,7 @@ G. S. X. E. Jefferis, G. M. Card, D. Sussillo, FlyWire Consortium, V.
 Jayaraman, **A Drosophila computational brain model reveals sensorimotor
 processing.** *Nature* 634 (8032), 210-219 (2024) doi:
 [10.1038/s41586-024-07763-9](https://doi.org/10.1038/s41586-024-07763-9)
-\[citations: 201\]
+\[citations: 202\]
 
 A. Lin, R. Yang, S. Dorkenwald, A. Matsliah, A. R. Sterling, P.
 Schlegel, S. Yu, C. E. McKellar, K. Eichler, T. Wolff, D. Deutsch, S.
@@ -388,7 +401,7 @@ Farias, M. Costa, **A. S. Bates**, N. Eckstein, J. Funke, G. S. X. E.
 Jefferis, FlyWire Consortium, **Network statistics of the whole-brain
 connectome of Drosophila.** *Nature* 634 (8032), 153-165 (2024) doi:
 [10.1038/s41586-024-07968-y](https://doi.org/10.1038/s41586-024-07968-y)
-\[citations: 225\]
+\[citations: 226\]
 
 P. Schlegel, Y. Yin, **A. S. Bates**, S. Dorkenwald, K. Eichler, P.
 Brooks, D. S. Han, M. Gkantia, M. dos Santos, E. J. Munnelly, G. Sterne,
@@ -398,7 +411,7 @@ J. Funke, G. S. X. E. Jefferis, **Whole-brain annotation and
 multi-connectome cell typing of Drosophila.** *Nature* 634 (8032),
 139-152 (2024) doi:
 [10.1038/s41586-024-07686-5](https://doi.org/10.1038/s41586-024-07686-5)
-\[citations: 641\]
+\[citations: 643\]
 
 S. Dorkenwald, A. Matsliah, A. R. Sterling, P. Schlegel, S. Yu, C. E.
 McKellar, A. Lin, M. Costa, K. Eichler, Y. Yin, W. Silversmith, C.
@@ -412,7 +425,7 @@ Bock, G. S. X. E. Jefferis, H. S. Seung, M. Murthy, FlyWire Consortium,
 **Neuronal wiring diagram of an adult brain.** *Nature* 634 (8032),
 124-138 (2024) doi:
 [10.1038/s41586-024-07558-y](https://doi.org/10.1038/s41586-024-07558-y)
-\[citations: 944\]
+\[citations: 950\]
 
 H. Lee, **A. S. Bates**, S. Callier, M. Chan, N. Chambwe, A. Marshall,
 M. B. Terry, J. Sauder, W. K. Chung, **Analysis and optimization of
@@ -440,7 +453,7 @@ Bock, A. Litwin-Kumar, M. Murthy, G. S. X. E. Jefferis, **The connectome
 of the adult Drosophila mushroom body provides insights into function.**
 *Elife* 9, e62576 (2020) doi:
 [10.7554/eLife.62576](https://doi.org/10.7554/eLife.62576) \[citations:
-457\]
+461\]
 
 S. Cachero, M. Gkantia, **A. S. Bates**, S. Frechter, L. Blackie, A.
 McCarthy, P. Sten-Domrose, G. S. X. E. Jefferis, **BAcTrace, a tool for
@@ -471,7 +484,7 @@ Ito, S. Saalfeld, R. George, I. Meinertzhagen, G. M. Rubin, H. F. Hess,
 V. Jain, S. M. Plaza, **A connectome and analysis of the adult
 Drosophila central brain.** *eLife* 9, e57443 (2020) doi:
 [10.7554/eLife.57443](https://doi.org/10.7554/eLife.57443) \[citations:
-1363\]
+1365\]
 
 E. C. Marin, L. Büld, M. Theiss, T. Sarkissian, R. J. V. Roberts, R.
 Turnbull, I. F. M. Tamimi, M. W. Pleijzier, W. J. Laursen, N. Drummond,
@@ -506,7 +519,7 @@ Meissner, D. D. Bock, Y. Aso, G. M. Rubin, G. S. Jefferis,
 outputs, diverse behavioural functions, and interactions with the
 mushroom body.** *Elife* 8, e43079 (2019) doi:
 [10.7554/eLife.43079](https://doi.org/10.7554/eLife.43079) \[citations:
-194\]
+195\]
 
 P. H. Li, L. F. Lindsey, M. Januszewski, Z. Zheng, **A. S. Bates**, I.
 Taisz, M. Tyka, M. Nichols, F. Li, E. Perlman, J. Ros, C. Bosch, M.
@@ -563,4 +576,4 @@ Tutor:** Dr. Marco Beato, UCL Neuroscience, <m.beato@ucl.ac.uk>
 
 ------------------------------------------------------------------------
 
-*Updated: 21 November 2026*
+*Updated: 23 November 2026*

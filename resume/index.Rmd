@@ -327,8 +327,6 @@ Education {data-icon=graduation-cap data-concise=true}
 CV %<>% print_section('education')
 ```
 
-<div class="page-break-after"></div>
-
 Primary Research {data-icon=book}
 --------------------------------------------------------------------------------
 
@@ -394,6 +392,13 @@ Leadership {data-icon=flag}
 
 ```{r leadership}
 CV %<>% print_section('leadership_experience')
+```
+
+Mentorship {data-icon=user-graduate}
+--------------------------------------------------------------------------------
+
+```{r mentorship}
+CV %<>% print_section('mentorship')
 ```
 
 ::: aside

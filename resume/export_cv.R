@@ -45,8 +45,11 @@ print_with_chrome <- function(html = "index.html", pdf = "index.pdf"){
 }
 
 export_cv <- function(){
+  # Recent Chrome builds can take >10 s to open the debugging port, longer than
+  # pagedown's default 20 x 0.5 s wait; allow up to a minute.
+  options(pagedown.remote.maxattempts = 120)
   rmarkdown::render("index.Rmd")
-  tryCatch(pagedown::chrome_print("index.html"),
+  tryCatch(pagedown::chrome_print("index.html", timeout = 240),
            error = function(e){
              message("pagedown::chrome_print failed (", conditionMessage(e), "); using headless Chrome directly")
              print_with_chrome()

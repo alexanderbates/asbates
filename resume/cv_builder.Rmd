@@ -309,6 +309,26 @@ if(nrow(leadership_entries) > 0) {
 }
 ```
 
+## Mentorship _____________________________________________
+
+```{r mentorship}
+mentee_entries <- CV$entries_data %>% filter(section == "mentorship")
+
+# One compact line per mentee: name, role and stage, then where they went
+if(nrow(mentee_entries) > 0) {
+  mentee_list <- mentee_entries %>%
+    mutate(stage = ifelse(timeline == "Current", "current", paste("during my", sub("Postdoc", "postdoc", timeline))),
+           outcome = ifelse(description_bullets == "", "",
+                            paste0(". ", gsub("\n- ", ". ", sub("^- ", "", description_bullets))))) %>%
+    mutate(entry_text = glue("**{title}**, {institution} ({stage}){outcome}")) %>%
+    pull(entry_text) %>%
+    paste(collapse = " • ")
+
+  cat(mentee_list)
+  cat("\n\n")
+}
+```
+
 ## Other Experience _______________________________________
 
 ```{r other_experience}
